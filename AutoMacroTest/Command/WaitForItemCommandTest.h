@@ -5,7 +5,8 @@ namespace AutoMacro {
 namespace Command {
 TEST_CLASS(WaitForItemCommandTest) {
  public:
-    TEST_METHOD(TestWaitForItemCommand);
+    TEST_METHOD(TestWaitForItemExist);
+    TEST_METHOD(TestWaitForItemNotExist);
 };
 }  // namespace Command
 }  // namespace AutoMacro

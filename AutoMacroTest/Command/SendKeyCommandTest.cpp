@@ -9,7 +9,7 @@
 namespace AutoMacro {
 namespace Command {
 namespace {
-    using History::HistoryAssert;
+using History::HistoryAssert;
 }  // namespace
 
 void SendKeyCommandTest::TestSendKeyCommand() {
@@ -38,22 +38,15 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     HistoryAssert::areEqual(histories[6], "releaseKey", KeyCode::KEY_A);
     HistoryAssert::areEqual(histories[7], "---");
 
-    HistoryAssert::durationIsInRange(histories[1], histories[2],
-        cmd.delayBetweenCommands, cmd.delayBetweenCommands + tolerence);
-    HistoryAssert::durationIsInRange(histories[3], histories[4],
-        cmd.delayBetweenCommands, cmd.delayBetweenCommands + tolerence);
-    HistoryAssert::durationIsInRange(histories[5], histories[6],
-        cmd.delayBetweenCommands, cmd.delayBetweenCommands + tolerence);
-
-    HistoryAssert::durationIsInRange(histories[2], histories[3],
-        cmd.delayBetweenRepeatitions, cmd.delayBetweenRepeatitions + tolerence);
-    HistoryAssert::durationIsInRange(histories[4], histories[5],
-        cmd.delayBetweenRepeatitions, cmd.delayBetweenRepeatitions + tolerence);
-
-    HistoryAssert::durationIsInRange(histories[0], histories[1],
-        cmd.delayBeforeCommand, cmd.delayBeforeCommand + tolerence);
-    HistoryAssert::durationIsInRange(histories[6], histories[7],
-        cmd.delayAfterCommand, cmd.delayAfterCommand + tolerence);
+    HistoryAssert::AllDurationAreInRange(histories, {
+        cmd.delayBeforeCommand,
+        cmd.delayBetweenCommands,
+        cmd.delayBetweenRepeatitions,
+        cmd.delayBetweenCommands,
+        cmd.delayBetweenRepeatitions,
+        cmd.delayBetweenCommands,
+        cmd.delayAfterCommand
+        }, tolerence);
 }
 }  // namespace Command
 }  // namespace AutoMacro

@@ -1,6 +1,7 @@
 #include "AutoMacroTest/History/HistoryAssert.h"
 
 #include <string>
+#include <vector>
 
 #include "CppUnitTest.h"
 #include <AutoMacro/History/History.h>
@@ -27,6 +28,20 @@ void HistoryAssert::durationIsInRange(
     using std::chrono::milliseconds;
     auto duration = duration_cast<milliseconds>(last.time - start.time);
     Assert::IsTrue(lowerb < duration.count() && duration.count() < upperb);
+}
+
+void HistoryAssert::AllDurationAreInRange(
+    const Histories& histoies,
+    std::vector<int> expectedTimes,
+    int tolerence) {
+    Assert::AreEqual(expectedTimes.size(), histoies.size() - 1);
+    for (int i = 0; i < expectedTimes.size() - 1; i++) {
+        durationIsInRange(
+            histoies[i],
+            histoies[i + 1],
+            expectedTimes[i],
+            expectedTimes[i] + tolerence);
+    }
 }
 }  // namespace History
 }  // namespace AutoMacro

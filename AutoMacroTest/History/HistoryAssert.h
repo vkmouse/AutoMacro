@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 #include "CppUnitTest.h"
 #include <AutoMacro/History/History.h>
@@ -42,6 +43,11 @@ class HistoryAssert {
         const History& last,
         int lowerb,
         int upperb);
+
+    static void AllDurationAreInRange(
+        const Histories& histoies,
+        std::vector<int> expectedTimes,
+        int tolerence);
 };
 }  // namespace History
 }  // namespace AutoMacro
