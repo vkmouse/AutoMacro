@@ -22,6 +22,7 @@
     <ClInclude Include="Command\Command.h" />
     <ClInclude Include="Command\SendKeyCommand.h" />
     <ClInclude Include="Command\WaitForItemCommand.h" />
+    <ClInclude Include="Command\WaitForItemsCommand.h" />
     <ClInclude Include="Core\Cv.h" />
     <ClInclude Include="Core\Image.h" />
     <ClInclude Include="Core\Keyboard.h" />
@@ -51,6 +52,7 @@
     <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\SendKeyCommand.cpp" />
     <ClCompile Include="Command\WaitForItemCommand.cpp" />
+    <ClCompile Include="Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Core\Cv.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />

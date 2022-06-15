@@ -82,6 +82,9 @@
     <ClCompile Include="Command\WaitForItemCommandTest.cpp">
       <Filter>AutoMacroTest\Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\WaitForItemsCommandTest.cpp">
+      <Filter>AutoMacroTest\Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -129,20 +132,27 @@
     <ClInclude Include="Command\WaitForItemCommandTest.h">
       <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Images\AutoMacroTest\ItemNotExists_10x10_24bits.png">
-      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
-    </Image>
-    <Image Include="Images\AutoMacroTest\Sample_10x10_32bits.png">
-      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
-    </Image>
-    <Image Include="Images\AutoMacroTest\Template_5x5_24bits.png">
-      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
-    </Image>
+    <ClInclude Include="Command\WaitForItemsCommandTest.h">
+      <Filter>AutoMacroTest\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\ItemNotExists_10x10_24bits.png">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\Sample_10x10_32bits.png">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\Template_5x5_24bits.png">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\AllItemExists_10x10_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\BlackWithWhiteBorder_5x5_24bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
   </ItemGroup>

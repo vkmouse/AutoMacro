@@ -115,6 +115,9 @@
     <ClInclude Include="Command\WaitForItemCommand.h">
       <Filter>AutoMacro\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\WaitForItemsCommand.h">
+      <Filter>AutoMacro\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Types.cpp">
@@ -184,6 +187,9 @@
       <Filter>AutoMacro\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command.cpp">
+      <Filter>AutoMacro\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemsCommand.cpp">
       <Filter>AutoMacro\Command</Filter>
     </ClCompile>
   </ItemGroup>
