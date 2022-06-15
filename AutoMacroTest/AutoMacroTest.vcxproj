@@ -36,6 +36,8 @@
     <ClCompile Include="History\HistoryTest.cpp" />
     <ClCompile Include="History\KeyboardHistoryAgentTest.cpp" />
     <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp" />
+    <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
+    <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp" />
     <ClCompile Include="Keyboard\MockKeyboardTest.cpp" />
     <ClCompile Include="Mouse\MockMouseTest.cpp" />
     <ClCompile Include="VideoCapture\ImageFileCaptureTest.cpp" />
@@ -54,6 +56,8 @@
     <ClInclude Include="History\HistoryTest.h" />
     <ClInclude Include="History\KeyboardHistoryAgentTest.h" />
     <ClInclude Include="History\VideoCaptureHistoryAgentTest.h" />
+    <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h" />
+    <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />
     <ClInclude Include="Keyboard\MockKeyboardTest.h" />
     <ClInclude Include="Mouse\MockMouseTest.h" />
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h" />

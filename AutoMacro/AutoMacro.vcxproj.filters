@@ -32,6 +32,9 @@
     <Filter Include="AutoMacro\Command">
       <UniqueIdentifier>{66e82985-4459-4d44-9dfc-d3d8a8dd8a0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\ImageProcessor">
+      <UniqueIdentifier>{2373c9eb-baa1-478e-9dca-74e32582a77c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Types.h">
@@ -79,13 +82,7 @@
     <ClInclude Include="Core\Cv.h">
       <Filter>AutoMacro\Core</Filter>
     </ClInclude>
-    <ClInclude Include="VideoCapture\CroppingProcessor.h">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapturePostProcessor.h">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
-    <ClInclude Include="VideoCapture\BGRConverterProcessor.h">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClInclude>
     <ClInclude Include="Detection\Detector.h">
@@ -117,6 +114,15 @@
     </ClInclude>
     <ClInclude Include="Command\WaitForItemsCommand.h">
       <Filter>AutoMacro\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor.h">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\CroppingProcessor.h">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\BGRConverterProcessor.h">
+      <Filter>AutoMacro\ImageProcessor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -153,12 +159,6 @@
     <ClCompile Include="Core\Cv.cpp">
       <Filter>AutoMacro\Core</Filter>
     </ClCompile>
-    <ClCompile Include="VideoCapture\CroppingProcessor.cpp">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
-    <ClCompile Include="VideoCapture\BGRConverterProcessor.cpp">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapturePostProcessor.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClCompile>
@@ -191,6 +191,15 @@
     </ClCompile>
     <ClCompile Include="Command\WaitForItemsCommand.cpp">
       <Filter>AutoMacro\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\CroppingProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\ImageProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

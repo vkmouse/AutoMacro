@@ -2,8 +2,7 @@
 
 #include "CppUnitTest.h"
 
-#include <AutoMacro/VideoCapture/BGRConverterProcessor.h>
-#include <AutoMacro/VideoCapture/CroppingProcessor.h>
+#include <AutoMacro/ImageProcessor/ImageProcessor.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
@@ -16,12 +15,15 @@ void VideoCapturePostProcessorTest::TestBGRConverterProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addBGRConverterProcessor(videoCapture);
+    ImageProcessor* processor = Factory::createBGRConverterProcessor();
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(3, image.channel());
     }
     delete(videoCapture);
+    delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestCroppingProcessor() {
@@ -29,13 +31,16 @@ void VideoCapturePostProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addCroppingProcessor(videoCapture, 0, 0, 5, 5);
+    ImageProcessor* processor = Factory::createCroppingProcessor(0, 0, 5, 5);
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
         Assert::AreEqual(5, image.height());
     }
     delete(videoCapture);
+    delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestMixedProcessor() {
@@ -43,8 +48,12 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addBGRConverterProcessor(videoCapture);
-    videoCapture = Factory::addCroppingProcessor(videoCapture, 0, 0, 5, 5);
+    ImageProcessor* processor1 = Factory::createBGRConverterProcessor();
+    ImageProcessor* processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor1);
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor2);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
@@ -57,8 +66,10 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addCroppingProcessor(videoCapture, 0, 0, 5, 5);
-    videoCapture = Factory::addBGRConverterProcessor(videoCapture);
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor2);
+    videoCapture = Factory::addVideoCapturePostProcessor(
+        videoCapture, processor1);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
@@ -66,5 +77,7 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         Assert::AreEqual(3, image.channel());
     }
     delete(videoCapture);
+    delete(processor1);
+    delete(processor2);
 }
 }  // namespace AutoMacro

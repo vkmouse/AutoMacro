@@ -5,12 +5,17 @@
 #include "VideoCapturePostProcessor.h"
 
 namespace AutoMacro {
-VideoCapturePostProcessor::VideoCapturePostProcessor(VideoCapture* capture) :
-    capture_(capture) {
+namespace Impl {
+VideoCapturePostProcessor::VideoCapturePostProcessor(
+    VideoCapture* capture,
+    ImageProcessor* processor) :
+    capture_(capture),
+    processor_(processor) {
 }
 
 Image VideoCapturePostProcessor::takeSnapshot() {
     Image image = capture_->takeSnapshot();
-    return process(image);
+    return processor_->process(image);
 }
+}  // namespace Impl
 }  // namespace AutoMacro
