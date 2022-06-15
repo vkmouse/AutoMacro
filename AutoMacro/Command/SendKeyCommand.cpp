@@ -8,32 +8,28 @@ namespace AutoMacro {
 namespace Command {
 SendKeyCommand::SendKeyCommand(
     Keyboard* keyboard,
-    SendKeyCommandParameter parameter) :
-    keyboard_(keyboard) {
-    key_ = parameter.key;
-    delayBeforeCommand_ = parameter.delayBeforeCommand;
-    delayAfterCommand_ = parameter.delayAfterCommand;
-    delayBetweenCommands_ = parameter.delayBetweenCommands;
-    delayBetweenRepeatitions_ = parameter.delayBetweenRepeatitions;
-    repeatTimes_ = parameter.repeatTimes;
+    KeyCode key) :
+    keyboard(keyboard),
+    key(key),
+    delayBetweenCommands(0),
+    delayBetweenRepeatitions(0),
+    repeatTimes(1) {
 }
 
-void SendKeyCommand::execute() {
-    Sleep(delayBeforeCommand_);
-    if (repeatTimes_ >= 1) {
+void SendKeyCommand::executeCommand() {
+    if (repeatTimes >= 1) {
         pressAndRelease();
-        for (int i = 1; i < repeatTimes_; i++) {
-            Sleep(delayBetweenRepeatitions_);
+        for (int i = 1; i < repeatTimes; i++) {
+            Sleep(delayBetweenRepeatitions);
             pressAndRelease();
         }
     }
-    Sleep(delayAfterCommand_);
 }
 
 void SendKeyCommand::pressAndRelease() {
-    keyboard_->pressKey(key_);
-    Sleep(delayBetweenCommands_);
-    keyboard_->releaseKey(key_);
+    keyboard->pressKey(key);
+    Sleep(delayBetweenCommands);
+    keyboard->releaseKey(key);
 }
 }  // namespace Command
 }  // namespace AutoMacro

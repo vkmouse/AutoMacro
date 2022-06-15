@@ -26,14 +26,15 @@ void WaitForItemCommandTest::TestWaitForItemCommand() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
-    WaitForItemCommandParameter p(detector, 0, 0.98f);
-    p.delayBetweenRepeatitions = 100;
-    p.waitForExists = true;
+    WaitForItemCommand cmd(videoCapture, detector, 0, 0.98f);
+    cmd.delayBeforeCommand = 50;
+    cmd.delayAfterCommand = 50;
+    cmd.delayBetweenRepeatitions = 100;
+    cmd.waitForExists = true;
     int tolerence = 40;
 
-    Command* command = new WaitForItemCommand(videoCapture, p);
     histories.record("---");
-    command->execute();
+    cmd.execute();
     histories.record("---");
 
     HistoryAssert::areEqual(histories[0], "---");
@@ -42,10 +43,14 @@ void WaitForItemCommandTest::TestWaitForItemCommand() {
     HistoryAssert::areEqual(histories[3], "takeSnapshot");
     HistoryAssert::areEqual(histories[4], "---");
 
-    HistoryAssert::durationIsInRange(histories[0], histories[4],
-        p.delayBetweenRepeatitions * 2,
-        p.delayBetweenRepeatitions * 2 + tolerence);
-    delete(command);
+    HistoryAssert::durationIsInRange(histories[1], histories[3],
+        cmd.delayBetweenRepeatitions * 2,
+        cmd.delayBetweenRepeatitions * 2 + tolerence);
+
+    HistoryAssert::durationIsInRange(histories[0], histories[1],
+        cmd.delayBeforeCommand, cmd.delayBeforeCommand + tolerence);
+    HistoryAssert::durationIsInRange(histories[3], histories[4],
+        cmd.delayAfterCommand, cmd.delayAfterCommand + tolerence);
 }
 }  // namespace Command
 }  // namespace AutoMacro

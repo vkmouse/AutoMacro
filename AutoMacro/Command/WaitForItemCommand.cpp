@@ -10,24 +10,26 @@ namespace AutoMacro {
 namespace Command {
 WaitForItemCommand::WaitForItemCommand(
     VideoCapture* videoCapture,
-    WaitForItemCommandParameter parameter) :
-    videoCapture_(videoCapture) {
-    detector_ = parameter.detector;
-    index_ = parameter.index;
-    threshold_ = parameter.threshold;
-    delayBetweenRepeatitions_ = parameter.delayBetweenRepeatitions;
-    waitForExists_ = parameter.waitForExists;
+    Detection::Detector* detector,
+    int index,
+    float threshold) :
+    videoCapture(videoCapture),
+    detector(detector),
+    index(index),
+    threshold(threshold),
+    delayBetweenRepeatitions(delayBetweenRepeatitions),
+    waitForExists(waitForExists) {
 }
 
-void WaitForItemCommand::execute() {
-    while (itemExists() != waitForExists_) {
-        Sleep(delayBetweenRepeatitions_);
+void WaitForItemCommand::executeCommand() {
+    while (itemExists() != waitForExists) {
+        Sleep(delayBetweenRepeatitions);
     }
 }
 
 bool WaitForItemCommand::itemExists() {
-    auto results = detector_->detect(videoCapture_->takeSnapshot());
-    return Detection::itemExists(results, index_, threshold_);
+    auto results = detector->detect(videoCapture->takeSnapshot());
+    return Detection::itemExists(results, index, threshold);
 }
 }  // namespace Command
 }  // namespace AutoMacro

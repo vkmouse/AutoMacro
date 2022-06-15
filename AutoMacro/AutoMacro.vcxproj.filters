@@ -183,6 +183,9 @@
     <ClCompile Include="Command\WaitForItemCommand.cpp">
       <Filter>AutoMacro\Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\Command.cpp">
+      <Filter>AutoMacro\Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="..\packages\opencv\bin\opencv_core455.dll">

@@ -5,7 +5,15 @@ namespace AutoMacro {
 namespace Command {
 class DLL_EXPORTS Command {
  public:
-    virtual void execute() = 0;
+    Command();
+
+    virtual void execute();
+
+    int delayBeforeCommand = 0;
+    int delayAfterCommand = 0;
+
+ protected:
+    virtual void executeCommand() = 0;
 };
 }  // namespace Command
 }  // namespace AutoMacro

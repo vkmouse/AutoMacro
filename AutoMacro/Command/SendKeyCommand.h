@@ -5,34 +5,20 @@
 
 namespace AutoMacro {
 namespace Command {
-class DLL_EXPORTS SendKeyCommandParameter {
+class DLL_EXPORTS SendKeyCommand : public Command {
  public:
-    explicit SendKeyCommandParameter(KeyCode key) : key(key) {}
+    SendKeyCommand(Keyboard* keyboard, KeyCode key);
 
-    int delayBeforeCommand = 0;
-    int delayAfterCommand = 0;
+    virtual void executeCommand();
+
+    Keyboard* keyboard;
+    KeyCode key;
     int delayBetweenCommands = 0;
     int delayBetweenRepeatitions = 0;
     int repeatTimes = 1;
-    KeyCode key;
-};
-
-class DLL_EXPORTS SendKeyCommand : public Command {
- public:
-    SendKeyCommand(Keyboard* keyboard, SendKeyCommandParameter parameter);
-
-    virtual void execute();
 
  private:
     void pressAndRelease();
-
-    Keyboard* keyboard_;
-    KeyCode key_;
-    int delayBeforeCommand_ = 0;
-    int delayAfterCommand_ = 0;
-    int delayBetweenCommands_ = 0;
-    int delayBetweenRepeatitions_ = 0;
-    int repeatTimes_ = 1;
 };
 }  // namespace Command
 }  // namespace AutoMacro
