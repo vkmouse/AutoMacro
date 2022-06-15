@@ -140,19 +140,19 @@
     <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_24bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="Images\AutoMacroTest\ItemNotExists_10x10_24bits.png">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="Images\AutoMacroTest\Sample_10x10_32bits.png">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="Images\AutoMacroTest\Template_5x5_24bits.png">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
     <CopyFileToFolders Include="Images\AutoMacroTest\AllItemExists_10x10_24bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="Images\AutoMacroTest\BlackWithWhiteBorder_5x5_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\Template_5x5_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\Sample_10x10_32bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\ItemNotExists_10x10_24bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
   </ItemGroup>
