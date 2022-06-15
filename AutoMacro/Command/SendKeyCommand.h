@@ -9,16 +9,18 @@ class DLL_EXPORTS SendKeyCommand : public Command {
  public:
     SendKeyCommand(Keyboard* keyboard, KeyCode key);
 
-    virtual void executeCommand();
-
-    Keyboard* keyboard;
-    KeyCode key;
     int delayBetweenCommands = 0;
     int delayBetweenRepeatitions = 0;
     int repeatTimes = 1;
 
+ protected:
+    virtual void executeCommand();
+
  private:
     void pressAndRelease();
+
+    Keyboard* keyboard;
+    KeyCode key;
 };
 }  // namespace Command
 }  // namespace AutoMacro
