@@ -8,5 +8,5 @@ namespace Impl {
 Image BGRConverterProcessor::process(const Image& src) {
     return Cv::convertToBGR(src);
 }
-}  //  namespace Impl
+}  // namespace Impl
 }  // namespace AutoMacro

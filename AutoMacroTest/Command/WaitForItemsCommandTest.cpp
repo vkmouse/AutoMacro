@@ -14,7 +14,7 @@ using History::HistoryAssert;
 }  // namespace
 
 void WaitForItemsCommandTest::TestWaitForAllItems() {
-	VideoCapture* videoCapture = Factory::createImageFileCapture({
+    VideoCapture* videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTest\\AllItemExists_10x10_24bits.png" });
