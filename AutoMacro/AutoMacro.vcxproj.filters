@@ -124,6 +124,9 @@
     <ClInclude Include="ImageProcessor\BGRConverterProcessor.h">
       <Filter>AutoMacro\ImageProcessor</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\BaseDetector.h">
+      <Filter>AutoMacro\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Types.cpp">
@@ -200,6 +203,9 @@
     </ClCompile>
     <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp">
       <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\BaseDetector.cpp">
+      <Filter>AutoMacro\Detection</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

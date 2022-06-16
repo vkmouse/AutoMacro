@@ -3,22 +3,24 @@
 #include <string>
 #include <vector>
 
+#include "AutoMacro/Detection/BaseDetector.h"
 #include "AutoMacro/Detection/DetectionResult.h"
-#include "AutoMacro/Detection/Detector.h"
 
 namespace AutoMacro {
 namespace Detection {
 namespace Impl {
-class TemplateBasedDetector : public Detector {
+class TemplateBasedDetector : public BaseDetector {
  public:
-    DLL_EXPORTS TemplateBasedDetector(std::vector<std::string> imagesPath);
+    explicit TemplateBasedDetector(std::vector<std::string> imagesPath);
 
-    DLL_EXPORTS void init() override;
-    DLL_EXPORTS DetectionResults detect(Image image) override;
+    void init() override;
+
+ protected:
+    DetectionResults detect(cv::Mat image) override;
 
  private:
-    class Impl;
-    std::unique_ptr<Impl> impl;
+    std::vector<std::string> imagesPath_;
+    std::vector<cv::Mat> templates_;
 };
 }  // namespace Impl
 }  // namespace Detection

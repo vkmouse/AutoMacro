@@ -30,6 +30,7 @@
     <ClInclude Include="Core\pch.h" />
     <ClInclude Include="Core\Types.h" />
     <ClInclude Include="Core\VideoCapture.h" />
+    <ClInclude Include="Detection\BaseDetector.h" />
     <ClInclude Include="Detection\DetectionResult.h" />
     <ClInclude Include="Detection\DetectionResultsProcessor.h" />
     <ClInclude Include="Detection\Detector.h" />
@@ -57,6 +58,7 @@
     <ClCompile Include="Core\Cv.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
+    <ClCompile Include="Detection\BaseDetector.cpp" />
     <ClCompile Include="Detection\DetectionResult.cpp" />
     <ClCompile Include="Detection\DetectionResultsProcessor.cpp" />
     <ClCompile Include="Detection\Detector.cpp" />
