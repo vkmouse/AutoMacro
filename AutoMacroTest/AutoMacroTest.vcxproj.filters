@@ -94,6 +94,9 @@
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp">
       <Filter>AutoMacroTest\ImageProcessor</Filter>
     </ClCompile>
+    <ClCompile Include="Detection\DetectionPreprocessorTest.cpp">
+      <Filter>AutoMacroTest\Detection</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -150,6 +153,9 @@
     <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h">
       <Filter>AutoMacroTest\ImageProcessor</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\DetectionPreprocessorTest.h">
+      <Filter>AutoMacroTest\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_24bits.png">
@@ -168,6 +174,9 @@
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="Images\AutoMacroTest\ItemNotExists_10x10_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_32bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
   </ItemGroup>

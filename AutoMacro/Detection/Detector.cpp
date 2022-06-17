@@ -4,7 +4,9 @@
 #include <string>
 #include <vector>
 
+#include "AutoMacro/Detection/DetectorPreprocessor.h"
 #include "AutoMacro/Detection/TemplateBasedDetector.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 namespace Factory {
@@ -19,6 +21,12 @@ Detection::Detector* createTemplateBasedDetector(
     detector->init();
 
     return detector;
+}
+
+Detection::Detector* addDetectorPreprocessing(
+    Detection::Detector* detector, 
+    ImageProcessor* processor) {
+    return new Detection::Impl::DetectorPreprocessor(detector, processor);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

@@ -29,6 +29,7 @@
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
     <ClCompile Include="Core\ImageTest.cpp" />
     <ClCompile Include="Core\TypesTest.cpp" />
+    <ClCompile Include="Detection\DetectionPreprocessorTest.cpp" />
     <ClCompile Include="Detection\DetectionResultsProcessorTest.cpp" />
     <ClCompile Include="Detection\DetectionResultTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="Command\WaitForItemsCommandTest.h" />
     <ClInclude Include="Core\ImageTest.h" />
     <ClInclude Include="Core\TypesTest.h" />
+    <ClInclude Include="Detection\DetectionPreprocessorTest.h" />
     <ClInclude Include="Detection\DetectionResultsProcessorTest.h" />
     <ClInclude Include="Detection\DetectionResultTest.h" />
     <ClInclude Include="Detection\TemplateBasedDetectorTest.h" />
@@ -87,6 +89,12 @@
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Images\AutoMacroTest</DestinationFolders>
     </CopyFileToFolders>
     <CopyFileToFolders Include="Images\AutoMacroTest\BlackWithWhiteBorder_5x5_24bits.png">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\Images\AutoMacroTest</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Images\AutoMacroTest</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_32bits.png">
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\Images\AutoMacroTest</DestinationFolders>
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Images\AutoMacroTest</DestinationFolders>
     </CopyFileToFolders>

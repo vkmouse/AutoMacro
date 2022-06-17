@@ -127,6 +127,9 @@
     <ClInclude Include="Detection\BaseDetector.h">
       <Filter>AutoMacro\Detection</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\DetectorPreprocessor.h">
+      <Filter>AutoMacro\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Types.cpp">
@@ -205,6 +208,9 @@
       <Filter>AutoMacro\ImageProcessor</Filter>
     </ClCompile>
     <ClCompile Include="Detection\BaseDetector.cpp">
+      <Filter>AutoMacro\Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\DetectorPreprocessor.cpp">
       <Filter>AutoMacro\Detection</Filter>
     </ClCompile>
   </ItemGroup>

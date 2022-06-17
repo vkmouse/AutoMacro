@@ -5,6 +5,7 @@
 #include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/Image.h"
 #include "AutoMacro/Detection/DetectionResult.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 namespace Detection {
@@ -18,7 +19,7 @@ class DLL_EXPORTS Detector {
 
     virtual ~Detector() {}
 
-    virtual void init() = 0;
+    virtual void init() {}
     virtual DetectionResults detect(Image image) = 0;
 
  protected:
@@ -29,5 +30,7 @@ class DLL_EXPORTS Detector {
 namespace Factory {
 DLL_EXPORTS Detection::Detector* createTemplateBasedDetector(
     std::vector<std::string> imagesPath);
+DLL_EXPORTS Detection::Detector* addDetectorPreprocessing(
+    Detection::Detector* detector, ImageProcessor* processor);
 }  // namespace Factory
 }  // namespace AutoMacro

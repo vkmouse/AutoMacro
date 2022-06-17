@@ -11,7 +11,8 @@ class BaseDetector : public Detector {
     virtual DetectionResults detect(Image image) final;
 
  protected:
-    virtual cv::Mat preprocessing(cv::Mat image);
+    using Detector::Detector;
+
     virtual DetectionResults detect(cv::Mat image) = 0;
 
  private:
