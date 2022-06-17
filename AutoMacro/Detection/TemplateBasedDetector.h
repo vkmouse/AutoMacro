@@ -3,15 +3,19 @@
 #include <string>
 #include <vector>
 
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
 #include "AutoMacro/Detection/BaseDetector.h"
 #include "AutoMacro/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/DetectorParameter.h"
 
 namespace AutoMacro {
 namespace Detection {
 namespace Impl {
 class TemplateBasedDetector : public BaseDetector {
  public:
-    explicit TemplateBasedDetector(std::vector<std::string> imagesPath);
+    explicit TemplateBasedDetector(
+        std::vector<TemplateBasedDetectorParameter> parameters);
 
     void init() override;
 
@@ -19,8 +23,18 @@ class TemplateBasedDetector : public BaseDetector {
     DetectionResults detect(cv::Mat image) override;
 
  private:
+     cv::Mat matchTemplate(
+        cv::InputArray image,
+        cv::InputArray templ,
+        cv::Mat mask);
+
+    DetectionResult getPartOfResult(cv::InputArray src);
+
+    int method = cv::TemplateMatchModes::TM_CCOEFF_NORMED;
     std::vector<std::string> imagesPath_;
+    std::vector<std::string> masksPath_;
     std::vector<cv::Mat> templates_;
+    std::vector<cv::Mat> masks_;
 };
 }  // namespace Impl
 }  // namespace Detection

@@ -34,6 +34,7 @@
     <ClInclude Include="Detection\DetectionResult.h" />
     <ClInclude Include="Detection\DetectionResultsProcessor.h" />
     <ClInclude Include="Detection\Detector.h" />
+    <ClInclude Include="Detection\DetectorParameter.h" />
     <ClInclude Include="Detection\DetectorPreprocessor.h" />
     <ClInclude Include="Detection\TemplateBasedDetector.h" />
     <ClInclude Include="History\History.h" />

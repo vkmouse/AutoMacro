@@ -16,15 +16,35 @@ Detection::Detector* createTemplateBasedDetector(
         throw std::runtime_error{ "No image for template based detector" };
     }
 
+    using Detection::TemplateBasedDetectorParameter;
+    std::vector<TemplateBasedDetectorParameter> parameters;
+    parameters.reserve(imagesPath.size());
+    for (const auto& path : imagesPath) {
+        parameters.push_back(path);
+    }
+
     Detection::Detector* detector =
-        new Detection::Impl::TemplateBasedDetector(imagesPath);
+        new Detection::Impl::TemplateBasedDetector(parameters);
+    detector->init();
+
+    return detector;
+}
+
+Detection::Detector* createTemplateBasedDetectorWithMask(
+    std::vector<Detection::TemplateBasedDetectorParameter> parameters) {
+    if (parameters.size() == 0) {
+        throw std::runtime_error{ "No image for template based detector" };
+    }
+
+    Detection::Detector* detector =
+        new Detection::Impl::TemplateBasedDetector(parameters);
     detector->init();
 
     return detector;
 }
 
 Detection::Detector* addDetectorPreprocessing(
-    Detection::Detector* detector, 
+    Detection::Detector* detector,
     ImageProcessor* processor) {
     return new Detection::Impl::DetectorPreprocessor(detector, processor);
 }

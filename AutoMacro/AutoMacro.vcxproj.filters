@@ -130,6 +130,9 @@
     <ClInclude Include="Detection\DetectorPreprocessor.h">
       <Filter>AutoMacro\Detection</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\DetectorParameter.h">
+      <Filter>AutoMacro\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Types.cpp">

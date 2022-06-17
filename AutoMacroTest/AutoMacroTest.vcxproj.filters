@@ -179,5 +179,11 @@
     <CopyFileToFolders Include="Images\AutoMacroTest\ItemExists_10x10_32bits.png">
       <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
     </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\NotExistedTemplate_5x5_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTest\NotExistedTemplateMask_5x5_24bits.png">
+      <Filter>AutoMacroTest\Images\AutoMacroTest</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>

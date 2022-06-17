@@ -46,5 +46,38 @@ void TemplateBasedDetectorTest::TestTempateBasedDetector() {
     Assert::AreEqual(static_cast<size_t>(1), results.size());
     Assert::IsTrue(itemExists(results, 0, 0.98f));
 }
+
+void TemplateBasedDetectorTest::TestNotExistTemplate() {
+    Detector* detector = Factory::createTemplateBasedDetector({
+        "images\\AutoMacroTest\\NotExistedTemplate_5x5_24bits.png",
+    });
+
+    VideoCapture* capture = Factory::createImageFileCapture({
+        "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
+    });
+
+    DetectionResults results = detector->detect(capture->takeSnapshot());
+
+    Assert::AreEqual(static_cast<size_t>(1), results.size());
+    Assert::IsFalse(itemExists(results, 0, 0.98f));
+}
+
+void TemplateBasedDetectorTest::TestTempateBasedDetectorWithMask() {
+    TemplateBasedDetectorParameter parameter(
+        "images\\AutoMacroTest\\NotExistedTemplate_5x5_24bits.png",
+        "images\\AutoMacroTest\\NotExistedTemplateMask_5x5_24bits.png");
+    Detector* detector = Factory::createTemplateBasedDetectorWithMask({
+        parameter
+    });
+
+    VideoCapture* capture = Factory::createImageFileCapture({
+        "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
+    });
+
+    DetectionResults results = detector->detect(capture->takeSnapshot());
+
+    Assert::AreEqual(static_cast<size_t>(1), results.size());
+    Assert::IsTrue(itemExists(results, 0, 0.98f));
+}
 }  // namespace Detection
 }  // namespace AutoMacro
