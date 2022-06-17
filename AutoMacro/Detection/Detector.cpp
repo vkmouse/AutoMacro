@@ -20,7 +20,7 @@ Detection::Detector* createTemplateBasedDetector(
     std::vector<TemplateBasedDetectorParameter> parameters;
     parameters.reserve(imagesPath.size());
     for (const auto& path : imagesPath) {
-        parameters.push_back(path);
+        parameters.push_back(TemplateBasedDetectorParameter(path));
     }
 
     Detection::Detector* detector =
