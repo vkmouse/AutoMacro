@@ -58,7 +58,7 @@ Detection::Detector* createTemplateBasedDetectorWithMask(
     return detector;
 }
 
-Detection::Detector* addDetectorPreprocessing(
+Detection::Detector* addPreprocessing(
     Detection::Detector* detector,
     ImageProcessor* processor) {
     return new Detection::Impl::DetectorPreprocessor(detector, processor);

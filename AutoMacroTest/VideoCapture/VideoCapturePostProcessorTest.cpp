@@ -16,8 +16,7 @@ void VideoCapturePostProcessorTest::TestBGRConverterProcessor() {
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
     ImageProcessor* processor = Factory::createBGRConverterProcessor();
-    videoCapture = Factory::addVideoCapturePostprocessing(
-        videoCapture, processor);
+    videoCapture = Factory::addPostprocessing(videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(3, image.channel());
@@ -32,8 +31,7 @@ void VideoCapturePostProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
     ImageProcessor* processor = Factory::createCroppingProcessor(0, 0, 5, 5);
-    videoCapture = Factory::addVideoCapturePostprocessing(
-        videoCapture, processor);
+    videoCapture = Factory::addPostprocessing(videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
@@ -50,10 +48,8 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
     });
     ImageProcessor* processor1 = Factory::createBGRConverterProcessor();
     ImageProcessor* processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
-    videoCapture = Factory::addVideoCapturePostprocessing(
-        videoCapture, processor1);
-    videoCapture = Factory::addVideoCapturePostprocessing(
-        videoCapture, processor2);
+    videoCapture = Factory::addPostprocessing(videoCapture, processor1);
+    videoCapture = Factory::addPostprocessing(videoCapture, processor2);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
@@ -66,9 +62,9 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addVideoCapturePostprocessing(
+    videoCapture = Factory::addPostprocessing(
         videoCapture, processor2);
-    videoCapture = Factory::addVideoCapturePostprocessing(
+    videoCapture = Factory::addPostprocessing(
         videoCapture, processor1);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();

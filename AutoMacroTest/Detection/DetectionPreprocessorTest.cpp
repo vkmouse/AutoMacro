@@ -26,7 +26,7 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
     Assert::ExpectException<std::runtime_error>(channelNotEqualFailed);
 
     ImageProcessor* processor = Factory::createBGRConverterProcessor();
-    detector = Factory::addDetectorPreprocessing(detector, processor);
+    detector = Factory::addPreprocessing(detector, processor);
     DetectionResults results = detector->detect(capture->takeSnapshot());
 
     Assert::IsTrue(itemExists(results, 0, 0.98f));
@@ -45,7 +45,7 @@ void DetectionPreprocessorTest::TestCroppingProcessor() {
     Assert::IsTrue(itemExists(results, 0, 0.98f));
 
     ImageProcessor* processor = Factory::createCroppingProcessor(3, 3, 7, 7);
-    detector = Factory::addDetectorPreprocessing(detector, processor);
+    detector = Factory::addPreprocessing(detector, processor);
     results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(itemExists(results, 0, 0.98f));
 }
@@ -60,8 +60,8 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     Detector* detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
-    detector = Factory::addDetectorPreprocessing(detector, processor1);
-    detector = Factory::addDetectorPreprocessing(detector, processor2);
+    detector = Factory::addPreprocessing(detector, processor1);
+    detector = Factory::addPreprocessing(detector, processor2);
     DetectionResults results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(itemExists(results, 0, 0.98f));
 
@@ -70,8 +70,8 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
-    detector = Factory::addDetectorPreprocessing(detector, processor2);
-    detector = Factory::addDetectorPreprocessing(detector, processor1);
+    detector = Factory::addPreprocessing(detector, processor2);
+    detector = Factory::addPreprocessing(detector, processor1);
     results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(itemExists(results, 0, 0.98f));
 }

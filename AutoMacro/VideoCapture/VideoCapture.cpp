@@ -12,7 +12,7 @@ VideoCapture* createImageFileCapture(std::vector<std::string> filenames) {
     return new Impl::ImageFileCapture(filenames);
 }
 
-VideoCapture* addVideoCapturePostprocessing(
+VideoCapture* addPostprocessing(
     VideoCapture* videoCapture,
     ImageProcessor* processor) {
     return new Impl::VideoCapturePostProcessor(videoCapture, processor);
