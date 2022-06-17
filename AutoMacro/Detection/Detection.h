@@ -3,29 +3,17 @@
 #include <vector>
 
 #include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Image.h"
-#include "AutoMacro/Detection/DetectionResult.h"
-#include "AutoMacro/Detection/DetectorParameter.h"
+#include "AutoMacro/Detection/Detection/Detector.h"
+#include "AutoMacro/Detection/Detection/DetectorParameter.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 namespace Detection {
-class DLL_EXPORTS Detector {
- public:
-    Detector(Detector&& other) = default;
-    Detector(const Detector&) = delete;
-
-    Detector& operator=(Detector&& other) = default;
-    Detector& operator=(const Detector&) = delete;
-
-    virtual ~Detector() {}
-
-    virtual void init() {}
-    virtual DetectionResults detect(Image image) = 0;
-
- protected:
-    Detector() {}
-};
+DLL_EXPORTS bool itemExists(
+    const DetectionResults& results,
+    int index,
+    float threshold);
 }  // namespace Detection
 
 namespace Factory {

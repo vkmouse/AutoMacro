@@ -1,6 +1,7 @@
-#include "AutoMacro/Detection/DetectorPreprocessor.h"
+#include "AutoMacro/Detection/Detection/DetectorPreprocessor.h"
 
-#include "AutoMacro/Detection/DetectionResult.h"
+#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {

@@ -1,9 +1,13 @@
-#include "AutoMacro/Detection/TemplateBasedDetector.h"
+#include "AutoMacro/Detection/Detection/TemplateBasedDetector.h"
 
 #include <stdexcept>
+
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
+#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectorParameter.h"
 
 namespace AutoMacro {
 namespace Detection {

@@ -1,7 +1,7 @@
 #include "AutoMacroTest/Command/WaitForItemsCommandTest.h"
 
 #include <AutoMacro/Command/WaitForItemsCommand.h>
-#include <AutoMacro/Detection/Detector.h>
+#include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/History/HistoryAgent.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>

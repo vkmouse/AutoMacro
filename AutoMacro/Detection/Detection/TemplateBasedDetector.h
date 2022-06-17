@@ -5,9 +5,10 @@
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
-#include "AutoMacro/Detection/BaseDetector.h"
-#include "AutoMacro/Detection/DetectionResult.h"
-#include "AutoMacro/Detection/DetectorParameter.h"
+#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Detection/Detection/BaseDetector.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectorParameter.h"
 
 namespace AutoMacro {
 namespace Detection {

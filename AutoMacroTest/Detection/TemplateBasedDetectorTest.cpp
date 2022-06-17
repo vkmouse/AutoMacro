@@ -4,8 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Detection/Detector.h"
-#include "AutoMacro/Detection/DetectionResultsProcessor.h"
+#include <AutoMacro/Detection/Detection.h>
 #include "AutoMacro/VideoCapture/VideoCapture.h"
 
 namespace AutoMacro {

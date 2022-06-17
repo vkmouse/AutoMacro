@@ -5,7 +5,7 @@
 #include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/VideoCapture.h"
 #include "AutoMacro/Command/Command.h"
-#include "AutoMacro/Detection/Detector.h"
+#include "AutoMacro/Detection/Detection.h"
 
 namespace AutoMacro {
 namespace Command {

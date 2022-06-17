@@ -2,8 +2,7 @@
 
 #include "CppUnitTest.h"
 
-#include <AutoMacro/Detection/DetectionResult.h>
-#include <AutoMacro/Detection/DetectionResultsProcessor.h>
+#include <AutoMacro/Detection/Detection.h>
 
 namespace AutoMacro {
 namespace Detection {

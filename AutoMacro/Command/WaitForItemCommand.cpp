@@ -3,8 +3,7 @@
 #include <Windows.h>
 
 #include "AutoMacro/Core/VideoCapture.h"
-#include "AutoMacro/Detection/Detector.h"
-#include "AutoMacro/Detection/DetectionResultsProcessor.h"
+#include "AutoMacro/Detection/Detection.h"
 
 namespace AutoMacro {
 namespace Command {

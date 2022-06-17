@@ -1,4 +1,8 @@
-#include "AutoMacro/Detection/BaseDetector.h"
+#include "AutoMacro/Detection/Detection/BaseDetector.h"
+
+#include <opencv2/core.hpp>
+#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
 
 namespace AutoMacro {
 namespace Detection {

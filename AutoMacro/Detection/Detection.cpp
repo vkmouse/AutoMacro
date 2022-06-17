@@ -1,14 +1,29 @@
-#include "AutoMacro/Detection/Detector.h"
+#include "AutoMacro/Detection/Detection.h"
 
+#include <algorithm>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Detection/DetectorPreprocessor.h"
-#include "AutoMacro/Detection/TemplateBasedDetector.h"
+#include "AutoMacro/Detection/Detection/Detector.h"
+#include "AutoMacro/Detection/Detection/DetectorParameter.h"
+#include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectorPreprocessor.h"
+#include "AutoMacro/Detection/Detection/TemplateBasedDetector.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
+namespace Detection {
+bool itemExists(const DetectionResults& results, int index, float threshold) {
+    auto func = [&index, &threshold](const DetectionResult& item) {
+        return item.index == index && item.confidence > threshold;
+    };
+    auto iterator = std::find_if(results.begin(), results.end(), func);
+    bool found = iterator != results.end();
+    return found;
+}
+}  // namespace Detection
+
 namespace Factory {
 Detection::Detector* createTemplateBasedDetector(
     std::vector<std::string> imagesPath) {

@@ -4,9 +4,7 @@
 
 #include "CppUnitTest.h"
 #include <AutoMacro/ImageProcessor/ImageProcessor.h>
-#include <AutoMacro/Detection/Detector.h>
-#include <AutoMacro/Detection/DetectionResult.h>
-#include "AutoMacro/Detection/DetectionResultsProcessor.h"
+#include <AutoMacro/Detection/Detection.h>
 #include "AutoMacro/VideoCapture/VideoCapture.h"
 
 namespace AutoMacro {
