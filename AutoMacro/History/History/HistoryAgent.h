@@ -2,7 +2,7 @@
 #include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/Keyboard.h"
 #include "AutoMacro/Core/VideoCapture.h"
-#include "AutoMacro/History/History.h"
+#include "AutoMacro/History/History/History.h"
 
 namespace AutoMacro {
 namespace Factory {

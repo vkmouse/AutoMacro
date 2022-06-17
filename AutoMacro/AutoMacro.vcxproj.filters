@@ -41,6 +41,9 @@
     <Filter Include="AutoMacro\ImageProcessor\ImageProcessor">
       <UniqueIdentifier>{3d75d78e-33f4-455d-a63b-d5ee17d5fa12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\History\History">
+      <UniqueIdentifier>{a4eb7af5-49ed-4a1c-b3bd-63e073de34bb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Types.h">
@@ -84,18 +87,6 @@
     </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapturePostProcessor.h">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
-    <ClInclude Include="History\History.h">
-      <Filter>AutoMacro\History</Filter>
-    </ClInclude>
-    <ClInclude Include="History\HistoryAgent.h">
-      <Filter>AutoMacro\History</Filter>
-    </ClInclude>
-    <ClInclude Include="History\KeyboardHistoryAgent.h">
-      <Filter>AutoMacro\History</Filter>
-    </ClInclude>
-    <ClInclude Include="History\VideoCaptureHistoryAgent.h">
-      <Filter>AutoMacro\History</Filter>
     </ClInclude>
     <ClInclude Include="Command\Command.h">
       <Filter>AutoMacro\Command</Filter>
@@ -142,6 +133,21 @@
     <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h">
       <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
     </ClInclude>
+    <ClInclude Include="History\History\History.h">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\History\KeyboardHistoryAgent.h">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\History\VideoCaptureHistoryAgent.h">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\History.h">
+      <Filter>AutoMacro\History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\History\Histories.h">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Types.cpp">
@@ -173,18 +179,6 @@
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapturePostProcessor.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
-    <ClCompile Include="History\History.cpp">
-      <Filter>AutoMacro\History</Filter>
-    </ClCompile>
-    <ClCompile Include="History\HistoryAgent.cpp">
-      <Filter>AutoMacro\History</Filter>
-    </ClCompile>
-    <ClCompile Include="History\KeyboardHistoryAgent.cpp">
-      <Filter>AutoMacro\History</Filter>
-    </ClCompile>
-    <ClCompile Include="History\VideoCaptureHistoryAgent.cpp">
-      <Filter>AutoMacro\History</Filter>
     </ClCompile>
     <ClCompile Include="Command\SendKeyCommand.cpp">
       <Filter>AutoMacro\Command</Filter>
@@ -221,6 +215,18 @@
     </ClCompile>
     <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp">
       <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="History\History\KeyboardHistoryAgent.cpp">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\History\VideoCaptureHistoryAgent.cpp">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\History.cpp">
+      <Filter>AutoMacro\History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\History\Histories.cpp">
+      <Filter>AutoMacro\History\History</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

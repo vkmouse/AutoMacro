@@ -38,9 +38,10 @@
     <ClInclude Include="Detection\Detection\DetectorPreprocessor.h" />
     <ClInclude Include="Detection\Detection\TemplateBasedDetector.h" />
     <ClInclude Include="History\History.h" />
-    <ClInclude Include="History\HistoryAgent.h" />
-    <ClInclude Include="History\KeyboardHistoryAgent.h" />
-    <ClInclude Include="History\VideoCaptureHistoryAgent.h" />
+    <ClInclude Include="History\History\Histories.h" />
+    <ClInclude Include="History\History\History.h" />
+    <ClInclude Include="History\History\KeyboardHistoryAgent.h" />
+    <ClInclude Include="History\History\VideoCaptureHistoryAgent.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor\CroppingProcessor.h" />
@@ -67,9 +68,9 @@
     <ClCompile Include="Detection\Detection\DetectorPreprocessor.cpp" />
     <ClCompile Include="Detection\Detection\TemplateBasedDetector.cpp" />
     <ClCompile Include="History\History.cpp" />
-    <ClCompile Include="History\HistoryAgent.cpp" />
-    <ClCompile Include="History\KeyboardHistoryAgent.cpp" />
-    <ClCompile Include="History\VideoCaptureHistoryAgent.cpp" />
+    <ClCompile Include="History\History\Histories.cpp" />
+    <ClCompile Include="History\History\KeyboardHistoryAgent.cpp" />
+    <ClCompile Include="History\History\VideoCaptureHistoryAgent.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp" />

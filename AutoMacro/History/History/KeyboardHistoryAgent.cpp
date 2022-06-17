@@ -1,6 +1,8 @@
-#include "AutoMacro/History/KeyboardHistoryAgent.h"
+#include "AutoMacro/History/History/KeyboardHistoryAgent.h"
 
 #include <string>
+
+#include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {
 namespace History {

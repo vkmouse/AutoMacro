@@ -1,21 +1,22 @@
-#include <chrono>
-#include <string>
-#include <vector>
-
 #include "AutoMacro/History/History.h"
 
+#include "AutoMacro/Core/Keyboard.h"
+#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/History/History/KeyboardHistoryAgent.h"
+#include "AutoMacro/History/History/VideoCaptureHistoryAgent.h"
+
 namespace AutoMacro {
-namespace History {
-void Histories::record(std::string message) {
-    record(message, {});
+namespace Factory {
+Keyboard* addHistoryAgent(
+    Keyboard* keyboard,
+    History::Histories* histories) {
+    return new History::Impl::KeyboardHistoryAgent(keyboard, histories);
 }
 
-void Histories::record(std::string message, std::vector<void*> pointers) {
-    History history;
-    history.time = std::chrono::high_resolution_clock::now();
-    history.message = message;
-    history.pointers = pointers;
-    push_back(history);
+VideoCapture* addHistoryAgent(
+    VideoCapture* videoCapture,
+    History::Histories* histories) {
+    return new History::Impl::VideoCaptureHistoryAgent(videoCapture, histories);
 }
-}  // namespace History
+}  // namespace Factory
 }  // namespace AutoMacro

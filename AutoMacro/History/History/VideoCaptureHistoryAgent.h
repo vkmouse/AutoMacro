@@ -1,13 +1,12 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/Image.h"
-#include "AutoMacro/History/History.h"
 #include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {
 namespace History {
 namespace Impl {
-class DLL_EXPORTS VideoCaptureHistoryAgent : public VideoCapture {
+class VideoCaptureHistoryAgent : public VideoCapture {
  public:
     VideoCaptureHistoryAgent(VideoCapture* videoCapture, Histories* histories);
 

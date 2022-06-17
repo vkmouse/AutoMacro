@@ -2,7 +2,6 @@
 
 #include "CppUnitTest.h"
 #include <AutoMacro/History/History.h>
-#include <AutoMacro/History/HistoryAgent.h>
 #include <AutoMacro/Keyboard/Keyboard.h>
 #include "AutoMacroTest/History/HistoryAssert.h"
 
@@ -11,7 +10,7 @@ namespace History {
 void KeyboardHistoryAgentTest::TestKeyboardHistoryAgent() {
     Histories histories;
     Keyboard* keyboard = Factory::createMockKeyboard();
-    keyboard = Factory::addKeyboardHistoryAgent(keyboard, &histories);
+    keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
     keyboard->pressKey(KeyCode::KEY_A);
     HistoryAssert::areEqual(histories.back(), "pressKey", KeyCode::KEY_A);

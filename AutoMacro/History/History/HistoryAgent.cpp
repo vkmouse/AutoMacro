@@ -1,9 +1,9 @@
-#include "AutoMacro/History/HistoryAgent.h"
+#include "AutoMacro/History/History/HistoryAgent.h"
 
 #include "AutoMacro/Core/Keyboard.h"
 #include "AutoMacro/Core/VideoCapture.h"
-#include "AutoMacro/History/KeyboardHistoryAgent.h"
-#include "AutoMacro/History/VideoCaptureHistoryAgent.h"
+#include "AutoMacro/History/History/KeyboardHistoryAgent.h"
+#include "AutoMacro/History/History/VideoCaptureHistoryAgent.h"
 
 namespace AutoMacro {
 namespace Factory {

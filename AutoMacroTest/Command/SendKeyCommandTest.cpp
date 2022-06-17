@@ -2,7 +2,6 @@
 
 #include <AutoMacro/Command/SendKeyCommand.h>
 #include <AutoMacro/History/History.h>
-#include <AutoMacro/History/HistoryAgent.h>
 #include <AutoMacro/Keyboard/Keyboard.h>
 #include "AutoMacroTest/History/HistoryAssert.h"
 
@@ -15,7 +14,7 @@ using History::HistoryAssert;
 void SendKeyCommandTest::TestSendKeyCommand() {
     History::Histories histories;
     Keyboard* keyboard = Factory::createMockKeyboard();
-    keyboard = Factory::addKeyboardHistoryAgent(keyboard, &histories);
+    keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
     SendKeyCommand cmd(keyboard, KeyCode::KEY_A);
     cmd.delayBeforeCommand = 50;

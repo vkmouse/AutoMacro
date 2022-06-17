@@ -3,7 +3,6 @@
 #include <AutoMacro/Command/WaitForItemCommand.h>
 #include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
-#include <AutoMacro/History/HistoryAgent.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 #include "AutoMacroTest/History/HistoryAssert.h"
 
@@ -20,7 +19,7 @@ void WaitForItemCommandTest::TestWaitForItemExist() {
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png" });
 
     History::Histories histories;
-    videoCapture = Factory::addVideoCaptureHistoryAgent(
+    videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
     Detection::Detector* detector = Factory::createTemplateBasedDetector({
@@ -57,7 +56,7 @@ void WaitForItemCommandTest::TestWaitForItemNotExist() {
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png" });
 
     History::Histories histories;
-    videoCapture = Factory::addVideoCaptureHistoryAgent(
+    videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
     Detection::Detector* detector = Factory::createTemplateBasedDetector({

@@ -1,14 +1,13 @@
 #pragma once
 #include <string>
 
-#include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/Keyboard.h"
-#include "AutoMacro/History/History.h"
+#include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {
 namespace History {
 namespace Impl {
-class DLL_EXPORTS KeyboardHistoryAgent : public Keyboard {
+class KeyboardHistoryAgent : public Keyboard {
  public:
     static std::string keyToString(KeyCode key);
 

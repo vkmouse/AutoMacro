@@ -2,7 +2,6 @@
 
 #include "CppUnitTest.h"
 #include <AutoMacro/History/History.h>
-#include <AutoMacro/History/HistoryAgent.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 #include "AutoMacroTest/History/HistoryAssert.h"
 
@@ -14,7 +13,7 @@ void VideoCaptureHistoryAgentTest::TestVideoCaptureHistoryAgent() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png"
     });
     videoCapture =
-        Factory::addVideoCaptureHistoryAgent(videoCapture, &histories);
+        Factory::addHistoryAgent(videoCapture, &histories);
 
     videoCapture->takeSnapshot();
     HistoryAssert::areEqual(histories.back(), "takeSnapshot");

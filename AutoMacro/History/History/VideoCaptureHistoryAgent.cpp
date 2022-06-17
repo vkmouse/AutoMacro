@@ -1,6 +1,8 @@
-#include "AutoMacro/History/VideoCaptureHistoryAgent.h"
+#include "AutoMacro/History/History/VideoCaptureHistoryAgent.h"
 
 #include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {
 namespace History {
