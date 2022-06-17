@@ -1,4 +1,4 @@
-#include "AutoMacro/ImageProcessor/BGRConverterProcessor.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor/BGRConverterProcessor.h"
 
 #include "AutoMacro/Core/Cv.h"
 #include "AutoMacro/Core/Image.h"

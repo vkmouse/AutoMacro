@@ -38,6 +38,9 @@
     <Filter Include="AutoMacro\Detection\Detection">
       <UniqueIdentifier>{08820808-be7f-441c-a3b1-fca1c659ebf7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\ImageProcessor\ImageProcessor">
+      <UniqueIdentifier>{3d75d78e-33f4-455d-a63b-d5ee17d5fa12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Types.h">
@@ -106,15 +109,6 @@
     <ClInclude Include="Command\WaitForItemsCommand.h">
       <Filter>AutoMacro\Command</Filter>
     </ClInclude>
-    <ClInclude Include="ImageProcessor\ImageProcessor.h">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageProcessor\CroppingProcessor.h">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageProcessor\BGRConverterProcessor.h">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClInclude>
     <ClInclude Include="Detection\Detection.h">
       <Filter>AutoMacro\Detection</Filter>
     </ClInclude>
@@ -135,6 +129,18 @@
     </ClInclude>
     <ClInclude Include="Detection\Detection\TemplateBasedDetector.h">
       <Filter>AutoMacro\Detection\Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor.h">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.h">
+      <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor\CroppingProcessor.h">
+      <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h">
+      <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -192,15 +198,6 @@
     <ClCompile Include="Command\WaitForItemsCommand.cpp">
       <Filter>AutoMacro\Command</Filter>
     </ClCompile>
-    <ClCompile Include="ImageProcessor\CroppingProcessor.cpp">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageProcessor\ImageProcessor.cpp">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp">
-      <Filter>AutoMacro\ImageProcessor</Filter>
-    </ClCompile>
     <ClCompile Include="Detection\Detection.cpp">
       <Filter>AutoMacro\Detection</Filter>
     </ClCompile>
@@ -215,6 +212,15 @@
     </ClCompile>
     <ClCompile Include="Detection\Detection\TemplateBasedDetector.cpp">
       <Filter>AutoMacro\Detection\Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\ImageProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp">
+      <Filter>AutoMacro\ImageProcessor\ImageProcessor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

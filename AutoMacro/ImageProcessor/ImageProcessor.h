@@ -1,17 +1,9 @@
 #pragma once
 #include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Image.h"
 #include "AutoMacro/Core/Types.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
-class DLL_EXPORTS ImageProcessor {
- public:
-    virtual Image process(const Image& src) = 0;
-
- protected:
-     ImageProcessor() = default;
-};
-
 namespace Factory {
 DLL_EXPORTS ImageProcessor* createBGRConverterProcessor();
 DLL_EXPORTS ImageProcessor* createCroppingProcessor(

@@ -1,12 +1,11 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
 #include "AutoMacro/Core/Image.h"
 #include "AutoMacro/Core/Types.h"
-#include "AutoMacro/ImageProcessor/ImageProcessor.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 namespace Impl {
-class DLL_EXPORTS CroppingProcessor : public ImageProcessor {
+class CroppingProcessor : public ImageProcessor {
  public:
     explicit CroppingProcessor(Rect region);
 

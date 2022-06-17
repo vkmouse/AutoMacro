@@ -42,8 +42,9 @@
     <ClInclude Include="History\KeyboardHistoryAgent.h" />
     <ClInclude Include="History\VideoCaptureHistoryAgent.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor.h" />
-    <ClInclude Include="ImageProcessor\BGRConverterProcessor.h" />
-    <ClInclude Include="ImageProcessor\CroppingProcessor.h" />
+    <ClInclude Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.h" />
+    <ClInclude Include="ImageProcessor\ImageProcessor\CroppingProcessor.h" />
+    <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="Keyboard\Keyboard.h" />
     <ClInclude Include="Keyboard\MockKeyboard.h" />
     <ClInclude Include="Mouse\MockMouse.h" />
@@ -70,8 +71,8 @@
     <ClCompile Include="History\KeyboardHistoryAgent.cpp" />
     <ClCompile Include="History\VideoCaptureHistoryAgent.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor.cpp" />
-    <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp" />
-    <ClCompile Include="ImageProcessor\CroppingProcessor.cpp" />
+    <ClCompile Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.cpp" />
+    <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp" />
     <ClCompile Include="Keyboard\Keyboard.cpp" />
     <ClCompile Include="Keyboard\MockKeyboard.cpp" />
     <ClCompile Include="Mouse\MockMouse.cpp" />

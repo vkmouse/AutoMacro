@@ -1,4 +1,4 @@
-#include "AutoMacro/ImageProcessor/CroppingProcessor.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor/CroppingProcessor.h"
 
 #include "AutoMacro/Core/Cv.h"
 #include "AutoMacro/Core/Image.h"
