@@ -16,7 +16,7 @@ void VideoCapturePostProcessorTest::TestBGRConverterProcessor() {
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
     ImageProcessor* processor = Factory::createBGRConverterProcessor();
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
@@ -32,7 +32,7 @@ void VideoCapturePostProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
     ImageProcessor* processor = Factory::createCroppingProcessor(0, 0, 5, 5);
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
@@ -50,9 +50,9 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
     });
     ImageProcessor* processor1 = Factory::createBGRConverterProcessor();
     ImageProcessor* processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor1);
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor2);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
@@ -66,9 +66,9 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor2);
-    videoCapture = Factory::addVideoCapturePostProcessor(
+    videoCapture = Factory::addVideoCapturePostprocessing(
         videoCapture, processor1);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
