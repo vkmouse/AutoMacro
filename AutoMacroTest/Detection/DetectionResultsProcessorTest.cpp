@@ -21,6 +21,8 @@ void DetectionResultsProcessorTest::TestItemExists() {
 
     DetectionResults results { result1, result2 };
 
+    Assert::IsTrue(itemExists(results, 0.8f));
+    Assert::IsFalse(itemExists(results, 0.95f));
     Assert::IsTrue(itemExists(results, 1, 0.8f));
     Assert::IsFalse(itemExists(results, 2, 0.8f));
 }

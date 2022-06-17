@@ -14,6 +14,10 @@ DLL_EXPORTS bool itemExists(
     const DetectionResults& results,
     int index,
     float threshold);
+
+DLL_EXPORTS bool itemExists(
+    const DetectionResults& results,
+    float threshold);
 }  // namespace Detection
 
 namespace Factory {
