@@ -1,5 +1,6 @@
 #include "AutoMacro/Detection/TemplateBasedDetector.h"
 
+#include <stdexcept>
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
@@ -28,6 +29,11 @@ DetectionResults TemplateBasedDetector::detect(cv::Mat image) {
     for (int i = 0; i < templates_.size(); i++) {
         cv::Mat templ = templates_[i];
         cv::Mat result;
+
+        if (templ.type() != image.type()) {
+            throw (std::runtime_error("image type and template type are not equal"));
+        }
+
         cv::matchTemplate(
             image,
             templ,
