@@ -38,7 +38,7 @@ WaitForItemsCommand::WaitForItemsCommand(
     impl(new Impl(videoCapture, detectors, indices, thresholds)) {
     assert(impl->detectors.size() == impl->indices.size());
     assert(impl->detectors.size() == impl->thresholds.size());
-    numDetectors = detectors.size();
+    numDetectors = static_cast<int>(detectors.size());
 }
 
 WaitForItemsCommand::~WaitForItemsCommand() {
