@@ -43,6 +43,5 @@ Image ImageFileCapture::takeSnapshot() {
     impl->next();
     return image;
 }
-}  // namespace Mouse
-}  // namespace AutoMacro 
-
+}  // namespace Impl
+}  // namespace AutoMacro

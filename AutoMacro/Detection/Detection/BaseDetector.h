@@ -9,7 +9,7 @@ namespace Detection {
 namespace Impl {
 class BaseDetector : public Detector {
  public:
-    virtual DetectionResults detect(Image image) final;
+    DetectionResults detect(Image image) final;
 
  protected:
     using Detector::Detector;
