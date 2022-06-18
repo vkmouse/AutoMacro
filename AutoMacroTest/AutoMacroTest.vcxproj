@@ -33,7 +33,6 @@
     <ClCompile Include="Detection\DetectionResultsProcessorTest.cpp" />
     <ClCompile Include="Detection\DetectionResultTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
-    <ClCompile Include="History\HistoryAssert.cpp" />
     <ClCompile Include="History\HistoryTest.cpp" />
     <ClCompile Include="History\KeyboardHistoryAgentTest.cpp" />
     <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp" />
@@ -54,7 +53,6 @@
     <ClInclude Include="Detection\DetectionResultsProcessorTest.h" />
     <ClInclude Include="Detection\DetectionResultTest.h" />
     <ClInclude Include="Detection\TemplateBasedDetectorTest.h" />
-    <ClInclude Include="History\HistoryAssert.h" />
     <ClInclude Include="History\HistoryTest.h" />
     <ClInclude Include="History\KeyboardHistoryAgentTest.h" />
     <ClInclude Include="History\VideoCaptureHistoryAgentTest.h" />

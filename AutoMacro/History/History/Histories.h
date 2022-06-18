@@ -18,8 +18,11 @@ class Histories : public std::vector<History> {
     template <typename T, typename ...Ts>
     DLL_EXPORTS void record(std::string message, T first, Ts... rest);
 
+    DLL_EXPORTS bool allDurationsAreInRange(
+        std::vector<int> expectedTimes, int tolerence) const;
+
  private:
-    DLL_EXPORTS void record(std::string message, std::vector<void*> pointers);
+    DLL_EXPORTS void record(std::string message, std::vector<void*> parameters);
 
     std::vector<void*> pointers_;
 };

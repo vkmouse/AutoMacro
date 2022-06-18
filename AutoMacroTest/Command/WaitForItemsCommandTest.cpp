@@ -4,12 +4,11 @@
 #include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
-#include "AutoMacroTest/History/HistoryAssert.h"
 
 namespace AutoMacro {
 namespace Command {
 namespace {
-using History::HistoryAssert;
+using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void WaitForItemsCommandTest::TestWaitForAllItems() {
@@ -43,13 +42,13 @@ void WaitForItemsCommandTest::TestWaitForAllItems() {
     cmd.execute();
     histories.record("---");
 
-    HistoryAssert::areEqual(histories[0], "---");
-    HistoryAssert::areEqual(histories[1], "takeSnapshot");
-    HistoryAssert::areEqual(histories[2], "takeSnapshot");
-    HistoryAssert::areEqual(histories[3], "takeSnapshot");
-    HistoryAssert::areEqual(histories[4], "---");
+    Assert::IsTrue(histories[0].equals("---"));
+    Assert::IsTrue(histories[1].equals("takeSnapshot"));
+    Assert::IsTrue(histories[2].equals("takeSnapshot"));
+    Assert::IsTrue(histories[3].equals("takeSnapshot"));
+    Assert::IsTrue(histories[4].equals("---"));
 
-    HistoryAssert::AllDurationAreInRange(histories, {
+    histories.allDurationsAreInRange({
         cmd.delayBeforeCommand,
         cmd.delayBetweenRepeatitions,
         cmd.delayBetweenRepeatitions,
@@ -90,14 +89,14 @@ void WaitForItemsCommandTest::TestWaitForAtLeastOneItem() {
     cmd.execute();
     histories.record("---");
 
-    HistoryAssert::areEqual(histories[0], "---");
-    HistoryAssert::areEqual(histories[1], "takeSnapshot");
-    HistoryAssert::areEqual(histories[2], "takeSnapshot");
-    HistoryAssert::areEqual(histories[3], "---");
-    HistoryAssert::areEqual(histories[4], "takeSnapshot");
-    HistoryAssert::areEqual(histories[5], "---");
+    Assert::IsTrue(histories[0].equals("---"));
+    Assert::IsTrue(histories[1].equals("takeSnapshot"));
+    Assert::IsTrue(histories[2].equals("takeSnapshot"));
+    Assert::IsTrue(histories[3].equals("---"));
+    Assert::IsTrue(histories[4].equals("takeSnapshot"));
+    Assert::IsTrue(histories[5].equals("---"));
 
-    HistoryAssert::AllDurationAreInRange(histories, {
+    histories.allDurationsAreInRange({
         cmd.delayBeforeCommand,
         cmd.delayBetweenRepeatitions,
         cmd.delayAfterCommand,

@@ -3,10 +3,13 @@
 #include "CppUnitTest.h"
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
-#include "AutoMacroTest/History/HistoryAssert.h"
 
 namespace AutoMacro {
 namespace History {
+namespace {
+using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
+}  // namespace
+
 void VideoCaptureHistoryAgentTest::TestVideoCaptureHistoryAgent() {
     Histories histories;
     VideoCapture* videoCapture = Factory::createImageFileCapture({
@@ -16,7 +19,7 @@ void VideoCaptureHistoryAgentTest::TestVideoCaptureHistoryAgent() {
         Factory::addHistoryAgent(videoCapture, &histories);
 
     videoCapture->takeSnapshot();
-    HistoryAssert::areEqual(histories.back(), "takeSnapshot");
+    Assert::IsTrue(histories.back().equals("takeSnapshot"));
 }
 }  // namespace History
 }  // namespace AutoMacro

@@ -3,12 +3,11 @@
 #include <AutoMacro/Command/SendKeyCommand.h>
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/Keyboard/Keyboard.h>
-#include "AutoMacroTest/History/HistoryAssert.h"
 
 namespace AutoMacro {
 namespace Command {
 namespace {
-using History::HistoryAssert;
+using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void SendKeyCommandTest::TestSendKeyCommand() {
@@ -28,16 +27,16 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     cmd.execute();
     histories.record("---");
 
-    HistoryAssert::areEqual(histories[0], "---");
-    HistoryAssert::areEqual(histories[1], "pressKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[2], "releaseKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[3], "pressKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[4], "releaseKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[5], "pressKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[6], "releaseKey", KeyCode::KEY_A);
-    HistoryAssert::areEqual(histories[7], "---");
+    Assert::IsTrue(histories[0].equals("---"));
+    Assert::IsTrue(histories[1].equals("pressKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[2].equals("releaseKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[3].equals("pressKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[4].equals("releaseKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[5].equals("pressKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[6].equals("releaseKey", KeyCode::KEY_A));
+    Assert::IsTrue(histories[7].equals("---"));
 
-    HistoryAssert::AllDurationAreInRange(histories, {
+    histories.allDurationsAreInRange({
         cmd.delayBeforeCommand,
         cmd.delayBetweenCommands,
         cmd.delayBetweenRepeatitions,

@@ -64,9 +64,6 @@
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClCompile>
-    <ClCompile Include="History\HistoryAssert.cpp">
-      <Filter>AutoMacroTest\History</Filter>
-    </ClCompile>
     <ClCompile Include="History\HistoryTest.cpp">
       <Filter>AutoMacroTest\History</Filter>
     </ClCompile>
@@ -122,9 +119,6 @@
     </ClInclude>
     <ClInclude Include="Detection\TemplateBasedDetectorTest.h">
       <Filter>AutoMacroTest\Detection</Filter>
-    </ClInclude>
-    <ClInclude Include="History\HistoryAssert.h">
-      <Filter>AutoMacroTest\History</Filter>
     </ClInclude>
     <ClInclude Include="History\HistoryTest.h">
       <Filter>AutoMacroTest\History</Filter>
