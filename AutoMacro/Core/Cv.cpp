@@ -48,7 +48,7 @@ Image imread(std::string filename) {
 
 Image cropping(const Image& image, Rect region) {
     cv::Mat mat = imageToMat(image);
-    mat = mat(toCvRect(region));
+    mat = mat(toCvRect(region)).clone();
     return matToImage(mat);
 }
 
