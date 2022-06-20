@@ -1,6 +1,6 @@
 #include "AutoMacroTest/Command/SendKeyCommandTest.h"
 
-#include <AutoMacro/Command/SendKeyCommand.h>
+#include <AutoMacro/Command/Command.h>
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/Keyboard/Keyboard.h>
 
@@ -15,16 +15,17 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     auto keyboard = Factory::createMockKeyboard();
     keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
-    SendKeyCommand cmd(keyboard, KeyCode::KEY_A);
-    cmd.delayBeforeCommand = 50;
-    cmd.delayAfterCommand = 50;
-    cmd.delayBetweenCommands = 50;
-    cmd.delayBetweenRepeatitions = 50;
-    cmd.repeatTimes = 3;
-    int tolerence = 40;
+    SendKeyCommandParameter p(keyboard, KeyCode::KEY_A);
+    p.delayBeforeCommand = 50;
+    p.delayAfterCommand = 50;
+    p.delayBetweenCommands = 50;
+    p.delayBetweenRepeatitions = 50;
+    p.repeatTimes = 3;
+
+    auto cmd = Factory::createCommand(&p);
 
     histories.record("---");
-    cmd.execute();
+    cmd->execute();
     histories.record("---");
 
     Assert::IsTrue(histories[0].equals("---"));
@@ -37,14 +38,14 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     Assert::IsTrue(histories[7].equals("---"));
 
     histories.allDurationsAreInRange({
-        cmd.delayBeforeCommand,
-        cmd.delayBetweenCommands,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayBetweenCommands,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayBetweenCommands,
-        cmd.delayAfterCommand
-        }, tolerence);
+        p.delayBeforeCommand,
+        p.delayBetweenCommands,
+        p.delayBetweenRepeatitions,
+        p.delayBetweenCommands,
+        p.delayBetweenRepeatitions,
+        p.delayBetweenCommands,
+        p.delayAfterCommand
+        }, 40);
 }
 }  // namespace Command
 }  // namespace AutoMacro

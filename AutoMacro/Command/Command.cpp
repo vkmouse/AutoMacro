@@ -1,17 +1,26 @@
-#pragma once
 #include "AutoMacro/Command/Command.h"
 
-#include <Windows.h>
+#include <memory>
+
+#include "AutoMacro/Command/Command/SendKeyCommand.h"
+#include "AutoMacro/Command/Command/WaitForItemCommand.h"
+#include "AutoMacro/Command/Command/WaitForItemsCommand.h"
 
 namespace AutoMacro {
-namespace Command {
-Command::Command() : delayBeforeCommand(0), delayAfterCommand(0) {
+namespace Factory {
+std::shared_ptr<Command::Command> createCommand(
+    Command::SendKeyCommandParameter* parameter) {
+    return std::make_shared<Command::SendKeyCommand>(parameter);
 }
 
-void Command::execute() {
-    Sleep(delayBeforeCommand);
-    executeCommand();
-    Sleep(delayAfterCommand);
+std::shared_ptr<Command::Command> createCommand(
+    Command::WaitForItemCommandParameter* parameter) {
+    return std::make_shared<Command::WaitForItemCommand>(parameter);
 }
-}  // namespace Command
+
+std::shared_ptr<Command::Command> createCommand(
+    Command::WaitForItemsCommandParameter* parameter) {
+    return std::make_shared<Command::WaitForItemsCommand>(parameter);
+}
+}  // namespace Factory
 }  // namespace AutoMacro

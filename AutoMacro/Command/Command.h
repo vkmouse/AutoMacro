@@ -1,20 +1,17 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Command/Command/Command.h"
+#include "AutoMacro/Command/Command/CommandParameter.h"
 
 namespace AutoMacro {
-namespace Command {
-class DLL_EXPORTS Command {
- public:
-    Command();
-    virtual ~Command() = default;
-
-    virtual void execute();
-
-    int delayBeforeCommand = 0;
-    int delayAfterCommand = 0;
-
- protected:
-    virtual void executeCommand() = 0;
-};
-}  // namespace Command
+namespace Factory {
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::SendKeyCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::WaitForItemCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::WaitForItemsCommandParameter* parameter);
+}  // namespace Factory
 }  // namespace AutoMacro

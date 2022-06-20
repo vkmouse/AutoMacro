@@ -20,9 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command\Command.h" />
-    <ClInclude Include="Command\SendKeyCommand.h" />
-    <ClInclude Include="Command\WaitForItemCommand.h" />
-    <ClInclude Include="Command\WaitForItemsCommand.h" />
+    <ClInclude Include="Command\Command\Command.h" />
+    <ClInclude Include="Command\Command\CommandParameter.h" />
+    <ClInclude Include="Command\Command\SendKeyCommand.h" />
+    <ClInclude Include="Command\Command\WaitForCommand.h" />
+    <ClInclude Include="Command\Command\WaitForItemCommand.h" />
+    <ClInclude Include="Command\Command\WaitForItemsCommand.h" />
     <ClInclude Include="Core\Core.h" />
     <ClInclude Include="Core\Core\Image.h" />
     <ClInclude Include="Core\Core\Keyboard.h" />
@@ -57,9 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command.cpp" />
-    <ClCompile Include="Command\SendKeyCommand.cpp" />
-    <ClCompile Include="Command\WaitForItemCommand.cpp" />
-    <ClCompile Include="Command\WaitForItemsCommand.cpp" />
+    <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
+    <ClCompile Include="Command\Command\WaitForCommand.cpp" />
+    <ClCompile Include="Command\Command\WaitForItemCommand.cpp" />
+    <ClCompile Include="Command\Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Core\Core\Image.cpp" />
     <ClCompile Include="Core\Core\Types.cpp" />
     <ClCompile Include="Cv\Cv.cpp" />

@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include <AutoMacro/Command/WaitForItemCommand.h>
+#include <AutoMacro/Command/Command.h>
 #include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
@@ -26,14 +26,16 @@ void WaitForItemCommandTest::TestWaitForItemExist() {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
 
-    WaitForItemCommand cmd(videoCapture, detector, 0, 0.98f);
-    cmd.delayBeforeCommand = 50;
-    cmd.delayAfterCommand = 50;
-    cmd.delayBetweenRepeatitions = 100;
-    cmd.waitForExists = true;
+    WaitForItemCommandParameter p(videoCapture, detector, 0, 0.98f);
+    p.delayBeforeCommand = 50;
+    p.delayAfterCommand = 50;
+    p.delayBetweenRepeatitions = 100;
+    p.waitForExists = true;
+
+    auto cmd = Factory::createCommand(&p);
 
     histories.record("---");
-    cmd.execute();
+    cmd->execute();
     histories.record("---");
 
     Assert::IsTrue(histories[0].equals("---"));
@@ -43,10 +45,10 @@ void WaitForItemCommandTest::TestWaitForItemExist() {
     Assert::IsTrue(histories[4].equals("---"));
 
     histories.allDurationsAreInRange({
-        cmd.delayBeforeCommand,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayAfterCommand
+        p.delayBeforeCommand,
+        p.delayBetweenRepeatitions,
+        p.delayBetweenRepeatitions,
+        p.delayAfterCommand
         }, 40);
 }
 
@@ -63,14 +65,16 @@ void WaitForItemCommandTest::TestWaitForItemNotExist() {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
 
-    WaitForItemCommand cmd(videoCapture, detector, 0, 0.98f);
-    cmd.delayBeforeCommand = 50;
-    cmd.delayAfterCommand = 50;
-    cmd.delayBetweenRepeatitions = 100;
-    cmd.waitForExists = false;
+    WaitForItemCommandParameter p(videoCapture, detector, 0, 0.98f);
+    p.delayBeforeCommand = 50;
+    p.delayAfterCommand = 50;
+    p.delayBetweenRepeatitions = 100;
+    p.waitForExists = false;
+
+    auto cmd = Factory::createCommand(&p);
 
     histories.record("---");
-    cmd.execute();
+    cmd->execute();
     histories.record("---");
 
     Assert::IsTrue(histories[0].equals("---"));
@@ -80,10 +84,10 @@ void WaitForItemCommandTest::TestWaitForItemNotExist() {
     Assert::IsTrue(histories[4].equals("---"));
 
     histories.allDurationsAreInRange({
-        cmd.delayBeforeCommand,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayBetweenRepeatitions,
-        cmd.delayAfterCommand
+        p.delayBeforeCommand,
+        p.delayBetweenRepeatitions,
+        p.delayBetweenRepeatitions,
+        p.delayAfterCommand
         }, 40);
 }
 }  // namespace Command

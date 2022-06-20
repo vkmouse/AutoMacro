@@ -1,18 +1,15 @@
 #pragma once
 #include <memory>
 
-#include "AutoMacro/Core/Core.h"
-#include "AutoMacro/Command/Command.h"
+#include "AutoMacro/Command/Command/Command.h"
+#include "AutoMacro/Command/Command/CommandParameter.h"
+#include "AutoMacro/Keyboard/Keyboard.h"
 
 namespace AutoMacro {
 namespace Command {
 class SendKeyCommand : public Command {
  public:
-    DLL_EXPORTS SendKeyCommand(std::shared_ptr<Keyboard> keyboard, KeyCode key);
-
-    int delayBetweenCommands = 0;
-    int delayBetweenRepeatitions = 0;
-    int repeatTimes = 1;
+    explicit SendKeyCommand(SendKeyCommandParameter* p);
 
  protected:
     virtual void executeCommand();
@@ -22,6 +19,9 @@ class SendKeyCommand : public Command {
 
     std::shared_ptr<Keyboard> keyboard;
     KeyCode key;
+    int delayBetweenCommands;
+    int delayBetweenRepeatitions;
+    int repeatTimes;
 };
 }  // namespace Command
 }  // namespace AutoMacro

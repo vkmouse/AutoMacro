@@ -59,6 +59,9 @@
     <Filter Include="AutoMacro\VideoCapture\VideoCapture">
       <UniqueIdentifier>{29d0b60a-073f-481f-98a5-1e73b3fb5449}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\Command\Command">
+      <UniqueIdentifier>{9a801732-86a2-469a-a148-28a7470ac090}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mouse\Mouse.h">
@@ -69,18 +72,6 @@
     </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapture.h">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\Command.h">
-      <Filter>AutoMacro\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\SendKeyCommand.h">
-      <Filter>AutoMacro\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemCommand.h">
-      <Filter>AutoMacro\Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemsCommand.h">
-      <Filter>AutoMacro\Command</Filter>
     </ClInclude>
     <ClInclude Include="Detection\Detection.h">
       <Filter>AutoMacro\Detection</Filter>
@@ -166,6 +157,27 @@
     <ClInclude Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.h">
       <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\CommandParameter.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\Command.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\SendKeyCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WaitForItemCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WaitForItemsCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command.h">
+      <Filter>AutoMacro\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WaitForCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mouse\Mouse.cpp">
@@ -176,18 +188,6 @@
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\SendKeyCommand.cpp">
-      <Filter>AutoMacro\Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\WaitForItemCommand.cpp">
-      <Filter>AutoMacro\Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\Command.cpp">
-      <Filter>AutoMacro\Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\WaitForItemsCommand.cpp">
-      <Filter>AutoMacro\Command</Filter>
     </ClCompile>
     <ClCompile Include="Detection\Detection.cpp">
       <Filter>AutoMacro\Detection</Filter>
@@ -245,6 +245,21 @@
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.cpp">
       <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\SendKeyCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WaitForItemCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WaitForItemsCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command.cpp">
+      <Filter>AutoMacro\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WaitForCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

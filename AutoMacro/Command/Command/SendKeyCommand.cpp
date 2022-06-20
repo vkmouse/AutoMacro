@@ -1,20 +1,20 @@
-#include "AutoMacro/Command/SendKeyCommand.h"
+#include "AutoMacro/Command/Command/SendKeyCommand.h"
 
 #include <Windows.h>
 #include <memory>
 
-#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Command/Command/CommandParameter.h"
+#include "AutoMacro/Keyboard/Keyboard.h"
 
 namespace AutoMacro {
 namespace Command {
-SendKeyCommand::SendKeyCommand(
-    std::shared_ptr<Keyboard> keyboard,
-    KeyCode key) :
-    keyboard(keyboard),
-    key(key),
-    delayBetweenCommands(0),
-    delayBetweenRepeatitions(0),
-    repeatTimes(1) {
+SendKeyCommand::SendKeyCommand(SendKeyCommandParameter* p) :
+    Command(p),
+    keyboard(p->keyboard),
+    key(p->key),
+    delayBetweenCommands(p->delayBetweenCommands),
+    delayBetweenRepeatitions(p->delayBetweenRepeatitions),
+    repeatTimes(p->repeatTimes) {
 }
 
 void SendKeyCommand::executeCommand() {
