@@ -2,27 +2,25 @@
 
 #include "CppUnitTest.h"
 #include <AutoMacro/Keyboard/Keyboard.h>
-#include <AutoMacro/Keyboard/MockKeyboard.h>
 
 namespace AutoMacro {
 namespace {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
-using Impl::MockKeyboard;
 Keyboard* keyboard;
 void assertKeyIsPressed(KeyCode key) {
-    Assert::AreEqual(true, MockKeyboard::isKeyPressed(key));
+    Assert::AreEqual(true, keyboard->isKeyPressed(key));
 }
 
 void assertKeyIsReleased(KeyCode key) {
-    Assert::AreEqual(false, MockKeyboard::isKeyPressed(key));
+    Assert::AreEqual(false, keyboard->isKeyPressed(key));
 }
 
 void assertKeyIsToggled(KeyCode key) {
-    Assert::AreEqual(true, MockKeyboard::isKeyToggled(key));
+    Assert::AreEqual(true, keyboard->isKeyToggled(key));
 }
 
 void assertKeyIsNotToggled(KeyCode key) {
-    Assert::AreEqual(false, MockKeyboard::isKeyToggled(key));
+    Assert::AreEqual(false, keyboard->isKeyToggled(key));
 }
 }  // namespace
 

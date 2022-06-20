@@ -1,5 +1,6 @@
 #pragma once
 #include "AutoMacro/Core/pch.h"
+#include "AutoMacro/Core/Types.h"
 
 namespace AutoMacro {
 enum class MouseButton : unsigned char {
@@ -11,6 +12,9 @@ enum class MouseButton : unsigned char {
 
 class DLL_EXPORTS Mouse {
  public:
+    virtual Point getCurrentPosition() const = 0;
+    virtual bool isMouseButtonDown(MouseButton button) const = 0;
+    
     virtual void mouseDown(MouseButton button) = 0;
     virtual void mouseUp(MouseButton button) = 0;
     virtual void mouseMove(int x, int y) = 0;

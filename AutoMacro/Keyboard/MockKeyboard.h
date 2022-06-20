@@ -6,10 +6,10 @@
 
 namespace AutoMacro {
 namespace Impl {
-class DLL_EXPORTS MockKeyboard : public Keyboard {
+class MockKeyboard : public Keyboard {
  public:
-    static bool isKeyPressed(KeyCode key);
-    static bool isKeyToggled(KeyCode key);
+    virtual bool isKeyPressed(KeyCode key) const;
+    virtual bool isKeyToggled(KeyCode key) const;
 
     virtual void pressKey(KeyCode key);
     virtual void releaseKey(KeyCode key);

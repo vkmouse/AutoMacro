@@ -31,11 +31,11 @@ void clear(std::vector<KeyCode>* list) {
     list->clear();
 }
 
-bool MockKeyboard::isKeyPressed(KeyCode key) {
+bool MockKeyboard::isKeyPressed(KeyCode key) const {
     return find(pressedList, key);
 }
 
-bool MockKeyboard::isKeyToggled(KeyCode key) {
+bool MockKeyboard::isKeyToggled(KeyCode key) const {
     return find(toggledList, key);
 }
 

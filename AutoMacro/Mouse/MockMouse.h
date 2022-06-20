@@ -7,8 +7,8 @@ namespace AutoMacro {
 namespace Impl {
 class DLL_EXPORTS MockMouse : public Mouse {
  public:
-    static bool isMouseButtonDown(MouseButton button);
-    static Point getCurrentPosition();
+    virtual Point getCurrentPosition() const;
+    virtual bool isMouseButtonDown(MouseButton button) const;
 
     virtual void mouseDown(MouseButton button);
     virtual void mouseUp(MouseButton button);

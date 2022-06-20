@@ -122,6 +122,9 @@ enum class KeyCode : unsigned char {
 
 class DLL_EXPORTS Keyboard {
  public:
+    virtual bool isKeyPressed(KeyCode key) const = 0;
+    virtual bool isKeyToggled(KeyCode key) const = 0;
+
     virtual void pressKey(KeyCode key) = 0;
     virtual void releaseKey(KeyCode key) = 0;
     virtual void releaseAllKeys() = 0;

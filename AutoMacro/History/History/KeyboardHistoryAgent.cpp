@@ -127,6 +127,14 @@ KeyboardHistoryAgent::KeyboardHistoryAgent(
     histories(histories) {
 }
 
+bool KeyboardHistoryAgent::isKeyPressed(KeyCode key) const {
+    return keyboard->isKeyPressed(key);
+}
+
+bool KeyboardHistoryAgent::isKeyToggled(KeyCode key) const {
+    return keyboard->isKeyToggled(key);
+}
+
 void KeyboardHistoryAgent::pressKey(KeyCode key) {
     keyboard->pressKey(key);
     histories->record("pressKey", key);

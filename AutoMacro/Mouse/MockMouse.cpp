@@ -33,11 +33,11 @@ void clear(std::vector<MouseButton>* list) {
     list->clear();
 }
 
-bool MockMouse::isMouseButtonDown(MouseButton button) {
+bool MockMouse::isMouseButtonDown(MouseButton button) const {
     return find(pressedList, button);
 }
 
-Point MockMouse::getCurrentPosition() {
+Point MockMouse::getCurrentPosition() const {
     return { currentX, currentY };
 }
 

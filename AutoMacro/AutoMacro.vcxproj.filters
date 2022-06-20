@@ -297,7 +297,4 @@
       <Filter>Resource Files\bin</Filter>
     </CopyFileToFolders>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
-  </ItemGroup>
 </Project>

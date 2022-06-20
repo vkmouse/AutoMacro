@@ -13,6 +13,9 @@ class KeyboardHistoryAgent : public Keyboard {
 
     KeyboardHistoryAgent(Keyboard* keyboard, Histories* histories);
 
+    virtual bool isKeyPressed(KeyCode key) const;
+    virtual bool isKeyToggled(KeyCode key) const;
+
     virtual void pressKey(KeyCode key);
     virtual void releaseKey(KeyCode key);
     virtual void releaseAllKeys();

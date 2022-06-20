@@ -2,19 +2,17 @@
 
 #include "CppUnitTest.h"
 #include <AutoMacro/Mouse/Mouse.h>
-#include <AutoMacro/Mouse/MockMouse.h>
 
 namespace AutoMacro {
 namespace {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
-using Impl::MockMouse;
 Mouse* mouse;
 void assertMouseButtonIsDown(MouseButton button) {
-    Assert::AreEqual(true, MockMouse::isMouseButtonDown(button));
+    Assert::AreEqual(true, mouse->isMouseButtonDown(button));
 }
 
 void assertMouseButtonIsUp(MouseButton button) {
-    Assert::AreEqual(false, MockMouse::isMouseButtonDown(button));
+    Assert::AreEqual(false, mouse->isMouseButtonDown(button));
 }
 }  // namespace
 
@@ -57,10 +55,10 @@ void MockMouseTest::TestMockMouseReleaseAllKeys() {
 void MockMouseTest::TestMockMouseMove() {
     Point expected(0, 0);
     mouse->mouseMove(0, 0);
-    Assert::IsTrue(expected == MockMouse::getCurrentPosition());
+    Assert::IsTrue(expected == mouse->getCurrentPosition());
 
     expected = Point(500, 500);
     mouse->mouseMove(500, 500);
-    Assert::IsTrue(expected == MockMouse::getCurrentPosition());
+    Assert::IsTrue(expected == mouse->getCurrentPosition());
 }
 }  // namespace AutoMacro
