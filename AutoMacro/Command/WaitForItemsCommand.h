@@ -12,7 +12,7 @@ class WaitForItemsCommand : public Command {
  public:
     DLL_EXPORTS WaitForItemsCommand(
          std::shared_ptr<VideoCapture> videoCapture,
-         std::vector<Detection::Detector*> detectors,
+         std::vector<std::shared_ptr<Detection::Detector>> detectors,
          std::vector<int> indices,
          std::vector<float> thresholds);
 

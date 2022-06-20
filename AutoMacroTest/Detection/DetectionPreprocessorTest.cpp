@@ -15,7 +15,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void DetectionPreprocessorTest::TestBGRConverterProcessor() {
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
@@ -34,7 +34,7 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
 }
 
 void DetectionPreprocessorTest::TestCroppingProcessor() {
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
@@ -58,15 +58,13 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     auto processor1 = Factory::createBGRConverterProcessor();
     auto processor2 = Factory::createCroppingProcessor(3, 3, 7, 7);
 
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
     detector = Factory::addPreprocessing(detector, processor1);
     detector = Factory::addPreprocessing(detector, processor2);
     DetectionResults results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(itemExists(results, 0, 0.98f));
-
-    delete(detector);
 
     detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",

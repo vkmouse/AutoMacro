@@ -1,5 +1,7 @@
 #include "AutoMacroTest/Command/WaitForItemsCommandTest.h"
 
+#include <memory>
+
 #include <AutoMacro/Command/WaitForItemsCommand.h>
 #include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
@@ -21,9 +23,9 @@ void WaitForItemsCommandTest::TestWaitForAllItems() {
     videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
-    Detection::Detector* detector1 = Factory::createTemplateBasedDetector({
+    auto detector1 = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
-    Detection::Detector* detector2 = Factory::createTemplateBasedDetector({
+    auto detector2 = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\BlackWithWhiteBorder_5x5_24bits.png" });
 
     WaitForItemsCommand cmd(
@@ -66,9 +68,9 @@ void WaitForItemsCommandTest::TestWaitForAtLeastOneItem() {
     videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
-    Detection::Detector* detector1 = Factory::createTemplateBasedDetector({
+    auto detector1 = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
-    Detection::Detector* detector2 = Factory::createTemplateBasedDetector({
+    auto detector2 = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\BlackWithWhiteBorder_5x5_24bits.png" });
 
     WaitForItemsCommand cmd(

@@ -14,7 +14,7 @@ namespace Command {
 class WaitForItemsCommand::Impl {
  public:
     Impl(std::shared_ptr<VideoCapture> videoCapture,
-        std::vector<Detection::Detector*> detectors,
+        std::vector<std::shared_ptr<Detection::Detector>> detectors,
         std::vector<int> indices,
         std::vector<float> thresholds) :
         videoCapture(videoCapture),
@@ -26,14 +26,14 @@ class WaitForItemsCommand::Impl {
     ~Impl() {}
 
     std::shared_ptr<VideoCapture> videoCapture;
-    std::vector<Detection::Detector*> detectors;
+    std::vector<std::shared_ptr<Detection::Detector>> detectors;
     std::vector<int> indices;
     std::vector<float> thresholds;
 };
 
 WaitForItemsCommand::WaitForItemsCommand(
     std::shared_ptr<VideoCapture> videoCapture,
-    std::vector<Detection::Detector*> detectors,
+    std::vector<std::shared_ptr<Detection::Detector>> detectors,
     std::vector<int> indices,
     std::vector<float> thresholds) :
     impl(new Impl(videoCapture, detectors, indices, thresholds)) {

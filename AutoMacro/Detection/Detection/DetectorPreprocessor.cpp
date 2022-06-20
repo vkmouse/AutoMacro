@@ -10,7 +10,7 @@ namespace AutoMacro {
 namespace Detection {
 namespace Impl {
 DetectorPreprocessor::DetectorPreprocessor(
-	Detector* detector, 
+	std::shared_ptr<Detector> detector, 
 	std::shared_ptr<ImageProcessor> processor) :
 	detector_(detector),
 	processor_(processor) {

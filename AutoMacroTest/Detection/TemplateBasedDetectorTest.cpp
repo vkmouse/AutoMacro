@@ -1,6 +1,7 @@
 #include "AutoMacroTest/Detection/TemplateBasedDetectorTest.h"
 
 #include <functional>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -24,15 +25,14 @@ void TemplateBasedDetectorTest::TestCreateTempateBasedDetector() {
         std::vector<std::string>{ "abc.png" });
     Assert::ExpectException<std::runtime_error>(initializationFailed);
 
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
-    Assert::IsNotNull(detector);
-    delete(detector);
+    Assert::IsTrue(detector != nullptr);
 }
 
 void TemplateBasedDetectorTest::TestTempateBasedDetector() {
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
@@ -47,7 +47,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetector() {
 }
 
 void TemplateBasedDetectorTest::TestNotExistTemplate() {
-    Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\NotExistedTemplate_5x5_24bits.png",
     });
 
@@ -65,7 +65,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetectorWithMask() {
     TemplateBasedDetectorParameter parameter(
         "images\\AutoMacroTest\\NotExistedTemplate_5x5_24bits.png",
         "images\\AutoMacroTest\\NotExistedTemplateMask_5x5_24bits.png");
-    Detector* detector = Factory::createTemplateBasedDetectorWithMask({
+    auto detector = Factory::createTemplateBasedDetectorWithMask({
         parameter
     });
 

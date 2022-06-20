@@ -35,7 +35,7 @@ bool itemExists(const DetectionResults& results, float threshold) {
 }  // namespace Detection
 
 namespace Factory {
-Detection::Detector* createTemplateBasedDetector(
+std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
     std::vector<std::string> imagesPath) {
     if (imagesPath.size() == 0) {
         throw std::runtime_error{ "No image for template based detector" };
@@ -48,30 +48,30 @@ Detection::Detector* createTemplateBasedDetector(
         parameters.push_back(TemplateBasedDetectorParameter(path));
     }
 
-    Detection::Detector* detector =
-        new Detection::Impl::TemplateBasedDetector(parameters);
+    std::shared_ptr<Detection::Detector> detector =
+        std::make_shared<Detection::Impl::TemplateBasedDetector>(parameters);
     detector->init();
 
     return detector;
 }
 
-Detection::Detector* createTemplateBasedDetectorWithMask(
+std::shared_ptr<Detection::Detector> createTemplateBasedDetectorWithMask(
     std::vector<Detection::TemplateBasedDetectorParameter> parameters) {
     if (parameters.size() == 0) {
         throw std::runtime_error{ "No image for template based detector" };
     }
 
-    Detection::Detector* detector =
-        new Detection::Impl::TemplateBasedDetector(parameters);
+    std::shared_ptr<Detection::Detector> detector =
+        std::make_shared<Detection::Impl::TemplateBasedDetector>(parameters);
     detector->init();
 
     return detector;
 }
 
-Detection::Detector* addPreprocessing(
-    Detection::Detector* detector,
+std::shared_ptr<Detection::Detector> addPreprocessing(
+    std::shared_ptr<Detection::Detector> detector,
     std::shared_ptr<ImageProcessor> processor) {
-    return new Detection::Impl::DetectorPreprocessor(detector, processor);
+    return std::make_shared<Detection::Impl::DetectorPreprocessor>(detector, processor);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

@@ -11,12 +11,12 @@ namespace Detection {
 namespace Impl {
 class DetectorPreprocessor : public Detector {
  public:
-	DetectorPreprocessor(Detector* detector, std::shared_ptr<ImageProcessor> processor);
+	DetectorPreprocessor(std::shared_ptr<Detector> detector, std::shared_ptr<ImageProcessor> processor);
 
 	virtual DetectionResults detect(Image image);
 
  private:
-	Detector* detector_;
+	std::shared_ptr<Detector> detector_;
 	std::shared_ptr<ImageProcessor> processor_;
 };
 }  // namespace Impl

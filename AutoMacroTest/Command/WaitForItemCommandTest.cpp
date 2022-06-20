@@ -1,5 +1,7 @@
 #include "AutoMacroTest/Command/WaitForItemCommandTest.h"
 
+#include <memory>
+
 #include <AutoMacro/Command/WaitForItemCommand.h>
 #include <AutoMacro/Detection/Detection.h>
 #include <AutoMacro/History/History.h>
@@ -21,7 +23,7 @@ void WaitForItemCommandTest::TestWaitForItemExist() {
     videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
-    Detection::Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
 
     WaitForItemCommand cmd(videoCapture, detector, 0, 0.98f);
@@ -58,7 +60,7 @@ void WaitForItemCommandTest::TestWaitForItemNotExist() {
     videoCapture = Factory::addHistoryAgent(
         videoCapture, &histories);
 
-    Detection::Detector* detector = Factory::createTemplateBasedDetector({
+    auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png" });
 
     WaitForItemCommand cmd(videoCapture, detector, 0, 0.98f);

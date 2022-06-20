@@ -10,7 +10,7 @@ namespace AutoMacro {
 namespace Command {
 WaitForItemCommand::WaitForItemCommand(
     std::shared_ptr<VideoCapture> videoCapture,
-    Detection::Detector* detector,
+    std::shared_ptr<Detection::Detector> detector,
     int index,
     float threshold) :
     videoCapture(videoCapture),

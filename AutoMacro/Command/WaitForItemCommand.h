@@ -11,7 +11,7 @@ class WaitForItemCommand : public Command {
  public:
     DLL_EXPORTS WaitForItemCommand(
         std::shared_ptr<VideoCapture> videoCapture,
-        Detection::Detector* detector,
+        std::shared_ptr<Detection::Detector> detector,
         int index,
         float threshold);
 
@@ -25,7 +25,7 @@ class WaitForItemCommand : public Command {
     bool itemExists();
 
     std::shared_ptr<VideoCapture> videoCapture;
-    Detection::Detector* detector;
+    std::shared_ptr<Detection::Detector> detector;
     int index;
     float threshold;
 };

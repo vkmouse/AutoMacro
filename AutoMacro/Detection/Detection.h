@@ -22,11 +22,11 @@ DLL_EXPORTS bool itemExists(
 }  // namespace Detection
 
 namespace Factory {
-DLL_EXPORTS Detection::Detector* createTemplateBasedDetector(
+DLL_EXPORTS std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
     std::vector<std::string> imagesPath);
-DLL_EXPORTS Detection::Detector* createTemplateBasedDetectorWithMask(
+DLL_EXPORTS std::shared_ptr<Detection::Detector> createTemplateBasedDetectorWithMask(
     std::vector<Detection::TemplateBasedDetectorParameter> parameters);
-DLL_EXPORTS Detection::Detector* addPreprocessing(
-    Detection::Detector* detector, std::shared_ptr<ImageProcessor> processor);
+DLL_EXPORTS std::shared_ptr<Detection::Detector> addPreprocessing(
+    std::shared_ptr<Detection::Detector> detector, std::shared_ptr<ImageProcessor> processor);
 }  // namespace Factory
 }  // namespace AutoMacro
