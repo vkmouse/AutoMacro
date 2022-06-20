@@ -11,7 +11,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void CroppingProcessorTest::TestCroppingProcessor() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
@@ -23,7 +23,5 @@ void CroppingProcessorTest::TestCroppingProcessor() {
         Assert::AreEqual(5, image.width());
         Assert::AreEqual(5, image.height());
     }
-
-    delete(videoCapture);
 }
 }  // namespace AutoMacro

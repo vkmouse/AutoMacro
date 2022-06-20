@@ -14,10 +14,10 @@ std::shared_ptr<Keyboard> addHistoryAgent(
     return std::make_shared<History::Impl::KeyboardHistoryAgent>(keyboard, histories);
 }
 
-VideoCapture* addHistoryAgent(
-    VideoCapture* videoCapture,
+std::shared_ptr<VideoCapture> addHistoryAgent(
+    std::shared_ptr<VideoCapture> videoCapture,
     History::Histories* histories) {
-    return new History::Impl::VideoCaptureHistoryAgent(videoCapture, histories);
+    return std::make_shared<History::Impl::VideoCaptureHistoryAgent>(videoCapture, histories);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

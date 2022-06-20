@@ -11,22 +11,21 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void VideoCapturePostProcessorTest::TestBGRConverterProcessor() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    ImageProcessor* processor = Factory::createBGRConverterProcessor();
+    auto processor = Factory::createBGRConverterProcessor();
     videoCapture = Factory::addPostprocessing(videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(3, image.channel());
     }
-    delete(videoCapture);
     delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestCroppingProcessor() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
@@ -37,12 +36,11 @@ void VideoCapturePostProcessorTest::TestCroppingProcessor() {
         Assert::AreEqual(5, image.width());
         Assert::AreEqual(5, image.height());
     }
-    delete(videoCapture);
     delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestMixedProcessor() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
@@ -56,7 +54,6 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         Assert::AreEqual(5, image.height());
         Assert::AreEqual(3, image.channel());
     }
-    delete(videoCapture);
 
     videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
@@ -72,7 +69,6 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         Assert::AreEqual(5, image.height());
         Assert::AreEqual(3, image.channel());
     }
-    delete(videoCapture);
     delete(processor1);
     delete(processor2);
 }

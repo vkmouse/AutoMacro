@@ -1,5 +1,7 @@
 #include "AutoMacro/History/History/VideoCaptureHistoryAgent.h"
 
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/Histories.h"
 
@@ -7,7 +9,7 @@ namespace AutoMacro {
 namespace History {
 namespace Impl {
 VideoCaptureHistoryAgent::VideoCaptureHistoryAgent(
-    VideoCapture* videoCapture,
+    std::shared_ptr<VideoCapture> videoCapture,
     Histories* histories) :
     videoCapture(videoCapture),
     histories(histories) {

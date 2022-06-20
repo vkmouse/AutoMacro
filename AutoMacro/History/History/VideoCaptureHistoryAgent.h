@@ -1,4 +1,6 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/Histories.h"
 
@@ -7,12 +9,12 @@ namespace History {
 namespace Impl {
 class VideoCaptureHistoryAgent : public VideoCapture {
  public:
-    VideoCaptureHistoryAgent(VideoCapture* videoCapture, Histories* histories);
+    VideoCaptureHistoryAgent(std::shared_ptr<VideoCapture> videoCapture, Histories* histories);
 
     virtual Image takeSnapshot();
 
  private:
-    VideoCapture* videoCapture;
+    std::shared_ptr<VideoCapture> videoCapture;
     Histories* histories;
 };
 }  // namespace Impl

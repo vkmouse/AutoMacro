@@ -5,6 +5,8 @@
 namespace AutoMacro {
 class DLL_EXPORTS VideoCapture {
  public:
+    virtual ~VideoCapture() = default;
+
     virtual Image takeSnapshot() = 0;
 };
 }  // namespace AutoMacro

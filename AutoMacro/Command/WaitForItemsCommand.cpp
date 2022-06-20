@@ -2,6 +2,7 @@
 
 #include <Windows.h>
 #include <cassert>
+#include <memory>
 #include <vector>
 
 #include "AutoMacro/Core/Core.h"
@@ -12,7 +13,7 @@ namespace AutoMacro {
 namespace Command {
 class WaitForItemsCommand::Impl {
  public:
-    Impl(VideoCapture* videoCapture,
+    Impl(std::shared_ptr<VideoCapture> videoCapture,
         std::vector<Detection::Detector*> detectors,
         std::vector<int> indices,
         std::vector<float> thresholds) :
@@ -22,14 +23,16 @@ class WaitForItemsCommand::Impl {
         thresholds(thresholds) {
     }
 
-    VideoCapture* videoCapture;
+    ~Impl() {}
+
+    std::shared_ptr<VideoCapture> videoCapture;
     std::vector<Detection::Detector*> detectors;
     std::vector<int> indices;
     std::vector<float> thresholds;
 };
 
 WaitForItemsCommand::WaitForItemsCommand(
-    VideoCapture* videoCapture,
+    std::shared_ptr<VideoCapture> videoCapture,
     std::vector<Detection::Detector*> detectors,
     std::vector<int> indices,
     std::vector<float> thresholds) :

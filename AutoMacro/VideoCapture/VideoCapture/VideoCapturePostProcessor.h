@@ -1,17 +1,19 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 namespace Impl {
-class DLL_EXPORTS VideoCapturePostProcessor : public VideoCapture {
+class VideoCapturePostProcessor : public VideoCapture {
  public:
-    VideoCapturePostProcessor(VideoCapture* capture, ImageProcessor* processor);
+    VideoCapturePostProcessor(std::shared_ptr<VideoCapture> capture, ImageProcessor* processor);
 
     virtual Image takeSnapshot();
 
  private:
-    VideoCapture* capture_;
+    std::shared_ptr<VideoCapture> capture_;
     ImageProcessor* processor_;
 };
 }  // namespace Impl

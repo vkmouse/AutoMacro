@@ -18,7 +18,7 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_32bits.png",
     });
     
@@ -37,7 +37,7 @@ void DetectionPreprocessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
     });
 
@@ -51,7 +51,7 @@ void DetectionPreprocessorTest::TestCroppingProcessor() {
 }
 
 void DetectionPreprocessorTest::TestMixedProcessor() {
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_32bits.png",
     });
     ImageProcessor* processor1 = Factory::createBGRConverterProcessor();

@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -7,9 +8,9 @@
 
 namespace AutoMacro {
 namespace Factory {
-DLL_EXPORTS VideoCapture* createImageFileCapture(
+DLL_EXPORTS std::shared_ptr<VideoCapture> createImageFileCapture(
     std::vector<std::string> filenames);
-DLL_EXPORTS VideoCapture* addPostprocessing(
-    VideoCapture* videoCapture, ImageProcessor* processor);
+DLL_EXPORTS std::shared_ptr<VideoCapture> addPostprocessing(
+    std::shared_ptr<VideoCapture> videoCapture, ImageProcessor* processor);
 }  // namespace Factory
 }  // namespace AutoMacro

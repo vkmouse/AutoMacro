@@ -12,7 +12,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void WaitForItemCommandTest::TestWaitForItemExist() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png" });
@@ -49,7 +49,7 @@ void WaitForItemCommandTest::TestWaitForItemExist() {
 }
 
 void WaitForItemCommandTest::TestWaitForItemNotExist() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png" });

@@ -1,14 +1,16 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Command/Command.h"
 #include "AutoMacro/Detection/Detection.h"
 
 namespace AutoMacro {
 namespace Command {
-class DLL_EXPORTS WaitForItemCommand : public Command {
+class WaitForItemCommand : public Command {
  public:
-    WaitForItemCommand(
-        VideoCapture* videoCapture,
+    DLL_EXPORTS WaitForItemCommand(
+        std::shared_ptr<VideoCapture> videoCapture,
         Detection::Detector* detector,
         int index,
         float threshold);
@@ -22,7 +24,7 @@ class DLL_EXPORTS WaitForItemCommand : public Command {
  private:
     bool itemExists();
 
-    VideoCapture* videoCapture;
+    std::shared_ptr<VideoCapture> videoCapture;
     Detection::Detector* detector;
     int index;
     float threshold;

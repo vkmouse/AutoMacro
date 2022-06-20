@@ -1,6 +1,7 @@
 #include "AutoMacro/Command/WaitForItemCommand.h"
 
 #include <Windows.h>
+#include <memory>
 
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection.h"
@@ -8,7 +9,7 @@
 namespace AutoMacro {
 namespace Command {
 WaitForItemCommand::WaitForItemCommand(
-    VideoCapture* videoCapture,
+    std::shared_ptr<VideoCapture> videoCapture,
     Detection::Detector* detector,
     int index,
     float threshold) :
@@ -16,8 +17,8 @@ WaitForItemCommand::WaitForItemCommand(
     detector(detector),
     index(index),
     threshold(threshold),
-    delayBetweenRepeatitions(delayBetweenRepeatitions),
-    waitForExists(waitForExists) {
+    delayBetweenRepeatitions(0),
+    waitForExists(true) {
 }
 
 void WaitForItemCommand::executeCommand() {

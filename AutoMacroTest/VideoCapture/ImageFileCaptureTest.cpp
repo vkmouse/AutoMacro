@@ -9,7 +9,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void ImageFileCaptureTest::TestTakeSnapshot() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
@@ -24,11 +24,10 @@ void ImageFileCaptureTest::TestTakeSnapshot() {
     Assert::AreEqual(10, image.height());
     Assert::AreEqual(4, image.channel());
     Assert::IsNotNull(image.data());
-    delete(videoCapture);
 }
 
 void ImageFileCaptureTest::TestCycleImages() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png"
     });
@@ -42,7 +41,5 @@ void ImageFileCaptureTest::TestCycleImages() {
         Assert::IsNotNull(image.data());
         expected = expected == 5 ? 10 : 5;
     }
-
-    delete(videoCapture);
 }
 }  // namespace AutoMacro

@@ -1,5 +1,6 @@
 #include "AutoMacro/VideoCapture/VideoCapture.h"
 
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -8,14 +9,14 @@
 
 namespace AutoMacro {
 namespace Factory {
-VideoCapture* createImageFileCapture(std::vector<std::string> filenames) {
-    return new Impl::ImageFileCapture(filenames);
+std::shared_ptr<VideoCapture> createImageFileCapture(std::vector<std::string> filenames) {
+    return std::make_shared<Impl::ImageFileCapture>(filenames);
 }
 
-VideoCapture* addPostprocessing(
-    VideoCapture* videoCapture,
+std::shared_ptr<VideoCapture> addPostprocessing(
+    std::shared_ptr<VideoCapture> videoCapture,
     ImageProcessor* processor) {
-    return new Impl::VideoCapturePostProcessor(videoCapture, processor);
+    return std::make_shared<Impl::VideoCapturePostProcessor>(videoCapture, processor);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

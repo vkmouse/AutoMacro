@@ -6,6 +6,7 @@ namespace Command {
 class DLL_EXPORTS Command {
  public:
     Command();
+    virtual ~Command() = default;
 
     virtual void execute();
 

@@ -36,7 +36,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetector() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
 
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
     });
 
@@ -51,7 +51,7 @@ void TemplateBasedDetectorTest::TestNotExistTemplate() {
         "images\\AutoMacroTest\\NotExistedTemplate_5x5_24bits.png",
     });
 
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
     });
 
@@ -69,7 +69,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetectorWithMask() {
         parameter
     });
 
-    VideoCapture* capture = Factory::createImageFileCapture({
+    auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
     });
 

@@ -12,7 +12,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 }  // namespace
 
 void WaitForItemsCommandTest::TestWaitForAllItems() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTest\\AllItemExists_10x10_24bits.png" });
@@ -57,7 +57,7 @@ void WaitForItemsCommandTest::TestWaitForAllItems() {
 }
 
 void WaitForItemsCommandTest::TestWaitForAtLeastOneItem() {
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTest\\AllItemExists_10x10_24bits.png" });

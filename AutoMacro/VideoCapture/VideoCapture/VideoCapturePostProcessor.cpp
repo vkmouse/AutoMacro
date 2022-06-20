@@ -1,12 +1,14 @@
 #pragma once
 #include "AutoMacro/VideoCapture/VideoCapture/VideoCapturePostProcessor.h"
 
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Impl {
 VideoCapturePostProcessor::VideoCapturePostProcessor(
-    VideoCapture* capture,
+    std::shared_ptr<VideoCapture> capture,
     ImageProcessor* processor) :
     capture_(capture),
     processor_(processor) {

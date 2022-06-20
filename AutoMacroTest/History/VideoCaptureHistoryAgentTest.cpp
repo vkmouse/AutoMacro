@@ -12,7 +12,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
 void VideoCaptureHistoryAgentTest::TestVideoCaptureHistoryAgent() {
     Histories histories;
-    VideoCapture* videoCapture = Factory::createImageFileCapture({
+    auto videoCapture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\Template_5x5_24bits.png"
     });
     videoCapture =
