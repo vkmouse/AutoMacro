@@ -11,13 +11,15 @@ namespace Factory {
 std::shared_ptr<Keyboard> addHistoryAgent(
     std::shared_ptr<Keyboard> keyboard,
     History::Histories* histories) {
-    return std::make_shared<History::Impl::KeyboardHistoryAgent>(keyboard, histories);
+    return std::make_shared<History::Impl::KeyboardHistoryAgent>(
+        keyboard, histories);
 }
 
 std::shared_ptr<VideoCapture> addHistoryAgent(
     std::shared_ptr<VideoCapture> videoCapture,
     History::Histories* histories) {
-    return std::make_shared<History::Impl::VideoCaptureHistoryAgent>(videoCapture, histories);
+    return std::make_shared<History::Impl::VideoCaptureHistoryAgent>(
+        videoCapture, histories);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

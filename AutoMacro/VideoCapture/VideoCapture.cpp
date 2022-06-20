@@ -9,14 +9,16 @@
 
 namespace AutoMacro {
 namespace Factory {
-std::shared_ptr<VideoCapture> createImageFileCapture(std::vector<std::string> filenames) {
+std::shared_ptr<VideoCapture> createImageFileCapture(
+    std::vector<std::string> filenames) {
     return std::make_shared<Impl::ImageFileCapture>(filenames);
 }
 
 std::shared_ptr<VideoCapture> addPostprocessing(
     std::shared_ptr<VideoCapture> videoCapture,
     std::shared_ptr<ImageProcessor> processor) {
-    return std::make_shared<Impl::VideoCapturePostProcessor>(videoCapture, processor);
+    return std::make_shared<Impl::VideoCapturePostProcessor>(
+        videoCapture, processor);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

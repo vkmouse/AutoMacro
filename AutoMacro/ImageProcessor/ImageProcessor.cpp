@@ -12,7 +12,8 @@ std::shared_ptr<ImageProcessor> createBGRConverterProcessor() {
     return std::make_shared<Impl::BGRConverterProcessor>();
 }
 
-std::shared_ptr<ImageProcessor> createCroppingProcessor(int x, int y, int width, int height) {
+std::shared_ptr<ImageProcessor> createCroppingProcessor(
+    int x, int y, int width, int height) {
     Rect region(x, y, width, height);
     return createCroppingProcessor(region);
 }

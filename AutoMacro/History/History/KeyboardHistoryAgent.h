@@ -12,7 +12,9 @@ class KeyboardHistoryAgent : public Keyboard {
  public:
     static std::string keyToString(KeyCode key);
 
-    KeyboardHistoryAgent(std::shared_ptr<Keyboard> keyboard, Histories* histories);
+    KeyboardHistoryAgent(
+        std::shared_ptr<Keyboard> keyboard,
+        Histories* histories);
 
     virtual bool isKeyPressed(KeyCode key) const;
     virtual bool isKeyToggled(KeyCode key) const;

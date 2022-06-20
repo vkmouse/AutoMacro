@@ -8,7 +8,9 @@ namespace AutoMacro {
 namespace Impl {
 class VideoCapturePostProcessor : public VideoCapture {
  public:
-    VideoCapturePostProcessor(std::shared_ptr<VideoCapture> capture, std::shared_ptr<ImageProcessor> processor);
+    VideoCapturePostProcessor(
+      std::shared_ptr<VideoCapture> capture,
+      std::shared_ptr<ImageProcessor> processor);
 
     virtual Image takeSnapshot();
 

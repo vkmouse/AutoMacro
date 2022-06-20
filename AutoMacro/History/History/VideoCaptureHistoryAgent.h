@@ -9,7 +9,9 @@ namespace History {
 namespace Impl {
 class VideoCaptureHistoryAgent : public VideoCapture {
  public:
-    VideoCaptureHistoryAgent(std::shared_ptr<VideoCapture> videoCapture, Histories* histories);
+    VideoCaptureHistoryAgent(
+        std::shared_ptr<VideoCapture> videoCapture,
+        Histories* histories);
 
     virtual Image takeSnapshot();
 

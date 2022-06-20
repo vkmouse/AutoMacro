@@ -6,7 +6,7 @@
 #include <vector>
 
 #include <AutoMacro/Detection/Detection.h>
-#include "AutoMacro/VideoCapture/VideoCapture.h"
+#include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
 namespace Detection {

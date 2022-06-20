@@ -9,5 +9,5 @@ TEST_CLASS(DetectionPreprocessorTest) {
     TEST_METHOD(TestCroppingProcessor);
     TEST_METHOD(TestMixedProcessor);
 };
-} // namespace Detection
+}  // namespace Detection
 }  // namespace AutoMacro

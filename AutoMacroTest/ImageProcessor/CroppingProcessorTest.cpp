@@ -16,7 +16,7 @@ void CroppingProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    auto processor = Factory::createCroppingProcessor(0, 0, 5, 5);   
+    auto processor = Factory::createCroppingProcessor(0, 0, 5, 5);
 
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();

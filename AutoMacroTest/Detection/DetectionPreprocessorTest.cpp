@@ -6,7 +6,7 @@
 #include "CppUnitTest.h"
 #include <AutoMacro/ImageProcessor/ImageProcessor.h>
 #include <AutoMacro/Detection/Detection.h>
-#include "AutoMacro/VideoCapture/VideoCapture.h"
+#include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
 namespace Detection {
@@ -22,8 +22,9 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
     auto capture = Factory::createImageFileCapture({
         "images\\AutoMacroTest\\ItemExists_10x10_32bits.png",
     });
-    
-    auto channelNotEqualFailed = std::bind(&Detector::detect, detector, capture->takeSnapshot());
+
+    auto channelNotEqualFailed =
+        std::bind(&Detector::detect, detector, capture->takeSnapshot());
     Assert::ExpectException<std::runtime_error>(channelNotEqualFailed);
 
     auto processor = Factory::createBGRConverterProcessor();
