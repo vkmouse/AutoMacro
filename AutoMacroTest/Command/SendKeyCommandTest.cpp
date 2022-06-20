@@ -12,7 +12,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
 void SendKeyCommandTest::TestSendKeyCommand() {
     History::Histories histories;
-    Keyboard* keyboard = Factory::createMockKeyboard();
+    auto keyboard = Factory::createMockKeyboard();
     keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
     SendKeyCommand cmd(keyboard, KeyCode::KEY_A);

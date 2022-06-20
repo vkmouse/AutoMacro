@@ -12,7 +12,7 @@ using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
 void KeyboardHistoryAgentTest::TestKeyboardHistoryAgent() {
     Histories histories;
-    Keyboard* keyboard = Factory::createMockKeyboard();
+    auto keyboard = Factory::createMockKeyboard();
     keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
     keyboard->pressKey(KeyCode::KEY_A);

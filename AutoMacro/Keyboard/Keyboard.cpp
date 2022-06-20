@@ -4,8 +4,8 @@
 
 namespace AutoMacro {
 namespace Factory {
-Keyboard* createMockKeyboard() {
-    return new Impl::MockKeyboard();
+std::shared_ptr<Keyboard> createMockKeyboard() {
+    return std::make_shared<Impl::MockKeyboard>();
 }
 }  // namespace Factory
 }  // namespace AutoMacro

@@ -1,13 +1,14 @@
 #include "AutoMacro/Command/SendKeyCommand.h"
 
 #include <Windows.h>
+#include <memory>
 
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Command {
 SendKeyCommand::SendKeyCommand(
-    Keyboard* keyboard,
+    std::shared_ptr<Keyboard> keyboard,
     KeyCode key) :
     keyboard(keyboard),
     key(key),

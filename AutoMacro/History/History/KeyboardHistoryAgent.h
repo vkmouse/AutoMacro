@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include <string>
 
 #include "AutoMacro/Core/Core.h"
@@ -11,7 +12,7 @@ class KeyboardHistoryAgent : public Keyboard {
  public:
     static std::string keyToString(KeyCode key);
 
-    KeyboardHistoryAgent(Keyboard* keyboard, Histories* histories);
+    KeyboardHistoryAgent(std::shared_ptr<Keyboard> keyboard, Histories* histories);
 
     virtual bool isKeyPressed(KeyCode key) const;
     virtual bool isKeyToggled(KeyCode key) const;
@@ -21,7 +22,7 @@ class KeyboardHistoryAgent : public Keyboard {
     virtual void releaseAllKeys();
 
  private:
-    Keyboard* keyboard;
+    std::shared_ptr<Keyboard> keyboard;
     Histories* histories;
 };
 }  // namespace Impl

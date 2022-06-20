@@ -1,5 +1,6 @@
 #include "AutoMacro/History/History/KeyboardHistoryAgent.h"
 
+#include <memory>
 #include <string>
 
 #include "AutoMacro/History/History/Histories.h"
@@ -121,7 +122,7 @@ std::string KeyboardHistoryAgent::keyToString(KeyCode key) {
 }
 
 KeyboardHistoryAgent::KeyboardHistoryAgent(
-    Keyboard* keyboard,
+    std::shared_ptr<Keyboard> keyboard,
     Histories* histories) :
     keyboard(keyboard),
     histories(histories) {

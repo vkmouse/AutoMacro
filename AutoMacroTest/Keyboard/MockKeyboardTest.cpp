@@ -1,84 +1,83 @@
 #include "AutoMacroTest/Keyboard/MockKeyboardTest.h"
 
+#include <memory>
+
 #include "CppUnitTest.h"
 #include <AutoMacro/Keyboard/Keyboard.h>
 
 namespace AutoMacro {
 namespace {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
-Keyboard* keyboard;
-void assertKeyIsPressed(KeyCode key) {
+void assertKeyIsPressed(std::shared_ptr<Keyboard> keyboard, KeyCode key) {
     Assert::AreEqual(true, keyboard->isKeyPressed(key));
 }
 
-void assertKeyIsReleased(KeyCode key) {
+void assertKeyIsReleased(std::shared_ptr<Keyboard> keyboard, KeyCode key) {
     Assert::AreEqual(false, keyboard->isKeyPressed(key));
 }
 
-void assertKeyIsToggled(KeyCode key) {
+void assertKeyIsToggled(std::shared_ptr<Keyboard> keyboard, KeyCode key) {
     Assert::AreEqual(true, keyboard->isKeyToggled(key));
 }
 
-void assertKeyIsNotToggled(KeyCode key) {
+void assertKeyIsNotToggled(std::shared_ptr<Keyboard> keyboard, KeyCode key) {
     Assert::AreEqual(false, keyboard->isKeyToggled(key));
 }
 }  // namespace
 
-void __stdcall MockKeyboardTest::initialize() {
-    keyboard = Factory::createMockKeyboard();
-}
-
-void __stdcall MockKeyboardTest::cleanup() {
-    delete(keyboard);
-}
-
 void MockKeyboardTest::TestMockKeyboardPressAndReleaseKey() {
-    assertKeyIsReleased(KeyCode::KEY_A);
+    auto keyboard = Factory::createMockKeyboard();
+
+    assertKeyIsReleased(keyboard, KeyCode::KEY_A);
 
     keyboard->pressKey(KeyCode::KEY_A);
-    assertKeyIsPressed(KeyCode::KEY_A);
+    assertKeyIsPressed(keyboard, KeyCode::KEY_A);
 
     keyboard->releaseKey(KeyCode::KEY_A);
-    assertKeyIsReleased(KeyCode::KEY_A);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_A);
 }
 
 void MockKeyboardTest::TestMockKeyboardReleaseAllKeys() {
-    assertKeyIsReleased(KeyCode::KEY_A);
-    assertKeyIsReleased(KeyCode::KEY_F1);
-    assertKeyIsReleased(KeyCode::KEY_ENTER);
+    auto keyboard = Factory::createMockKeyboard();
+
+    assertKeyIsReleased(keyboard, KeyCode::KEY_A);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_F1);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_ENTER);
 
     keyboard->pressKey(KeyCode::KEY_A);
     keyboard->pressKey(KeyCode::KEY_F1);
     keyboard->pressKey(KeyCode::KEY_ENTER);
-    assertKeyIsPressed(KeyCode::KEY_A);
-    assertKeyIsPressed(KeyCode::KEY_F1);
-    assertKeyIsPressed(KeyCode::KEY_ENTER);
+    assertKeyIsPressed(keyboard, KeyCode::KEY_A);
+    assertKeyIsPressed(keyboard, KeyCode::KEY_F1);
+    assertKeyIsPressed(keyboard, KeyCode::KEY_ENTER);
 
     keyboard->releaseAllKeys();
-    assertKeyIsReleased(KeyCode::KEY_A);
-    assertKeyIsReleased(KeyCode::KEY_F1);
-    assertKeyIsReleased(KeyCode::KEY_ENTER);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_A);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_F1);
+    assertKeyIsReleased(keyboard, KeyCode::KEY_ENTER);
 }
 
 void MockKeyboardTest::TestMockKeyboardToggleKey() {
-    assertKeyIsNotToggled(KeyCode::KEY_NUMLOCK);
-    assertKeyIsNotToggled(KeyCode::KEY_CAPSLOCK);
-    assertKeyIsNotToggled(KeyCode::KEY_SCROLLLOCK);
+    auto keyboard = Factory::createMockKeyboard();
+
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_NUMLOCK);
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_CAPSLOCK);
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_SCROLLLOCK);
 
     keyboard->pressKey(KeyCode::KEY_NUMLOCK);
     keyboard->pressKey(KeyCode::KEY_CAPSLOCK);
     keyboard->pressKey(KeyCode::KEY_SCROLLLOCK);
     keyboard->releaseAllKeys();
-    assertKeyIsToggled(KeyCode::KEY_NUMLOCK);
-    assertKeyIsToggled(KeyCode::KEY_CAPSLOCK);
-    assertKeyIsToggled(KeyCode::KEY_SCROLLLOCK);
+    assertKeyIsToggled(keyboard, KeyCode::KEY_NUMLOCK);
+    assertKeyIsToggled(keyboard, KeyCode::KEY_CAPSLOCK);
+    assertKeyIsToggled(keyboard, KeyCode::KEY_SCROLLLOCK);
 
     keyboard->pressKey(KeyCode::KEY_NUMLOCK);
     keyboard->pressKey(KeyCode::KEY_CAPSLOCK);
     keyboard->pressKey(KeyCode::KEY_SCROLLLOCK);
     keyboard->releaseAllKeys();
-    assertKeyIsNotToggled(KeyCode::KEY_NUMLOCK);
-    assertKeyIsNotToggled(KeyCode::KEY_CAPSLOCK);
-    assertKeyIsNotToggled(KeyCode::KEY_SCROLLLOCK);
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_NUMLOCK);
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_CAPSLOCK);
+    assertKeyIsNotToggled(keyboard, KeyCode::KEY_SCROLLLOCK);
 }
 }  // namespace AutoMacro
