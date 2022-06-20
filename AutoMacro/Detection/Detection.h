@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Core/pch.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/Detector.h"
 #include "AutoMacro/Detection/Detection/DetectorParameter.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"

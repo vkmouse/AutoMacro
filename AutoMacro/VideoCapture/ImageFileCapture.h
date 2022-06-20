@@ -3,9 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Image.h"
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Impl {

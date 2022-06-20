@@ -1,6 +1,6 @@
 #include <string.h>
 
-#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Core/Core/Image.h"
 
 namespace AutoMacro {
 Image::Image(int width, int height, int channel, unsigned char* data) :

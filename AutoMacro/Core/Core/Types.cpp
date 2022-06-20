@@ -1,6 +1,6 @@
 #include <string.h>
 
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core/Types.h"
 
 namespace AutoMacro {
 Point::Point() {

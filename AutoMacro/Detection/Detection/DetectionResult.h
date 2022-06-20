@@ -1,8 +1,7 @@
 #pragma once
 #include <vector>
 
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Detection {

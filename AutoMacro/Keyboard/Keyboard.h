@@ -1,6 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Keyboard.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Factory {

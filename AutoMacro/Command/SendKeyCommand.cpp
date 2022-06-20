@@ -2,7 +2,7 @@
 
 #include <Windows.h>
 
-#include "AutoMacro/Core/Keyboard.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Command {

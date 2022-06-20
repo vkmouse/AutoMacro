@@ -1,6 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/Image.h"
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {

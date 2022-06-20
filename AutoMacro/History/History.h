@@ -1,7 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Keyboard.h"
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/Histories.h"
 
 namespace AutoMacro {

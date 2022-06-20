@@ -44,33 +44,24 @@
     <Filter Include="AutoMacro\History\History">
       <UniqueIdentifier>{a4eb7af5-49ed-4a1c-b3bd-63e073de34bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\Keyboard\Keyboard">
+      <UniqueIdentifier>{8918b012-99f9-4556-b685-351c7bd3e16f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoMacro\Mouse\Mouse">
+      <UniqueIdentifier>{cc1dad48-9a1e-4024-980f-686ad21de22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoMacro\Cv">
+      <UniqueIdentifier>{030a52a7-bb9e-408b-b96d-2b1c63f531ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoMacro\Core\Core">
+      <UniqueIdentifier>{b3aec9e4-a155-47c0-b25b-875887616341}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Types.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\pch.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Image.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Mouse.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse\MockMouse.h">
-      <Filter>AutoMacro\Mouse</Filter>
-    </ClInclude>
     <ClInclude Include="Mouse\Mouse.h">
       <Filter>AutoMacro\Mouse</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Keyboard.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
     <ClInclude Include="Keyboard\Keyboard.h">
-      <Filter>AutoMacro\Keyboard</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard\MockKeyboard.h">
       <Filter>AutoMacro\Keyboard</Filter>
     </ClInclude>
     <ClInclude Include="VideoCapture\ImageFileCapture.h">
@@ -78,12 +69,6 @@
     </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapture.h">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\VideoCapture.h">
-      <Filter>AutoMacro\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Cv.h">
-      <Filter>AutoMacro\Core</Filter>
     </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapturePostProcessor.h">
       <Filter>AutoMacro\VideoCapture</Filter>
@@ -148,22 +133,40 @@
     <ClInclude Include="History\History\Histories.h">
       <Filter>AutoMacro\History\History</Filter>
     </ClInclude>
+    <ClInclude Include="Mouse\Mouse\MockMouse.h">
+      <Filter>AutoMacro\Mouse\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard\Keyboard\MockKeyboard.h">
+      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Cv\Cv.h">
+      <Filter>AutoMacro\Cv</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\Image.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\Keyboard.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\Mouse.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\pch.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\Types.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core\VideoCapture.h">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Core.h">
+      <Filter>AutoMacro\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Types.cpp">
-      <Filter>AutoMacro\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Image.cpp">
-      <Filter>AutoMacro\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse\MockMouse.cpp">
-      <Filter>AutoMacro\Mouse</Filter>
-    </ClCompile>
     <ClCompile Include="Mouse\Mouse.cpp">
       <Filter>AutoMacro\Mouse</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard\MockKeyboard.cpp">
-      <Filter>AutoMacro\Keyboard</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard\Keyboard.cpp">
       <Filter>AutoMacro\Keyboard</Filter>
@@ -173,9 +176,6 @@
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Cv.cpp">
-      <Filter>AutoMacro\Core</Filter>
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapturePostProcessor.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
@@ -227,6 +227,21 @@
     </ClCompile>
     <ClCompile Include="History\History\Histories.cpp">
       <Filter>AutoMacro\History\History</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse\Mouse\MockMouse.cpp">
+      <Filter>AutoMacro\Mouse\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard\Keyboard\MockKeyboard.cpp">
+      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Cv\Cv.cpp">
+      <Filter>AutoMacro\Cv</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Core\Image.cpp">
+      <Filter>AutoMacro\Core\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Core\Types.cpp">
+      <Filter>AutoMacro\Core\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,6 @@
 #include "AutoMacro/Detection/Detection/DetectorPreprocessor.h"
 
-#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 

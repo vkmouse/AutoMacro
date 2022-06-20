@@ -1,6 +1,6 @@
 #include "AutoMacro/Mouse/Mouse.h"
 
-#include "AutoMacro/Mouse/MockMouse.h"
+#include "AutoMacro/Mouse/Mouse/MockMouse.h"
 
 namespace AutoMacro {
 namespace Factory {

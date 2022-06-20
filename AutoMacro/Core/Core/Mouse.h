@@ -1,6 +1,6 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core/pch.h"
+#include "AutoMacro/Core/Core/Types.h"
 
 namespace AutoMacro {
 enum class MouseButton : unsigned char {

@@ -1,8 +1,7 @@
 #include "AutoMacroTest/Core/TypesTest.h"
 
 #include "CppUnitTest.h"
-#include <AutoMacro/Core/Image.h>
-#include <AutoMacro/Core/Types.h>
+#include <AutoMacro/Core/Core.h>
 
 namespace AutoMacro {
 namespace {

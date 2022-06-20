@@ -1,6 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {

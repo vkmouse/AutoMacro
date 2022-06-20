@@ -1,11 +1,10 @@
-#include "AutoMacro/Core/Cv.h"
+#include "AutoMacro/Cv/Cv.h"
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 
-#include "AutoMacro/Core/Image.h"
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Cv {

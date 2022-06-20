@@ -1,5 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
+#include "AutoMacro/Core/Core/pch.h"
 
 namespace AutoMacro {
 enum class KeyCode : unsigned char {

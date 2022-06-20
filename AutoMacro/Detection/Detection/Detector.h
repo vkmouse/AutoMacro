@@ -1,6 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
 
 namespace AutoMacro {

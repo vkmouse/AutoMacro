@@ -2,7 +2,7 @@
 
 #include <Windows.h>
 
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection.h"
 
 namespace AutoMacro {

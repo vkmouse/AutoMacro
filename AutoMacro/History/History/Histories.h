@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Core/pch.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/History.h"
 
 namespace AutoMacro {

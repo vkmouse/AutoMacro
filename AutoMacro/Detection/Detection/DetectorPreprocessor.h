@@ -1,5 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/Image.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/Detector.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"

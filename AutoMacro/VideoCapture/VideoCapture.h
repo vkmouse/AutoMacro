@@ -2,9 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/Core/pch.h"
-#include "AutoMacro/Core/Types.h"
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {

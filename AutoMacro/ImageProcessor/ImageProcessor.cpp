@@ -1,6 +1,6 @@
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor/BGRConverterProcessor.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor/CroppingProcessor.h"
 

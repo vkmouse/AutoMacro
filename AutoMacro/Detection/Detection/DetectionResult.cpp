@@ -1,6 +1,6 @@
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
 
-#include "AutoMacro/Core/Types.h"
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 namespace Detection {

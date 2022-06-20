@@ -1,7 +1,6 @@
 #include "AutoMacro/History/History.h"
 
-#include "AutoMacro/Core/Keyboard.h"
-#include "AutoMacro/Core/VideoCapture.h"
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/KeyboardHistoryAgent.h"
 #include "AutoMacro/History/History/VideoCaptureHistoryAgent.h"
 
