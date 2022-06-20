@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 
-#include "AutoMacro/VideoCapture/ImageFileCapture.h"
-#include "AutoMacro/VideoCapture/VideoCapturePostProcessor.h"
+#include "AutoMacro/VideoCapture/VideoCapture/ImageFileCapture.h"
+#include "AutoMacro/VideoCapture/VideoCapture/VideoCapturePostProcessor.h"
 
 namespace AutoMacro {
 namespace Factory {

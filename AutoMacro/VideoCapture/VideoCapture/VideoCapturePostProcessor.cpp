@@ -1,6 +1,7 @@
 #pragma once
+#include "AutoMacro/VideoCapture/VideoCapture/VideoCapturePostProcessor.h"
+
 #include "AutoMacro/Core/Core.h"
-#include "VideoCapturePostProcessor.h"
 
 namespace AutoMacro {
 namespace Impl {

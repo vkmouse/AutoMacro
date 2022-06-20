@@ -56,6 +56,9 @@
     <Filter Include="AutoMacro\Core\Core">
       <UniqueIdentifier>{b3aec9e4-a155-47c0-b25b-875887616341}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\VideoCapture\VideoCapture">
+      <UniqueIdentifier>{29d0b60a-073f-481f-98a5-1e73b3fb5449}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Mouse\Mouse.h">
@@ -64,13 +67,7 @@
     <ClInclude Include="Keyboard\Keyboard.h">
       <Filter>AutoMacro\Keyboard</Filter>
     </ClInclude>
-    <ClInclude Include="VideoCapture\ImageFileCapture.h">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapture.h">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClInclude>
-    <ClInclude Include="VideoCapture\VideoCapturePostProcessor.h">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClInclude>
     <ClInclude Include="Command\Command.h">
@@ -163,6 +160,12 @@
     <ClInclude Include="Core\Core.h">
       <Filter>AutoMacro\Core</Filter>
     </ClInclude>
+    <ClInclude Include="VideoCapture\VideoCapture\ImageFileCapture.h">
+      <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.h">
+      <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mouse\Mouse.cpp">
@@ -171,13 +174,7 @@
     <ClCompile Include="Keyboard\Keyboard.cpp">
       <Filter>AutoMacro\Keyboard</Filter>
     </ClCompile>
-    <ClCompile Include="VideoCapture\ImageFileCapture.cpp">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
-      <Filter>AutoMacro\VideoCapture</Filter>
-    </ClCompile>
-    <ClCompile Include="VideoCapture\VideoCapturePostProcessor.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClCompile>
     <ClCompile Include="Command\SendKeyCommand.cpp">
@@ -242,6 +239,12 @@
     </ClCompile>
     <ClCompile Include="Core\Core\Types.cpp">
       <Filter>AutoMacro\Core\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoCapture\VideoCapture\ImageFileCapture.cpp">
+      <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.cpp">
+      <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

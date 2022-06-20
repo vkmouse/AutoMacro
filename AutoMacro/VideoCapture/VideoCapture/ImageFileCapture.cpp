@@ -1,4 +1,4 @@
-#include "AutoMacro/VideoCapture/ImageFileCapture.h"
+#include "AutoMacro/VideoCapture/VideoCapture/ImageFileCapture.h"
 
 #include <cassert>
 #include <string>
