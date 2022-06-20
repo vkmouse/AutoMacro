@@ -1,5 +1,7 @@
 #include "AutoMacro/Detection/Detection/DetectorPreprocessor.h"
 
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
@@ -9,7 +11,7 @@ namespace Detection {
 namespace Impl {
 DetectorPreprocessor::DetectorPreprocessor(
 	Detector* detector, 
-	ImageProcessor* processor) :
+	std::shared_ptr<ImageProcessor> processor) :
 	detector_(detector),
 	processor_(processor) {
 }

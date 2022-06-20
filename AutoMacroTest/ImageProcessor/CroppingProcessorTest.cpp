@@ -1,7 +1,8 @@
 #include "AutoMacroTest/ImageProcessor/CroppingProcessorTest.h"
 
-#include "CppUnitTest.h"
+#include <memory>
 
+#include "CppUnitTest.h"
 #include <AutoMacro/ImageProcessor/ImageProcessor.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 
@@ -15,7 +16,7 @@ void CroppingProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    ImageProcessor* processor = Factory::createCroppingProcessor(0, 0, 5, 5);   
+    auto processor = Factory::createCroppingProcessor(0, 0, 5, 5);   
 
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();

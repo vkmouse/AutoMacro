@@ -1,4 +1,6 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/Detector.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
@@ -9,13 +11,13 @@ namespace Detection {
 namespace Impl {
 class DetectorPreprocessor : public Detector {
  public:
-	DetectorPreprocessor(Detector* detector, ImageProcessor* processor);
+	DetectorPreprocessor(Detector* detector, std::shared_ptr<ImageProcessor> processor);
 
 	virtual DetectionResults detect(Image image);
 
  private:
 	Detector* detector_;
-	ImageProcessor* processor_;
+	std::shared_ptr<ImageProcessor> processor_;
 };
 }  // namespace Impl
 }  // namespace Detection

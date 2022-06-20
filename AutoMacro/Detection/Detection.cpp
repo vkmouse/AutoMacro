@@ -1,6 +1,7 @@
 #include "AutoMacro/Detection/Detection.h"
 
 #include <algorithm>
+#include <memory>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -69,7 +70,7 @@ Detection::Detector* createTemplateBasedDetectorWithMask(
 
 Detection::Detector* addPreprocessing(
     Detection::Detector* detector,
-    ImageProcessor* processor) {
+    std::shared_ptr<ImageProcessor> processor) {
     return new Detection::Impl::DetectorPreprocessor(detector, processor);
 }
 }  // namespace Factory

@@ -15,7 +15,7 @@ std::shared_ptr<VideoCapture> createImageFileCapture(std::vector<std::string> fi
 
 std::shared_ptr<VideoCapture> addPostprocessing(
     std::shared_ptr<VideoCapture> videoCapture,
-    ImageProcessor* processor) {
+    std::shared_ptr<ImageProcessor> processor) {
     return std::make_shared<Impl::VideoCapturePostProcessor>(videoCapture, processor);
 }
 }  // namespace Factory

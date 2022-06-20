@@ -1,7 +1,8 @@
 #include "AutoMacroTest/VideoCapture/VideoCapturePostProcessorTest.h"
 
-#include "CppUnitTest.h"
+#include <memory>
 
+#include "CppUnitTest.h"
 #include <AutoMacro/ImageProcessor/ImageProcessor.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 
@@ -21,7 +22,6 @@ void VideoCapturePostProcessorTest::TestBGRConverterProcessor() {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(3, image.channel());
     }
-    delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestCroppingProcessor() {
@@ -29,14 +29,13 @@ void VideoCapturePostProcessorTest::TestCroppingProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    ImageProcessor* processor = Factory::createCroppingProcessor(0, 0, 5, 5);
+    auto processor = Factory::createCroppingProcessor(0, 0, 5, 5);
     videoCapture = Factory::addPostprocessing(videoCapture, processor);
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         Assert::AreEqual(5, image.width());
         Assert::AreEqual(5, image.height());
     }
-    delete(processor);
 }
 
 void VideoCapturePostProcessorTest::TestMixedProcessor() {
@@ -44,8 +43,8 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
-    ImageProcessor* processor1 = Factory::createBGRConverterProcessor();
-    ImageProcessor* processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
+    auto processor1 = Factory::createBGRConverterProcessor();
+    auto processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
     videoCapture = Factory::addPostprocessing(videoCapture, processor1);
     videoCapture = Factory::addPostprocessing(videoCapture, processor2);
     for (int i = 0; i < 2; i++) {
@@ -69,7 +68,5 @@ void VideoCapturePostProcessorTest::TestMixedProcessor() {
         Assert::AreEqual(5, image.height());
         Assert::AreEqual(3, image.channel());
     }
-    delete(processor1);
-    delete(processor2);
 }
 }  // namespace AutoMacro

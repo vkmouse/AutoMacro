@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -26,6 +27,6 @@ DLL_EXPORTS Detection::Detector* createTemplateBasedDetector(
 DLL_EXPORTS Detection::Detector* createTemplateBasedDetectorWithMask(
     std::vector<Detection::TemplateBasedDetectorParameter> parameters);
 DLL_EXPORTS Detection::Detector* addPreprocessing(
-    Detection::Detector* detector, ImageProcessor* processor);
+    Detection::Detector* detector, std::shared_ptr<ImageProcessor> processor);
 }  // namespace Factory
 }  // namespace AutoMacro

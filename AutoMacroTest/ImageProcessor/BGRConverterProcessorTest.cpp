@@ -1,7 +1,8 @@
 #include "AutoMacroTest/ImageProcessor/BGRConverterProcessorTest.h"
 
-#include "CppUnitTest.h"
+#include <memory>
 
+#include "CppUnitTest.h"
 #include <AutoMacro/ImageProcessor/ImageProcessor.h>
 #include <AutoMacro/VideoCapture/VideoCapture.h>
 
@@ -16,7 +17,7 @@ void BGRConverterProcessorTest::TestBGRConverterProcessor() {
         "images\\AutoMacroTest\\Sample_10x10_32bits.png",
     });
 
-    ImageProcessor* processor = Factory::createBGRConverterProcessor();
+    auto processor = Factory::createBGRConverterProcessor();
     for (int i = 0; i < 2; i++) {
         Image image = videoCapture->takeSnapshot();
         image = processor->process(image);

@@ -1,22 +1,24 @@
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor/BGRConverterProcessor.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor/CroppingProcessor.h"
 
 namespace AutoMacro {
 namespace Factory {
-ImageProcessor* createBGRConverterProcessor() {
-    return new Impl::BGRConverterProcessor();
+std::shared_ptr<ImageProcessor> createBGRConverterProcessor() {
+    return std::make_shared<Impl::BGRConverterProcessor>();
 }
 
-ImageProcessor* createCroppingProcessor(int x, int y, int width, int height) {
+std::shared_ptr<ImageProcessor> createCroppingProcessor(int x, int y, int width, int height) {
     Rect region(x, y, width, height);
     return createCroppingProcessor(region);
 }
 
-ImageProcessor* createCroppingProcessor(Rect region) {
-    return new Impl::CroppingProcessor(region);
+std::shared_ptr<ImageProcessor> createCroppingProcessor(Rect region) {
+    return std::make_shared<Impl::CroppingProcessor>(region);
 }
 }  // namespace Factory
 }  // namespace AutoMacro
