@@ -61,7 +61,7 @@ class WaitForItemsCommandParameter : public WaitForCommandParameter {
 };
 
 class KeyboardCommandParameter : public CommandParameter {
-public:
+ public:
     KeyboardCommandParameter(
         std::shared_ptr<Keyboard> keyboard) :
         keyboard(keyboard) {}
