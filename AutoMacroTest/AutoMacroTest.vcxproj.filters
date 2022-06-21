@@ -94,6 +94,9 @@
     <ClCompile Include="Detection\DetectionPreprocessorTest.cpp">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClCompile>
+    <ClCompile Include="Command\ShortcutCommandTest.cpp">
+      <Filter>AutoMacroTest\Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -149,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="Detection\DetectionPreprocessorTest.h">
       <Filter>AutoMacroTest\Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\ShortcutCommandTest.h">
+      <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@ namespace Impl {
 SendKeyCommand::SendKeyCommand(SendKeyCommandParameter* p) :
     KeyboardCommand(p),
     key(p->key),
-    delayBetweenCommands(p->delayBetweenCommands),
+    delayBetweenPressKeyAndReleaseKey(p->delayBetweenPressKeyAndReleaseKey),
     delayBetweenRepeatitions(p->delayBetweenRepeatitions),
     repeatTimes(p->repeatTimes) {
 }
@@ -29,7 +29,7 @@ void SendKeyCommand::executeCommand() {
 
 void SendKeyCommand::pressAndRelease() {
     keyboard()->pressKey(key);
-    Sleep(delayBetweenCommands);
+    Sleep(delayBetweenPressKeyAndReleaseKey);
     keyboard()->releaseKey(key);
 }
 }  // namespace Impl

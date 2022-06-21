@@ -18,7 +18,7 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     SendKeyCommandParameter p(keyboard, KeyCode::KEY_A);
     p.delayBeforeCommand = 50;
     p.delayAfterCommand = 50;
-    p.delayBetweenCommands = 50;
+    p.delayBetweenPressKeyAndReleaseKey = 50;
     p.delayBetweenRepeatitions = 50;
     p.repeatTimes = 3;
 
@@ -39,11 +39,11 @@ void SendKeyCommandTest::TestSendKeyCommand() {
 
     histories.allDurationsAreInRange({
         p.delayBeforeCommand,
-        p.delayBetweenCommands,
+        p.delayBetweenPressKeyAndReleaseKey,
         p.delayBetweenRepeatitions,
-        p.delayBetweenCommands,
+        p.delayBetweenPressKeyAndReleaseKey,
         p.delayBetweenRepeatitions,
-        p.delayBetweenCommands,
+        p.delayBetweenPressKeyAndReleaseKey,
         p.delayAfterCommand
         }, 40);
 }

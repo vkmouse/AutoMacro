@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+#include <vector>
 
 #include "AutoMacro/Command/Command/CommandParameter.h"
 #include "AutoMacro/Command/Command/KeyboardCommand.h"
@@ -8,17 +9,21 @@
 namespace AutoMacro {
 namespace Command {
 namespace Impl {
-class SendKeyCommand : public KeyboardCommand {
+class ShortcutCommand : public KeyboardCommand {
  public:
-    explicit SendKeyCommand(SendKeyCommandParameter* p);
+    explicit ShortcutCommand(ShortcutCommandParameter* p);
 
  protected:
     virtual void executeCommand();
 
  private:
-    void pressAndRelease();
+    void pressKeys();
+    void releaseKeys();
+    void pressAndReleaseKeys();
 
-    KeyCode key;
+    std::vector<KeyCode> keys;
+    int delayBetweenEachPressKey;
+    int delayBetweenEachReleaseKey;
     int delayBetweenPressKeyAndReleaseKey;
     int delayBetweenRepeatitions;
     int repeatTimes;

@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
+    <ClCompile Include="Command\ShortcutCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
     <ClCompile Include="Core\ImageTest.cpp" />
@@ -45,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command\SendKeyCommandTest.h" />
+    <ClInclude Include="Command\ShortcutCommandTest.h" />
     <ClInclude Include="Command\WaitForItemCommandTest.h" />
     <ClInclude Include="Command\WaitForItemsCommandTest.h" />
     <ClInclude Include="Core\ImageTest.h" />

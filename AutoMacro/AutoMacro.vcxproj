@@ -24,6 +24,7 @@
     <ClInclude Include="Command\Command\CommandParameter.h" />
     <ClInclude Include="Command\Command\KeyboardCommand.h" />
     <ClInclude Include="Command\Command\SendKeyCommand.h" />
+    <ClInclude Include="Command\Command\ShortcutCommand.h" />
     <ClInclude Include="Command\Command\WaitForCommand.h" />
     <ClInclude Include="Command\Command\WaitForItemCommand.h" />
     <ClInclude Include="Command\Command\WaitForItemsCommand.h" />
@@ -63,6 +64,7 @@
     <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\Command\KeyboardCommand.cpp" />
     <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
+    <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
     <ClCompile Include="Command\Command\WaitForCommand.cpp" />
     <ClCompile Include="Command\Command\WaitForItemCommand.cpp" />
     <ClCompile Include="Command\Command\WaitForItemsCommand.cpp" />

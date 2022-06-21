@@ -75,10 +75,25 @@ class SendKeyCommandParameter : public KeyboardCommandParameter {
         KeyboardCommandParameter(keyboard), key(key) {}
 
     KeyCode key;
-    int delayBetweenCommands = 0;
+    int delayBetweenPressKeyAndReleaseKey = 0;
     int delayBetweenRepeatitions = 0;
     int repeatTimes = 1;
 };
 
+class ShortcutCommandParameter : public KeyboardCommandParameter {
+ public:
+    ShortcutCommandParameter(
+        std::shared_ptr<Keyboard> keyboard,
+        std::vector<KeyCode> keys) :
+        KeyboardCommandParameter(keyboard),
+        keys(keys) {}
+
+    std::vector<KeyCode> keys;
+    int delayBetweenEachPressKey = 0;
+    int delayBetweenEachReleaseKey = 0;
+    int delayBetweenPressKeyAndReleaseKey = 0;
+    int delayBetweenRepeatitions = 0;
+    int repeatTimes = 1;
+};
 }  // namespace Command
 }  // namespace AutoMacro
