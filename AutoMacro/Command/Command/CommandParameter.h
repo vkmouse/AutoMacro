@@ -60,13 +60,20 @@ class WaitForItemsCommandParameter : public WaitForCommandParameter {
     bool waitForAllItems = false;
 };
 
-class SendKeyCommandParameter : public CommandParameter {
+class KeyboardCommandParameter : public CommandParameter {
+public:
+    KeyboardCommandParameter(
+        std::shared_ptr<Keyboard> keyboard) :
+        keyboard(keyboard) {}
+    std::shared_ptr<Keyboard> keyboard;
+};
+
+class SendKeyCommandParameter : public KeyboardCommandParameter {
  public:
     SendKeyCommandParameter(
         std::shared_ptr<Keyboard> keyboard, KeyCode key) :
-        keyboard(keyboard), key(key) {}
+        KeyboardCommandParameter(keyboard), key(key) {}
 
-    std::shared_ptr<Keyboard> keyboard;
     KeyCode key;
     int delayBetweenCommands = 0;
     int delayBetweenRepeatitions = 0;

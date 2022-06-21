@@ -178,6 +178,9 @@
     <ClInclude Include="Command\Command\WaitForCommand.h">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\KeyboardCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mouse\Mouse.cpp">
@@ -259,6 +262,9 @@
       <Filter>AutoMacro\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command\WaitForCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\KeyboardCommand.cpp">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
   </ItemGroup>
