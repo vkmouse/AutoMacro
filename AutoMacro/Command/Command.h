@@ -15,5 +15,7 @@ DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::WaitForItemsCommandParameter* parameter);
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::ShortcutCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::DesktopSwitchCommandParameter* parameter);
 }  // namespace Factory
 }  // namespace AutoMacro

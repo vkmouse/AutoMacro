@@ -24,6 +24,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
@@ -45,6 +46,7 @@
     <ClCompile Include="VideoCapture\VideoCapturePostProcessorTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command\DesktopSwitchCommandTest.h" />
     <ClInclude Include="Command\SendKeyCommandTest.h" />
     <ClInclude Include="Command\ShortcutCommandTest.h" />
     <ClInclude Include="Command\WaitForItemCommandTest.h" />

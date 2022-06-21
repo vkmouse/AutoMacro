@@ -184,6 +184,9 @@
     <ClInclude Include="Command\Command\ShortcutCommand.h">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\DesktopSwitchCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mouse\Mouse.cpp">
@@ -271,6 +274,9 @@
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command\ShortcutCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
   </ItemGroup>

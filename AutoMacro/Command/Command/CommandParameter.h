@@ -95,5 +95,19 @@ class ShortcutCommandParameter : public KeyboardCommandParameter {
     int delayBetweenRepeatitions = 0;
     int repeatTimes = 1;
 };
+
+class DesktopSwitchCommandParameter : public KeyboardCommandParameter {
+ public:
+    DesktopSwitchCommandParameter(
+        std::shared_ptr<Keyboard> keyboard,
+        int numDesktops,
+        int destination) :
+        KeyboardCommandParameter(keyboard),
+        numDesktops(numDesktops),
+        destination(destination) {}
+
+    int numDesktops;
+    int destination;
+};
 }  // namespace Command
 }  // namespace AutoMacro
