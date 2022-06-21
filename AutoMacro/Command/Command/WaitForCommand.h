@@ -7,6 +7,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 class WaitForCommand : public Command {
  public:
     explicit WaitForCommand(WaitForCommandParameter* p);
@@ -24,5 +25,6 @@ class WaitForCommand : public Command {
     int delayBetweenRepeatitions_;
     bool waitForExists_;
 };
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

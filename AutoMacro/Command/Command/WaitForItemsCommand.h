@@ -8,6 +8,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 class WaitForItemsCommand : public WaitForCommand {
  public:
     explicit WaitForItemsCommand(WaitForItemsCommandParameter* p);
@@ -26,5 +27,6 @@ class WaitForItemsCommand : public WaitForCommand {
     bool waitForAllItems;
     int numDetectors;
 };
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

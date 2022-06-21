@@ -7,6 +7,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 WaitForItemCommand::WaitForItemCommand(WaitForItemCommandParameter* p) :
     WaitForCommand(p),
     detector(p->detector),
@@ -18,5 +19,6 @@ bool WaitForItemCommand::testExpression() {
     auto results = detector->detect(videoCapture()->takeSnapshot());
     return Detection::itemExists(results, index, threshold) == waitForExists();
 }
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

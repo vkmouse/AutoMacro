@@ -8,6 +8,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 SendKeyCommand::SendKeyCommand(SendKeyCommandParameter* p) :
     Command(p),
     keyboard(p->keyboard),
@@ -32,5 +33,6 @@ void SendKeyCommand::pressAndRelease() {
     Sleep(delayBetweenCommands);
     keyboard->releaseKey(key);
 }
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

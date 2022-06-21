@@ -11,6 +11,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 WaitForItemsCommand::WaitForItemsCommand(WaitForItemsCommandParameter* p) :
     WaitForCommand(p),
     detectors(p->detectors),
@@ -52,5 +53,6 @@ bool WaitForItemsCommand::itemExists(const Image& image, int detectorIndex) {
     float threshold = thresholds[detectorIndex];
     return Detection::itemExists(results, index, threshold);
 }
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

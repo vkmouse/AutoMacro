@@ -7,6 +7,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 class SendKeyCommand : public Command {
  public:
     explicit SendKeyCommand(SendKeyCommandParameter* p);
@@ -23,5 +24,6 @@ class SendKeyCommand : public Command {
     int delayBetweenRepeatitions;
     int repeatTimes;
 };
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

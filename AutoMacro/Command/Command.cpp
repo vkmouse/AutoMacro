@@ -10,17 +10,17 @@ namespace AutoMacro {
 namespace Factory {
 std::shared_ptr<Command::Command> createCommand(
     Command::SendKeyCommandParameter* parameter) {
-    return std::make_shared<Command::SendKeyCommand>(parameter);
+    return std::make_shared<Command::Impl::SendKeyCommand>(parameter);
 }
 
 std::shared_ptr<Command::Command> createCommand(
     Command::WaitForItemCommandParameter* parameter) {
-    return std::make_shared<Command::WaitForItemCommand>(parameter);
+    return std::make_shared<Command::Impl::WaitForItemCommand>(parameter);
 }
 
 std::shared_ptr<Command::Command> createCommand(
     Command::WaitForItemsCommandParameter* parameter) {
-    return std::make_shared<Command::WaitForItemsCommand>(parameter);
+    return std::make_shared<Command::Impl::WaitForItemsCommand>(parameter);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

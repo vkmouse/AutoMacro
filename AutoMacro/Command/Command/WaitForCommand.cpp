@@ -6,6 +6,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 WaitForCommand::WaitForCommand(WaitForCommandParameter* p) :
     Command(p),
     videoCapture_(p->videoCapture),
@@ -26,5 +27,6 @@ std::shared_ptr<VideoCapture> WaitForCommand::videoCapture() const {
 bool WaitForCommand::waitForExists() const {
     return waitForExists_;
 }
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro

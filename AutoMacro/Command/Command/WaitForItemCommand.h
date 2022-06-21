@@ -7,6 +7,7 @@
 
 namespace AutoMacro {
 namespace Command {
+namespace Impl {
 class WaitForItemCommand : public WaitForCommand {
  public:
     explicit WaitForItemCommand(WaitForItemCommandParameter* p);
@@ -19,5 +20,6 @@ class WaitForItemCommand : public WaitForCommand {
     int index;
     float threshold;
 };
+}  // namespace Impl
 }  // namespace Command
 }  // namespace AutoMacro
