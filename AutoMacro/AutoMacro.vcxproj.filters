@@ -187,6 +187,9 @@
     <ClInclude Include="Command\Command\DesktopSwitchCommand.h">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Keyboard\Keyboard\HIDKeyboard.h">
+      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mouse\Mouse.cpp">
@@ -278,6 +281,9 @@
     </ClCompile>
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp">
       <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard\Keyboard\HIDKeyboard.cpp">
+      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

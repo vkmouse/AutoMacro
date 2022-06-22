@@ -103,6 +103,9 @@
     <ClCompile Include="Keyboard\KeyboardTest.cpp">
       <Filter>AutoMacroTest\Keyboard</Filter>
     </ClCompile>
+    <ClCompile Include="Keyboard\HIDKeyboardTest.cpp">
+      <Filter>AutoMacroTest\Keyboard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -166,6 +169,9 @@
       <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard\KeyboardTest.h">
+      <Filter>AutoMacroTest\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard\HIDKeyboardTest.h">
       <Filter>AutoMacroTest\Keyboard</Filter>
     </ClInclude>
   </ItemGroup>

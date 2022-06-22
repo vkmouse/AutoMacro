@@ -54,6 +54,7 @@
     <ClInclude Include="ImageProcessor\ImageProcessor\CroppingProcessor.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="Keyboard\Keyboard.h" />
+    <ClInclude Include="Keyboard\Keyboard\HIDKeyboard.h" />
     <ClInclude Include="Keyboard\Keyboard\MockKeyboard.h" />
     <ClInclude Include="Mouse\Mouse.h" />
     <ClInclude Include="Mouse\Mouse\MockMouse.h" />
@@ -86,6 +87,7 @@
     <ClCompile Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp" />
     <ClCompile Include="Keyboard\Keyboard.cpp" />
+    <ClCompile Include="Keyboard\Keyboard\HIDKeyboard.cpp" />
     <ClCompile Include="Keyboard\Keyboard\MockKeyboard.cpp" />
     <ClCompile Include="Mouse\Mouse.cpp" />
     <ClCompile Include="Mouse\Mouse\MockMouse.cpp" />
