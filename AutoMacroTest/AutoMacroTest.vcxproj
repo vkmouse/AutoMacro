@@ -40,10 +40,10 @@
     <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp" />
-    <ClCompile Include="Keyboard\HIDKeyboardTest.cpp" />
-    <ClCompile Include="Keyboard\KeyboardTest.cpp" />
-    <ClCompile Include="Keyboard\MockKeyboardTest.cpp" />
-    <ClCompile Include="Mouse\MockMouseTest.cpp" />
+    <ClCompile Include="KbdMou\HIDKeyboardTest.cpp" />
+    <ClCompile Include="KbdMou\KeyboardTest.cpp" />
+    <ClCompile Include="KbdMou\MockKeyboardTest.cpp" />
+    <ClCompile Include="KbdMou\MockMouseTest.cpp" />
     <ClCompile Include="VideoCapture\ImageFileCaptureTest.cpp" />
     <ClCompile Include="VideoCapture\VideoCapturePostProcessorTest.cpp" />
   </ItemGroup>
@@ -64,10 +64,10 @@
     <ClInclude Include="History\VideoCaptureHistoryAgentTest.h" />
     <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />
-    <ClInclude Include="Keyboard\HIDKeyboardTest.h" />
-    <ClInclude Include="Keyboard\KeyboardTest.h" />
-    <ClInclude Include="Keyboard\MockKeyboardTest.h" />
-    <ClInclude Include="Mouse\MockMouseTest.h" />
+    <ClInclude Include="KbdMou\HIDKeyboardTest.h" />
+    <ClInclude Include="KbdMou\KeyboardTest.h" />
+    <ClInclude Include="KbdMou\MockKeyboardTest.h" />
+    <ClInclude Include="KbdMou\MockMouseTest.h" />
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h" />
     <ClInclude Include="VideoCapture\VideoCapturePostProcessorTest.h" />
   </ItemGroup>

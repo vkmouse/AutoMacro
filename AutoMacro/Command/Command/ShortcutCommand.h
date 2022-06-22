@@ -4,7 +4,7 @@
 
 #include "AutoMacro/Command/Command/CommandParameter.h"
 #include "AutoMacro/Command/Command/KeyboardCommand.h"
-#include "AutoMacro/Keyboard/Keyboard.h"
+#include "AutoMacro/KbdMou/KbdMou.h"
 
 namespace AutoMacro {
 namespace Command {

@@ -1,9 +1,9 @@
-#include "AutoMacroTest/Mouse/MockMouseTest.h"
+#include "AutoMacroTest/KbdMou/MockMouseTest.h"
 
 #include <memory>
 
 #include "CppUnitTest.h"
-#include <AutoMacro/Mouse/Mouse.h>
+#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace {

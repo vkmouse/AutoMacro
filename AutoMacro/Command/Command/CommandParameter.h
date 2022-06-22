@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "AutoMacro/Detection/Detection.h"
-#include "AutoMacro/Keyboard/Keyboard.h"
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "AutoMacro/VideoCapture/VideoCapture.h"
 
 namespace AutoMacro {

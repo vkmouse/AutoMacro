@@ -1,9 +1,9 @@
-#include "AutoMacroTest/Keyboard/KeyboardTest.h"
+#include "AutoMacroTest/KbdMou/KeyboardTest.h"
 
 #include <memory>
 
 #include "CppUnitTest.h"
-#include <AutoMacro/Keyboard/Keyboard.h>
+#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace {

@@ -14,12 +14,6 @@
     <Filter Include="AutoMacroTest\Detection">
       <UniqueIdentifier>{c8828f5f-b9a4-466a-bb87-616dd56599b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutoMacroTest\Keyboard">
-      <UniqueIdentifier>{7a88b5ca-ce04-452d-adad-e36a19f3f46d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutoMacroTest\Mouse">
-      <UniqueIdentifier>{cb0071ba-57c7-4c2a-bace-47e482ba898e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutoMacroTest\VideoCapture">
       <UniqueIdentifier>{254b3146-207f-4b56-b535-4845c085c665}</UniqueIdentifier>
     </Filter>
@@ -38,16 +32,13 @@
     <Filter Include="AutoMacroTest\ImageProcessor">
       <UniqueIdentifier>{abc588c2-cc41-42c0-ad4a-ad949e3c980c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacroTest\KbdMou">
+      <UniqueIdentifier>{333496df-bc03-41b6-a619-5244b02d0965}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\TypesTest.cpp">
       <Filter>AutoMacroTest\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse\MockMouseTest.cpp">
-      <Filter>AutoMacroTest\Mouse</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard\MockKeyboardTest.cpp">
-      <Filter>AutoMacroTest\Keyboard</Filter>
     </ClCompile>
     <ClCompile Include="Detection\DetectionResultTest.cpp">
       <Filter>AutoMacroTest\Detection</Filter>
@@ -100,22 +91,22 @@
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp">
       <Filter>AutoMacroTest\Command</Filter>
     </ClCompile>
-    <ClCompile Include="Keyboard\KeyboardTest.cpp">
-      <Filter>AutoMacroTest\Keyboard</Filter>
+    <ClCompile Include="KbdMou\HIDKeyboardTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
     </ClCompile>
-    <ClCompile Include="Keyboard\HIDKeyboardTest.cpp">
-      <Filter>AutoMacroTest\Keyboard</Filter>
+    <ClCompile Include="KbdMou\KeyboardTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\MockKeyboardTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\MockMouseTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
       <Filter>AutoMacroTest\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse\MockMouseTest.h">
-      <Filter>AutoMacroTest\Mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard\MockKeyboardTest.h">
-      <Filter>AutoMacroTest\Keyboard</Filter>
     </ClInclude>
     <ClInclude Include="Detection\DetectionResultTest.h">
       <Filter>AutoMacroTest\Detection</Filter>
@@ -168,11 +159,17 @@
     <ClInclude Include="Command\DesktopSwitchCommandTest.h">
       <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
-    <ClInclude Include="Keyboard\KeyboardTest.h">
-      <Filter>AutoMacroTest\Keyboard</Filter>
+    <ClInclude Include="KbdMou\HIDKeyboardTest.h">
+      <Filter>AutoMacroTest\KbdMou</Filter>
     </ClInclude>
-    <ClInclude Include="Keyboard\HIDKeyboardTest.h">
-      <Filter>AutoMacroTest\Keyboard</Filter>
+    <ClInclude Include="KbdMou\KeyboardTest.h">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\MockKeyboardTest.h">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\MockMouseTest.h">
+      <Filter>AutoMacroTest\KbdMou</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

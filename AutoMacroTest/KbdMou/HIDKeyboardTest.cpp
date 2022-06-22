@@ -1,8 +1,8 @@
-#include "AutoMacroTest/Keyboard/HIDKeyboardTest.h"
+#include "AutoMacroTest/KbdMou/HIDKeyboardTest.h"
 
 #include <memory>
 
-#include <AutoMacro/Keyboard/Keyboard.h>
+#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 void HIDKeyboardTest::TestHIDKeyboardPressAndReleaseKey() {

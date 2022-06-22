@@ -1,4 +1,4 @@
-#include "AutoMacro/Mouse/Mouse/MockMouse.h"
+#include "AutoMacro/KbdMou/KbdMou/MockMouse.h"
 
 #include <vector>
 

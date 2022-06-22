@@ -1,4 +1,4 @@
-#include "AutoMacro/Keyboard/Keyboard/HIDKeyboard.h"
+#include "AutoMacro/KbdMou/KbdMou/HIDKeyboard.h"
 
 #include "AutoMacro/Core/Core.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 #include "CppUnitTest.h"
-#include "AutoMacroTest/Keyboard/KeyboardTest.h"
+#include "AutoMacroTest/KbdMou/KeyboardTest.h"
 
 namespace AutoMacro {
 TEST_CLASS(MockKeyboardTest), public KeyboardTest {

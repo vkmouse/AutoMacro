@@ -1,8 +1,8 @@
-#include "AutoMacroTest/Keyboard/MockKeyboardTest.h"
+#include "AutoMacroTest/KbdMou/MockKeyboardTest.h"
 
 #include <memory>
 
-#include <AutoMacro/Keyboard/Keyboard.h>
+#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 void MockKeyboardTest::TestMockKeyboardPressAndReleaseKey() {

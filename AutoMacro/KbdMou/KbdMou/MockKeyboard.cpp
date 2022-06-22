@@ -1,4 +1,4 @@
-#include "AutoMacro/Keyboard/Keyboard/MockKeyboard.h"
+#include "AutoMacro/KbdMou/KbdMou/MockKeyboard.h"
 
 #include <vector>
 

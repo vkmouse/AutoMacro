@@ -2,7 +2,7 @@
 
 #include <AutoMacro/Command/Command.h>
 #include <AutoMacro/History/History.h>
-#include <AutoMacro/Keyboard/Keyboard.h>
+#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace Command {

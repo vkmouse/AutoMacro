@@ -11,12 +11,6 @@
     <Filter Include="AutoMacro\VideoCapture">
       <UniqueIdentifier>{0a3c67cc-ebcf-4412-b0d4-44eef5b48a4d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutoMacro\Mouse">
-      <UniqueIdentifier>{5f311f0f-7f3b-4013-9522-6c12e2554a73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutoMacro\Keyboard">
-      <UniqueIdentifier>{87690696-9ced-4ec7-9622-e9501df8f8dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutoMacro\Detection">
       <UniqueIdentifier>{1284a370-c536-4947-afec-0d2c2de951e8}</UniqueIdentifier>
     </Filter>
@@ -44,12 +38,6 @@
     <Filter Include="AutoMacro\History\History">
       <UniqueIdentifier>{a4eb7af5-49ed-4a1c-b3bd-63e073de34bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutoMacro\Keyboard\Keyboard">
-      <UniqueIdentifier>{8918b012-99f9-4556-b685-351c7bd3e16f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutoMacro\Mouse\Mouse">
-      <UniqueIdentifier>{cc1dad48-9a1e-4024-980f-686ad21de22e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutoMacro\Cv">
       <UniqueIdentifier>{030a52a7-bb9e-408b-b96d-2b1c63f531ff}</UniqueIdentifier>
     </Filter>
@@ -62,14 +50,14 @@
     <Filter Include="AutoMacro\Command\Command">
       <UniqueIdentifier>{9a801732-86a2-469a-a148-28a7470ac090}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutoMacro\KbdMou">
+      <UniqueIdentifier>{03f25476-9cef-4ba8-bb3b-c6a6195a1d67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoMacro\KbdMou\KbdMou">
+      <UniqueIdentifier>{bb0eb1c3-3209-4170-9889-04ba35281a4c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Mouse\Mouse.h">
-      <Filter>AutoMacro\Mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard\Keyboard.h">
-      <Filter>AutoMacro\Keyboard</Filter>
-    </ClInclude>
     <ClInclude Include="VideoCapture\VideoCapture.h">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClInclude>
@@ -120,12 +108,6 @@
     </ClInclude>
     <ClInclude Include="History\History\Histories.h">
       <Filter>AutoMacro\History\History</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse\Mouse\MockMouse.h">
-      <Filter>AutoMacro\Mouse\Mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard\Keyboard\MockKeyboard.h">
-      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
     </ClInclude>
     <ClInclude Include="Cv\Cv.h">
       <Filter>AutoMacro\Cv</Filter>
@@ -187,17 +169,20 @@
     <ClInclude Include="Command\Command\DesktopSwitchCommand.h">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClInclude>
-    <ClInclude Include="Keyboard\Keyboard\HIDKeyboard.h">
-      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
+    <ClInclude Include="KbdMou\KbdMou\HIDKeyboard.h">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\KbdMou\MockKeyboard.h">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\KbdMou\MockMouse.h">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\KbdMou.h">
+      <Filter>AutoMacro\KbdMou</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mouse\Mouse.cpp">
-      <Filter>AutoMacro\Mouse</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard\Keyboard.cpp">
-      <Filter>AutoMacro\Keyboard</Filter>
-    </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
       <Filter>AutoMacro\VideoCapture</Filter>
     </ClCompile>
@@ -236,12 +221,6 @@
     </ClCompile>
     <ClCompile Include="History\History\Histories.cpp">
       <Filter>AutoMacro\History\History</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse\Mouse\MockMouse.cpp">
-      <Filter>AutoMacro\Mouse\Mouse</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard\Keyboard\MockKeyboard.cpp">
-      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
     </ClCompile>
     <ClCompile Include="Cv\Cv.cpp">
       <Filter>AutoMacro\Cv</Filter>
@@ -282,8 +261,17 @@
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
-    <ClCompile Include="Keyboard\Keyboard\HIDKeyboard.cpp">
-      <Filter>AutoMacro\Keyboard\Keyboard</Filter>
+    <ClCompile Include="KbdMou\KbdMou\HIDKeyboard.cpp">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\KbdMou\MockKeyboard.cpp">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\KbdMou\MockMouse.cpp">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\KbdMou.cpp">
+      <Filter>AutoMacro\KbdMou</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
