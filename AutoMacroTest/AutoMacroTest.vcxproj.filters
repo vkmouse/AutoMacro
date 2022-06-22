@@ -100,6 +100,9 @@
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp">
       <Filter>AutoMacroTest\Command</Filter>
     </ClCompile>
+    <ClCompile Include="Keyboard\KeyboardTest.cpp">
+      <Filter>AutoMacroTest\Keyboard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -161,6 +164,9 @@
     </ClInclude>
     <ClInclude Include="Command\DesktopSwitchCommandTest.h">
       <Filter>AutoMacroTest\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard\KeyboardTest.h">
+      <Filter>AutoMacroTest\Keyboard</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
