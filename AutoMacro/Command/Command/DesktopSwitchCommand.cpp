@@ -14,34 +14,33 @@ DesktopSwitchCommand::DesktopSwitchCommand(
     DesktopSwitchCommandParameter* p) :
     KeyboardCommand(p),
     numDesktops(p->numDesktops),
-    destination(p->destination) {
+    destination(p->destination),
+    delayBetweemEachSwitch(p->delayBetweemEachSwitch) {
 }
 
 void DesktopSwitchCommand::executeCommand() {
     if (numDesktops != globalNumDesktops) {
-        resetDesktop(keyboard(), numDesktops);
+        resetDesktop(numDesktops);
     }
 
     int times = destination - currentDesktop;
     if (times > 0) {
-        switchToNext(keyboard(), times);
+        switchToNext(times);
     } else if (times < 0) {
-        switchToPrevious(keyboard(), times);
+        switchToPrevious(times);
     }
 }
 
 int DesktopSwitchCommand::globalNumDesktops = -1;
 int DesktopSwitchCommand::currentDesktop = -1;
-void DesktopSwitchCommand::resetDesktop(
-    std::shared_ptr<Keyboard> keyboard, int numDesktops) {
+void DesktopSwitchCommand::resetDesktop(int numDesktops) {
     globalNumDesktops = numDesktops;
-    switchToPrevious(keyboard, numDesktops - 1);
+    switchToPrevious(numDesktops - 1);
     currentDesktop = 1;
 }
 
-void DesktopSwitchCommand::switchToNext(
-    std::shared_ptr<Keyboard> keyboard, int times) {
-    ShortcutCommandParameter p(keyboard, {
+void DesktopSwitchCommand::switchToNext(int times) {
+    ShortcutCommandParameter p(keyboard(), {
         KeyCode::KEY_LCTRL,
         KeyCode::KEY_LMETA,
         KeyCode::KEY_RIGHT });
@@ -49,13 +48,13 @@ void DesktopSwitchCommand::switchToNext(
     p.delayBetweenEachReleaseKey = 0;
     p.delayBetweenPressKeyAndReleaseKey = 1;
     p.repeatTimes = times;
+    p.delayBetweenRepeatitions = delayBetweemEachSwitch;
     Factory::createCommand(&p)->execute();
     currentDesktop = currentDesktop + times;
 }
 
-void DesktopSwitchCommand::switchToPrevious(
-    std::shared_ptr<Keyboard> keyboard, int times) {
-    ShortcutCommandParameter p(keyboard, {
+void DesktopSwitchCommand::switchToPrevious(int times) {
+    ShortcutCommandParameter p(keyboard(), {
         KeyCode::KEY_LCTRL,
         KeyCode::KEY_LMETA,
         KeyCode::KEY_LEFT });
@@ -63,6 +62,7 @@ void DesktopSwitchCommand::switchToPrevious(
     p.delayBetweenEachReleaseKey = 0;
     p.delayBetweenPressKeyAndReleaseKey = 1;
     p.repeatTimes = times;
+    p.delayBetweenRepeatitions = delayBetweemEachSwitch;
     Factory::createCommand(&p)->execute();
     currentDesktop = currentDesktop - times;
 }

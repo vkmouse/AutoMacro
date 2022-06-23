@@ -54,7 +54,7 @@ void DesktopSwitchCommandTest::methodCleanup() {
     Assert::IsTrue(histories[1].equals("---"));
 }
 
-void DesktopSwitchCommandTest::DesktopSwitch() {
+void DesktopSwitchCommandTest::TestDesktopSwitch() {
     History::Histories histories;
     auto keyboard = Factory::createMockKeyboard();
     keyboard = Factory::addHistoryAgent(keyboard, &histories);
@@ -79,6 +79,41 @@ void DesktopSwitchCommandTest::DesktopSwitch() {
     Assert::IsTrue(histories[6].equals("releaseKey", KeyCode::KEY_LMETA));
     Assert::IsTrue(histories[7].equals("releaseKey", KeyCode::KEY_LCTRL));
     Assert::IsTrue(histories[8].equals("---"));
+}
+
+void DesktopSwitchCommandTest::TestDelayBetweenEachSwitch() {
+    History::Histories histories;
+    auto keyboard = Factory::createMockKeyboard();
+    keyboard = Factory::addHistoryAgent(keyboard, &histories);
+
+    DesktopSwitchCommandParameter p(keyboard, 3, 3);
+    p.delayBetweemEachSwitch = 100;
+    auto cmd = Factory::createCommand(&p);
+
+    histories.record("---");
+    cmd->execute();
+    histories.record("---");
+
+    int idx = 0;
+    Assert::IsTrue(histories[idx++].equals("---"));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(histories[idx++].equals("pressKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(histories[idx++].equals("---"));
+
+    bool allDurationsAreInRange = History::History::durationIsInRange(histories[6], histories[7],
+        p.delayBetweemEachSwitch,
+        p.delayBetweemEachSwitch + 40);
+    Assert::IsTrue(allDurationsAreInRange);
 }
 }  // namespace Command
 }  // namespace AutoMacro

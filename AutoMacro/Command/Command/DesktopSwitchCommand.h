@@ -16,18 +16,16 @@ class DesktopSwitchCommand : public KeyboardCommand {
     virtual void executeCommand();
 
  private:
-    static void resetDesktop(
-        std::shared_ptr<Keyboard> keyboard, int numDesktops);
-    static void switchToNext(
-        std::shared_ptr<Keyboard> keyboard, int times);
-    static void switchToPrevious(
-        std::shared_ptr<Keyboard> keyboard, int times);
+    void resetDesktop(int numDesktops);
+    void switchToNext(int times);
+    void switchToPrevious(int times);
 
     static int globalNumDesktops;
     static int currentDesktop;
 
     int numDesktops;
     int destination;
+    int delayBetweemEachSwitch;
 };
 }  // namespace Impl
 }  // namespace Command

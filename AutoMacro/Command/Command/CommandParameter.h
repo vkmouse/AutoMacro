@@ -108,6 +108,7 @@ class DesktopSwitchCommandParameter : public KeyboardCommandParameter {
 
     int numDesktops;
     int destination;
+    int delayBetweemEachSwitch = 0;
 };
 }  // namespace Command
 }  // namespace AutoMacro
