@@ -37,7 +37,7 @@ void SendKeyCommandTest::TestSendKeyCommand() {
     Assert::IsTrue(histories[6].equals("releaseKey", KeyCode::KEY_A));
     Assert::IsTrue(histories[7].equals("---"));
 
-    histories.allDurationsAreInRange({
+    bool allDurationsAreInRange = histories.allDurationsAreInRange({
         p.delayBeforeCommand,
         p.delayBetweenPressKeyAndReleaseKey,
         p.delayBetweenRepeatitions,
@@ -46,6 +46,7 @@ void SendKeyCommandTest::TestSendKeyCommand() {
         p.delayBetweenPressKeyAndReleaseKey,
         p.delayAfterCommand
         }, 40);
+    Assert::IsTrue(allDurationsAreInRange);
 }
 }  // namespace Command
 }  // namespace AutoMacro

@@ -42,7 +42,7 @@ void ShortcutCommandTest::TestShortcutCommand() {
     Assert::IsTrue(histories[8].equals("releaseKey", KeyCode::KEY_LALT));
     Assert::IsTrue(histories[9].equals("---"));
 
-    histories.allDurationsAreInRange({
+    bool allDurationsAreInRange = histories.allDurationsAreInRange({
         p.delayBeforeCommand,
         p.delayBetweenEachPressKey,
         p.delayBetweenPressKeyAndReleaseKey,
@@ -53,6 +53,7 @@ void ShortcutCommandTest::TestShortcutCommand() {
         p.delayBetweenEachReleaseKey,
         p.delayAfterCommand
         }, 40);
+    Assert::IsTrue(allDurationsAreInRange);
 }
 }  // namespace Command
 }  // namespace AutoMacro

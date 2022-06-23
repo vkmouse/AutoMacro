@@ -52,12 +52,13 @@ void WaitForItemsCommandTest::TestWaitForAllItems() {
     Assert::IsTrue(histories[3].equals("takeSnapshot"));
     Assert::IsTrue(histories[4].equals("---"));
 
-    histories.allDurationsAreInRange({
+    bool allDurationsAreInRange = histories.allDurationsAreInRange({
         p.delayBeforeCommand,
         p.delayBetweenRepeatitions,
         p.delayBetweenRepeatitions,
         p.delayAfterCommand
         }, 40);
+    Assert::IsTrue(allDurationsAreInRange);
 }
 
 void WaitForItemsCommandTest::TestWaitForAtLeastOneItem() {
@@ -102,13 +103,14 @@ void WaitForItemsCommandTest::TestWaitForAtLeastOneItem() {
     Assert::IsTrue(histories[4].equals("takeSnapshot"));
     Assert::IsTrue(histories[5].equals("---"));
 
-    histories.allDurationsAreInRange({
+    bool allDurationsAreInRange = histories.allDurationsAreInRange({
         p.delayBeforeCommand,
         p.delayBetweenRepeatitions,
         p.delayAfterCommand,
         p.delayBeforeCommand,
         p.delayAfterCommand
         }, 40);
+    Assert::IsTrue(allDurationsAreInRange);
 }
 }  // namespace Command
 }  // namespace AutoMacro
