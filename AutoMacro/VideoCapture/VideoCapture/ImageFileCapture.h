@@ -9,9 +9,9 @@ namespace AutoMacro {
 namespace Impl {
 class ImageFileCapture : public VideoCapture {
  public:
-    DLL_EXPORTS ImageFileCapture(std::vector<std::string> filenames);
+    ImageFileCapture(std::vector<std::string> filenames);
 
-    virtual DLL_EXPORTS Image takeSnapshot();
+    virtual Image takeSnapshot();
 
  private:
     class Impl;
