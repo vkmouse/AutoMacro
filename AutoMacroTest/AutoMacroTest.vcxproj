@@ -24,6 +24,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Assert\AssertExtension.cpp" />
+    <ClCompile Include="Assert\AssertExtensionTest.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />
@@ -44,10 +46,13 @@
     <ClCompile Include="KbdMou\KeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockKeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockMouseTest.cpp" />
+    <ClCompile Include="VideoCapture\DesktopCaptureTest.cpp" />
     <ClCompile Include="VideoCapture\ImageFileCaptureTest.cpp" />
     <ClCompile Include="VideoCapture\VideoCapturePostProcessorTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assert\AssertExtension.h" />
+    <ClInclude Include="Assert\AssertExtensionTest.h" />
     <ClInclude Include="Command\DesktopSwitchCommandTest.h" />
     <ClInclude Include="Command\SendKeyCommandTest.h" />
     <ClInclude Include="Command\ShortcutCommandTest.h" />
@@ -66,6 +71,7 @@
     <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />
     <ClInclude Include="KbdMou\KeyboardTest.h" />
     <ClInclude Include="KbdMou\MockMouseTest.h" />
+    <ClInclude Include="VideoCapture\DesktopCaptureTest.h" />
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h" />
     <ClInclude Include="VideoCapture\VideoCapturePostProcessorTest.h" />
   </ItemGroup>

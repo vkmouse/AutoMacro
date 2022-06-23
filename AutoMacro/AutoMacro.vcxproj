@@ -59,6 +59,7 @@
     <ClInclude Include="KbdMou\KbdMou\MockKeyboard.h" />
     <ClInclude Include="KbdMou\KbdMou\MockMouse.h" />
     <ClInclude Include="VideoCapture\VideoCapture.h" />
+    <ClInclude Include="VideoCapture\VideoCapture\DesktopCapture.h" />
     <ClInclude Include="VideoCapture\VideoCapture\ImageFileCapture.h" />
     <ClInclude Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.h" />
   </ItemGroup>
@@ -92,6 +93,7 @@
     <ClCompile Include="KbdMou\KbdMou\MockKeyboard.cpp" />
     <ClCompile Include="KbdMou\KbdMou\MockMouse.cpp" />
     <ClCompile Include="VideoCapture\VideoCapture.cpp" />
+    <ClCompile Include="VideoCapture\VideoCapture\DesktopCapture.cpp" />
     <ClCompile Include="VideoCapture\VideoCapture\ImageFileCapture.cpp" />
     <ClCompile Include="VideoCapture\VideoCapture\VideoCapturePostProcessor.cpp" />
   </ItemGroup>

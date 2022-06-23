@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="AutoMacroTest">
       <UniqueIdentifier>{58dda09d-8b7b-4c55-99c5-a233d31100f6}</UniqueIdentifier>
     </Filter>
@@ -34,6 +30,9 @@
     </Filter>
     <Filter Include="AutoMacroTest\KbdMou">
       <UniqueIdentifier>{333496df-bc03-41b6-a619-5244b02d0965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutoMacroTest\Assert">
+      <UniqueIdentifier>{4fd12628-1f7f-4ed2-9807-1a517a6c419c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +102,15 @@
     <ClCompile Include="KbdMou\MockMouseTest.cpp">
       <Filter>AutoMacroTest\KbdMou</Filter>
     </ClCompile>
+    <ClCompile Include="VideoCapture\DesktopCaptureTest.cpp">
+      <Filter>AutoMacroTest\VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="Assert\AssertExtensionTest.cpp">
+      <Filter>AutoMacroTest\Assert</Filter>
+    </ClCompile>
+    <ClCompile Include="Assert\AssertExtension.cpp">
+      <Filter>AutoMacroTest\Assert</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -164,6 +172,15 @@
     </ClInclude>
     <ClInclude Include="KbdMou\MockMouseTest.h">
       <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoCapture\DesktopCaptureTest.h">
+      <Filter>AutoMacroTest\VideoCapture</Filter>
+    </ClInclude>
+    <ClInclude Include="Assert\AssertExtension.h">
+      <Filter>AutoMacroTest\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="Assert\AssertExtensionTest.h">
+      <Filter>AutoMacroTest\Assert</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

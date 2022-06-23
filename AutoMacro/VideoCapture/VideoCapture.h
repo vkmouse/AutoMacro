@@ -8,6 +8,7 @@
 
 namespace AutoMacro {
 namespace Factory {
+DLL_EXPORTS std::shared_ptr<VideoCapture> createDesktopCapture();
 DLL_EXPORTS std::shared_ptr<VideoCapture> createImageFileCapture(
     std::vector<std::string> filenames);
 DLL_EXPORTS std::shared_ptr<VideoCapture> addPostprocessing(

@@ -5,7 +5,7 @@
 
 namespace AutoMacro {
 namespace Cv {
-Image imread(std::string filename);
+DLL_EXPORTS Image imread(std::string filename);
 Image cropping(const Image& image, Rect region);
 Image convertToBGR(const Image& image);
 }  // namespace Cv
