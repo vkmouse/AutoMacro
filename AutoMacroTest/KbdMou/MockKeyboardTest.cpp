@@ -1,23 +1,61 @@
-#include "AutoMacroTest/KbdMou/MockKeyboardTest.h"
-
 #include <memory>
 
+#include "CppUnitTest.h"
 #include <AutoMacro/KbdMou/KbdMou.h>
+#include "AutoMacroTest/KbdMou/KeyboardTest.h"
 
 namespace AutoMacro {
-void MockKeyboardTest::TestMockKeyboardPressAndReleaseKey() {
-    TestKeyboardPressAndReleaseKey();
-}
+TEST_CLASS(MockKeyboardTest), public KeyboardTest {
+ public:
+    MockKeyboardTest() : KeyboardTest(0) {}
 
-void MockKeyboardTest::TestMockKeyboardReleaseAllKeys() {
-    TestKeyboardReleaseAllKeys();
-}
+    TEST_METHOD_INITIALIZE(TestMethodInitialize) {
+        KeyboardTest::TestMethodInitialize();
+    }
 
-void MockKeyboardTest::TestMockKeyboardToggleKey() {
-    TestKeyboardToggleKey();
-}
+    TEST_METHOD_CLEANUP(TestMethodCleanup) {
+        KeyboardTest::TestMethodCleanup();
+    }
 
-std::shared_ptr<Keyboard> MockKeyboardTest::createKeyboard() {
-    return Factory::createMockKeyboard();
-}
+    TEST_METHOD(TestPressAndReleaseAlphabetKey) {
+        KeyboardTest::TestPressAndReleaseAlphabetKey();
+    }
+
+    TEST_METHOD(TestPressAndReleaseNumericKeys) {
+        KeyboardTest::TestPressAndReleaseNumericKeys();
+    }
+
+    TEST_METHOD(TestPressAndReleaseOtherTypingKeys) {
+        KeyboardTest::TestPressAndReleaseOtherTypingKeys();
+    }
+
+    TEST_METHOD(TestPressAndReleaseFuntionKeys) {
+        KeyboardTest::TestPressAndReleaseFuntionKeys();
+    }
+
+    TEST_METHOD(TestPressAndReleaseKeypadKeys) {
+        KeyboardTest::TestPressAndReleaseKeypadKeys();
+    }
+
+    TEST_METHOD(TestPressAndReleaseNavigationKeys) {
+        KeyboardTest::TestPressAndReleaseNavigationKeys();
+    }
+
+    TEST_METHOD(TestPressAndReleaseControlKeys) {
+        KeyboardTest::TestPressAndReleaseControlKeys();
+    }
+
+    TEST_METHOD(TestKeyboardReleaseAllKeys) {
+        KeyboardTest::TestKeyboardReleaseAllKeys();
+    }
+
+    TEST_METHOD(TestKeyboardToggleKey) {
+        KeyboardTest::TestKeyboardToggleKey();
+    }
+
+ protected:
+    std::shared_ptr<Keyboard> createKeyboard() override {
+        return Factory::createMockKeyboard();
+    }
+};
 }  // namespace AutoMacro

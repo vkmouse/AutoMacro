@@ -55,6 +55,7 @@
     <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="KbdMou\KbdMou.h" />
     <ClInclude Include="KbdMou\KbdMou\HIDKeyboard.h" />
+    <ClInclude Include="KbdMou\KbdMou\KbdMouDevice.h" />
     <ClInclude Include="KbdMou\KbdMou\MockKeyboard.h" />
     <ClInclude Include="KbdMou\KbdMou\MockMouse.h" />
     <ClInclude Include="VideoCapture\VideoCapture.h" />
@@ -87,6 +88,7 @@
     <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp" />
     <ClCompile Include="KbdMou\KbdMou.cpp" />
     <ClCompile Include="KbdMou\KbdMou\HIDKeyboard.cpp" />
+    <ClCompile Include="KbdMou\KbdMou\KbdMouDevice.cpp" />
     <ClCompile Include="KbdMou\KbdMou\MockKeyboard.cpp" />
     <ClCompile Include="KbdMou\KbdMou\MockMouse.cpp" />
     <ClCompile Include="VideoCapture\VideoCapture.cpp" />
@@ -304,7 +306,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>$(ProjectDir)..\packages\opencv\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core455d.lib;opencv_dnn455d.lib;opencv_highgui455d.lib;opencv_imgcodecs455d.lib;opencv_imgproc455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Cfgmgr32.lib;hid.lib;opencv_core455d.lib;opencv_dnn455d.lib;opencv_highgui455d.lib;opencv_imgcodecs455d.lib;opencv_imgproc455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -326,7 +328,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>$(ProjectDir)..\packages\opencv\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_core455.lib;opencv_dnn455.lib;opencv_highgui455.lib;opencv_imgcodecs455.lib;opencv_imgproc455.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Cfgmgr32.lib;hid.lib;opencv_core455.lib;opencv_dnn455.lib;opencv_highgui455.lib;opencv_imgcodecs455.lib;opencv_imgproc455.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

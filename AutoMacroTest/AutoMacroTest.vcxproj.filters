@@ -159,13 +159,7 @@
     <ClInclude Include="Command\DesktopSwitchCommandTest.h">
       <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
-    <ClInclude Include="KbdMou\HIDKeyboardTest.h">
-      <Filter>AutoMacroTest\KbdMou</Filter>
-    </ClInclude>
     <ClInclude Include="KbdMou\KeyboardTest.h">
-      <Filter>AutoMacroTest\KbdMou</Filter>
-    </ClInclude>
-    <ClInclude Include="KbdMou\MockKeyboardTest.h">
       <Filter>AutoMacroTest\KbdMou</Filter>
     </ClInclude>
     <ClInclude Include="KbdMou\MockMouseTest.h">

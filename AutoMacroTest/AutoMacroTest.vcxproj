@@ -64,9 +64,7 @@
     <ClInclude Include="History\VideoCaptureHistoryAgentTest.h" />
     <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />
-    <ClInclude Include="KbdMou\HIDKeyboardTest.h" />
     <ClInclude Include="KbdMou\KeyboardTest.h" />
-    <ClInclude Include="KbdMou\MockKeyboardTest.h" />
     <ClInclude Include="KbdMou\MockMouseTest.h" />
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h" />
     <ClInclude Include="VideoCapture\VideoCapturePostProcessorTest.h" />

@@ -181,6 +181,9 @@
     <ClInclude Include="KbdMou\KbdMou.h">
       <Filter>AutoMacro\KbdMou</Filter>
     </ClInclude>
+    <ClInclude Include="KbdMou\KbdMou\KbdMouDevice.h">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -272,6 +275,9 @@
     </ClCompile>
     <ClCompile Include="KbdMou\KbdMou.cpp">
       <Filter>AutoMacro\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\KbdMou\KbdMouDevice.cpp">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
