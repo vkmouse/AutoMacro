@@ -12,7 +12,7 @@ class History {
         using std::chrono::duration_cast;
         using std::chrono::milliseconds;
         auto duration = duration_cast<milliseconds>(last.time() - start.time());
-        return lowerb < duration.count() && duration.count() < upperb;
+        return lowerb <= duration.count() && duration.count() < upperb;
     }
 
     History(std::string message, std::vector<void*> parameters) :
