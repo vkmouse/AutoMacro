@@ -110,14 +110,14 @@ enum class KeyCode : unsigned char {
     KEY_102ND = 0x64,  // Keyboard Non-US \ and |
     KEY_COMPOSE = 0x65,  // Keyboard Application
 
-    KEY_LEFTCTRL = 0xe0,  // Keyboard Left Control
-    KEY_LEFTSHIFT = 0xe1,  // Keyboard Left Shift
-    KEY_LEFTALT = 0xe2,  // Keyboard Left Alt
-    KEY_LEFTMETA = 0xe3,  // Keyboard Left GUI
-    KEY_RIGHTCTRL = 0xe4,  // Keyboard Right Control
-    KEY_RIGHTSHIFT = 0xe5,  // Keyboard Right Shift
-    KEY_RIGHTALT = 0xe6,  // Keyboard Right Alt
-    KEY_RIGHTMETA = 0xe7,  // Keyboard Right GUI
+    KEY_LCTRL = 0xe0,  // Keyboard Left Control
+    KEY_LSHIFT = 0xe1,  // Keyboard Left Shift
+    KEY_LALT = 0xe2,  // Keyboard Left Alt
+    KEY_LMETA = 0xe3,  // Keyboard Left GUI
+    KEY_RCTRL = 0xe4,  // Keyboard Right Control
+    KEY_RSHIFT = 0xe5,  // Keyboard Right Shift
+    KEY_RALT = 0xe6,  // Keyboard Right Alt
+    KEY_RMETA = 0xe7,  // Keyboard Right GUI
 };
 
 class DLL_EXPORTS Keyboard {

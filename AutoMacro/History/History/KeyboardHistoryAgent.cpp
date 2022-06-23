@@ -109,14 +109,14 @@ std::string KeyboardHistoryAgent::keyToString(KeyCode key) {
     case KeyCode::KEY_KPDOT: return "KEY_KPDOT";
     case KeyCode::KEY_102ND: return "KEY_102ND";
     case KeyCode::KEY_COMPOSE: return "KEY_COMPOSE";
-    case KeyCode::KEY_LEFTCTRL: return "KEY_LEFTCTRL";
-    case KeyCode::KEY_LEFTSHIFT: return "KEY_LEFTSHIFT";
-    case KeyCode::KEY_LEFTALT: return "KEY_LEFTALT";
-    case KeyCode::KEY_LEFTMETA: return "KEY_LEFTMETA";
-    case KeyCode::KEY_RIGHTCTRL: return "KEY_RIGHTCTRL";
-    case KeyCode::KEY_RIGHTSHIFT: return "KEY_RIGHTSHIFT";
-    case KeyCode::KEY_RIGHTALT: return "KEY_RIGHTALT";
-    case KeyCode::KEY_RIGHTMETA: return "KEY_RIGHTMETA";
+    case KeyCode::KEY_LCTRL: return "KEY_LEFTCTRL";
+    case KeyCode::KEY_LSHIFT: return "KEY_LEFTSHIFT";
+    case KeyCode::KEY_LALT: return "KEY_LEFTALT";
+    case KeyCode::KEY_LMETA: return "KEY_LEFTMETA";
+    case KeyCode::KEY_RCTRL: return "KEY_RIGHTCTRL";
+    case KeyCode::KEY_RSHIFT: return "KEY_RIGHTSHIFT";
+    case KeyCode::KEY_RALT: return "KEY_RIGHTALT";
+    case KeyCode::KEY_RMETA: return "KEY_RIGHTMETA";
     default: return "";
     }
 }

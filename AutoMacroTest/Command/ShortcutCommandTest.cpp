@@ -16,7 +16,7 @@ void ShortcutCommandTest::TestShortcutCommand() {
     keyboard = Factory::addHistoryAgent(keyboard, &histories);
 
     ShortcutCommandParameter p(keyboard,
-        { KeyCode::KEY_LEFTALT, KeyCode::KEY_TAB });
+        { KeyCode::KEY_LALT, KeyCode::KEY_TAB });
     p.delayBeforeCommand = 50;
     p.delayAfterCommand = 50;
     p.delayBetweenEachPressKey = 50;
@@ -32,14 +32,14 @@ void ShortcutCommandTest::TestShortcutCommand() {
     histories.record("---");
 
     Assert::IsTrue(histories[0].equals("---"));
-    Assert::IsTrue(histories[1].equals("pressKey", KeyCode::KEY_LEFTALT));
+    Assert::IsTrue(histories[1].equals("pressKey", KeyCode::KEY_LALT));
     Assert::IsTrue(histories[2].equals("pressKey", KeyCode::KEY_TAB));
     Assert::IsTrue(histories[3].equals("releaseKey", KeyCode::KEY_TAB));
-    Assert::IsTrue(histories[4].equals("releaseKey", KeyCode::KEY_LEFTALT));
-    Assert::IsTrue(histories[5].equals("pressKey", KeyCode::KEY_LEFTALT));
+    Assert::IsTrue(histories[4].equals("releaseKey", KeyCode::KEY_LALT));
+    Assert::IsTrue(histories[5].equals("pressKey", KeyCode::KEY_LALT));
     Assert::IsTrue(histories[6].equals("pressKey", KeyCode::KEY_TAB));
     Assert::IsTrue(histories[7].equals("releaseKey", KeyCode::KEY_TAB));
-    Assert::IsTrue(histories[8].equals("releaseKey", KeyCode::KEY_LEFTALT));
+    Assert::IsTrue(histories[8].equals("releaseKey", KeyCode::KEY_LALT));
     Assert::IsTrue(histories[9].equals("---"));
 
     histories.allDurationsAreInRange({

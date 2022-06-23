@@ -42,8 +42,8 @@ void DesktopSwitchCommand::resetDesktop(
 void DesktopSwitchCommand::switchToNext(
     std::shared_ptr<Keyboard> keyboard, int times) {
     ShortcutCommandParameter p(keyboard, {
-        KeyCode::KEY_LEFTCTRL,
-        KeyCode::KEY_LEFTMETA,
+        KeyCode::KEY_LCTRL,
+        KeyCode::KEY_LMETA,
         KeyCode::KEY_RIGHT });
     p.delayBetweenEachPressKey = 0;
     p.delayBetweenEachReleaseKey = 0;
@@ -56,8 +56,8 @@ void DesktopSwitchCommand::switchToNext(
 void DesktopSwitchCommand::switchToPrevious(
     std::shared_ptr<Keyboard> keyboard, int times) {
     ShortcutCommandParameter p(keyboard, {
-        KeyCode::KEY_LEFTCTRL,
-        KeyCode::KEY_LEFTMETA,
+        KeyCode::KEY_LCTRL,
+        KeyCode::KEY_LMETA,
         KeyCode::KEY_LEFT });
     p.delayBetweenEachPressKey = 0;
     p.delayBetweenEachReleaseKey = 0;
