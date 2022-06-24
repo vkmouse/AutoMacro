@@ -13,7 +13,9 @@ namespace AutoMacro {
 namespace Detection {
 namespace Impl {
 TemplateBasedDetector::TemplateBasedDetector(
-    std::vector<TemplateBasedDetectorParameter> parameters) {
+    std::vector<TemplateBasedDetectorParameter> parameters,
+    int numBoxes) :
+    numBoxes_(numBoxes) {
     imagesPath_.reserve(parameters.size());
     masksPath_.reserve(parameters.size());
     for (const auto& parameter : parameters) {
@@ -55,12 +57,16 @@ DetectionResults TemplateBasedDetector::detect(cv::Mat image) {
         }
 
         cv::Mat resultMap = matchTemplate(image, templ, mask);
-        DetectionResult result = getPartOfResult(resultMap);
 
-        result.index = i;
-        result.width = templ.cols;
-        result.height = templ.rows;
-        results.push_back(result);
+        for (int i = 0; i < numBoxes_; i++) {
+            DetectionResult result = getPartOfResult(resultMap);
+            result.index = i;
+            result.width = templ.cols;
+            result.height = templ.rows;
+            results.push_back(result);
+
+            resultMap.at<float>(result.y, result.x) = 0;
+        }
     }
 
     return results;

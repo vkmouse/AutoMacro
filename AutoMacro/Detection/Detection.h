@@ -23,10 +23,10 @@ DLL_EXPORTS bool itemExists(
 
 namespace Factory {
 DLL_EXPORTS std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
-    std::vector<std::string> imagesPath);
-DLL_EXPORTS std::shared_ptr<Detection::Detector>
-createTemplateBasedDetectorWithMask(
-    std::vector<Detection::TemplateBasedDetectorParameter> parameters);
+    std::vector<std::string> imagesPath, int numBoxes = 1);
+DLL_EXPORTS std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
+    std::vector<Detection::TemplateBasedDetectorParameter> parameters,
+    int numBoxes = 1);
 DLL_EXPORTS std::shared_ptr<Detection::Detector> addPreprocessing(
     std::shared_ptr<Detection::Detector> detector,
     std::shared_ptr<ImageProcessor> processor);

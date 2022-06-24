@@ -15,8 +15,9 @@ namespace Detection {
 namespace Impl {
 class TemplateBasedDetector : public BaseDetector {
  public:
-    explicit TemplateBasedDetector(
-        std::vector<TemplateBasedDetectorParameter> parameters);
+    TemplateBasedDetector(
+        std::vector<TemplateBasedDetectorParameter> parameters,
+        int numBoxes);
 
     void init() override;
 
@@ -36,6 +37,7 @@ class TemplateBasedDetector : public BaseDetector {
     std::vector<std::string> masksPath_;
     std::vector<cv::Mat> templates_;
     std::vector<cv::Mat> masks_;
+    int numBoxes_;
 };
 }  // namespace Impl
 }  // namespace Detection

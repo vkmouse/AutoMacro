@@ -28,6 +28,15 @@ DetectionResult::DetectionResult(
     confidence(confidence) {
 }
 
+bool DetectionResult::operator==(const DetectionResult& other) const {
+    return index == other.index &&
+        x == other.x &&
+        y == other.y &&
+        width == other.width &&
+        height == other.height &&
+        confidence == other.confidence;
+}
+
 Rect DetectionResult::region() const {
     return Rect(x, y, width, height);
 }

@@ -18,6 +18,7 @@ class DLL_EXPORTS DetectionResult {
     DetectionResult(const DetectionResult& other) = default;
 
     DetectionResult& operator=(const DetectionResult& other) = default;
+    bool operator==(const DetectionResult& other) const;
 
     Rect region() const;
     Point center() const;
