@@ -51,7 +51,7 @@ bool WaitForItemsCommand::itemExists(const Image& image, int detectorIndex) {
     auto results = detectors[detectorIndex]->detect(image);
     int index = indices[detectorIndex];
     float threshold = thresholds[detectorIndex];
-    return Detection::itemExists(results, index, threshold);
+    return results.exists(index, threshold);
 }
 }  // namespace Impl
 }  // namespace Command

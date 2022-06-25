@@ -14,26 +14,6 @@
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
-namespace Detection {
-bool itemExists(const DetectionResults& results, int index, float threshold) {
-    auto func = [&index, &threshold](const DetectionResult& item) {
-        return item.index == index && item.confidence > threshold;
-    };
-    auto iterator = std::find_if(results.begin(), results.end(), func);
-    bool found = iterator != results.end();
-    return found;
-}
-
-bool itemExists(const DetectionResults& results, float threshold) {
-    auto func = [&threshold](const DetectionResult& item) {
-        return item.confidence > threshold;
-    };
-    auto iterator = std::find_if(results.begin(), results.end(), func);
-    bool found = iterator != results.end();
-    return found;
-}
-}  // namespace Detection
-
 namespace Factory {
 std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
     std::vector<std::string> imagesPath,

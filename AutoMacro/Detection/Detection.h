@@ -10,17 +10,6 @@
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
-namespace Detection {
-DLL_EXPORTS bool itemExists(
-    const DetectionResults& results,
-    int index,
-    float threshold);
-
-DLL_EXPORTS bool itemExists(
-    const DetectionResults& results,
-    float threshold);
-}  // namespace Detection
-
 namespace Factory {
 DLL_EXPORTS std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
     std::vector<std::string> imagesPath, int numBoxes = 1);

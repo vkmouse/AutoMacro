@@ -17,7 +17,7 @@ WaitForItemCommand::WaitForItemCommand(WaitForItemCommandParameter* p) :
 
 bool WaitForItemCommand::testExpression() {
     auto results = detector->detect(videoCapture()->takeSnapshot());
-    return Detection::itemExists(results, index, threshold) == waitForExists();
+    return results.exists(index, threshold) == waitForExists();
 }
 }  // namespace Impl
 }  // namespace Command

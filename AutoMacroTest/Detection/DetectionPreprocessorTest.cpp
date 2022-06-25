@@ -31,7 +31,7 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
     detector = Factory::addPreprocessing(detector, processor);
     DetectionResults results = detector->detect(capture->takeSnapshot());
 
-    Assert::IsTrue(itemExists(results, 0, 0.98f));
+    Assert::IsTrue(results.exists(0, 0.98f));
 }
 
 void DetectionPreprocessorTest::TestCroppingProcessor() {
@@ -44,12 +44,12 @@ void DetectionPreprocessorTest::TestCroppingProcessor() {
     });
 
     DetectionResults results = detector->detect(capture->takeSnapshot());
-    Assert::IsTrue(itemExists(results, 0, 0.98f));
+    Assert::IsTrue(results.exists(0, 0.98f));
 
     auto processor = Factory::createCroppingProcessor(3, 3, 7, 7);
     detector = Factory::addPreprocessing(detector, processor);
     results = detector->detect(capture->takeSnapshot());
-    Assert::IsFalse(itemExists(results, 0, 0.98f));
+    Assert::IsFalse(results.exists(0, 0.98f));
 }
 
 void DetectionPreprocessorTest::TestMixedProcessor() {
@@ -65,7 +65,7 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     detector = Factory::addPreprocessing(detector, processor1);
     detector = Factory::addPreprocessing(detector, processor2);
     DetectionResults results = detector->detect(capture->takeSnapshot());
-    Assert::IsFalse(itemExists(results, 0, 0.98f));
+    Assert::IsFalse(results.exists(0, 0.98f));
 
     detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
@@ -73,7 +73,7 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     detector = Factory::addPreprocessing(detector, processor2);
     detector = Factory::addPreprocessing(detector, processor1);
     results = detector->detect(capture->takeSnapshot());
-    Assert::IsFalse(itemExists(results, 0, 0.98f));
+    Assert::IsFalse(results.exists(0, 0.98f));
 }
 }  // namespace Detection
 }  // namespace AutoMacro

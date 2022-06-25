@@ -31,6 +31,10 @@ class DLL_EXPORTS DetectionResult {
     float confidence;
 };
 
-typedef std::vector<DetectionResult> DetectionResults;
+class DetectionResults : public std::vector<DetectionResult> {
+ public:
+    DLL_EXPORTS bool exists(int index, float threshold) const;
+    DLL_EXPORTS bool exists(float threshold) const;
+};
 }  // namespace Detection
 }  // namespace AutoMacro
