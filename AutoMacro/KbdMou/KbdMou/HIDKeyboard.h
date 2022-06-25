@@ -3,7 +3,6 @@
 #include <memory>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacro/KbdMou/KbdMou/KbdMouDevice.h"
 
 namespace AutoMacro {
 namespace Impl {
