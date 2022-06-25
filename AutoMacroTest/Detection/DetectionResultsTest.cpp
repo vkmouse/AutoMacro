@@ -49,11 +49,16 @@ void DetectionResultsTest::TestCountAndWhere() {
     results.push_back(result3);
 
     Assert::AreEqual(2, results.count(0.8f));
+    Assert::AreEqual(1, results.count(0.8f, 1));
 
     DetectionResults output = results.where(0.8f);
     Assert::AreEqual(static_cast<size_t>(2), output.size());
     Assert::AreEqual(result1, output[0]);
     Assert::AreEqual(result2, output[1]);
+
+    output = results.where(0.8f, 1);
+    Assert::AreEqual(static_cast<size_t>(1), output.size());
+    Assert::AreEqual(result1, output[0]);
 }
 }  // namespace Detection
 }  // namespace AutoMacro

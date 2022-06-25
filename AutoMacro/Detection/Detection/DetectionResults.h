@@ -12,7 +12,9 @@ class DetectionResults : public std::vector<DetectionResult> {
 
     DLL_EXPORTS bool exists(float threshold, int index) const;
     DLL_EXPORTS bool exists(float threshold) const;
+    DLL_EXPORTS DetectionResults where(float threshold, int index) const;
     DLL_EXPORTS DetectionResults where(float threshold) const;
+    DLL_EXPORTS int count(float threshold, int index) const;
     DLL_EXPORTS int count(float threshold) const;
 };
 }  // namespace Detection

@@ -42,11 +42,22 @@ bool DetectionResults::exists(float threshold) const {
     return AutoMacro::Detection::exists(this, func);
 }
 
+DetectionResults DetectionResults::where(float threshold, int index) const {
+    auto func = [&index, &threshold](const DetectionResult& item) {
+        return item.index == index && item.confidence > threshold;
+    };
+    return AutoMacro::Detection::where(this, func);
+}
+
 DetectionResults DetectionResults::where(float threshold) const {
     auto func = [&threshold](const DetectionResult& item) {
         return item.confidence > threshold;
     };
     return AutoMacro::Detection::where(this, func);
+}
+
+int DetectionResults::count(float threshold, int index) const {
+    return static_cast<int>(where(threshold, index).size());
 }
 
 int DetectionResults::count(float threshold) const {
