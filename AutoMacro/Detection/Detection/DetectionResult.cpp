@@ -44,23 +44,5 @@ Rect DetectionResult::region() const {
 Point DetectionResult::center() const {
     return region().center();
 }
-
-bool DetectionResults::exists(int index, float threshold) const {
-    auto func = [&index, &threshold](const DetectionResult& item) {
-        return item.index == index && item.confidence > threshold;
-    };
-    auto iterator = std::find_if(begin(), end(), func);
-    bool found = iterator != end();
-    return found;
-}
-
-bool DetectionResults::exists(float threshold) const {
-    auto func = [&threshold](const DetectionResult& item) {
-        return item.confidence > threshold;
-    };
-    auto iterator = std::find_if(begin(), end(), func);
-    bool found = iterator != end();
-    return found;
-}
 }  // namespace Detection
 }  // namespace AutoMacro

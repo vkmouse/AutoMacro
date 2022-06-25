@@ -7,6 +7,7 @@
 #include "AutoMacro/Detection/Detection/Detector.h"
 #include "AutoMacro/Detection/Detection/DetectorParameter.h"
 #include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectionResults.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {

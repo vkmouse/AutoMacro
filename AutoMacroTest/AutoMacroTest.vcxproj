@@ -34,7 +34,7 @@
     <ClCompile Include="Core\ImageTest.cpp" />
     <ClCompile Include="Core\TypesTest.cpp" />
     <ClCompile Include="Detection\DetectionPreprocessorTest.cpp" />
-    <ClCompile Include="Detection\DetectionResultsProcessorTest.cpp" />
+    <ClCompile Include="Detection\DetectionResultsTest.cpp" />
     <ClCompile Include="Detection\DetectionResultTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
     <ClCompile Include="History\HistoryTest.cpp" />
@@ -61,7 +61,7 @@
     <ClInclude Include="Core\ImageTest.h" />
     <ClInclude Include="Core\TypesTest.h" />
     <ClInclude Include="Detection\DetectionPreprocessorTest.h" />
-    <ClInclude Include="Detection\DetectionResultsProcessorTest.h" />
+    <ClInclude Include="Detection\DetectionResultsTest.h" />
     <ClInclude Include="Detection\DetectionResultTest.h" />
     <ClInclude Include="Detection\TemplateBasedDetectorTest.h" />
     <ClInclude Include="History\HistoryTest.h" />

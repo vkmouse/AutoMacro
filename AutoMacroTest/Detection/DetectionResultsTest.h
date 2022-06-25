@@ -3,9 +3,10 @@
 
 namespace AutoMacro {
 namespace Detection {
-TEST_CLASS(DetectionResultsProcessorTest) {
+TEST_CLASS(DetectionResultsTest) {
  public:
-    TEST_METHOD(TestItemExists);
+    TEST_METHOD(TestExists);
+    TEST_METHOD(TestCountAndWhere);
 };
 }  // namespace Detection
 }  //  namespace AutoMacro

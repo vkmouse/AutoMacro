@@ -52,7 +52,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetector() {
     DetectionResults results = detector->detect(image);
 
     Assert::AreEqual(static_cast<size_t>(1), results.size());
-    Assert::IsTrue(results.exists(0, 0.98f));
+    Assert::IsTrue(results.exists(0.98f, 0));
 }
 
 void TemplateBasedDetectorTest::TestNotExistTemplate() {
@@ -65,7 +65,7 @@ void TemplateBasedDetectorTest::TestNotExistTemplate() {
     DetectionResults results = detector->detect(image);
 
     Assert::AreEqual(static_cast<size_t>(1), results.size());
-    Assert::IsFalse(results.exists(0, 0.98f));
+    Assert::IsFalse(results.exists(0.98f, 0));
 }
 
 void TemplateBasedDetectorTest::TestTempateBasedDetectorWithMask() {
@@ -79,7 +79,7 @@ void TemplateBasedDetectorTest::TestTempateBasedDetectorWithMask() {
     DetectionResults results = detector->detect(image);
 
     Assert::AreEqual(static_cast<size_t>(1), results.size());
-    Assert::IsTrue(results.exists(0, 0.98f));
+    Assert::IsTrue(results.exists(0.98f, 0));
 }
 
 void TemplateBasedDetectorTest::TestMultipleBoxes() {
@@ -92,7 +92,7 @@ void TemplateBasedDetectorTest::TestMultipleBoxes() {
     DetectionResults results = detector->detect(image);
 
     Assert::AreEqual(static_cast<size_t>(3), results.size());
-    Assert::IsTrue(results.exists(0, 0.98f));
+    Assert::IsTrue(results.exists(0.98f, 0));
 
     Assert::AreNotEqual(results[0], results[1]);
     Assert::AreNotEqual(results[0], results[2]);

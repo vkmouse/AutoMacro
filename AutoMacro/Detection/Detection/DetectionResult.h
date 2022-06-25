@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
@@ -29,12 +27,6 @@ class DLL_EXPORTS DetectionResult {
     int width;
     int height;
     float confidence;
-};
-
-class DetectionResults : public std::vector<DetectionResult> {
- public:
-    DLL_EXPORTS bool exists(int index, float threshold) const;
-    DLL_EXPORTS bool exists(float threshold) const;
 };
 }  // namespace Detection
 }  // namespace AutoMacro

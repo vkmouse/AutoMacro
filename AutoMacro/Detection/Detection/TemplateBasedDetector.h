@@ -7,7 +7,7 @@
 #include <opencv2/imgproc.hpp>
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/BaseDetector.h"
-#include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectionResults.h"
 #include "AutoMacro/Detection/Detection/DetectorParameter.h"
 
 namespace AutoMacro {

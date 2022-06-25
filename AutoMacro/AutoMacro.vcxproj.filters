@@ -187,6 +187,9 @@
     <ClInclude Include="VideoCapture\VideoCapture\DesktopCapture.h">
       <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\Detection\DetectionResults.h">
+      <Filter>AutoMacro\Detection\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -284,6 +287,9 @@
     </ClCompile>
     <ClCompile Include="VideoCapture\VideoCapture\DesktopCapture.cpp">
       <Filter>AutoMacro\VideoCapture\VideoCapture</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\Detection\DetectionResults.cpp">
+      <Filter>AutoMacro\Detection\Detection</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

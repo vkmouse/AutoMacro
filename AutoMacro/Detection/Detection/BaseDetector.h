@@ -2,7 +2,7 @@
 #include <opencv2/core.hpp>
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/Detector.h"
-#include "AutoMacro/Detection/Detection/DetectionResult.h"
+#include "AutoMacro/Detection/Detection/DetectionResults.h"
 
 namespace AutoMacro {
 namespace Detection {

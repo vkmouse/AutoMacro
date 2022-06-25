@@ -42,7 +42,7 @@
     <ClCompile Include="Detection\DetectionResultTest.cpp">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Detection\DetectionResultsProcessorTest.cpp">
+    <ClCompile Include="Detection\DetectionResultsTest.cpp">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClCompile>
     <ClCompile Include="VideoCapture\ImageFileCaptureTest.cpp">
@@ -119,7 +119,7 @@
     <ClInclude Include="Detection\DetectionResultTest.h">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClInclude>
-    <ClInclude Include="Detection\DetectionResultsProcessorTest.h">
+    <ClInclude Include="Detection\DetectionResultsTest.h">
       <Filter>AutoMacroTest\Detection</Filter>
     </ClInclude>
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h">
