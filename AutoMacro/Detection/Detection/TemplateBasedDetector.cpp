@@ -59,7 +59,7 @@ DetectionResults TemplateBasedDetector::detect(cv::Mat image) {
 
         cv::Mat resultMap = matchTemplate(image, templ, mask);
 
-        for (int i = 0; i < numBoxes_; i++) {
+        for (int j = 0; j < numBoxes_; j++) {
             DetectionResult result = getPartOfResult(resultMap);
             result.index = i;
             result.width = templ.cols;

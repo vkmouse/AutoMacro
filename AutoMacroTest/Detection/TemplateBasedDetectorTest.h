@@ -12,6 +12,7 @@ TEST_CLASS(TemplateBasedDetectorTest) {
     TEST_METHOD(TestNotExistTemplate);
     TEST_METHOD(TestTempateBasedDetectorWithMask);
     TEST_METHOD(TestMultipleBoxes);
+    TEST_METHOD(TestMultipleTemplates);
 };
 }  // namespace Detection
 }  // namespace AutoMacro

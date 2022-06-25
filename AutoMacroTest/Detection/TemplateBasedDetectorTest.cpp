@@ -98,5 +98,24 @@ void TemplateBasedDetectorTest::TestMultipleBoxes() {
     Assert::AreNotEqual(results[0], results[2]);
     Assert::AreNotEqual(results[1], results[2]);
 }
+
+void TemplateBasedDetectorTest::TestMultipleTemplates() {
+    std::vector<std::string> templates = {
+        "images\\AutoMacroTest\\Template_5x5_24bits.png",
+        "images\\AutoMacroTest\\Template_5x5_24bits.png"
+    };
+    auto detector = Factory::createTemplateBasedDetector(templates);
+
+    std::string filename = "images\\AutoMacroTest\\ItemExists_10x10_24bits.png";
+    Image image = Cv::imread(filename);
+    DetectionResults results = detector->detect(image);
+
+    Assert::AreEqual(static_cast<size_t>(2), results.size());
+    Assert::IsTrue(results.exists(0.98f, 0));
+
+    Assert::AreEqual(0, results[0].index);
+    Assert::AreEqual(1, results[1].index);
+    Assert::AreEqual(results[0].confidence, results[1].confidence);
+}
 }  // namespace Detection
 }  // namespace AutoMacro
