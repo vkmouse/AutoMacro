@@ -46,6 +46,7 @@
     <ClCompile Include="KbdMou\KeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockKeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockMouseTest.cpp" />
+    <ClCompile Include="KbdMou\MouseTest.cpp" />
     <ClCompile Include="VideoCapture\DesktopCaptureTest.cpp" />
     <ClCompile Include="VideoCapture\ImageFileCaptureTest.cpp" />
     <ClCompile Include="VideoCapture\VideoCapturePostProcessorTest.cpp" />
@@ -70,7 +71,7 @@
     <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />
     <ClInclude Include="KbdMou\KeyboardTest.h" />
-    <ClInclude Include="KbdMou\MockMouseTest.h" />
+    <ClInclude Include="KbdMou\MouseTest.h" />
     <ClInclude Include="VideoCapture\DesktopCaptureTest.h" />
     <ClInclude Include="VideoCapture\ImageFileCaptureTest.h" />
     <ClInclude Include="VideoCapture\VideoCapturePostProcessorTest.h" />

@@ -111,6 +111,9 @@
     <ClCompile Include="Assert\AssertExtension.cpp">
       <Filter>AutoMacroTest\Assert</Filter>
     </ClCompile>
+    <ClCompile Include="KbdMou\MouseTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -170,9 +173,6 @@
     <ClInclude Include="KbdMou\KeyboardTest.h">
       <Filter>AutoMacroTest\KbdMou</Filter>
     </ClInclude>
-    <ClInclude Include="KbdMou\MockMouseTest.h">
-      <Filter>AutoMacroTest\KbdMou</Filter>
-    </ClInclude>
     <ClInclude Include="VideoCapture\DesktopCaptureTest.h">
       <Filter>AutoMacroTest\VideoCapture</Filter>
     </ClInclude>
@@ -181,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="Assert\AssertExtensionTest.h">
       <Filter>AutoMacroTest\Assert</Filter>
+    </ClInclude>
+    <ClInclude Include="KbdMou\MouseTest.h">
+      <Filter>AutoMacroTest\KbdMou</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
