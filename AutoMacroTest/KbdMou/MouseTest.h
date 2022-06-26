@@ -7,7 +7,7 @@
 namespace AutoMacro {
 class MouseTest {
  protected:
-    MouseTest(int delay, int moveTolerance) : 
+    MouseTest(int delay, int moveTolerance) :
         delay(delay), moveTolerance(moveTolerance) {}
 
     virtual std::shared_ptr<Mouse> createMouse() = 0;
