@@ -163,7 +163,7 @@ int getVirtualKey(KeyCode key) {
 
 class HIDKeyboard::Impl : public KbdMouDevice {
  public:
-    Impl(const HIDKeyboard& keyboard) : 
+    explicit Impl(const HIDKeyboard& keyboard) :
         KbdMouDevice(L"\\\\?\\HID#VARIABLE_6&Col04#1"),
         keyboard(keyboard) {
     }

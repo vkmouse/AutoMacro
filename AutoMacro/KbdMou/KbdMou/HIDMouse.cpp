@@ -1,9 +1,9 @@
 #include "AutoMacro/KbdMou/KbdMou/HIDMouse.h"
 
 #include <Windows.h>
+#include <chrono>
 #include <stdexcept>
 #include <vector>
-#include <chrono>
 
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/KbdMou/KbdMou/KbdMouDevice.h"
@@ -142,15 +142,8 @@ class HIDMouse::Impl : public KbdMouDevice {
     void mouseDown(MouseButton button) {
         if (!mouse.isMouseButtonDown(button)) {
             buttons |= (BYTE)button;
-
-            Report report;
-            report.reportId = REPORT_ID;
-            report.buttons = buttons;
-            report.x = 0;
-            report.y = 0;
-
             do {
-                setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
+                sendMouseReport();
             } while (!mouse.isMouseButtonDown(button));
         }
     }
@@ -158,15 +151,8 @@ class HIDMouse::Impl : public KbdMouDevice {
     void mouseUp(MouseButton button) {
         if (mouse.isMouseButtonDown(button)) {
             buttons &= ~(BYTE)button;
-
-            Report report;
-            report.reportId = REPORT_ID;
-            report.buttons = buttons;
-            report.x = 0;
-            report.y = 0;
-
             do {
-                setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
+                sendMouseReport();
             } while (mouse.isMouseButtonDown(button));
         }
     }
@@ -185,15 +171,8 @@ class HIDMouse::Impl : public KbdMouDevice {
     void releaseAllButtons() {
         if (!allButtonsAreReleased()) {
             buttons = 0x00;
-
-            Report report;
-            report.reportId = REPORT_ID;
-            report.buttons = buttons;
-            report.x = 0;
-            report.y = 0;
-
             do {
-                setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
+                sendMouseReport();
             } while (!allButtonsAreReleased());
         }
     }
@@ -246,6 +225,16 @@ class HIDMouse::Impl : public KbdMouDevice {
             current = high_resolution_clock::now();
             duration = duration_cast<milliseconds>(current - start);
         }
+    }
+
+    void sendMouseReport() {
+        Report report;
+        report.reportId = REPORT_ID;
+        report.buttons = buttons;
+        report.x = 0;
+        report.y = 0;
+
+        setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
     }
 
     BYTE buttons = 0x00;
