@@ -7,7 +7,7 @@
 namespace AutoMacro {
 class KeyboardTest {
  protected:
-    explicit KeyboardTest(int delay) : delay(delay) {}
+    explicit KeyboardTest(int delay) {}
 
     virtual std::shared_ptr<Keyboard> createKeyboard() = 0;
 
@@ -28,12 +28,10 @@ class KeyboardTest {
  private:
     static void TestPressAndReleaseKey(
         std::shared_ptr<Keyboard> keyboard,
-        KeyCode key,
-        int delay);
+        KeyCode key);
 
     void setLocks(bool numLock, bool capsLock, bool scrollLock);
 
     std::shared_ptr<Keyboard> keyboard = nullptr;
-    int delay;
 };
 }  // namespace AutoMacro

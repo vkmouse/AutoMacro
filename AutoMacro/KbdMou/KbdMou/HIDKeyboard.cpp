@@ -163,46 +163,56 @@ int getVirtualKey(KeyCode key) {
 
 class HIDKeyboard::Impl : public KbdMouDevice {
  public:
-    Impl() : KbdMouDevice(L"\\\\?\\HID#VARIABLE_6&Col04#1") {
+    Impl(const HIDKeyboard& keyboard) : 
+        KbdMouDevice(L"\\\\?\\HID#VARIABLE_6&Col04#1"),
+        keyboard(keyboard) {
     }
 
     void pressModifier(KeyCode key) {
-        modifiers = modifiers | getModifier(key);
-        sendKeyboardReport();
+        if (!keyboard.isKeyPressed(key)) {
+            modifiers = modifiers | getModifier(key);
+            do {
+                sendKeyboardReport();
+            } while (!keyboard.isKeyPressed(key));
+        }
     }
 
     void pressKey(KeyCode key) {
-        if (canPressKey(key)) {
+        if (!keyboard.isKeyPressed(key) && canPressKey(key)) {
             replaceFirstKey(KeyCode::KEY_NONE, key);
-            sendKeyboardReport();
+            do {
+                sendKeyboardReport();
+            } while (!keyboard.isKeyPressed(key));
         }
     }
 
     void releaseModifier(KeyCode key) {
-        modifiers = modifiers & ~getModifier(key);
-        sendKeyboardReport();
-    }
-
-    void releaseKey(KeyCode key) {
-        if (canReleaseKey(key)) {
-            replaceFirstKey(key, KeyCode::KEY_NONE);
-            sendKeyboardReport();
+        if (keyboard.isKeyPressed(key)) {
+            modifiers = modifiers & ~getModifier(key);
+            do {
+                sendKeyboardReport();
+            } while (keyboard.isKeyPressed(key));
         }
     }
 
-    void releaseAllModifiers() {
-        if (!isAborted()) {
-            modifiers = 0x00;
-            sendKeyboardReport();
+    void releaseKey(KeyCode key) {
+        if (keyboard.isKeyPressed(key) && canReleaseKey(key)) {
+            replaceFirstKey(key, KeyCode::KEY_NONE);
+            do {
+                sendKeyboardReport();
+            } while (keyboard.isKeyPressed(key));
         }
     }
 
     void releaseAllKeys() {
-        if (!isAborted()) {
+        if (!allKeysAreReleased()) {
+            modifiers = 0x00;
             for (auto& key : keys) {
                 key = KeyCode::KEY_NONE;
             }
-            sendKeyboardReport();
+            do {
+                sendKeyboardReport();
+            } while (!allKeysAreReleased());
         }
     }
 
@@ -241,6 +251,14 @@ class HIDKeyboard::Impl : public KbdMouDevice {
         *keyPtr = newKey;
     }
 
+    bool allKeysAreReleased() {
+        bool released = true;
+        for (int i = 0; i < CHAR_MAX + 1; i++) {
+            released &= !keyboard.isKeyPressed((KeyCode)i);
+        }
+        return released;
+    }
+
     void sendKeyboardReport() {
         Report report;
         report.reportId = REPORT_ID;
@@ -253,9 +271,10 @@ class HIDKeyboard::Impl : public KbdMouDevice {
 
     unsigned char modifiers = 0x00;
     KeyCode keys[6] = { KeyCode::KEY_NONE };
+    const HIDKeyboard& keyboard;
 };
 
-HIDKeyboard::HIDKeyboard() : impl(new Impl) {
+HIDKeyboard::HIDKeyboard() : impl(new Impl(*this)) {
     impl->initialize();
 }
 
@@ -292,7 +311,6 @@ void HIDKeyboard::releaseKey(KeyCode key) {
 
 void HIDKeyboard::releaseAllKeys() {
     impl->releaseAllKeys();
-    impl->releaseAllModifiers();
 }
 }  // namespace Impl
 }  // namespace AutoMacro
