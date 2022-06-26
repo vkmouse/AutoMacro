@@ -15,12 +15,13 @@ void MouseTest::TestMethodInitialize() {
     if (mouse == nullptr) {
         mouse = createMouse();
     }
+    mouse->releaseAllButtons();
 }
 
 void MouseTest::TestMouseButtonDownAndUp() {
-    TestButtonDownAndUp(mouse, MouseButton::BUTTON_LEFT, delay);
-    TestButtonDownAndUp(mouse, MouseButton::BUTTON_MIDDLE, delay);
-    TestButtonDownAndUp(mouse, MouseButton::BUTTON_RIGHT, delay);
+    TestButtonDownAndUp(mouse, MouseButton::BUTTON_LEFT);
+    TestButtonDownAndUp(mouse, MouseButton::BUTTON_MIDDLE);
+    TestButtonDownAndUp(mouse, MouseButton::BUTTON_RIGHT);
 }
 
 void MouseTest::TestReleaseAllButtons() {
@@ -46,7 +47,6 @@ void MouseTest::TestMouseMove() {
         int x = rand() % 1920;
         int y = rand() % 1080;
         mouse->mouseMove(x, y);
-        Sleep(delay);
         auto actual = mouse->getCurrentPosition();
         Assert::IsTrue(x - moveTolerance <= actual.x);
         Assert::IsTrue(actual.x <= x + moveTolerance);
@@ -57,16 +57,11 @@ void MouseTest::TestMouseMove() {
 
 void MouseTest::TestButtonDownAndUp(
     std::shared_ptr<Mouse> mouse,
-    MouseButton button,
-    int delay) {
+    MouseButton button) {
     Assert::IsFalse(mouse->isMouseButtonDown(button));
-
     mouse->mouseDown(button);
-    Sleep(delay);
     Assert::IsTrue(mouse->isMouseButtonDown(button));
-
     mouse->mouseUp(button);
-    Sleep(delay);
     Assert::IsFalse(mouse->isMouseButtonDown(button));
 }
 }  // namespace AutoMacro

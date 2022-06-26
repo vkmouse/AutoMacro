@@ -114,6 +114,9 @@
     <ClCompile Include="KbdMou\MouseTest.cpp">
       <Filter>AutoMacroTest\KbdMou</Filter>
     </ClCompile>
+    <ClCompile Include="KbdMou\HIDMouseTest.cpp">
+      <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">

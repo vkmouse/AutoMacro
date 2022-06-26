@@ -56,6 +56,7 @@
     <ClInclude Include="ImageProcessor\ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="KbdMou\KbdMou.h" />
     <ClInclude Include="KbdMou\KbdMou\HIDKeyboard.h" />
+    <ClInclude Include="KbdMou\KbdMou\HIDMouse.h" />
     <ClInclude Include="KbdMou\KbdMou\KbdMouDevice.h" />
     <ClInclude Include="KbdMou\KbdMou\MockKeyboard.h" />
     <ClInclude Include="KbdMou\KbdMou\MockMouse.h" />
@@ -91,6 +92,7 @@
     <ClCompile Include="ImageProcessor\ImageProcessor\CroppingProcessor.cpp" />
     <ClCompile Include="KbdMou\KbdMou.cpp" />
     <ClCompile Include="KbdMou\KbdMou\HIDKeyboard.cpp" />
+    <ClCompile Include="KbdMou\KbdMou\HIDMouse.cpp" />
     <ClCompile Include="KbdMou\KbdMou\KbdMouDevice.cpp" />
     <ClCompile Include="KbdMou\KbdMou\MockKeyboard.cpp" />
     <ClCompile Include="KbdMou\KbdMou\MockMouse.cpp" />

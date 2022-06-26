@@ -190,6 +190,9 @@
     <ClInclude Include="Detection\Detection\DetectionResults.h">
       <Filter>AutoMacro\Detection\Detection</Filter>
     </ClInclude>
+    <ClInclude Include="KbdMou\KbdMou\HIDMouse.h">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -290,6 +293,9 @@
     </ClCompile>
     <ClCompile Include="Detection\Detection\DetectionResults.cpp">
       <Filter>AutoMacro\Detection\Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="KbdMou\KbdMou\HIDMouse.cpp">
+      <Filter>AutoMacro\KbdMou\KbdMou</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

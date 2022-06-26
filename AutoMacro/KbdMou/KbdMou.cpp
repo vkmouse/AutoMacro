@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "AutoMacro/KbdMou/KbdMou/HIDKeyboard.h"
+#include "AutoMacro/KbdMou/KbdMou/HIDMouse.h"
 #include "AutoMacro/KbdMou/KbdMou/MockKeyboard.h"
 #include "AutoMacro/KbdMou/KbdMou/MockMouse.h"
 
@@ -14,6 +15,10 @@ std::shared_ptr<Keyboard> createHIDKeyboard() {
 
 std::shared_ptr<Keyboard> createMockKeyboard() {
     return std::make_shared<Impl::MockKeyboard>();
+}
+
+std::shared_ptr<Mouse> createHIDMouse() {
+    return std::make_shared<Impl::HIDMouse>();
 }
 
 std::shared_ptr<Mouse> createMockMouse() {

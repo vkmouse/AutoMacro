@@ -43,6 +43,7 @@
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp" />
     <ClCompile Include="KbdMou\HIDKeyboardTest.cpp" />
+    <ClCompile Include="KbdMou\HIDMouseTest.cpp" />
     <ClCompile Include="KbdMou\KeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockKeyboardTest.cpp" />
     <ClCompile Include="KbdMou\MockMouseTest.cpp" />
