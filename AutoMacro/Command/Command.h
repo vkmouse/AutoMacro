@@ -8,14 +8,16 @@
 namespace AutoMacro {
 namespace Factory {
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::DesktopSwitchCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::MouseMoveCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::SendKeyCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::ShortcutCommandParameter* parameter);
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::WaitForItemCommandParameter* parameter);
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::WaitForItemsCommandParameter* parameter);
-DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
-    Command::ShortcutCommandParameter* parameter);
-DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
-    Command::DesktopSwitchCommandParameter* parameter);
 }  // namespace Factory
 }  // namespace AutoMacro

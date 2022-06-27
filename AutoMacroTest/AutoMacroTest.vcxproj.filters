@@ -120,6 +120,9 @@
     <ClCompile Include="History\MouseHistoryAgentTest.cpp">
       <Filter>AutoMacroTest\History</Filter>
     </ClCompile>
+    <ClCompile Include="Command\MouseMoveCommandTest.cpp">
+      <Filter>AutoMacroTest\Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -193,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="History\MouseHistoryAgentTest.h">
       <Filter>AutoMacroTest\History</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\MouseMoveCommandTest.h">
+      <Filter>AutoMacroTest\Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

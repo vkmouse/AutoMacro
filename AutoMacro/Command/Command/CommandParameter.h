@@ -110,5 +110,44 @@ class DesktopSwitchCommandParameter : public KeyboardCommandParameter {
     int destination;
     int delayBetweemEachSwitch = 0;
 };
+
+class MouseCommandParameter : public CommandParameter {
+ public:
+    MouseCommandParameter(
+        std::shared_ptr<Mouse> mouse) :
+        mouse(mouse) {}
+    std::shared_ptr<Mouse> mouse;
+};
+
+class MouseMoveCommandParameter : public MouseCommandParameter {
+ public:
+    MouseMoveCommandParameter(
+        std::shared_ptr<Mouse> mouse,
+        int x, int y) :
+        MouseCommandParameter(mouse),
+        x(x), y(y) {}
+
+    int x;
+    int y;
+};
+
+class MouseClickCommandParameter : public MouseCommandParameter {
+ public:
+    MouseClickCommandParameter(
+        std::shared_ptr<Mouse> mouse,
+        MouseButton button) :
+        MouseCommandParameter(mouse),
+        button(button),
+        mouseMoveCommandParameter(MouseMoveCommandParameter(mouse, 0, 0)) {
+    }
+
+    MouseButton button;
+    int delayBetweenMouseDownAndMouseUp = 0;
+    int delayBetweenRepeatitions = 0;
+    int repeatTimes = 1;
+
+    bool enableMouseMove = false;
+    MouseMoveCommandParameter mouseMoveCommandParameter;
+};
 }  // namespace Command
 }  // namespace AutoMacro

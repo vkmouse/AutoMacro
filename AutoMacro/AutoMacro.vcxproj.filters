@@ -196,6 +196,12 @@
     <ClInclude Include="History\History\MouseHistoryAgent.h">
       <Filter>AutoMacro\History\History</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\MouseCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\MouseMoveCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -302,6 +308,12 @@
     </ClCompile>
     <ClCompile Include="History\History\MouseHistoryAgent.cpp">
       <Filter>AutoMacro\History\History</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\MouseCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\MouseMoveCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
