@@ -193,6 +193,9 @@
     <ClInclude Include="KbdMou\KbdMou\HIDMouse.h">
       <Filter>AutoMacro\KbdMou\KbdMou</Filter>
     </ClInclude>
+    <ClInclude Include="History\History\MouseHistoryAgent.h">
+      <Filter>AutoMacro\History\History</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -296,6 +299,9 @@
     </ClCompile>
     <ClCompile Include="KbdMou\KbdMou\HIDMouse.cpp">
       <Filter>AutoMacro\KbdMou\KbdMou</Filter>
+    </ClCompile>
+    <ClCompile Include="History\History\MouseHistoryAgent.cpp">
+      <Filter>AutoMacro\History\History</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

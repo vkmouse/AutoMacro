@@ -39,6 +39,7 @@
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
     <ClCompile Include="History\HistoryTest.cpp" />
     <ClCompile Include="History\KeyboardHistoryAgentTest.cpp" />
+    <ClCompile Include="History\MouseHistoryAgentTest.cpp" />
     <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp" />
@@ -68,6 +69,7 @@
     <ClInclude Include="Detection\TemplateBasedDetectorTest.h" />
     <ClInclude Include="History\HistoryTest.h" />
     <ClInclude Include="History\KeyboardHistoryAgentTest.h" />
+    <ClInclude Include="History\MouseHistoryAgentTest.h" />
     <ClInclude Include="History\VideoCaptureHistoryAgentTest.h" />
     <ClInclude Include="ImageProcessor\BGRConverterProcessorTest.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessorTest.h" />

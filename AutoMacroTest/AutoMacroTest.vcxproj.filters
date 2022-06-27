@@ -117,6 +117,9 @@
     <ClCompile Include="KbdMou\HIDMouseTest.cpp">
       <Filter>AutoMacroTest\KbdMou</Filter>
     </ClCompile>
+    <ClCompile Include="History\MouseHistoryAgentTest.cpp">
+      <Filter>AutoMacroTest\History</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\TypesTest.h">
@@ -187,6 +190,9 @@
     </ClInclude>
     <ClInclude Include="KbdMou\MouseTest.h">
       <Filter>AutoMacroTest\KbdMou</Filter>
+    </ClInclude>
+    <ClInclude Include="History\MouseHistoryAgentTest.h">
+      <Filter>AutoMacroTest\History</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

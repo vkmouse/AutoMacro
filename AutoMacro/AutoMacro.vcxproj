@@ -49,6 +49,7 @@
     <ClInclude Include="History\History\Histories.h" />
     <ClInclude Include="History\History\History.h" />
     <ClInclude Include="History\History\KeyboardHistoryAgent.h" />
+    <ClInclude Include="History\History\MouseHistoryAgent.h" />
     <ClInclude Include="History\History\VideoCaptureHistoryAgent.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.h" />
@@ -86,6 +87,7 @@
     <ClCompile Include="History\History.cpp" />
     <ClCompile Include="History\History\Histories.cpp" />
     <ClCompile Include="History\History\KeyboardHistoryAgent.cpp" />
+    <ClCompile Include="History\History\MouseHistoryAgent.cpp" />
     <ClCompile Include="History\History\VideoCaptureHistoryAgent.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor.cpp" />
     <ClCompile Include="ImageProcessor\ImageProcessor\BGRConverterProcessor.cpp" />
