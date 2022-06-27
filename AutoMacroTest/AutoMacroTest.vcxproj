@@ -27,6 +27,7 @@
     <ClCompile Include="Assert\AssertExtension.cpp" />
     <ClCompile Include="Assert\AssertExtensionTest.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
+    <ClCompile Include="Command\MouseClickCommandTest.cpp" />
     <ClCompile Include="Command\MouseMoveCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />
@@ -58,6 +59,7 @@
     <ClInclude Include="Assert\AssertExtension.h" />
     <ClInclude Include="Assert\AssertExtensionTest.h" />
     <ClInclude Include="Command\DesktopSwitchCommandTest.h" />
+    <ClInclude Include="Command\MouseClickCommandTest.h" />
     <ClInclude Include="Command\MouseMoveCommandTest.h" />
     <ClInclude Include="Command\SendKeyCommandTest.h" />
     <ClInclude Include="Command\ShortcutCommandTest.h" />

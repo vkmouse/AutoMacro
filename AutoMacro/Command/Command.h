@@ -10,6 +10,8 @@ namespace Factory {
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::DesktopSwitchCommandParameter* parameter);
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
+    Command::MouseClickCommandParameter* parameter);
+DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::MouseMoveCommandParameter* parameter);
 DLL_EXPORTS std::shared_ptr<Command::Command> createCommand(
     Command::SendKeyCommandParameter* parameter);

@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "AutoMacro/Command/Command/DesktopSwitchCommand.h"
+#include "AutoMacro/Command/Command/MouseClickCommand.h"
 #include "AutoMacro/Command/Command/MouseMoveCommand.h"
 #include "AutoMacro/Command/Command/SendKeyCommand.h"
 #include "AutoMacro/Command/Command/ShortcutCommand.h"
@@ -14,6 +15,11 @@ namespace Factory {
 std::shared_ptr<Command::Command> createCommand(
     Command::DesktopSwitchCommandParameter* parameter) {
     return std::make_shared<Command::Impl::DesktopSwitchCommand>(parameter);
+}
+
+std::shared_ptr<Command::Command> createCommand(
+    Command::MouseClickCommandParameter* parameter) {
+    return std::make_shared<Command::Impl::MouseClickCommand>(parameter);
 }
 
 std::shared_ptr<Command::Command> createCommand(

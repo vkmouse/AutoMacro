@@ -202,6 +202,9 @@
     <ClInclude Include="Command\Command\MouseMoveCommand.h">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\MouseClickCommand.h">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VideoCapture\VideoCapture.cpp">
@@ -313,6 +316,9 @@
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command\MouseMoveCommand.cpp">
+      <Filter>AutoMacro\Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\MouseClickCommand.cpp">
       <Filter>AutoMacro\Command\Command</Filter>
     </ClCompile>
   </ItemGroup>

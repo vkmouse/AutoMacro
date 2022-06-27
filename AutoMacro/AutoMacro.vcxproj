@@ -24,6 +24,7 @@
     <ClInclude Include="Command\Command\CommandParameter.h" />
     <ClInclude Include="Command\Command\DesktopSwitchCommand.h" />
     <ClInclude Include="Command\Command\KeyboardCommand.h" />
+    <ClInclude Include="Command\Command\MouseClickCommand.h" />
     <ClInclude Include="Command\Command\MouseCommand.h" />
     <ClInclude Include="Command\Command\MouseMoveCommand.h" />
     <ClInclude Include="Command\Command\SendKeyCommand.h" />
@@ -72,6 +73,7 @@
     <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
     <ClCompile Include="Command\Command\KeyboardCommand.cpp" />
+    <ClCompile Include="Command\Command\MouseClickCommand.cpp" />
     <ClCompile Include="Command\Command\MouseCommand.cpp" />
     <ClCompile Include="Command\Command\MouseMoveCommand.cpp" />
     <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
