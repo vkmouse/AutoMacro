@@ -1,6 +1,5 @@
 #pragma once
 #include <memory>
-#include <string>
 
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/History/History/Histories.h"
@@ -10,8 +9,6 @@ namespace History {
 namespace Impl {
 class KeyboardHistoryAgent : public Keyboard {
  public:
-    static std::string keyToString(KeyCode key);
-
     KeyboardHistoryAgent(
         std::shared_ptr<Keyboard> keyboard,
         Histories* histories);
