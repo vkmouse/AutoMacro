@@ -1,7 +1,5 @@
 #include "AutoMacro/Command/Command/MouseMoveCommand.h"
 
-#include <memory>
-
 #include "AutoMacro/Command/Command/CommandParameter.h"
 #include "AutoMacro/KbdMou/KbdMou.h"
 
