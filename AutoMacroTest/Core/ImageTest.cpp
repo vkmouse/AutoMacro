@@ -1,8 +1,8 @@
 #include "AutoMacroTest/Core/ImageTest.h"
 
-#include "CppUnitTest.h"
-#include <AutoMacro/Core/Core.h>
+#include "AutoMacro/Core/Core.h"
 #include "AutoMacroTest/Assert/AssertExtension.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace {

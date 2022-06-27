@@ -2,10 +2,10 @@
 
 #include <string>
 
-#include "CppUnitTest.h"
-#include <AutoMacro/Cv/Cv.h>
-#include <AutoMacro/Detection/Detection.h>
+#include "AutoMacro/Cv/Cv.h"
+#include "AutoMacro/Detection/Detection.h"
 #include "AutoMacroTest/Assert/AssertExtension.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace {

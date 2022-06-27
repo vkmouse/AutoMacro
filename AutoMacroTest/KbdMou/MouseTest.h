@@ -1,8 +1,7 @@
 #pragma once
 #include <memory>
-#include <vector>
 
-#include <AutoMacro/Core/Core.h>
+#include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
 class MouseTest {

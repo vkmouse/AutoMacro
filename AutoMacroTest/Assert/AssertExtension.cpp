@@ -1,5 +1,9 @@
 #include "AutoMacroTest/Assert/AssertExtension.h"
 
+#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Detection/Detection.h"
+#include "CppUnitTest.h"
+
 namespace Microsoft {
 namespace VisualStudio {
 namespace CppUnitTestFramework {

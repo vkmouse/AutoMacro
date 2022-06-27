@@ -1,8 +1,8 @@
 #include "AutoMacroTest/History/VideoCaptureHistoryAgentTest.h"
 
+#include "AutoMacro/History/History.h"
+#include "AutoMacro/VideoCapture/VideoCapture.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/History/History.h>
-#include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
 namespace History {

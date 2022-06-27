@@ -1,8 +1,9 @@
 #include "AutoMacroTest/Command/DesktopSwitchCommandTest.h"
 
-#include <AutoMacro/Command/Command.h>
-#include <AutoMacro/History/History.h>
-#include <AutoMacro/KbdMou/KbdMou.h>
+#include "AutoMacro/Command/Command.h"
+#include "AutoMacro/History/History.h"
+#include "AutoMacro/KbdMou/KbdMou.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace Command {
@@ -110,7 +111,8 @@ void DesktopSwitchCommandTest::TestDelayBetweenEachSwitch() {
     Assert::IsTrue(histories[idx++].equals("releaseKey", KeyCode::KEY_LCTRL));
     Assert::IsTrue(histories[idx++].equals("---"));
 
-    bool allDurationsAreInRange = History::History::durationIsInRange(histories[6], histories[7],
+    bool allDurationsAreInRange = History::History::durationIsInRange(
+        histories[6], histories[7],
         p.delayBetweemEachSwitch,
         p.delayBetweemEachSwitch + 40);
     Assert::IsTrue(allDurationsAreInRange);

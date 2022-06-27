@@ -1,7 +1,7 @@
 #include "AutoMacroTest/Detection/DetectionResultTest.h"
 
+#include "AutoMacro/Detection/Detection.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/Detection/Detection.h>
 
 namespace AutoMacro {
 namespace Detection {

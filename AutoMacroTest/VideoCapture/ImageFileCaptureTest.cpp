@@ -1,7 +1,7 @@
 #include "AutoMacroTest/VideoCapture/ImageFileCaptureTest.h"
 
+#include "AutoMacro/VideoCapture/VideoCapture.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
 namespace {

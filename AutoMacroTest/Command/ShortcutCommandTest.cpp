@@ -1,8 +1,9 @@
 #include "AutoMacroTest/Command/ShortcutCommandTest.h"
 
-#include <AutoMacro/Command/Command.h>
-#include <AutoMacro/History/History.h>
-#include <AutoMacro/KbdMou/KbdMou.h>
+#include "AutoMacro/Command/Command.h"
+#include "AutoMacro/History/History.h"
+#include "AutoMacro/KbdMou/KbdMou.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace Command {

@@ -1,8 +1,8 @@
 #include <memory>
 
-#include "CppUnitTest.h"
-#include <AutoMacro/KbdMou/KbdMou.h>
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "AutoMacroTest/KbdMou/KeyboardTest.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 TEST_CLASS(HIDKeyboardTest), public KeyboardTest {

@@ -2,9 +2,10 @@
 
 #include <Windows.h>
 #include <memory>
+#include <random>
 
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace {
@@ -43,9 +44,12 @@ void MouseTest::TestReleaseAllButtons() {
 }
 
 void MouseTest::TestMouseMove() {
+    std::default_random_engine generator;
+    std::uniform_real_distribution<double> distribution(0, 1);
+
     for (int i = 0; i < 100; i++) {
-        int x = rand() % 1920;
-        int y = rand() % 1080;
+        int x = static_cast<int>(distribution(generator) * 1920);
+        int y = static_cast<int>(distribution(generator) * 1080);
         mouse->mouseMove(x, y);
         auto actual = mouse->getCurrentPosition();
         Assert::IsTrue(x - moveTolerance <= actual.x);

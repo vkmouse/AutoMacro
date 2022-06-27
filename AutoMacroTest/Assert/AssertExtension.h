@@ -1,7 +1,7 @@
 #pragma once
+#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Detection/Detection.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/Core/Core.h>
-#include <AutoMacro/Detection/Detection.h>
 
 namespace Microsoft {
 namespace VisualStudio {

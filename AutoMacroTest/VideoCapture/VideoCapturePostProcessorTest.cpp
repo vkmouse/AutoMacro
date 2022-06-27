@@ -2,9 +2,9 @@
 
 #include <memory>
 
+#include "AutoMacro/ImageProcessor/ImageProcessor.h"
+#include "AutoMacro/VideoCapture/VideoCapture.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/ImageProcessor/ImageProcessor.h>
-#include <AutoMacro/VideoCapture/VideoCapture.h>
 
 namespace AutoMacro {
 namespace {

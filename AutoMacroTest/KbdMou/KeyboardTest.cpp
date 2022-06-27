@@ -2,8 +2,8 @@
 
 #include <memory>
 
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace {

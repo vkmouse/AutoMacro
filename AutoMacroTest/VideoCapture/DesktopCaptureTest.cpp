@@ -3,11 +3,11 @@
 #include <Windows.h>
 #include <string>
 
-#include "CppUnitTest.h"
-#include <AutoMacro/Cv/Cv.h>
-#include <AutoMacro/ImageProcessor/ImageProcessor.h>
-#include <AutoMacro/VideoCapture/VideoCapture.h>
+#include "AutoMacro/Cv/Cv.h"
+#include "AutoMacro/ImageProcessor/ImageProcessor.h"
+#include "AutoMacro/VideoCapture/VideoCapture.h"
 #include "AutoMacroTest/Assert/AssertExtension.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace {
@@ -35,7 +35,7 @@ void DesktopCaptureTest::TestTakeSnapshotWithProcessor() {
     system(filename.c_str());
     Sleep(400);
     Image actual = videoCapture->takeSnapshot();
-        
+
     Assert::AreEqual(expected, actual);
     system("TASKKILL /F /IM Microsoft.Photos.exe");
 }

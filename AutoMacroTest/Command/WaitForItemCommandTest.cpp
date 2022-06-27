@@ -2,10 +2,11 @@
 
 #include <memory>
 
-#include <AutoMacro/Command/Command.h>
-#include <AutoMacro/Detection/Detection.h>
-#include <AutoMacro/History/History.h>
-#include <AutoMacro/VideoCapture/VideoCapture.h>
+#include "AutoMacro/Command/Command.h"
+#include "AutoMacro/Detection/Detection.h"
+#include "AutoMacro/History/History.h"
+#include "AutoMacro/VideoCapture/VideoCapture.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace Command {

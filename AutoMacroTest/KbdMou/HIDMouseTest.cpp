@@ -1,9 +1,9 @@
-#include <memory>
 #include <Windows.h>
+#include <memory>
 
-#include "CppUnitTest.h"
-#include <AutoMacro/KbdMou/KbdMou.h>
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "AutoMacroTest/KbdMou/MouseTest.h"
+#include "CppUnitTest.h"
 
 namespace AutoMacro {
 TEST_CLASS(HIDMouseTest), public MouseTest {

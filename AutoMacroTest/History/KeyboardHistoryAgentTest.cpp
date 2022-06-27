@@ -1,8 +1,8 @@
 #include "AutoMacroTest/History/KeyboardHistoryAgentTest.h"
 
+#include "AutoMacro/History/History.h"
+#include "AutoMacro/KbdMou/KbdMou.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/History/History.h>
-#include <AutoMacro/KbdMou/KbdMou.h>
 
 namespace AutoMacro {
 namespace History {

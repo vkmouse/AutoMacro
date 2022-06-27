@@ -9,7 +9,7 @@ namespace AutoMacro {
 namespace Impl {
 class ImageFileCapture : public VideoCapture {
  public:
-    ImageFileCapture(std::vector<std::string> filenames);
+    explicit ImageFileCapture(std::vector<std::string> filenames);
 
     virtual Image takeSnapshot();
 

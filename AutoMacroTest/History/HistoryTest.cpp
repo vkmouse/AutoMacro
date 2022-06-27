@@ -1,7 +1,7 @@
 #include "AutoMacroTest/History/HistoryTest.h"
 
+#include "AutoMacro/History/History.h"
 #include "CppUnitTest.h"
-#include <AutoMacro/History/History.h>
 
 namespace AutoMacro {
 namespace History {
