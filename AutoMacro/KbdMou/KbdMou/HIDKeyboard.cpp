@@ -169,51 +169,35 @@ class HIDKeyboard::Impl : public KbdMouDevice {
     }
 
     void pressModifier(KeyCode key) {
-        if (!keyboard.isKeyPressed(key)) {
-            modifiers = modifiers | getModifier(key);
-            do {
-                sendKeyboardReport();
-            } while (!keyboard.isKeyPressed(key));
-        }
+        modifiers = modifiers | getModifier(key);
+        sendKeyboardReport();
     }
 
     void pressKey(KeyCode key) {
-        if (!keyboard.isKeyPressed(key) && canPressKey(key)) {
+        if (canPressKey(key)) {
             replaceFirstKey(KeyCode::KEY_NONE, key);
-            do {
-                sendKeyboardReport();
-            } while (!keyboard.isKeyPressed(key));
+            sendKeyboardReport();
         }
     }
 
     void releaseModifier(KeyCode key) {
-        if (keyboard.isKeyPressed(key)) {
-            modifiers = modifiers & ~getModifier(key);
-            do {
-                sendKeyboardReport();
-            } while (keyboard.isKeyPressed(key));
-        }
+        modifiers = modifiers & ~getModifier(key);
+        sendKeyboardReport();
     }
 
     void releaseKey(KeyCode key) {
-        if (keyboard.isKeyPressed(key) && canReleaseKey(key)) {
+        if (canReleaseKey(key)) {
             replaceFirstKey(key, KeyCode::KEY_NONE);
-            do {
-                sendKeyboardReport();
-            } while (keyboard.isKeyPressed(key));
+            sendKeyboardReport();
         }
     }
 
     void releaseAllKeys() {
-        if (!allKeysAreReleased()) {
-            modifiers = 0x00;
-            for (auto& key : keys) {
-                key = KeyCode::KEY_NONE;
-            }
-            do {
-                sendKeyboardReport();
-            } while (!allKeysAreReleased());
+        modifiers = 0x00;
+        for (auto& key : keys) {
+            key = KeyCode::KEY_NONE;
         }
+        sendKeyboardReport();
     }
 
  private:
@@ -249,14 +233,6 @@ class HIDKeyboard::Impl : public KbdMouDevice {
             throw std::runtime_error{ "KEYCODE_DOES_NOT_EXIST" };
         }
         *keyPtr = newKey;
-    }
-
-    bool allKeysAreReleased() {
-        bool released = true;
-        for (int i = 0; i < CHAR_MAX + 1; i++) {
-            released &= !keyboard.isKeyPressed((KeyCode)i);
-        }
-        return released;
     }
 
     void sendKeyboardReport() {

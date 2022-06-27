@@ -1,7 +1,6 @@
 #include "AutoMacro/KbdMou/KbdMou/HIDMouse.h"
 
 #include <Windows.h>
-#include <chrono>
 #include <stdexcept>
 #include <vector>
 
@@ -140,21 +139,13 @@ class HIDMouse::Impl : public KbdMouDevice {
     }
 
     void mouseDown(MouseButton button) {
-        if (!mouse.isMouseButtonDown(button)) {
-            buttons |= (BYTE)button;
-            do {
-                sendMouseReport();
-            } while (!mouse.isMouseButtonDown(button));
-        }
+        buttons |= (BYTE)button;
+        sendMouseReport();
     }
 
     void mouseUp(MouseButton button) {
-        if (mouse.isMouseButtonDown(button)) {
-            buttons &= ~(BYTE)button;
-            do {
-                sendMouseReport();
-            } while (mouse.isMouseButtonDown(button));
-        }
+        buttons &= ~(BYTE)button;
+        sendMouseReport();
     }
 
     void mouseMove(int x, int y) {
@@ -163,18 +154,14 @@ class HIDMouse::Impl : public KbdMouDevice {
         while (!lessThanTolerance(current, destination)) {
             CHAR xSpeed = speedMatcher.getSpeed(destination.x - current.x);
             CHAR ySpeed = speedMatcher.getSpeed(destination.y - current.y);
-            sendMouseMoveReport(xSpeed, ySpeed);
+            sendMouseReport(xSpeed, ySpeed);
             current = mouse.getCurrentPosition();
         }
     }
 
     void releaseAllButtons() {
-        if (!allButtonsAreReleased()) {
-            buttons = 0x00;
-            do {
-                sendMouseReport();
-            } while (!allButtonsAreReleased());
-        }
+        buttons = 0x00;
+        sendMouseReport();
     }
 
  private:
@@ -198,41 +185,12 @@ class HIDMouse::Impl : public KbdMouDevice {
         return sqrt(pow(deltaX, 2) + pow(deltaY, 2));
     }
 
-    bool allButtonsAreReleased() {
-        bool released = true;
-        released &= !mouse.isMouseButtonDown(MouseButton::BUTTON_LEFT);
-        released &= !mouse.isMouseButtonDown(MouseButton::BUTTON_RIGHT);
-        released &= !mouse.isMouseButtonDown(MouseButton::BUTTON_MIDDLE);
-        return released;
-    }
-
-    void sendMouseMoveReport(CHAR xSpeed, CHAR ySpeed) {
-        using std::chrono::high_resolution_clock;
-        using std::chrono::duration_cast;
-        using std::chrono::milliseconds;
-
+    void sendMouseReport(CHAR xSpeed = 0, CHAR ySpeed = 0) {
         Report report;
         report.reportId = REPORT_ID;
         report.buttons = buttons;
         report.x = xSpeed;
         report.y = ySpeed;
-
-        auto start = high_resolution_clock::now();
-        setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
-        auto current = high_resolution_clock::now();
-        auto duration = duration_cast<milliseconds>(current - start);
-        while (duration.count() < 1) {
-            current = high_resolution_clock::now();
-            duration = duration_cast<milliseconds>(current - start);
-        }
-    }
-
-    void sendMouseReport() {
-        Report report;
-        report.reportId = REPORT_ID;
-        report.buttons = buttons;
-        report.x = 0;
-        report.y = 0;
 
         setOutputReport(&report, static_cast<DWORD>(sizeof(Report)));
     }

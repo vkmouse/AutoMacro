@@ -1,7 +1,8 @@
-#include "KbdMouDevice.h"
+#include "AutoMacro/KbdMou/KbdMou/KbdMouDevice.h"
 
 #include <cfgmgr32.h>
 #include <hidsdi.h>
+#include <chrono>
 #include <stdexcept>
 
 namespace AutoMacro {
@@ -99,8 +100,17 @@ void KbdMouDevice::abort() {
 }
 
 void KbdMouDevice::setOutputReport(PVOID data, DWORD size) {
+    using std::chrono::high_resolution_clock;
+    auto start = high_resolution_clock::now();
+
     if (!HidD_SetOutputReport(mp_deviceHandle, data, size)) {
         throw std::runtime_error{ "ERROR_SET_OUTPUT_REPORT" };
+    }
+
+    auto duration = high_resolution_clock::now() - start;
+    auto timeout = std::chrono::milliseconds(1);
+    while (duration < timeout) {
+        duration = high_resolution_clock::now() - start;
     }
 }
 }  // namespace Impl
