@@ -1,6 +1,6 @@
 #include "AutoMacro/Detection/Detection/BaseDetector.h"
 
-#include <opencv2/core.hpp>
+#include "opencv2/core.hpp"
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Detection/Detection/DetectionResults.h"
 
@@ -8,8 +8,19 @@ namespace AutoMacro {
 namespace Detection {
 namespace Impl {
 DetectionResults BaseDetector::detect(Image image) {
+    for (const auto& processor : preprocessors) {
+        image = processor->process(image);
+    }
     cv::Mat mat = imageToMat(image);
     return detect(mat);
+}
+
+void BaseDetector::addPreprocessor(std::shared_ptr<ImageProcessor> processor) {
+    preprocessors.push_back(processor);
+}
+
+void BaseDetector::removeLastPreprocessor() {
+    preprocessors.pop_back();
 }
 
 cv::Mat BaseDetector::imageToMat(const Image& image) {

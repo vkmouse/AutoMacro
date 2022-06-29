@@ -8,7 +8,6 @@
 
 #include "AutoMacro/Detection/Detection/Detector.h"
 #include "AutoMacro/Detection/Detection/DetectorParameter.h"
-#include "AutoMacro/Detection/Detection/DetectorPreprocessor.h"
 #include "AutoMacro/Detection/Detection/TemplateBasedDetector.h"
 #include "AutoMacro/ImageProcessor/ImageProcessor.h"
 
@@ -53,13 +52,6 @@ std::shared_ptr<Detection::Detector> createTemplateBasedDetector(
     detector->init();
 
     return detector;
-}
-
-std::shared_ptr<Detection::Detector> addPreprocessing(
-    std::shared_ptr<Detection::Detector> detector,
-    std::shared_ptr<ImageProcessor> processor) {
-    using Detection::Impl::DetectorPreprocessor;
-    return std::make_shared<DetectorPreprocessor>(detector, processor);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

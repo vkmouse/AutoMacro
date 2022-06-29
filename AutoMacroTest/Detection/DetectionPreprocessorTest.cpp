@@ -28,7 +28,7 @@ void DetectionPreprocessorTest::TestBGRConverterProcessor() {
     Assert::ExpectException<std::runtime_error>(channelNotEqualFailed);
 
     auto processor = Factory::createBGRConverterProcessor();
-    detector = Factory::addPreprocessing(detector, processor);
+    detector->addPreprocessor(processor);
     DetectionResults results = detector->detect(capture->takeSnapshot());
 
     Assert::IsTrue(results.exists(0.98f, 0));
@@ -47,9 +47,13 @@ void DetectionPreprocessorTest::TestCroppingProcessor() {
     Assert::IsTrue(results.exists(0.98f, 0));
 
     auto processor = Factory::createCroppingProcessor(3, 3, 7, 7);
-    detector = Factory::addPreprocessing(detector, processor);
+    detector->addPreprocessor(processor);
     results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(results.exists(0.98f, 0));
+
+    detector->removeLastPreprocessor();
+    results = detector->detect(capture->takeSnapshot());
+    Assert::IsTrue(results.exists(0.98f, 0));
 }
 
 void DetectionPreprocessorTest::TestMixedProcessor() {
@@ -62,18 +66,38 @@ void DetectionPreprocessorTest::TestMixedProcessor() {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
     });
-    detector = Factory::addPreprocessing(detector, processor1);
-    detector = Factory::addPreprocessing(detector, processor2);
+    detector->addPreprocessor(processor1);
+    detector->addPreprocessor(processor2);
     DetectionResults results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(results.exists(0.98f, 0));
 
     detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTest\\Template_5x5_24bits.png",
-        });
-    detector = Factory::addPreprocessing(detector, processor2);
-    detector = Factory::addPreprocessing(detector, processor1);
+    });
+    detector->addPreprocessor(processor2);
+    detector->addPreprocessor(processor1);
     results = detector->detect(capture->takeSnapshot());
     Assert::IsFalse(results.exists(0.98f, 0));
+}
+
+void DetectionPreprocessorTest::TestMultipleCroppingProcessor() {
+    auto detector = Factory::createTemplateBasedDetector({
+        "images\\AutoMacroTest\\Template_5x5_24bits.png",
+        });
+
+    auto capture = Factory::createImageFileCapture({
+        "images\\AutoMacroTest\\ItemExists_10x10_24bits.png",
+        });
+
+    auto processor1 = Factory::createCroppingProcessor(3, 1, 5, 5);
+    detector->addPreprocessor(processor1);
+    auto results = detector->detect(capture->takeSnapshot());
+    Assert::IsTrue(results.exists(0.98f, 0));
+
+    auto processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
+    detector->addPreprocessor(processor2);
+    results = detector->detect(capture->takeSnapshot());
+    Assert::IsTrue(results.exists(0.98f, 0));
 }
 }  // namespace Detection
 }  // namespace AutoMacro

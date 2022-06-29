@@ -8,6 +8,7 @@ TEST_CLASS(DetectionPreprocessorTest) {
     TEST_METHOD(TestBGRConverterProcessor);
     TEST_METHOD(TestCroppingProcessor);
     TEST_METHOD(TestMixedProcessor);
+    TEST_METHOD(TestMultipleCroppingProcessor);
 };
 }  // namespace Detection
 }  // namespace AutoMacro

@@ -46,7 +46,6 @@
     <ClInclude Include="Detection\Detection\DetectionResults.h" />
     <ClInclude Include="Detection\Detection\Detector.h" />
     <ClInclude Include="Detection\Detection\DetectorParameter.h" />
-    <ClInclude Include="Detection\Detection\DetectorPreprocessor.h" />
     <ClInclude Include="Detection\Detection\TemplateBasedDetector.h" />
     <ClInclude Include="History\History.h" />
     <ClInclude Include="History\History\Histories.h" />
@@ -88,7 +87,6 @@
     <ClCompile Include="Detection\Detection\BaseDetector.cpp" />
     <ClCompile Include="Detection\Detection\DetectionResult.cpp" />
     <ClCompile Include="Detection\Detection\DetectionResults.cpp" />
-    <ClCompile Include="Detection\Detection\DetectorPreprocessor.cpp" />
     <ClCompile Include="Detection\Detection\TemplateBasedDetector.cpp" />
     <ClCompile Include="History\History.cpp" />
     <ClCompile Include="History\History\Histories.cpp" />

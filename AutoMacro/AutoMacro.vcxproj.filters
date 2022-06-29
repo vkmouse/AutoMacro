@@ -76,9 +76,6 @@
     <ClInclude Include="Detection\Detection\DetectorParameter.h">
       <Filter>AutoMacro\Detection\Detection</Filter>
     </ClInclude>
-    <ClInclude Include="Detection\Detection\DetectorPreprocessor.h">
-      <Filter>AutoMacro\Detection\Detection</Filter>
-    </ClInclude>
     <ClInclude Include="Detection\Detection\TemplateBasedDetector.h">
       <Filter>AutoMacro\Detection\Detection</Filter>
     </ClInclude>
@@ -217,9 +214,6 @@
       <Filter>AutoMacro\Detection\Detection</Filter>
     </ClCompile>
     <ClCompile Include="Detection\Detection\DetectionResult.cpp">
-      <Filter>AutoMacro\Detection\Detection</Filter>
-    </ClCompile>
-    <ClCompile Include="Detection\Detection\DetectorPreprocessor.cpp">
       <Filter>AutoMacro\Detection\Detection</Filter>
     </ClCompile>
     <ClCompile Include="Detection\Detection\TemplateBasedDetector.cpp">
