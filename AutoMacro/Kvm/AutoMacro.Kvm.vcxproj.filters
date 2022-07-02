@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{6a837b0c-08c6-40da-8abe-51b068563d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{b808391c-f00a-47a8-a6d0-f32897cb7ee8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Kvm\MockKeyboard.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\MockMouse.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm.cpp" />
+    <ClCompile Include="Kvm\MockVideoCapture.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\HIDKeyboard.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\HIDMouse.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\KbdMouDevice.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\DesktopCapture.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\SendKeyCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\ShortcutCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\MouseClickCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\DesktopSwitchCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\ActualDelay.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Kvm\MockKeyboard.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\MockMouse.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm.h" />
+    <ClInclude Include="Kvm\MockVideoCapture.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\HIDKeyboard.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\HIDMouse.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\KbdMouDevice.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\MockDelay.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\DesktopCapture.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\SendKeyCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\SendKeyCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\ShortcutCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\ShortCutCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\MouseClickCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\MouseClickCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\DesktopSwitchCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\DesktopSwitchCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\ActualDelay.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

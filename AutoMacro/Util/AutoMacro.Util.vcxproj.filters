@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="History\Histories.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\KeyboardHistoryAgent.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\MouseHistoryAgent.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\VideoCaptureHistoryAgent.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\DelayHistoryAgent.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="History\Histories.h">
+      <Filter>History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\History.h">
+      <Filter>History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\KeyboardHistoryAgent.h">
+      <Filter>History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\MouseHistoryAgent.h">
+      <Filter>History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\VideoCaptureHistoryAgent.h">
+      <Filter>History</Filter>
+    </ClInclude>
+    <ClInclude Include="History\DelayHistoryAgent.h">
+      <Filter>History</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="History">
+      <UniqueIdentifier>{ffc36b7a-5689-4459-877d-1653a7583c0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

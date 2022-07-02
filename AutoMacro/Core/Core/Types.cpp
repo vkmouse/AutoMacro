@@ -1,5 +1,3 @@
-#include <string.h>
-
 #include "AutoMacro/Core/Core/Types.h"
 
 namespace AutoMacro {

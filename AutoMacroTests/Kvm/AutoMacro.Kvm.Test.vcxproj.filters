@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{4801340e-fcc0-41f0-8493-3adf95e1443e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{3bb9a76c-68bb-4170-bdee-36cb6d9e14cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Kvm\DesktopCaptureTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\HIDKeyboardTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\HIDMouseTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\KeyboardTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\MockKeyboardTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\MockMouseTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\MouseTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\SendKeyCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\ShortcutCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\MouseClickCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\DesktopSwitchCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\ActualDelayTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Kvm\KeyboardTest.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\MouseTest.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

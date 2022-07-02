@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="DetectionResultsUtilTest.cpp" />
+    <ClCompile Include="History\DelayHistoryAgentTest.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\HistoryTest.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\KeyboardHistoryAgentTest.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\MouseHistoryAgentTest.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+    <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp">
+      <Filter>History</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="History">
+      <UniqueIdentifier>{1f36035b-53ee-4b98-8850-9d290b8bbac9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

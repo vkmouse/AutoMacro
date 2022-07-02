@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ImageProcessor">
+      <UniqueIdentifier>{4ede6775-620e-4c6c-b148-ddc8c0295eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{d02eca01-dcbb-4ee5-bb8c-fc79b6b23835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{61d70af3-ed7c-4482-82bc-58c1565d669f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Detection">
+      <UniqueIdentifier>{bfa8ace3-eb6e-49b3-aa5c-d6a0edc0756d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{8635a90e-1834-4967-b692-37254de08039}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp">
+      <Filter>ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp">
+      <Filter>ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="AssertExtension.cpp" />
+    <ClCompile Include="Kvm\ImageFileCaptureTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp">
+      <Filter>Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemsCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Images\AutoMacroTests\AllItemExists_10x10_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\BlackWithWhiteBorder_5x5_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\ItemExists_10x10_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\ItemExists_10x10_32bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\ItemNotExists_10x10_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\NotExistedTemplate_5x5_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\NotExistedTemplateMask_5x5_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\Sample_10x10_32bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Images\AutoMacroTests\Template_5x5_24bits.png">
+      <Filter>Images</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssertExtension.h" />
+  </ItemGroup>
+</Project>

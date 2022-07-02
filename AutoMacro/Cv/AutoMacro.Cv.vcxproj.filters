@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{7e4eb1c2-0b57-42c7-88b6-e1ceeecdd3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageProcessor">
+      <UniqueIdentifier>{6db7ca02-e925-4ea8-bd39-a49c6c78cafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\bin">
+      <UniqueIdentifier>{4aef5964-c56a-4139-96ba-c08225285989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Detection">
+      <UniqueIdentifier>{bb042b1a-b9dc-4e92-b8d7-410b2e7d35bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{8b4e55ce-a9e3-482d-a1f8-82aa89d725ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cv.cpp" />
+    <ClCompile Include="Kvm\ImageFileCapture.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp">
+      <Filter>ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\CroppingProcessor.cpp">
+      <Filter>ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\BaseDetector.cpp">
+      <Filter>Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\TemplateBasedDetector.cpp">
+      <Filter>Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemsCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cv.h" />
+    <ClInclude Include="Kvm\ImageFileCapture.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\BGRConverterProcessor.h">
+      <Filter>ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\CroppingProcessor.h">
+      <Filter>ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Detection\BaseDetector.h">
+      <Filter>Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="Detection\TemplateBasedDetector.h">
+      <Filter>Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForItemCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForItemCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForItemsCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WaitForItemsCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_core455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_core455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_dnn455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_dnn455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_highgui455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_highgui455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_imgcodecs455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_imgcodecs455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_imgproc455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_imgproc455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_videoio455.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\opencv\bin\opencv_videoio455d.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Release\openvino.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Release\openvino_intel_cpu_plugin.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Debug\openvino_intel_cpu_plugind.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Release\openvino_ir_frontend.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Debug\openvino_ir_frontendd.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Debug\openvinod.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Release\plugins.xml">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\openvino\bin\intel64\Debug\plugins.xml">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\tbb\bin\tbb.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\..\packages\tbb\bin\tbb_debug.dll">
+      <Filter>Resource Files\bin</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+</Project>

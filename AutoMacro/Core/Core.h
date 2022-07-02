@@ -1,6 +1,11 @@
 #pragma once
-#include "AutoMacro/Core/Core/pch.h"
+#include "AutoMacro/Core/Core/Command.h"
+#include "AutoMacro/Core/Core/CommandParameter.h"
+#include "AutoMacro/Core/Core/Delay.h"
+#include "AutoMacro/Core/Core/DetectionResult.h"
+#include "AutoMacro/Core/Core/Detector.h"
 #include "AutoMacro/Core/Core/Image.h"
+#include "AutoMacro/Core/Core/ImageProcessor.h"
 #include "AutoMacro/Core/Core/Keyboard.h"
 #include "AutoMacro/Core/Core/Mouse.h"
 #include "AutoMacro/Core/Core/Types.h"
