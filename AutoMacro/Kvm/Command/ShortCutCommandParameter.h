@@ -7,14 +7,8 @@
 namespace AutoMacro {
 class ShortcutCommandParameter : public CommandParameter {
  public:
-    ShortcutCommandParameter(
-        std::shared_ptr<Keyboard> keyboard,
-        std::shared_ptr<Mouse> mouse,
-        std::shared_ptr<VideoCapture> videoCapture,
-        std::shared_ptr<Delay> delay,
-        std::vector<KeyCode> keys)
-        : CommandParameter(keyboard, mouse, videoCapture, delay),
-          keys(keys) {}
+    ShortcutCommandParameter(Kvm kvm, std::vector<KeyCode> keys)
+        : CommandParameter(kvm), keys(keys) {}
 
     std::vector<KeyCode> keys;
     int delayBetweenEachPressKey = 0;

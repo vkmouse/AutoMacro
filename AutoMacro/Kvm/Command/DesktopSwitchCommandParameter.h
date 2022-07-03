@@ -6,14 +6,8 @@
 namespace AutoMacro {
 class DesktopSwitchCommandParameter : public CommandParameter {
  public:
-    DesktopSwitchCommandParameter(
-        std::shared_ptr<Keyboard> keyboard,
-        std::shared_ptr<Mouse> mouse,
-        std::shared_ptr<VideoCapture> videoCapture,
-        std::shared_ptr<Delay> delay,
-        int numDesktops,
-        int destination)
-        : CommandParameter(keyboard, mouse, videoCapture, delay),
+    DesktopSwitchCommandParameter(Kvm kvm, int numDesktops, int destination)
+        : CommandParameter(kvm),
           numDesktops(numDesktops),
           destination(destination) {}
 

@@ -6,24 +6,13 @@
 namespace AutoMacro {
 class MouseClickCommandParameter : public CommandParameter {
  public:
-    MouseClickCommandParameter(
-        std::shared_ptr<Keyboard> keyboard,
-        std::shared_ptr<Mouse> mouse,
-        std::shared_ptr<VideoCapture> videoCapture,
-        std::shared_ptr<Delay> delay,
-        MouseButton button)
-        : CommandParameter(keyboard, mouse, videoCapture, delay),
-          button(button) {}
+    MouseClickCommandParameter(Kvm kvm, MouseButton button)
+        : CommandParameter(kvm), button(button) {}
 
-    MouseClickCommandParameter(
-        std::shared_ptr<Keyboard> keyboard,
-        std::shared_ptr<Mouse> mouse,
-        std::shared_ptr<VideoCapture> videoCapture,
-        std::shared_ptr<Delay> delay,
-        MouseButton button,
-        int x, int y)
-        : CommandParameter(keyboard, mouse, videoCapture, delay),
-          button(button), enableMove(true), x(x), y(y) {}
+    MouseClickCommandParameter(Kvm kvm, MouseButton button, int x, int y)
+        : CommandParameter(kvm), button(button), x(x), y(y) {
+        enableMove = true;
+    }
 
     MouseButton button;
     int delayBetweenMouseDownAndMouseUp = 0;

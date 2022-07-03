@@ -9,14 +9,11 @@ namespace AutoMacro {
 class WaitForItemsCommandParameter : public WaitForCommandParameter {
  public:
     WaitForItemsCommandParameter(
-        std::shared_ptr<Keyboard> keyboard,
-        std::shared_ptr<Mouse> mouse,
-        std::shared_ptr<VideoCapture> videoCapture,
-        std::shared_ptr<Delay> delay,
+        Kvm kvm,
         std::vector<std::shared_ptr<Detector>> detectors,
         std::vector<int> indices,
         std::vector<float> thresholds)
-        : WaitForCommandParameter(keyboard, mouse, videoCapture, delay),
+        : WaitForCommandParameter(kvm),
           detectors(detectors),
           indices(indices),
           thresholds(thresholds) {}

@@ -1,6 +1,7 @@
 #include "AutoMacro/Cv/Cv.h"
 #include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
+#include "AutoMacroTests/Cv/Command/CommandTest.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {
@@ -8,89 +9,67 @@ namespace CommandTest {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
 TEST_CLASS(WaitForItemCommandTest) {
+int delayBeforeCommand = 1;
+int delayAfterCommand = 2;
+int delayBetweenRepeatitions = 3;
+
 public:
 TEST_METHOD(TestWaitForItemExist) {
-    Histories histories;
-    auto videoCapture = Factory::createImageFileCapture({
+    Histories h;
+    std::vector<std::string> f = {
         "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png",
         "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png",
-        "images\\AutoMacroTests\\ItemExists_10x10_24bits.png" });
-    auto delay = Factory::createMockDelay();
-    videoCapture = Util::addHistoryAgent(videoCapture, &histories);
-    delay = Util::addHistoryAgent(delay, &histories);
-
+        "images\\AutoMacroTests\\ItemExists_10x10_24bits.png" };
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    int dBeforeCmd = 1;
-    int dAfterCmd = 2;
-    int dBetweenRp = 3;
-
-    WaitForItemCommandParameter p(nullptr, nullptr, videoCapture, delay,
-        detector, 0, 0.98f);
-    p.delayBeforeCommand = dBeforeCmd;
-    p.delayAfterCommand = dAfterCmd;
-    p.delayBetweenRepeatitions = dBetweenRp;
+    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
     p.waitForExists = true;
 
-    auto cmd = Factory::createCommand(&p);
+    execute(&h, p);
 
-    histories.record("---");
-    cmd->execute();
-    histories.record("---");
-
-    int idx = 0;
-    Assert::IsTrue(histories[idx++].equals("---"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeCmd));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenRp));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenRp));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterCmd));
-    Assert::IsTrue(histories[idx++].equals("---"));
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
 }
 
 TEST_METHOD(TestWaitForItemNotExist) {
-    Histories histories;
-    auto videoCapture = Factory::createImageFileCapture({
+    Histories h;
+    std::vector<std::string> f = {
         "images\\AutoMacroTests\\ItemExists_10x10_24bits.png",
         "images\\AutoMacroTests\\ItemExists_10x10_24bits.png",
-        "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png" });
-    auto delay = Factory::createMockDelay();
-    videoCapture = Util::addHistoryAgent(videoCapture, &histories);
-    delay = Util::addHistoryAgent(delay, &histories);
-
+        "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png" };
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    int dBeforeCmd = 1;
-    int dAfterCmd = 2;
-    int dBetweenRp = 3;
-
-    WaitForItemCommandParameter p(nullptr, nullptr, videoCapture, delay,
-        detector, 0, 0.98f);
-    p.delayBeforeCommand = dBeforeCmd;
-    p.delayAfterCommand = dAfterCmd;
-    p.delayBetweenRepeatitions = dBetweenRp;
+    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
     p.waitForExists = false;
 
-    auto cmd = Factory::createCommand(&p);
+    execute(&h, p);
 
-    histories.record("---");
-    cmd->execute();
-    histories.record("---");
-
-    int idx = 0;
-    Assert::IsTrue(histories[idx++].equals("---"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeCmd));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenRp));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenRp));
-    Assert::IsTrue(histories[idx++].equals("takeSnapshot"));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterCmd));
-    Assert::IsTrue(histories[idx++].equals("---"));
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
 }
 };
 }  // namespace CommandTest

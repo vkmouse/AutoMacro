@@ -37,6 +37,9 @@
       <Filter>Command</Filter>
     </ClCompile>
     <ClCompile Include="..\AssertExtension.cpp" />
+    <ClCompile Include="Command\CommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Images\AutoMacroTests\AllItemExists_10x10_24bits.png">
@@ -69,5 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
+    <ClInclude Include="Command\CommandTest.h">
+      <Filter>Command</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

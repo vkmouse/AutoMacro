@@ -11,10 +11,7 @@ namespace AutoMacro {
 class Command {
  public:
     explicit Command(CommandParameter* p)
-        : keyboard_(p->keyboard),
-          mouse_(p->mouse),
-          videoCapture_(p->videoCapture),
-          delay_(p->delay),
+        : kvm_(p->kvm),
           delayBeforeCommand(p->delayBeforeCommand),
           delayAfterCommand(p->delayAfterCommand) {
     }
@@ -28,26 +25,20 @@ class Command {
  protected:
     virtual void executeCommand() = 0;
 
-    std::shared_ptr<Keyboard> keyboard() { return keyboard_; }
-    std::shared_ptr<Mouse> mouse() { return mouse_; }
-    std::shared_ptr<VideoCapture> videoCapture() { return videoCapture_; }
-    std::shared_ptr<Delay> delay() { return delay_; }
+    const Kvm& kvm() { return kvm_; }
 
-    void pressKey(KeyCode key) { keyboard_->pressKey(key); }
-    void releaseKey(KeyCode key) { keyboard_->releaseKey(key); }
-    void releaseAllKeys() { keyboard_->releaseAllKeys(); }
-    void mouseDown(MouseButton button) { mouse_->mouseDown(button); }
-    void mouseUp(MouseButton button) { mouse_->mouseUp(button); }
-    void mouseMove(int x, int y) { mouse_->mouseMove(x, y); }
-    void releaseAllButtons() { mouse_->releaseAllButtons(); }
-    Image takeSnapshot() { return videoCapture_->takeSnapshot(); }
-    void sleep(int ms) { delay_->execute(ms); }
+    void pressKey(KeyCode key) { kvm_.keyboard->pressKey(key); }
+    void releaseKey(KeyCode key) { kvm_.keyboard->releaseKey(key); }
+    void releaseAllKeys() { kvm_.keyboard->releaseAllKeys(); }
+    void mouseDown(MouseButton button) { kvm_.mouse->mouseDown(button); }
+    void mouseUp(MouseButton button) { kvm_.mouse->mouseUp(button); }
+    void mouseMove(int x, int y) { kvm_.mouse->mouseMove(x, y); }
+    void releaseAllButtons() { kvm_.mouse->releaseAllButtons(); }
+    Image takeSnapshot() { return kvm_.videoCapture->takeSnapshot(); }
+    void sleep(int ms) { kvm_.delay->execute(ms); }
 
  private:
-    std::shared_ptr<Keyboard> keyboard_;
-    std::shared_ptr<Mouse> mouse_;
-    std::shared_ptr<VideoCapture> videoCapture_;
-    std::shared_ptr<Delay> delay_;
+    const Kvm& kvm_;
     int delayBeforeCommand;
     int delayAfterCommand;
 };

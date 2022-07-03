@@ -21,7 +21,7 @@ WaitForItemsCommand::WaitForItemsCommand(WaitForItemsCommandParameter* p) :
 }
 
 bool WaitForItemsCommand::testExpression() {
-    Image image = videoCapture()->takeSnapshot();
+    Image image = takeSnapshot();
     return (waitForAllItems && allItemsExists(image)) ||
         (!waitForAllItems && atLeastOneItemExists(image));
 }

@@ -38,7 +38,7 @@ void DesktopSwitchCommand::resetDesktop(int numDesktops) {
 
 void DesktopSwitchCommand::switchToNext(int times) {
     if (times > 0) {
-        ShortcutCommandParameter p(keyboard(), mouse(), videoCapture(), delay(),
+        ShortcutCommandParameter p(kvm(),
             { KeyCode::KEY_LCTRL, KeyCode::KEY_LMETA, KeyCode::KEY_RIGHT });
         p.delayBetweenEachPressKey = 0;
         p.delayBetweenEachReleaseKey = 0;
@@ -53,7 +53,7 @@ void DesktopSwitchCommand::switchToNext(int times) {
 
 void DesktopSwitchCommand::switchToPrevious(int times) {
     if (times > 0) {
-        ShortcutCommandParameter p(keyboard(), mouse(), videoCapture(), delay(),
+        ShortcutCommandParameter p(kvm(),
             { KeyCode::KEY_LCTRL, KeyCode::KEY_LMETA, KeyCode::KEY_LEFT });
         p.delayBetweenEachPressKey = 0;
         p.delayBetweenEachReleaseKey = 0;

@@ -49,6 +49,9 @@
     <ClInclude Include="Core\Delay.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Kvm.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

@@ -30,6 +30,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\CommandTest.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
     <ClCompile Include="Command\MouseClickCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
@@ -44,6 +45,7 @@
     <ClCompile Include="Kvm\MouseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command\CommandTest.h" />
     <ClInclude Include="Kvm\KeyboardTest.h" />
     <ClInclude Include="Kvm\MouseTest.h" />
   </ItemGroup>

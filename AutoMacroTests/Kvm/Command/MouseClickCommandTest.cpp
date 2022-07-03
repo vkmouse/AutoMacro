@@ -1,127 +1,89 @@
 #include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
+#include "AutoMacroTests/Kvm/Command/CommandTest.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {
 namespace CommandTest {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
-
 TEST_CLASS(MouseClickCommandTest) {
+int delayBeforeCommand = 1;
+int delayAfterCommand = 2;
+int delayBetweenMouseDownAndMouseUp = 3;
+int delayBetweenRepeatitions = 4;
+int delayBeforeMove = 5;
+int delayAfterMove = 6;
+int x = 7;
+int y = 8;
+int repeatTimes = 2;
+
 public:
 TEST_METHOD(TestSingleClick) {
-    Histories histories;
-    auto mouse = Factory::createMockMouse();
-    auto delay = Factory::createMockDelay();
-    mouse = Util::addHistoryAgent(mouse, &histories);
-    delay = Util::addHistoryAgent(delay, &histories);
+    Histories h;
+    MouseClickCommandParameter p(getKvm(&h), MouseButton::BUTTON_LEFT);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenMouseDownAndMouseUp = delayBetweenMouseDownAndMouseUp;
 
-    MouseButton button = MouseButton::BUTTON_LEFT;
-    int dBeforeCmd = 1;
-    int dAfterCmd = 2;
-    int dBetweenPBtnAndRBtn = 3;
+    execute(&h, p);
 
-    MouseClickCommandParameter p(nullptr, mouse, nullptr, delay, button);
-    p.delayBeforeCommand = dBeforeCmd;
-    p.delayAfterCommand = dAfterCmd;
-    p.delayBetweenMouseDownAndMouseUp = dBetweenPBtnAndRBtn;
-
-    auto cmd = Factory::createCommand(&p);
-
-    histories.record("---");
-    cmd->execute();
-    histories.record("---");
-
-    int idx = 0;
-    Assert::IsTrue(histories[idx++].equals("---"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeCmd));
-    Assert::IsTrue(histories[idx++].equals("mouseDown", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenPBtnAndRBtn));
-    Assert::IsTrue(histories[idx++].equals("mouseUp", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterCmd));
-    Assert::IsTrue(histories[idx++].equals("---"));
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("mouseDown", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenMouseDownAndMouseUp));
+    Assert::IsTrue(h[i++].equals("mouseUp", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
 }
 
 TEST_METHOD(TestMultipleClick) {
-    Histories histories;
-    auto mouse = Factory::createMockMouse();
-    auto delay = Factory::createMockDelay();
-    mouse = Util::addHistoryAgent(mouse, &histories);
-    delay = Util::addHistoryAgent(delay, &histories);
-
-    MouseButton button = MouseButton::BUTTON_LEFT;
-    int dBeforeCmd = 1;
-    int dAfterCmd = 2;
-    int dBetweenPBtnAndRBtn = 3;
-    int dBetweenRp = 4;
-    int repeatTimes = 2;
-
-    MouseClickCommandParameter p(nullptr, mouse, nullptr, delay, button);
-    p.delayBeforeCommand = dBeforeCmd;
-    p.delayAfterCommand = dAfterCmd;
-    p.delayBetweenMouseDownAndMouseUp = dBetweenPBtnAndRBtn;
-    p.delayBetweenRepeatitions = dBetweenRp;
+    Histories h;
+    MouseClickCommandParameter p(getKvm(&h), MouseButton::BUTTON_LEFT);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenMouseDownAndMouseUp = delayBetweenMouseDownAndMouseUp;
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
     p.repeatTimes = repeatTimes;
 
-    auto cmd = Factory::createCommand(&p);
+    execute(&h, p);
 
-    histories.record("---");
-    cmd->execute();
-    histories.record("---");
-
-    int idx = 0;
-    Assert::IsTrue(histories[idx++].equals("---"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeCmd));
-    Assert::IsTrue(histories[idx++].equals("mouseDown", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenPBtnAndRBtn));
-    Assert::IsTrue(histories[idx++].equals("mouseUp", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenRp));
-    Assert::IsTrue(histories[idx++].equals("mouseDown", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenPBtnAndRBtn));
-    Assert::IsTrue(histories[idx++].equals("mouseUp", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterCmd));
-    Assert::IsTrue(histories[idx++].equals("---"));
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("mouseDown", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenMouseDownAndMouseUp));
+    Assert::IsTrue(h[i++].equals("mouseUp", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("mouseDown", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenMouseDownAndMouseUp));
+    Assert::IsTrue(h[i++].equals("mouseUp", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
 }
 
 TEST_METHOD(TestMouseMoveAndClick) {
-    Histories histories;
-    auto mouse = Factory::createMockMouse();
-    auto delay = Factory::createMockDelay();
-    mouse = Util::addHistoryAgent(mouse, &histories);
-    delay = Util::addHistoryAgent(delay, &histories);
+    Histories h;
+    MouseClickCommandParameter p(getKvm(&h), MouseButton::BUTTON_LEFT, x, y);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenMouseDownAndMouseUp = delayBetweenMouseDownAndMouseUp;
+    p.delayBeforeMove = delayBeforeMove;
+    p.delayAfterMove = delayAfterMove;
 
-    MouseButton button = MouseButton::BUTTON_LEFT;
-    int dBeforeCmd = 1;
-    int dAfterCmd = 2;
-    int dBetweenPBtnAndRBtn = 3;
-    int x = 321;
-    int y = 123;
-    int dBeforeMove = 4;
-    int dAfterMove = 5;
+    execute(&h, p);
 
-    MouseClickCommandParameter p(nullptr, mouse, nullptr, delay, button, x, y);
-    p.delayBeforeCommand = dBeforeCmd;
-    p.delayAfterCommand = dAfterCmd;
-    p.delayBetweenMouseDownAndMouseUp = dBetweenPBtnAndRBtn;
-    p.delayBeforeMove = dBeforeMove;
-    p.delayAfterMove = dAfterMove;
-
-    auto cmd = Factory::createCommand(&p);
-
-    histories.record("---");
-    cmd->execute();
-    histories.record("---");
-
-    int idx = 0;
-    Assert::IsTrue(histories[idx++].equals("---"));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeCmd));
-    Assert::IsTrue(histories[idx++].equals("delay", dBeforeMove));
-    Assert::IsTrue(histories[idx++].equals("mouseMove", x, y));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterMove));
-    Assert::IsTrue(histories[idx++].equals("mouseDown", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dBetweenPBtnAndRBtn));
-    Assert::IsTrue(histories[idx++].equals("mouseUp", button));
-    Assert::IsTrue(histories[idx++].equals("delay", dAfterCmd));
-    Assert::IsTrue(histories[idx++].equals("---"));
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeMove));
+    Assert::IsTrue(h[i++].equals("mouseMove", x, y));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterMove));
+    Assert::IsTrue(h[i++].equals("mouseDown", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", p.delayBetweenMouseDownAndMouseUp));
+    Assert::IsTrue(h[i++].equals("mouseUp", MouseButton::BUTTON_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
 }
 };
 }  // namespace CommandTest

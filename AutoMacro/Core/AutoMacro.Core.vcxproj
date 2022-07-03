@@ -33,6 +33,7 @@
     <ClInclude Include="Core\Image.h" />
     <ClInclude Include="Core\ImageProcessor.h" />
     <ClInclude Include="Core\Keyboard.h" />
+    <ClInclude Include="Core\Kvm.h" />
     <ClInclude Include="Core\Mouse.h" />
     <ClInclude Include="Core\pch.h" />
     <ClInclude Include="Core\Types.h" />
