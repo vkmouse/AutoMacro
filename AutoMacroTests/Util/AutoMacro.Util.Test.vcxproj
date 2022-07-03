@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="DetectionResultsUtilTest.cpp" />
     <ClCompile Include="History\DelayHistoryAgentTest.cpp" />
     <ClCompile Include="History\HistoryTest.cpp" />
@@ -36,6 +37,9 @@
     <ProjectReference Include="..\..\AutoMacro\Util\AutoMacro.Util.vcxproj">
       <Project>{cc8580ba-dd42-4df7-b0d4-76d87847009c}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

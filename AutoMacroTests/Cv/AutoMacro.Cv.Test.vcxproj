@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AssertExtension.cpp" />
+    <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
@@ -80,7 +80,7 @@
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AssertExtension.h" />
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

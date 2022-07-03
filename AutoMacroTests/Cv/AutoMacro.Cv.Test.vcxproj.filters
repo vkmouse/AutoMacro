@@ -24,7 +24,6 @@
     <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp">
       <Filter>ImageProcessor</Filter>
     </ClCompile>
-    <ClCompile Include="AssertExtension.cpp" />
     <ClCompile Include="Kvm\ImageFileCaptureTest.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
@@ -37,6 +36,7 @@
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="..\AssertExtension.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Images\AutoMacroTests\AllItemExists_10x10_24bits.png">
@@ -68,6 +68,6 @@
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AssertExtension.h" />
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 #include "AutoMacro/Cv/Cv.h"
-#include "AutoMacroTests/Cv/AssertExtension.h"
+#include "AutoMacroTests/AssertExtension.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {

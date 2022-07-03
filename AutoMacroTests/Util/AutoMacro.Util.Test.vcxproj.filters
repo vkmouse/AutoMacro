@@ -17,10 +17,14 @@
     <ClCompile Include="History\VideoCaptureHistoryAgentTest.cpp">
       <Filter>History</Filter>
     </ClCompile>
+    <ClCompile Include="..\AssertExtension.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="History">
       <UniqueIdentifier>{1f36035b-53ee-4b98-8850-9d290b8bbac9}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
 </Project>

@@ -24,9 +24,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="Core\DetectionResultTest.cpp" />
     <ClCompile Include="Core\ImageTest.cpp" />
     <ClCompile Include="Core\TypesTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -5,24 +5,8 @@
 
 #include "AutoMacro/Cv/Cv.h"
 #include "AutoMacro/Util/Util.h"
-#include "AutoMacroTests/Cv/AssertExtension.h"
+#include "AutoMacroTests/AssertExtension.h"
 #include "CppUnitTest.h"
-
-namespace Microsoft {
-namespace VisualStudio {
-namespace CppUnitTestFramework {
-std::wstring ToString(AutoMacro::DetectionResult value) {
-    std::wstring str = std::to_wstring(value.index);
-    str += std::to_wstring(value.x);
-    str += std::to_wstring(value.y);
-    str += std::to_wstring(value.width);
-    str += std::to_wstring(value.height);
-    str += std::to_wstring(value.confidence);
-    return str;
-}
-}  // namespace CppUnitTestFramework
-}  // namespace VisualStudio
-}  // namespace Microsoft
 
 namespace AutoMacro {
 namespace DetectionTest {

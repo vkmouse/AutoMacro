@@ -15,5 +15,9 @@
     <ClCompile Include="Core\TypesTest.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\AssertExtension.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AssertExtension.h" />
   </ItemGroup>
 </Project>
