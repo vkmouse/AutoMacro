@@ -85,7 +85,7 @@ TEST_METHOD(TestDesktopSwitch) {
     p2.delayBeforeCommand = delayBeforeCommand;
     p2.delayAfterCommand = delayAfterCommand;
 
-    execute(&h, p1, p2);
+    execute(&h, p1, p2, p1);
 
     int i = 0;
     Assert::IsTrue(h[i++].equals("---"));
@@ -101,6 +101,22 @@ TEST_METHOD(TestDesktopSwitch) {
     Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_RIGHT));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenPressKeyAndReleaseKey));
     Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterShortcut));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeShortcut));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachPressKey));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachPressKey));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_LEFT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenPressKeyAndReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LEFT));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));
     Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LMETA));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));

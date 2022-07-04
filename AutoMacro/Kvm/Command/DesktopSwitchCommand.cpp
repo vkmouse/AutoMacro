@@ -22,9 +22,9 @@ void DesktopSwitchCommand::executeCommand() {
 
     int times = destination - currentDesktop;
     if (times > 0) {
-        switchToNext(times);
+        switchToNext(abs(times));
     } else if (times < 0) {
-        switchToPrevious(times);
+        switchToPrevious(abs(times));
     }
 }
 
