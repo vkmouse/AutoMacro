@@ -30,6 +30,7 @@
     <ClInclude Include="Command\CommandParameter.h" />
     <ClInclude Include="Command\Commands.h" />
     <ClInclude Include="Command\CommandsParameter.h" />
+    <ClInclude Include="Command\EmptyCommand.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Core\Image.h" />
     <ClInclude Include="Core\pch.h" />

@@ -19,6 +19,7 @@ namespace AutoMacro {
 namespace Factory {
 DLL_EXPORTS std::shared_ptr<Delay> createMockDelay();
 
+DLL_EXPORTS std::shared_ptr<Command> createCommands();
 DLL_EXPORTS std::shared_ptr<Command> createCommands(
     CommandsParameter* p);
 }  // namespace Factory

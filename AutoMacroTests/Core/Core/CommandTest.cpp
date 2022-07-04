@@ -25,6 +25,11 @@ TEST_METHOD(TestCounterCommand) {
     cmd.execute();
     Assert::AreEqual(3, count);
 }
+
+TEST_METHOD(TestEmptyCommand) {
+    auto emptyCmd = Factory::createCommands();
+    emptyCmd->execute();
+}
 };
 }  // namespace CoreTest
 }  // namespace AutoMacro

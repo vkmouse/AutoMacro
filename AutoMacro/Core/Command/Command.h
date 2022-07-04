@@ -13,7 +13,7 @@ class Command {
           delayAfterCommand(p->delayAfterCommand) {
     }
 
-    void execute() {
+    virtual void execute() {
         sleep(delayBeforeCommand);
         executeCommand();
         sleep(delayAfterCommand);

@@ -65,6 +65,9 @@
     <ClInclude Include="ImageProcessor\ImageProcessor.h">
       <Filter>ImageProcessor</Filter>
     </ClInclude>
+    <ClInclude Include="Command\EmptyCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
