@@ -14,17 +14,12 @@
 #include "AutoMacro/Kvm/Kvm/DesktopCapture.h"
 #include "AutoMacro/Kvm/Kvm/HIDKeyboard.h"
 #include "AutoMacro/Kvm/Kvm/HIDMouse.h"
-#include "AutoMacro/Kvm/Kvm/MockDelay.h"
 #include "AutoMacro/Kvm/Kvm/MockKeyboard.h"
 #include "AutoMacro/Kvm/Kvm/MockMouse.h"
 #include "AutoMacro/Kvm/Kvm/MockVideoCapture.h"
 
 namespace AutoMacro {
 namespace Factory {
-std::shared_ptr<Delay> createMockDelay() {
-    return std::make_shared<Impl::MockDelay>();
-}
-
 std::shared_ptr<Delay> createActualDelay() {
     return std::make_shared<Impl::ActualDelay>();
 }

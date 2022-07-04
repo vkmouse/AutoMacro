@@ -48,7 +48,6 @@
     <ClInclude Include="Kvm\HIDKeyboard.h" />
     <ClInclude Include="Kvm\HIDMouse.h" />
     <ClInclude Include="Kvm\KbdMouDevice.h" />
-    <ClInclude Include="Kvm\MockDelay.h" />
     <ClInclude Include="Kvm\MockKeyboard.h" />
     <ClInclude Include="Kvm\MockMouse.h" />
     <ClInclude Include="Kvm\MockVideoCapture.h" />

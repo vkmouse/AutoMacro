@@ -9,7 +9,6 @@
 
 namespace AutoMacro {
 namespace Factory {
-DLL_EXPORTS std::shared_ptr<Delay> createMockDelay();
 DLL_EXPORTS std::shared_ptr<Delay> createActualDelay();
 DLL_EXPORTS std::shared_ptr<Keyboard> createHIDKeyboard();
 DLL_EXPORTS std::shared_ptr<Keyboard> createMockKeyboard();

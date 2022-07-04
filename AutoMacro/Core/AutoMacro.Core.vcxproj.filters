@@ -10,25 +10,16 @@
     <ClCompile Include="Core\DetectionResult.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Core.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core.h" />
     <ClInclude Include="Core\Image.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Keyboard.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Mouse.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\pch.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Types.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\VideoCapture.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Command.h">
@@ -46,16 +37,32 @@
     <ClInclude Include="Core\ImageProcessor.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Delay.h">
-      <Filter>Core</Filter>
+    <ClInclude Include="Kvm\Delay.h">
+      <Filter>Kvm</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Kvm.h">
-      <Filter>Core</Filter>
+    <ClInclude Include="Kvm\Keyboard.h">
+      <Filter>Kvm</Filter>
     </ClInclude>
+    <ClInclude Include="Kvm\Kvm.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Mouse.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\VideoCapture.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\MockDelay.h">
+      <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
       <UniqueIdentifier>{b7b479fe-9a1e-457f-a0ed-8b023b42d0ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{d227fa55-e2a9-4d28-845d-868a0eb671eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

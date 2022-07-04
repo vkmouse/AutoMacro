@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\DetectionResult.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
@@ -27,17 +28,18 @@
     <ClInclude Include="Core.h" />
     <ClInclude Include="Core\Command.h" />
     <ClInclude Include="Core\CommandParameter.h" />
-    <ClInclude Include="Core\Delay.h" />
     <ClInclude Include="Core\DetectionResult.h" />
     <ClInclude Include="Core\Detector.h" />
     <ClInclude Include="Core\Image.h" />
     <ClInclude Include="Core\ImageProcessor.h" />
-    <ClInclude Include="Core\Keyboard.h" />
-    <ClInclude Include="Core\Kvm.h" />
-    <ClInclude Include="Core\Mouse.h" />
     <ClInclude Include="Core\pch.h" />
     <ClInclude Include="Core\Types.h" />
-    <ClInclude Include="Core\VideoCapture.h" />
+    <ClInclude Include="Kvm\Delay.h" />
+    <ClInclude Include="Kvm\Keyboard.h" />
+    <ClInclude Include="Kvm\Kvm.h" />
+    <ClInclude Include="Kvm\MockDelay.h" />
+    <ClInclude Include="Kvm\Mouse.h" />
+    <ClInclude Include="Kvm\VideoCapture.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

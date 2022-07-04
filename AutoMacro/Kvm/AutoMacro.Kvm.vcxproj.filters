@@ -67,9 +67,6 @@
     <ClInclude Include="Kvm\KbdMouDevice.h">
       <Filter>Kvm</Filter>
     </ClInclude>
-    <ClInclude Include="Kvm\MockDelay.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
     <ClInclude Include="Kvm\DesktopCapture.h">
       <Filter>Kvm</Filter>
     </ClInclude>

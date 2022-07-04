@@ -1,10 +1,10 @@
 #pragma once
 #include <memory>
 
-#include "AutoMacro/Core/Core/Delay.h"
-#include "AutoMacro/Core/Core/Keyboard.h"
-#include "AutoMacro/Core/Core/Mouse.h"
-#include "AutoMacro/Core/Core/VideoCapture.h"
+#include "AutoMacro/Core/Kvm/Delay.h"
+#include "AutoMacro/Core/Kvm/Keyboard.h"
+#include "AutoMacro/Core/Kvm/Mouse.h"
+#include "AutoMacro/Core/Kvm/VideoCapture.h"
 
 namespace AutoMacro {
 struct Kvm {
