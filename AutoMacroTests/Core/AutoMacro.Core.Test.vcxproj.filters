@@ -16,8 +16,17 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\AssertExtension.cpp" />
+    <ClCompile Include="Core\CommandTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\CounterCommand.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
+    <ClInclude Include="Core\CounterCommand.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
