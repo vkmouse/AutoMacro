@@ -12,26 +12,22 @@ TEST_CLASS(CommandsTest) {
 public:
 TEST_METHOD(TestMultipleCounter) {
     Kvm kvm;
-    int count;
+    int count = 0;
     kvm.delay = Factory::createMockDelay();
 
-    std::vector<std::shared_ptr<Command>> cmds;
-    CommandsParameter p(cmds);
-    auto cmd = Factory::createCommand(&p);
-
-    count = 0;
     CounterCommandParameter counterParam(&count);
-    cmds.push_back(Factory::createCommand(&counterParam));
-    cmd->execute();
-    Assert::AreEqual(1, count);
+    std::vector<std::shared_ptr<Command>> cmds = {
+        Factory::createCommand(&counterParam),
+        Factory::createCommand(&counterParam),
+        Factory::createCommand(&counterParam)
+    };
 
-    count = 0;
-    cmds.clear();
-    cmds.push_back(Factory::createCommand(&counterParam));
-    cmds.push_back(Factory::createCommand(&counterParam));
+    auto cmd = Factory::createCommand(&CommandsParameter(cmds));
     cmd->execute();
-    Assert::AreEqual(2, count);
+    Assert::AreEqual(3, count);
 
+    cmds = { Factory::createCommand(&counterParam) };
+    cmd = Factory::createCommand(&CommandsParameter(cmds));
     cmd->execute();
     Assert::AreEqual(4, count);
 }

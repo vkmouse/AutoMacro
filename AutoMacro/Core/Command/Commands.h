@@ -14,7 +14,7 @@ class Commands : public Command {
     void execute() final;
 
  private:
-    const std::vector<std::shared_ptr<Command>>& commands_;
+    std::vector<std::shared_ptr<Command>> commands_;
 };
 }  // namespace Impl
 }  // namespace AutoMacro
