@@ -25,7 +25,7 @@ class DLL_EXPORTS KvmCommand : public Command {
     void sleep(int ms);
 
  private:
-    const Kvm& kvm_;
+    Kvm kvm_;
     int delayBeforeCommand_;
     int delayAfterCommand_;
 };
