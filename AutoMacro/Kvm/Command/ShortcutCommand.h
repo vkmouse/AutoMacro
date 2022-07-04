@@ -6,7 +6,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class ShortcutCommand : public Command {
+class ShortcutCommand : public KvmCommand {
  public:
     explicit ShortcutCommand(ShortcutCommandParameter* p);
 

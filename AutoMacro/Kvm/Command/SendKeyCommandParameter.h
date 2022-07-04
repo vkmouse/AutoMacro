@@ -4,10 +4,10 @@
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
-class SendKeyCommandParameter : public CommandParameter {
+class SendKeyCommandParameter : public KvmCommandParameter {
  public:
     SendKeyCommandParameter(Kvm kvm, KeyCode key)
-        : CommandParameter(kvm), key(key) {}
+        : KvmCommandParameter(kvm), key(key) {}
 
     KeyCode key;
     int delayBetweenPressKeyAndReleaseKey = 0;

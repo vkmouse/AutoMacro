@@ -6,7 +6,7 @@
 namespace AutoMacro {
 namespace Impl {
 WaitForCommand::WaitForCommand(WaitForCommandParameter* p)
-    : Command(p),
+    : KvmCommand(p),
       delayBetweenRepeatitions_(p->delayBetweenRepeatitions),
       waitForExists_(p->waitForExists) {
 }

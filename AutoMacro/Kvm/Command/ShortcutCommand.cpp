@@ -6,7 +6,7 @@
 namespace AutoMacro {
 namespace Impl {
 ShortcutCommand::ShortcutCommand(ShortcutCommandParameter* p)
-    : Command(p),
+    : KvmCommand(p),
       keys(p->keys),
       delayBetweenEachPressKey(p->delayBetweenEachPressKey),
       delayBetweenEachReleaseKey(p->delayBetweenEachReleaseKey),

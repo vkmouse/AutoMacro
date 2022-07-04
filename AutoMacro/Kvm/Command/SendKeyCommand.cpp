@@ -6,7 +6,7 @@
 namespace AutoMacro {
 namespace Impl {
 SendKeyCommand::SendKeyCommand(SendKeyCommandParameter* p)
-    : Command(p),
+    : KvmCommand(p),
       key(p->key),
       delayBetweenPressKeyAndReleaseKey(p->delayBetweenPressKeyAndReleaseKey),
       delayBetweenRepeatitions(p->delayBetweenRepeatitions),

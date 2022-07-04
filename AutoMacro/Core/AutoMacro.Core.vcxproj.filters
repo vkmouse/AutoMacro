@@ -14,6 +14,13 @@
     <ClCompile Include="Detection\DetectionResult.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
+    <ClCompile Include="Command\KvmCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Command\CounterCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Image.h">
@@ -44,10 +51,10 @@
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Core.h" />
-    <ClInclude Include="Command\Command.h">
+    <ClInclude Include="Command\KvmCommand.h">
       <Filter>Command</Filter>
     </ClInclude>
-    <ClInclude Include="Command\CommandParameter.h">
+    <ClInclude Include="Command\KvmCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="Command\Commands.h">
@@ -66,6 +73,16 @@
       <Filter>ImageProcessor</Filter>
     </ClInclude>
     <ClInclude Include="Command\EmptyCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Command\CounterCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CounterCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,7 +4,6 @@
 
 #include "AutoMacro/Core/Command/Command.h"
 #include "AutoMacro/Core/Command/CommandsParameter.h"
-#include "AutoMacro/Core/Kvm/Kvm.h"
 
 namespace AutoMacro {
 namespace Impl {
@@ -12,8 +11,7 @@ class Commands : public Command {
  public:
     explicit Commands(CommandsParameter* p);
 
- protected:
-     virtual void executeCommand();
+    void execute() final;
 
  private:
     const std::vector<std::shared_ptr<Command>>& commands_;

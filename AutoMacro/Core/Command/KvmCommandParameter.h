@@ -1,12 +1,10 @@
 #pragma once
-#include <memory>
-
 #include "AutoMacro/Core/Kvm/Kvm.h"
 
 namespace AutoMacro {
-class CommandParameter {
+class KvmCommandParameter {
  public:
-    explicit CommandParameter(Kvm kvm) : kvm(kvm) {}
+    explicit KvmCommandParameter(Kvm kvm) : kvm(kvm) {}
 
     Kvm kvm;
     int delayBeforeCommand = 0;

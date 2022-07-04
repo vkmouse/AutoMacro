@@ -9,7 +9,7 @@ namespace AutoMacro {
 namespace Impl {
 DesktopSwitchCommand::DesktopSwitchCommand(
     DesktopSwitchCommandParameter* p)
-    : Command(p),
+    : KvmCommand(p),
       numDesktops(p->numDesktops),
       destination(p->destination),
       delayBetweemEachSwitch(p->delayBetweemEachSwitch) {

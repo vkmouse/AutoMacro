@@ -1,5 +1,4 @@
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacroTests/Core/Core/CounterCommand.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {
@@ -13,16 +12,16 @@ TEST_METHOD(TestCounterCommand) {
     kvm.delay = Factory::createMockDelay();
     int count = 0;
 
-    CounterCommandParameter p(kvm, &count);
-    CounterCommand cmd(&p);
+    CounterCommandParameter p(&count);
+    auto cmd = Factory::createCommand(&p);
 
     Assert::AreEqual(0, count);
 
-    cmd.execute();
+    cmd->execute();
     Assert::AreEqual(1, count);
 
-    cmd.execute();
-    cmd.execute();
+    cmd->execute();
+    cmd->execute();
     Assert::AreEqual(3, count);
 }
 

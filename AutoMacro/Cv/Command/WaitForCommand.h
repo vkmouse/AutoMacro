@@ -4,7 +4,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class WaitForCommand : public Command {
+class WaitForCommand : public KvmCommand {
  public:
     explicit WaitForCommand(WaitForCommandParameter* p);
 

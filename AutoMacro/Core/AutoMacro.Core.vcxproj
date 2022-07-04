@@ -19,15 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command.cpp" />
     <ClCompile Include="Command\Commands.cpp" />
+    <ClCompile Include="Command\CounterCommand.cpp" />
+    <ClCompile Include="Command\KvmCommand.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
     <ClCompile Include="Detection\DetectionResult.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Command\Command.h" />
-    <ClInclude Include="Command\CommandParameter.h" />
+    <ClInclude Include="Command\CounterCommand.h" />
+    <ClInclude Include="Command\CounterCommandParameter.h" />
+    <ClInclude Include="Command\KvmCommand.h" />
+    <ClInclude Include="Command\KvmCommandParameter.h" />
     <ClInclude Include="Command\Commands.h" />
     <ClInclude Include="Command\CommandsParameter.h" />
     <ClInclude Include="Command\EmptyCommand.h" />

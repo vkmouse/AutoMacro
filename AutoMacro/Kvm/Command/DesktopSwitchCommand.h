@@ -4,7 +4,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class DesktopSwitchCommand : public Command {
+class DesktopSwitchCommand : public KvmCommand {
  public:
     explicit DesktopSwitchCommand(DesktopSwitchCommandParameter* p);
 

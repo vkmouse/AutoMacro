@@ -5,7 +5,7 @@
 namespace AutoMacro {
 namespace Impl {
 MouseClickCommand::MouseClickCommand(MouseClickCommandParameter* p)
-    : Command(p),
+    : KvmCommand(p),
       button(p->button),
       delayBetweenMouseDownAndMouseUp(p->delayBetweenMouseDownAndMouseUp),
       delayBetweenRepeatitions(p->delayBetweenRepeatitions),
@@ -37,7 +37,7 @@ void MouseClickCommand::mouseClick() {
 
 void MouseClickCommand::mouseMove() {
     sleep(delayBeforeMove);
-    Command::mouseMove(x, y);
+    KvmCommand::mouseMove(x, y);
     sleep(delayAfterMove);
 }
 }  // namespace Impl

@@ -4,10 +4,10 @@
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
-class DesktopSwitchCommandParameter : public CommandParameter {
+class DesktopSwitchCommandParameter : public KvmCommandParameter {
  public:
     DesktopSwitchCommandParameter(Kvm kvm, int numDesktops, int destination)
-        : CommandParameter(kvm),
+        : KvmCommandParameter(kvm),
           numDesktops(numDesktops),
           destination(destination) {}
 

@@ -2,11 +2,10 @@
 
 namespace AutoMacro {
 namespace Impl {
-Commands::Commands(CommandsParameter* p) : Command(p),
-    commands_(p->commands) {
+Commands::Commands(CommandsParameter* p) : commands_(p->commands) {
 }
 
-void Commands::executeCommand() {
+void Commands::execute() {
     for (const auto& cmd : commands_) {
         cmd->execute();
     }

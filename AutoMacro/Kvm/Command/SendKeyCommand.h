@@ -4,7 +4,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class SendKeyCommand : public Command {
+class SendKeyCommand : public KvmCommand {
  public:
     explicit SendKeyCommand(SendKeyCommandParameter* p);
 

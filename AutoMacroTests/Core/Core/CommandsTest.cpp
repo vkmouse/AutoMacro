@@ -2,7 +2,6 @@
 #include <vector>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacroTests/Core/Core/CounterCommand.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {
@@ -17,19 +16,19 @@ TEST_METHOD(TestMultipleCounter) {
     kvm.delay = Factory::createMockDelay();
 
     std::vector<std::shared_ptr<Command>> cmds;
-    CommandsParameter p(kvm, cmds);
+    CommandsParameter p(cmds);
     auto cmd = Factory::createCommand(&p);
 
     count = 0;
-    CounterCommandParameter counterParam(kvm, &count);
-    cmds.push_back(std::make_shared<CounterCommand>(&counterParam));
+    CounterCommandParameter counterParam(&count);
+    cmds.push_back(Factory::createCommand(&counterParam));
     cmd->execute();
     Assert::AreEqual(1, count);
 
     count = 0;
     cmds.clear();
-    cmds.push_back(std::make_shared<CounterCommand>(&counterParam));
-    cmds.push_back(std::make_shared<CounterCommand>(&counterParam));
+    cmds.push_back(Factory::createCommand(&counterParam));
+    cmds.push_back(Factory::createCommand(&counterParam));
     cmd->execute();
     Assert::AreEqual(2, count);
 

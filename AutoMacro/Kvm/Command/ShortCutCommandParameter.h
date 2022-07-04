@@ -5,10 +5,10 @@
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
-class ShortcutCommandParameter : public CommandParameter {
+class ShortcutCommandParameter : public KvmCommandParameter {
  public:
     ShortcutCommandParameter(Kvm kvm, std::vector<KeyCode> keys)
-        : CommandParameter(kvm), keys(keys) {}
+        : KvmCommandParameter(kvm), keys(keys) {}
 
     std::vector<KeyCode> keys;
     int delayBetweenEachPressKey = 0;

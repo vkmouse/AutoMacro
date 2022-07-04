@@ -4,13 +4,13 @@
 #include "AutoMacro/Core/Core.h"
 
 namespace AutoMacro {
-class MouseClickCommandParameter : public CommandParameter {
+class MouseClickCommandParameter : public KvmCommandParameter {
  public:
     MouseClickCommandParameter(Kvm kvm, MouseButton button)
-        : CommandParameter(kvm), button(button) {}
+        : KvmCommandParameter(kvm), button(button) {}
 
     MouseClickCommandParameter(Kvm kvm, MouseButton button, int x, int y)
-        : CommandParameter(kvm), button(button), x(x), y(y) {
+        : KvmCommandParameter(kvm), button(button), x(x), y(y) {
         enableMove = true;
     }
 
