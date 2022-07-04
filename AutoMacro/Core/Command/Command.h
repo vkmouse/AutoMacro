@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 
-#include "AutoMacro/Core/Core/CommandParameter.h"
+#include "AutoMacro/Core/Command/CommandParameter.h"
 #include "AutoMacro/Core/Kvm/Kvm.h"
 
 namespace AutoMacro {

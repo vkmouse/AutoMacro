@@ -22,6 +22,9 @@
     <ClCompile Include="Core\CounterCommand.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Core\CommandsTest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />

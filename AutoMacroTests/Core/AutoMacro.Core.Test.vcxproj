@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AssertExtension.cpp" />
+    <ClCompile Include="Core\CommandsTest.cpp" />
     <ClCompile Include="Core\CommandTest.cpp" />
     <ClCompile Include="Core\CounterCommand.cpp" />
     <ClCompile Include="Core\DetectionResultTest.cpp" />

@@ -11,6 +11,9 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Command\Commands.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Image.h">
@@ -20,12 +23,6 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Types.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Command.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\CommandParameter.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\DetectionResult.h">
@@ -56,6 +53,18 @@
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Core.h" />
+    <ClInclude Include="Command\Command.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Commands.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CommandsParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -63,6 +72,9 @@
     </Filter>
     <Filter Include="Kvm">
       <UniqueIdentifier>{d227fa55-e2a9-4d28-845d-868a0eb671eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{93fa78eb-424e-41ca-a974-4c8177b0448d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

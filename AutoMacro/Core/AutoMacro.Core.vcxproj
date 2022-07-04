@@ -19,15 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\Commands.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\DetectionResult.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command\Command.h" />
+    <ClInclude Include="Command\CommandParameter.h" />
+    <ClInclude Include="Command\Commands.h" />
+    <ClInclude Include="Command\CommandsParameter.h" />
     <ClInclude Include="Core.h" />
-    <ClInclude Include="Core\Command.h" />
-    <ClInclude Include="Core\CommandParameter.h" />
     <ClInclude Include="Core\DetectionResult.h" />
     <ClInclude Include="Core\Detector.h" />
     <ClInclude Include="Core\Image.h" />
