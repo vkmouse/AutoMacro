@@ -18,7 +18,7 @@ TEST_METHOD(TestMultipleCounter) {
 
     std::vector<std::shared_ptr<Command>> cmds;
     CommandsParameter p(kvm, cmds);
-    auto cmd = Factory::createCommands(&p);
+    auto cmd = Factory::createCommand(&p);
 
     count = 0;
     CounterCommandParameter counterParam(kvm, &count);

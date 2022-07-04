@@ -12,11 +12,11 @@ std::shared_ptr<Delay> createMockDelay() {
     return std::make_shared<Impl::MockDelay>();
 }
 
-std::shared_ptr<Command> createCommands() {
+std::shared_ptr<Command> createCommand() {
     return std::make_shared<Impl::EmptyCommand>();
 }
 
-std::shared_ptr<Command> createCommands(CommandsParameter* p) {
+std::shared_ptr<Command> createCommand(CommandsParameter* p) {
     return std::make_shared<Impl::Commands>(p);
 }
 }  // namespace Factory

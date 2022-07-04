@@ -27,7 +27,7 @@ TEST_METHOD(TestCounterCommand) {
 }
 
 TEST_METHOD(TestEmptyCommand) {
-    auto emptyCmd = Factory::createCommands();
+    auto emptyCmd = Factory::createCommand();
     emptyCmd->execute();
 }
 };
