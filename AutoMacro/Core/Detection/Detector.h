@@ -2,8 +2,8 @@
 #include <memory>
 #include <vector>
 
-#include "AutoMacro/Core/Core/DetectionResult.h"
-#include "AutoMacro/Core/Core/ImageProcessor.h"
+#include "AutoMacro/Core/Detection/DetectionResult.h"
+#include "AutoMacro/Core/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 class DLL_EXPORTS Detector {

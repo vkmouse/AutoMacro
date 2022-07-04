@@ -4,7 +4,7 @@
 
 #include "AutoMacro/Core/Core/pch.h"
 #include "AutoMacro/Core/Core/Image.h"
-#include "AutoMacro/Core/Core/ImageProcessor.h"
+#include "AutoMacro/Core/ImageProcessor/ImageProcessor.h"
 
 namespace AutoMacro {
 class DLL_EXPORTS VideoCapture {

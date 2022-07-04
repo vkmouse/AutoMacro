@@ -1,4 +1,4 @@
-#include "AutoMacro/Core/Core/DetectionResult.h"
+#include "AutoMacro/Core/Detection/DetectionResult.h"
 
 #include "AutoMacro/Core/Core/Types.h"
 

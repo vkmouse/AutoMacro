@@ -7,12 +7,12 @@
     <ClCompile Include="Core\Types.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Core\DetectionResult.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Command\Commands.cpp">
       <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\DetectionResult.cpp">
+      <Filter>Detection</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -23,15 +23,6 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Core\Types.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\DetectionResult.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Detector.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\ImageProcessor.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Kvm\Delay.h">
@@ -65,6 +56,15 @@
     <ClInclude Include="Command\CommandsParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
+    <ClInclude Include="Detection\DetectionResult.h">
+      <Filter>Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="Detection\Detector.h">
+      <Filter>Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor.h">
+      <Filter>ImageProcessor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -75,6 +75,12 @@
     </Filter>
     <Filter Include="Command">
       <UniqueIdentifier>{93fa78eb-424e-41ca-a974-4c8177b0448d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageProcessor">
+      <UniqueIdentifier>{973f2143-9809-4517-831d-a61296560362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Detection">
+      <UniqueIdentifier>{c4fd134a-c796-4feb-869a-8ea713aeec3c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
