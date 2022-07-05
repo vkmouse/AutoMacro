@@ -19,6 +19,7 @@ class DLL_EXPORTS Image {
 
  private:
     void copyFromData(unsigned char* data);
+    void clear();
 
     int width_;
     int height_;

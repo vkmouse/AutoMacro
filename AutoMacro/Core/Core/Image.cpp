@@ -18,6 +18,7 @@ Image::Image(const Image& other) noexcept {
 }
 
 Image& Image::operator=(const Image& other) {
+    clear();
     width_ = other.width();
     height_ = other.height();
     channel_ = other.channel();
@@ -41,14 +42,7 @@ bool Image::operator==(const Image& other) const {
 }
 
 Image::~Image() {
-    width_ = 0;
-    height_ = 0;
-    channel_ = 0;
-
-    if (data_) {
-        delete(data_);
-        data_ = nullptr;
-    }
+    clear();
 }
 
 int Image::width() const {
@@ -71,5 +65,16 @@ void Image::copyFromData(unsigned char* data) {
     int size = width_ * height_ * channel_;
     data_ = new unsigned char[size];
     memcpy(data_, data, size);
+}
+
+void Image::clear() {
+    width_ = 0;
+    height_ = 0;
+    channel_ = 0;
+
+    if (data_) {
+        delete(data_);
+        data_ = nullptr;
+    }
 }
 }  // namespace AutoMacro
