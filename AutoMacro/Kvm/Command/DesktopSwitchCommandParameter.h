@@ -14,5 +14,6 @@ class DesktopSwitchCommandParameter : public KvmCommandParameter {
     int numDesktops;
     int destination;
     int delayBetweemEachSwitch = 0;
+    std::shared_ptr<Command> afterSwitchCommand = Factory::createCommand();
 };
 }  // namespace AutoMacro

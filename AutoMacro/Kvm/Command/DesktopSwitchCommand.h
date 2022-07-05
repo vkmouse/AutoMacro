@@ -1,4 +1,6 @@
 #pragma once
+#include <memory>
+
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Kvm/Command/DesktopSwitchCommandParameter.h"
 
@@ -22,6 +24,7 @@ class DesktopSwitchCommand : public KvmCommand {
     int numDesktops;
     int destination;
     int delayBetweemEachSwitch;
+    std::shared_ptr<Command> afterSwitchCommand;
 };
 }  // namespace Impl
 }  // namespace AutoMacro

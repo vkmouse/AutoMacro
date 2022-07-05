@@ -125,6 +125,54 @@ TEST_METHOD(TestDesktopSwitch) {
     Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
     Assert::IsTrue(h[i++].equals("---"));
 }
+
+TEST_METHOD(TestAfterSwitchCommand) {
+    Histories h;
+
+    SendKeyCommandParameter p(getKvm(&h), KeyCode::KEY_ENTER);
+    p.delayBeforeCommand = delayBeforeCommand;
+    p.delayAfterCommand = delayAfterCommand;
+    p.delayBetweenPressKeyAndReleaseKey = delayBetweenPressKeyAndReleaseKey;
+
+    DesktopSwitchCommandParameter p1(getKvm(&h), 3, 1);
+    p1.delayBeforeCommand = delayBeforeCommand;
+    p1.delayAfterCommand = delayAfterCommand;
+    p1.afterSwitchCommand = Factory::createCommand(&p);
+
+    DesktopSwitchCommandParameter p2(getKvm(&h), 3, 2);
+    p2.delayBeforeCommand = delayBeforeCommand;
+    p2.delayAfterCommand = delayAfterCommand;
+    p2.afterSwitchCommand = Factory::createCommand(&p);
+
+    execute(&h, p1, p2);
+
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeShortcut));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachPressKey));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachPressKey));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenPressKeyAndReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_RIGHT));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LMETA));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenEachReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_LCTRL));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterShortcut));
+    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("pressKey", KeyCode::KEY_ENTER));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenPressKeyAndReleaseKey));
+    Assert::IsTrue(h[i++].equals("releaseKey", KeyCode::KEY_ENTER));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("---"));
+}
 };
 }  // namespace CommandTest
 }  // namespace AutoMacro

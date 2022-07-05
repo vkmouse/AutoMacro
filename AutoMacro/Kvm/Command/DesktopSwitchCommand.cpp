@@ -12,7 +12,8 @@ DesktopSwitchCommand::DesktopSwitchCommand(
     : KvmCommand(p),
       numDesktops(p->numDesktops),
       destination(p->destination),
-      delayBetweemEachSwitch(p->delayBetweemEachSwitch) {
+      delayBetweemEachSwitch(p->delayBetweemEachSwitch),
+      afterSwitchCommand(p->afterSwitchCommand) {
 }
 
 void DesktopSwitchCommand::executeCommand() {
@@ -48,6 +49,7 @@ void DesktopSwitchCommand::switchToNext(int times) {
         ShortcutCommand cmd(&p);
         cmd.execute();
         currentDesktop = currentDesktop + times;
+        afterSwitchCommand->execute();
     }
 }
 
@@ -63,6 +65,7 @@ void DesktopSwitchCommand::switchToPrevious(int times) {
         ShortcutCommand cmd(&p);
         cmd.execute();
         currentDesktop = currentDesktop - times;
+        afterSwitchCommand->execute();
     }
 }
 }  // namespace Impl
