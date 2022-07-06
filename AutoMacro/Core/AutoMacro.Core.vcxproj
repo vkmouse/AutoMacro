@@ -23,6 +23,7 @@
     <ClCompile Include="Command\Commands.cpp" />
     <ClCompile Include="Command\CounterCommand.cpp" />
     <ClCompile Include="Command\KvmCommand.cpp" />
+    <ClCompile Include="Command\WhileCommand.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
@@ -39,6 +40,8 @@
     <ClInclude Include="Command\CommandsParameter.h" />
     <ClInclude Include="Command\EmptyCommand.h" />
     <ClInclude Include="Command\TCommandAdapter.h" />
+    <ClInclude Include="Command\WhileCommand.h" />
+    <ClInclude Include="Command\WhileCommandParameter.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="Core\Image.h" />
     <ClInclude Include="Core\pch.h" />

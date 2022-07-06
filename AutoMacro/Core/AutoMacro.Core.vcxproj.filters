@@ -21,6 +21,9 @@
     <ClCompile Include="Command\CounterCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\WhileCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Image.h">
@@ -86,6 +89,12 @@
       <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="Command\TCommandAdapter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WhileCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\WhileCommand.h">
       <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
