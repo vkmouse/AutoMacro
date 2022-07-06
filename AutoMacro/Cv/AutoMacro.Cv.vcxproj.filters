@@ -47,6 +47,18 @@
     <ClCompile Include="Command\WaitForItemsCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Detection\Detection.cpp">
+      <Filter>Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessor\ImageProcessor.cpp">
+      <Filter>ImageProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Kvm.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cv.h" />
@@ -82,6 +94,18 @@
     </ClInclude>
     <ClInclude Include="Command\WaitForItemsCommand.h">
       <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Detection\Detection.h">
+      <Filter>Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessor\ImageProcessor.h">
+      <Filter>ImageProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Kvm.h">
+      <Filter>Kvm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

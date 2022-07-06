@@ -19,17 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\WaitForCommand.cpp" />
     <ClCompile Include="Command\WaitForItemCommand.cpp" />
     <ClCompile Include="Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Cv.cpp" />
     <ClCompile Include="Detection\BaseDetector.cpp" />
+    <ClCompile Include="Detection\Detection.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetector.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessor.cpp" />
+    <ClCompile Include="ImageProcessor\ImageProcessor.cpp" />
     <ClCompile Include="Kvm\ImageFileCapture.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Kvm\Kvm.cpp" />
+    <ClInclude Include="Command\Command.h" />
     <ClInclude Include="Command\WaitForCommand.h" />
     <ClInclude Include="Command\WaitForCommandParameter.h" />
     <ClInclude Include="Command\WaitForItemCommand.h" />
@@ -38,10 +41,13 @@
     <ClInclude Include="Command\WaitForItemsCommandParameter.h" />
     <ClInclude Include="Cv.h" />
     <ClInclude Include="Detection\BaseDetector.h" />
+    <ClInclude Include="Detection\Detection.h" />
     <ClInclude Include="Detection\TemplateBasedDetector.h" />
     <ClInclude Include="ImageProcessor\BGRConverterProcessor.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessor.h" />
+    <ClInclude Include="ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="Kvm\ImageFileCapture.h" />
+    <ClInclude Include="Kvm\Kvm.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\AutoMacro.Core.vcxproj">
