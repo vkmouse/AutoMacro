@@ -4,7 +4,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class CounterCommand : public Command {
+class CounterCommand : public TCommand<void> {
  public:
     explicit CounterCommand(CounterCommandParameter* p);
 

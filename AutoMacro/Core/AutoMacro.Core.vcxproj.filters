@@ -85,6 +85,9 @@
     <ClInclude Include="Command\CounterCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\TCommandAdapter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
