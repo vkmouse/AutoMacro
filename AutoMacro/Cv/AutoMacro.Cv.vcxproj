@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command.cpp" />
+    <ClCompile Include="Command\RequestItemExistsCommand.cpp" />
     <ClCompile Include="Command\WaitForCommand.cpp" />
     <ClCompile Include="Command\WaitForItemCommand.cpp" />
     <ClCompile Include="Command\WaitForItemsCommand.cpp" />
@@ -34,6 +35,8 @@
     <ClCompile Include="Kvm\ImageFileCapture.cpp" />
     <ClCompile Include="Kvm\Kvm.cpp" />
     <ClInclude Include="Command\Command.h" />
+    <ClInclude Include="Command\RequestItemExistsCommand.h" />
+    <ClInclude Include="Command\RequestItemExistsCommandParameter.h" />
     <ClInclude Include="Command\WaitForCommand.h" />
     <ClInclude Include="Command\WaitForCommandParameter.h" />
     <ClInclude Include="Command\WaitForItemCommand.h" />

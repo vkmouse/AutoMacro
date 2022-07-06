@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="Command\CommandTest.cpp" />
+    <ClCompile Include="Command\RequestItemExistsCommand.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
     <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp" />

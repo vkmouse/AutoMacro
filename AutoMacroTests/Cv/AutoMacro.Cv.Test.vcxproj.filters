@@ -49,6 +49,9 @@
     <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
+    <ClCompile Include="Command\RequestItemExistsCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Images\AutoMacroTests\AllItemExists_10x10_24bits.png">

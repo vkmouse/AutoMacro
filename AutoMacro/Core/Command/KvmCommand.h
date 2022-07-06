@@ -13,14 +13,10 @@ class DLL_EXPORTS KvmCommand : public TCommand<T> {
           delayAfterCommand_(p->delayAfterCommand) {
     }
 
-    virtual void execute() {
-        sleep(delayBeforeCommand_);
-        executeCommand();
-        sleep(delayAfterCommand_);
-    }
+    virtual T execute();
 
  protected:
-    virtual void executeCommand() = 0;
+    virtual T executeCommand() = 0;
 
     const Kvm& kvm() { return kvm_; }
     void pressKey(KeyCode key) { kvm_.keyboard->pressKey(key); }
@@ -38,4 +34,19 @@ class DLL_EXPORTS KvmCommand : public TCommand<T> {
     int delayBeforeCommand_;
     int delayAfterCommand_;
 };
+
+template<>
+inline void KvmCommand<void>::execute() {
+    sleep(delayBeforeCommand_);
+    executeCommand();
+    sleep(delayAfterCommand_);
+}
+
+template<>
+inline bool KvmCommand<bool>::execute() {
+    sleep(delayBeforeCommand_);
+    auto output = executeCommand();
+    sleep(delayAfterCommand_);
+    return output;
+}
 }  // namespace AutoMacro
