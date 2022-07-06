@@ -1,5 +1,5 @@
 #pragma once
-#include "AutoMacro/Cv/Cv.h"
+#include "AutoMacro/Core/Core.h"
 #include "CppUnitTest.h"
 
 namespace Microsoft {

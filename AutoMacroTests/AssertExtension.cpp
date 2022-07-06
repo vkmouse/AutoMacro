@@ -1,4 +1,5 @@
 #include "AutoMacroTests/AssertExtension.h"
+#include "AutoMacro/Core/Core.h"
 #include "CppUnitTest.h"
 
 namespace Microsoft {
