@@ -56,11 +56,11 @@ TEST_METHOD(TestTempateBasedDetector) {
 
 TEST_METHOD(TestNotExistTemplate) {
     auto detector = Factory::createTemplateBasedDetector({
-        "images\\AutoMacroTests\\NotExistedTemplate_5x5_24bits.png",
+        "images\\AutoMacroTests\\Template_5x5_24bits.png",
     });
 
     Image image =
-        Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_24bits.png");
+        Cv::imread("images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png");
     DetectionResults results = detector->detect(image);
 
     Assert::AreEqual(static_cast<size_t>(1), results.size());
@@ -123,17 +123,16 @@ TEST_METHOD(TestBGRConverterProcessor) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png",
     });
 
-    auto capture = Factory::createImageFileCapture({
-        "images\\AutoMacroTests\\ItemExists_10x10_32bits.png",
-    });
+    Image image =
+        Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_32bits.png");
 
     auto channelNotEqualFailed =
-        std::bind(&Detector::detect, detector, capture->takeSnapshot());
+        std::bind(&Detector::detect, detector, image);
     Assert::ExpectException<std::runtime_error>(channelNotEqualFailed);
 
     auto processor = Factory::createBGRConverterProcessor();
     detector->addPreprocessor(processor);
-    DetectionResults results = detector->detect(capture->takeSnapshot());
+    DetectionResults results = detector->detect(image);
 
     Assert::IsTrue(Util::exists(results, 0.98f, 0));
 }
@@ -143,27 +142,25 @@ TEST_METHOD(TestCroppingProcessor) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png",
     });
 
-    auto capture = Factory::createImageFileCapture({
-        "images\\AutoMacroTests\\ItemExists_10x10_24bits.png",
-    });
+    Image image =
+        Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_24bits.png");
 
-    DetectionResults results = detector->detect(capture->takeSnapshot());
+    DetectionResults results = detector->detect(image);
     Assert::IsTrue(Util::exists(results, 0.98f, 0));
 
     auto processor = Factory::createCroppingProcessor(3, 3, 7, 7);
     detector->addPreprocessor(processor);
-    results = detector->detect(capture->takeSnapshot());
+    results = detector->detect(image);
     Assert::IsFalse(Util::exists(results, 0.98f, 0));
 
     detector->removeLastPreprocessor();
-    results = detector->detect(capture->takeSnapshot());
+    results = detector->detect(image);
     Assert::IsTrue(Util::exists(results, 0.98f, 0));
 }
 
 TEST_METHOD(TestMixedProcessor) {
-    auto capture = Factory::createImageFileCapture({
-        "images\\AutoMacroTests\\ItemExists_10x10_32bits.png",
-    });
+    Image image =
+        Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_32bits.png");
     auto processor1 = Factory::createBGRConverterProcessor();
     auto processor2 = Factory::createCroppingProcessor(3, 3, 7, 7);
 
@@ -172,7 +169,7 @@ TEST_METHOD(TestMixedProcessor) {
     });
     detector->addPreprocessor(processor1);
     detector->addPreprocessor(processor2);
-    DetectionResults results = detector->detect(capture->takeSnapshot());
+    DetectionResults results = detector->detect(image);
     Assert::IsFalse(Util::exists(results, 0.98f, 0));
 
     detector = Factory::createTemplateBasedDetector({
@@ -180,7 +177,7 @@ TEST_METHOD(TestMixedProcessor) {
     });
     detector->addPreprocessor(processor2);
     detector->addPreprocessor(processor1);
-    results = detector->detect(capture->takeSnapshot());
+    results = detector->detect(image);
     Assert::IsFalse(Util::exists(results, 0.98f, 0));
 }
 
@@ -189,18 +186,17 @@ TEST_METHOD(TestMultipleCroppingProcessor) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png",
     });
 
-    auto capture = Factory::createImageFileCapture({
-        "images\\AutoMacroTests\\ItemExists_10x10_24bits.png",
-    });
+    Image image =
+        Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_24bits.png");
 
     auto processor1 = Factory::createCroppingProcessor(3, 1, 5, 5);
     detector->addPreprocessor(processor1);
-    auto results = detector->detect(capture->takeSnapshot());
+    auto results = detector->detect(image);
     Assert::IsTrue(Util::exists(results, 0.98f, 0));
 
     auto processor2 = Factory::createCroppingProcessor(0, 0, 5, 5);
     detector->addPreprocessor(processor2);
-    results = detector->detect(capture->takeSnapshot());
+    results = detector->detect(image);
     Assert::IsTrue(Util::exists(results, 0.98f, 0));
 }
 };

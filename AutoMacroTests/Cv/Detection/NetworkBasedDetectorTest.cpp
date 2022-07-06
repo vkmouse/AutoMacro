@@ -1,6 +1,7 @@
 #include <string>
 
 #include "AutoMacro/Cv/Cv.h"
+#include "AutoMacro/Util/Util.h"
 #include "AutoMacroTests/AssertExtension.h"
 #include "CppUnitTest.h"
 
@@ -39,9 +40,8 @@ TEST_METHOD(TestItemFound) {
         Cv::imread("images\\AutoMacroTests\\ItemExists_10x10_24bits.png");
     DetectionResults results = detector->detect(image);
 
-    Assert::IsTrue(results.size() > 0);
+    Assert::IsTrue(Util::exists(results, 0.98f));
     Assert::AreEqual(Rect(4, 2, 3, 3), results[0].region());
-    Assert::IsTrue(results[0].confidence > 0.98f);
 }
 
 TEST_METHOD(TestItemNotFound) {
@@ -51,8 +51,7 @@ TEST_METHOD(TestItemNotFound) {
         Cv::imread("images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png");
     DetectionResults results = detector->detect(image);
 
-    Assert::IsTrue(results.size() > 0);
-    Assert::IsTrue(results[0].confidence < 0.98f);
+    Assert::IsFalse(Util::exists(results, 0.98f));
 }
 };
 }  // namespace DetectionTest
