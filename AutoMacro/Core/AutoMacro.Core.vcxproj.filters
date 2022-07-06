@@ -21,6 +21,9 @@
     <ClCompile Include="Command\WhileCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\DelayCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Image.h">
@@ -92,6 +95,12 @@
       <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="Command\WhileCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\DelayCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\DelayCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
