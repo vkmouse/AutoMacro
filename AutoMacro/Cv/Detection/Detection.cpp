@@ -4,6 +4,7 @@
 #include <utility>
 #include <vector>
 
+#include "AutoMacro/Cv/Detection/NetworkBasedDetector.h"
 #include "AutoMacro/Cv/Detection/TemplateBasedDetector.h"
 
 namespace AutoMacro {
@@ -25,6 +26,14 @@ std::shared_ptr<Detector> createTemplateBasedDetector(
     int numBoxes) {
     auto detector = std::make_shared<Impl::TemplateBasedDetector>(
         templateAndMaskPaths, numBoxes);
+    detector->init();
+    return detector;
+}
+
+std::shared_ptr<Detector> createNetworkBasedDetector(
+    std::string modelName, std::string config, int width, int height) {
+    auto detector = std::make_shared<Impl::NetworkBasedDetector>(
+        modelName, config, width, height);
     detector->init();
     return detector;
 }

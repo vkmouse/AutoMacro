@@ -16,6 +16,12 @@
     <Filter Include="Command">
       <UniqueIdentifier>{8635a90e-1834-4967-b692-37254de08039}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{967067f1-798b-4594-a698-438f3a121677}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\TestModel">
+      <UniqueIdentifier>{59d1e4a4-f14e-4201-9861-3132cd765345}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp">
@@ -39,6 +45,9 @@
     <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="Command\CommandTest.cpp">
       <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp">
+      <Filter>Detection</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +77,15 @@
     </CopyFileToFolders>
     <CopyFileToFolders Include="Images\AutoMacroTests\Template_5x5_24bits.png">
       <Filter>Images</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.bin">
+      <Filter>Models\TestModel</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.mapping">
+      <Filter>Models\TestModel</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.xml">
+      <Filter>Models\TestModel</Filter>
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>

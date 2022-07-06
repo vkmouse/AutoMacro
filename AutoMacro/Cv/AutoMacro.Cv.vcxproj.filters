@@ -59,6 +59,9 @@
     <ClCompile Include="Kvm\Kvm.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
+    <ClCompile Include="Detection\NetworkBasedDetector.cpp">
+      <Filter>Detection</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cv.h" />
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="Kvm\Kvm.h">
       <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Detection\NetworkBasedDetector.h">
+      <Filter>Detection</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -23,6 +23,7 @@
     <ClCompile Include="Command\CommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
+    <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessorTest.cpp" />
@@ -83,6 +84,24 @@
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
     <ClInclude Include="Command\CommandTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.bin">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.mapping">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.xml">
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\Models\AutoMacroTests\TestModel</DestinationFolders>
+    </CopyFileToFolders>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

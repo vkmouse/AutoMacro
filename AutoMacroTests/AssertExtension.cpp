@@ -13,6 +13,15 @@ std::wstring ToString(AutoMacro::Image value) {
     return str;
 }
 
+std::wstring ToString(AutoMacro::Rect value) {
+    std::wstring str = L"";
+    str += std::to_wstring(value.x) + L",";
+    str += std::to_wstring(value.y) + L",";
+    str += std::to_wstring(value.width) + L",";
+    str += std::to_wstring(value.height);
+    return str;
+}
+
 std::wstring ToString(AutoMacro::DetectionResult value) {
     std::wstring str = std::to_wstring(value.index);
     str += std::to_wstring(value.x);

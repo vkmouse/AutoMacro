@@ -26,6 +26,7 @@
     <ClCompile Include="Cv.cpp" />
     <ClCompile Include="Detection\BaseDetector.cpp" />
     <ClCompile Include="Detection\Detection.cpp" />
+    <ClCompile Include="Detection\NetworkBasedDetector.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetector.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessor.cpp" />
     <ClCompile Include="ImageProcessor\CroppingProcessor.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="Cv.h" />
     <ClInclude Include="Detection\BaseDetector.h" />
     <ClInclude Include="Detection\Detection.h" />
+    <ClInclude Include="Detection\NetworkBasedDetector.h" />
     <ClInclude Include="Detection\TemplateBasedDetector.h" />
     <ClInclude Include="ImageProcessor\BGRConverterProcessor.h" />
     <ClInclude Include="ImageProcessor\CroppingProcessor.h" />
