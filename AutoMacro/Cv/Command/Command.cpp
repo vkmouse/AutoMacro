@@ -11,11 +11,21 @@ namespace AutoMacro {
 namespace Factory {
 std::shared_ptr<Command> createCommand(
         WaitForItemCommandParameter* parameter) {
-    return std::make_shared<Impl::WaitForItemCommand>(parameter);
+    return createCommand(createTCommand(parameter));
 }
 
 std::shared_ptr<Command> createCommand(
-        WaitForItemsCommandParameter* parameter) {
+    WaitForItemsCommandParameter* parameter) {
+    return createCommand(createTCommand(parameter));
+}
+
+std::shared_ptr<TCommand<void>> createTCommand(
+    WaitForItemCommandParameter* parameter) {
+    return std::make_shared<Impl::WaitForItemCommand>(parameter);
+}
+
+std::shared_ptr<TCommand<void>> createTCommand(
+    WaitForItemsCommandParameter* parameter) {
     return std::make_shared<Impl::WaitForItemsCommand>(parameter);
 }
 }  // namespace Factory

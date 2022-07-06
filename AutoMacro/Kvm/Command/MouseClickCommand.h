@@ -4,7 +4,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class MouseClickCommand : public KvmCommand {
+class MouseClickCommand : public KvmCommand<void> {
  public:
     explicit MouseClickCommand(MouseClickCommandParameter* p);
 

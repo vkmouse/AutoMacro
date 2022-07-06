@@ -22,7 +22,6 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Command\Commands.cpp" />
     <ClCompile Include="Command\CounterCommand.cpp" />
-    <ClCompile Include="Command\KvmCommand.cpp" />
     <ClCompile Include="Command\WhileCommand.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\Image.cpp" />

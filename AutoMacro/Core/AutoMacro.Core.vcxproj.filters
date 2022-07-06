@@ -14,9 +14,6 @@
     <ClCompile Include="Detection\DetectionResult.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Command\KvmCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Command\CounterCommand.cpp">
       <Filter>Command</Filter>

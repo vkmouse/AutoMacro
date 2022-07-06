@@ -6,7 +6,7 @@
 
 namespace AutoMacro {
 namespace Impl {
-class DesktopSwitchCommand : public KvmCommand {
+class DesktopSwitchCommand : public KvmCommand<void> {
  public:
     explicit DesktopSwitchCommand(DesktopSwitchCommandParameter* p);
 
