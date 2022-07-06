@@ -46,6 +46,9 @@
     <ClCompile Include="Kvm\ActualDelay.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
+    <ClCompile Include="Command\Command.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kvm\MockKeyboard.h">
@@ -96,6 +99,9 @@
     </ClInclude>
     <ClInclude Include="Kvm\ActualDelay.h">
       <Filter>Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command.h">
+      <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

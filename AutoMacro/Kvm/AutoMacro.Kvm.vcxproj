@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommand.cpp" />
     <ClCompile Include="Command\MouseClickCommand.cpp" />
     <ClCompile Include="Command\SendKeyCommand.cpp" />
@@ -34,6 +35,7 @@
     <ClCompile Include="Kvm\MockVideoCapture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command\Command.h" />
     <ClInclude Include="Command\DesktopSwitchCommand.h" />
     <ClInclude Include="Command\DesktopSwitchCommandParameter.h" />
     <ClInclude Include="Command\MouseClickCommand.h" />
