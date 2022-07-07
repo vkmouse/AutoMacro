@@ -41,9 +41,6 @@
     <ClCompile Include="Command\WaitForCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
-    <ClCompile Include="Command\WaitForItemCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Command\WaitForItemsCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
@@ -63,6 +60,9 @@
       <Filter>Detection</Filter>
     </ClCompile>
     <ClCompile Include="Command\CheckItemExistenceCommand.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\CheckItemExistenceCommandFactory.cpp">
       <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
@@ -126,6 +126,9 @@
       <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="Command\CheckExistenceCommand.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CheckItemExistenceCommandFactory.h">
       <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>

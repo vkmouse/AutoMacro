@@ -9,9 +9,7 @@ namespace CommandTest {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
 TEST_CLASS(WaitForItemCommandTest) {
-int delayBeforeCommand = 1;
-int delayAfterCommand = 2;
-int delayBetweenRepeatitions = 3;
+int delayBetweenRepeatitions = 1;
 
 public:
 TEST_METHOD(TestWaitForItemExist) {
@@ -24,22 +22,28 @@ TEST_METHOD(TestWaitForItemExist) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
     WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.delayBeforeCommand = delayBeforeCommand;
-    p.delayAfterCommand = delayAfterCommand;
-    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
-    p.waitForExists = true;
+    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
+    p.setIsExpectedToExist(true);
 
     execute(&h, p);
 
     int i = 0;
     Assert::IsTrue(h[i++].equals("---"));
-    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
-    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("---"));
 }
 
@@ -53,22 +57,28 @@ TEST_METHOD(TestWaitForItemNotExist) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
     WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.delayBeforeCommand = delayBeforeCommand;
-    p.delayAfterCommand = delayAfterCommand;
-    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
-    p.waitForExists = false;
+    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
+    p.setIsExpectedToExist(false);
 
     execute(&h, p);
 
     int i = 0;
     Assert::IsTrue(h[i++].equals("---"));
-    Assert::IsTrue(h[i++].equals("delay", delayBeforeCommand));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("takeSnapshot"));
-    Assert::IsTrue(h[i++].equals("delay", delayAfterCommand));
+    Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("---"));
 }
 };

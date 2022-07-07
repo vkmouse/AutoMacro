@@ -3,9 +3,19 @@
 
 namespace AutoMacro {
 namespace Impl {
-class EmptyCommand : public Command {
+template<typename T>
+class EmptyCommand : public TCommand<T> {
  public:
-    void execute() override {}
+    virtual T execute();
 };
+
+template<>
+void EmptyCommand<void>::execute() {
+}
+
+template<>
+bool EmptyCommand<bool>::execute() {
+    return false;
+}
 }  // namespace Impl
 }  // namespace AutoMacro

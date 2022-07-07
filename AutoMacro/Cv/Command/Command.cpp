@@ -30,9 +30,5 @@ std::shared_ptr<TCommand<void>> createTCommand(
     WaitForItemsCommandParameter* parameter) {
     return std::make_shared<Impl::WaitForItemsCommand>(parameter);
 }
-std::shared_ptr<TCommand<bool>> createTCommand(
-    CheckItemExistenceCommandParameter* parameter) {
-    return std::make_shared<Impl::CheckItemExistenceCommand>(parameter);
-}
 }  // namespace Factory
 }  // namespace AutoMacro

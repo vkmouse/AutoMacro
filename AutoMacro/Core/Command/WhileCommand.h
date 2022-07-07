@@ -7,9 +7,9 @@
 namespace AutoMacro {
 class WhileCommand : public TCommand<void> {
  public:
-    explicit WhileCommand(WhileCommandParameter* p);
+    DLL_EXPORTS explicit WhileCommand(WhileCommandParameter* p);
 
-    virtual void execute();
+    DLL_EXPORTS virtual void execute();
 
  private:
     std::shared_ptr<Command> executeCommand_;

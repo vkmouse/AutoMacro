@@ -9,7 +9,7 @@
 namespace AutoMacro {
 namespace Factory {
 std::shared_ptr<Command> createCommand() {
-    return std::make_shared<Impl::EmptyCommand>();
+    return createCommand(createTCommand<void>());
 }
 
 std::shared_ptr<Command> createCommand(CommandsParameter* p) {
@@ -37,6 +37,11 @@ std::shared_ptr<TCommand<void>> createTCommand(DelayCommandParameter* p) {
 template<class T>
 std::shared_ptr<Command> createCommand(std::shared_ptr<TCommand<T>> command) {
     return std::make_shared<Impl::TCommandAdapter<T>>(command);
+}
+
+template<class T>
+std::shared_ptr<TCommand<T>> createTCommand() {
+    return std::make_shared<Impl::EmptyCommand<T>>();
 }
 }  // namespace Factory
 }  // namespace AutoMacro

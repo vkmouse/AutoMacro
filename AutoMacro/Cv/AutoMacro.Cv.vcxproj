@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\CheckItemExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Command.cpp" />
     <ClCompile Include="Command\CheckItemExistenceCommand.cpp" />
     <ClCompile Include="Command\WaitForCommand.cpp" />
-    <ClCompile Include="Command\WaitForItemCommand.cpp" />
     <ClCompile Include="Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Cv.cpp" />
     <ClCompile Include="Detection\BaseDetector.cpp" />
@@ -36,6 +36,7 @@
     <ClCompile Include="Kvm\Kvm.cpp" />
     <ClInclude Include="Command\CheckExistenceCommand.h" />
     <ClInclude Include="Command\CheckExistenceCommandParameter.h" />
+    <ClInclude Include="Command\CheckItemExistenceCommandFactory.h" />
     <ClInclude Include="Command\CheckItemExistenceCommandParameter.h" />
     <ClInclude Include="Command\Command.h" />
     <ClInclude Include="Command\CheckItemExistenceCommand.h" />

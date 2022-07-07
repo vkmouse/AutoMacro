@@ -28,5 +28,7 @@ DLL_EXPORTS std::shared_ptr<TCommand<void>> createTCommand(
 template<class T>
 DLL_EXPORTS std::shared_ptr<Command> createCommand(
     std::shared_ptr<TCommand<T>> command);
+template<class T>
+DLL_EXPORTS std::shared_ptr<TCommand<T>> createTCommand();
 }  // namespace Factory
 }  // namespace AutoMacro
