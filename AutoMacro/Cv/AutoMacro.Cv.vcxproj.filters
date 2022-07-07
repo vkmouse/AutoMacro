@@ -62,7 +62,7 @@
     <ClCompile Include="Detection\NetworkBasedDetector.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Command\RequestItemExistsCommand.cpp">
+    <ClCompile Include="Command\CheckItemExistenceCommand.cpp">
       <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,10 +116,16 @@
     <ClInclude Include="Detection\NetworkBasedDetector.h">
       <Filter>Detection</Filter>
     </ClInclude>
-    <ClInclude Include="Command\RequestItemExistsCommandParameter.h">
+    <ClInclude Include="Command\CheckItemExistenceCommand.h">
       <Filter>Command</Filter>
     </ClInclude>
-    <ClInclude Include="Command\RequestItemExistsCommand.h">
+    <ClInclude Include="Command\CheckExistenceCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CheckItemExistenceCommandParameter.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CheckExistenceCommand.h">
       <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>

@@ -49,7 +49,7 @@
     <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Command\RequestItemExistsCommand.cpp">
+    <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>

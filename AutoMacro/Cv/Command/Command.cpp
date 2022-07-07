@@ -2,8 +2,8 @@
 
 #include <memory>
 
-#include "AutoMacro/Cv/Command/RequestItemExistsCommand.h"
-#include "AutoMacro/Cv/Command/RequestItemExistsCommandParameter.h"
+#include "AutoMacro/Cv/Command/CheckItemExistenceCommand.h"
+#include "AutoMacro/Cv/Command/CheckItemExistenceCommandParameter.h"
 #include "AutoMacro/Cv/Command/WaitForItemCommand.h"
 #include "AutoMacro/Cv/Command/WaitForItemCommandParameter.h"
 #include "AutoMacro/Cv/Command/WaitForItemsCommand.h"
@@ -31,8 +31,8 @@ std::shared_ptr<TCommand<void>> createTCommand(
     return std::make_shared<Impl::WaitForItemsCommand>(parameter);
 }
 std::shared_ptr<TCommand<bool>> createTCommand(
-    RequestItemExistsCommandParameter* parameter) {
-    return std::make_shared<Impl::RequestItemExistsCommand>(parameter);
+    CheckItemExistenceCommandParameter* parameter) {
+    return std::make_shared<Impl::CheckItemExistenceCommand>(parameter);
 }
 }  // namespace Factory
 }  // namespace AutoMacro

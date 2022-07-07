@@ -2,13 +2,14 @@
 #include <memory>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacro/Cv/Command/RequestItemExistsCommandParameter.h"
+#include "AutoMacro/Cv/Command/CheckExistenceCommand.h"
+#include "AutoMacro/Cv/Command/CheckItemExistenceCommandParameter.h"
 
 namespace AutoMacro {
 namespace Impl {
-class RequestItemExistsCommand : public KvmCommand<bool> {
+class CheckItemExistenceCommand : public CheckExistenceCommand {
  public:
-    explicit RequestItemExistsCommand(RequestItemExistsCommandParameter* p);
+    explicit CheckItemExistenceCommand(CheckItemExistenceCommandParameter* p);
 
  protected:
     virtual bool executeCommand();
