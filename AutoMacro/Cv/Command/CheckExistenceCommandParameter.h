@@ -6,9 +6,9 @@
 namespace AutoMacro {
 class CheckExistenceCommandParameter : public KvmCommandParameter {
  public:
-    CheckExistenceCommandParameter(Kvm kvm, bool isExpectedToExist)
-        : KvmCommandParameter(kvm), isExpectedToExist(isExpectedToExist) {}
+    explicit CheckExistenceCommandParameter(Kvm kvm)
+        : KvmCommandParameter(kvm) {}
 
-    bool isExpectedToExist;
+    bool isExpectedToExist = true;
 };
 }  // namespace AutoMacro
