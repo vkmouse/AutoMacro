@@ -3,7 +3,6 @@
 #include <vector>
 
 #include "AutoMacro/Cv/Cv.h"
-#include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
 
 namespace AutoMacro {

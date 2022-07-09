@@ -1,5 +1,4 @@
 #include "AutoMacro/Cv/Cv.h"
-#include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
 #include "AutoMacroTests/Cv/Command/CommandTest.h"
 #include "CppUnitTest.h"

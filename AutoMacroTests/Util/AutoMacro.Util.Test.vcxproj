@@ -31,9 +31,6 @@
     <ProjectReference Include="..\..\AutoMacro\Core\AutoMacro.Core.vcxproj">
       <Project>{50f13574-316f-41fd-ab3c-91172c559a60}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\AutoMacro\Kvm\AutoMacro.Kvm.vcxproj">
-      <Project>{a50075ae-0083-444c-883b-b0d01c72bb62}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\AutoMacro\Util\AutoMacro.Util.vcxproj">
       <Project>{cc8580ba-dd42-4df7-b0d4-76d87847009c}</Project>
     </ProjectReference>

@@ -1,7 +1,6 @@
 #include "AutoMacroTests/Cv/Command/CommandTest.h"
 
 #include "AutoMacro/Cv/Cv.h"
-#include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
 
 namespace AutoMacro {

@@ -1,4 +1,3 @@
-#include "AutoMacro/Kvm/Kvm.h"
 #include "AutoMacro/Util/Util.h"
 #include "CppUnitTest.h"
 
