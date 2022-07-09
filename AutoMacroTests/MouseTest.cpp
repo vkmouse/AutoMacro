@@ -1,4 +1,4 @@
-#include "AutoMacroTests/Kvm/Kvm/MouseTest.h"
+#include "AutoMacroTests/MouseTest.h"
 
 #include <memory>
 #include <random>

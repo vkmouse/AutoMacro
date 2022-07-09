@@ -1,8 +1,8 @@
-#include "AutoMacro/Kvm/Kvm/MockMouse.h"
+#include "AutoMacro/Core/Kvm/Kvm/MockMouse.h"
 
 #include <vector>
 
-#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Core/Kvm/Mouse.h"
 
 namespace AutoMacro {
 namespace Impl {

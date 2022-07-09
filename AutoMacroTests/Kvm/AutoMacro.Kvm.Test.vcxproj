@@ -30,6 +30,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\KeyboardTest.cpp" />
+    <ClCompile Include="..\MouseTest.cpp" />
     <ClCompile Include="Command\CommandTest.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
     <ClCompile Include="Command\MouseClickCommandTest.cpp" />
@@ -39,15 +41,11 @@
     <ClCompile Include="Kvm\DesktopCaptureTest.cpp" />
     <ClCompile Include="Kvm\HIDKeyboardTest.cpp" />
     <ClCompile Include="Kvm\HIDMouseTest.cpp" />
-    <ClCompile Include="Kvm\KeyboardTest.cpp" />
-    <ClCompile Include="Kvm\MockKeyboardTest.cpp" />
-    <ClCompile Include="Kvm\MockMouseTest.cpp" />
-    <ClCompile Include="Kvm\MouseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\KeyboardTest.h" />
+    <ClInclude Include="..\MouseTest.h" />
     <ClInclude Include="Command\CommandTest.h" />
-    <ClInclude Include="Kvm\KeyboardTest.h" />
-    <ClInclude Include="Kvm\MouseTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

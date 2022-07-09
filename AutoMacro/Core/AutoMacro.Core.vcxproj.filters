@@ -7,7 +7,6 @@
     <ClCompile Include="Core\Types.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Command\Commands.cpp">
       <Filter>Command</Filter>
     </ClCompile>
@@ -23,6 +22,24 @@
     </ClCompile>
     <ClCompile Include="Command\DelayCommand.cpp">
       <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Kvm\MockKeyboard.cpp">
+      <Filter>Kvm\Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Kvm\MockMouse.cpp">
+      <Filter>Kvm\Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Factory\MockDelayFactory.cpp">
+      <Filter>Kvm\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Factory\MockKeyboardFactory.cpp">
+      <Filter>Kvm\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Factory\MockMouseFactory.cpp">
+      <Filter>Kvm\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\Factory\MockVideoCaptureFactory.cpp">
+      <Filter>Kvm\Factory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,9 +65,6 @@
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Kvm\VideoCapture.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
-    <ClInclude Include="Kvm\MockDelay.h">
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Core.h" />
@@ -103,6 +117,30 @@
     <ClInclude Include="Command\DelayCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
+    <ClInclude Include="Kvm\Kvm\MockKeyboard.h">
+      <Filter>Kvm\Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Kvm\MockMouse.h">
+      <Filter>Kvm\Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Kvm\MockVideoCapture.h">
+      <Filter>Kvm\Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Kvm\MockDelay.h">
+      <Filter>Kvm\Kvm</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Factory\MockDelayFactory.h">
+      <Filter>Kvm\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Factory\MockKeyboardFactory.h">
+      <Filter>Kvm\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Factory\MockMouseFactory.h">
+      <Filter>Kvm\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Kvm\Factory\MockVideoCaptureFactory.h">
+      <Filter>Kvm\Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
@@ -119,6 +157,12 @@
     </Filter>
     <Filter Include="Detection">
       <UniqueIdentifier>{c4fd134a-c796-4feb-869a-8ea713aeec3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kvm\Kvm">
+      <UniqueIdentifier>{d5bf026f-a886-4ea4-9a1c-1edffa3e0785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kvm\Factory">
+      <UniqueIdentifier>{41134e32-c9ae-4446-9e08-eccf6fc570a2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

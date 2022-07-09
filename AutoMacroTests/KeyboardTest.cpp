@@ -1,4 +1,4 @@
-#include "AutoMacroTests/Kvm/Kvm/KeyboardTest.h"
+#include "AutoMacroTests/KeyboardTest.h"
 
 #include <memory>
 

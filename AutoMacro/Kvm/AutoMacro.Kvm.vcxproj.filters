@@ -9,16 +9,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Kvm\MockKeyboard.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Kvm\MockMouse.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
     <ClCompile Include="Kvm.cpp" />
-    <ClCompile Include="Kvm\MockVideoCapture.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
     <ClCompile Include="Kvm\HIDKeyboard.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
@@ -51,16 +42,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Kvm\MockKeyboard.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
-    <ClInclude Include="Kvm\MockMouse.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
     <ClInclude Include="Kvm.h" />
-    <ClInclude Include="Kvm\MockVideoCapture.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
     <ClInclude Include="Kvm\HIDKeyboard.h">
       <Filter>Kvm</Filter>
     </ClInclude>

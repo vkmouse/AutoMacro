@@ -1,8 +1,8 @@
-#include "AutoMacro/Kvm/Kvm/MockKeyboard.h"
+#include "AutoMacro/Core/Kvm/Kvm/MockKeyboard.h"
 
 #include <vector>
 
-#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Core/Kvm/Keyboard.h"
 
 namespace AutoMacro {
 namespace Impl {

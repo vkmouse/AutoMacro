@@ -1,5 +1,5 @@
 #pragma once
-#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Core/Kvm/Keyboard.h"
 
 namespace AutoMacro {
 namespace Impl {

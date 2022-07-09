@@ -25,14 +25,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AssertExtension.cpp" />
+    <ClCompile Include="..\KeyboardTest.cpp" />
+    <ClCompile Include="..\MouseTest.cpp" />
     <ClCompile Include="Core\CommandsTest.cpp" />
     <ClCompile Include="Core\CommandTest.cpp" />
     <ClCompile Include="Core\DetectionResultTest.cpp" />
     <ClCompile Include="Core\ImageTest.cpp" />
     <ClCompile Include="Core\TypesTest.cpp" />
+    <ClCompile Include="Kvm\MockKeyboardTest.cpp" />
+    <ClCompile Include="Kvm\MockMouseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
+    <ClInclude Include="..\KeyboardTest.h" />
+    <ClInclude Include="..\MouseTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

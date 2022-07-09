@@ -24,10 +24,15 @@
     <ClCompile Include="Command\CounterCommand.cpp" />
     <ClCompile Include="Command\DelayCommand.cpp" />
     <ClCompile Include="Command\WhileCommand.cpp" />
-    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Core\Image.cpp" />
     <ClCompile Include="Core\Types.cpp" />
     <ClCompile Include="Detection\DetectionResult.cpp" />
+    <ClCompile Include="Kvm\Factory\MockDelayFactory.cpp" />
+    <ClCompile Include="Kvm\Factory\MockKeyboardFactory.cpp" />
+    <ClCompile Include="Kvm\Factory\MockMouseFactory.cpp" />
+    <ClCompile Include="Kvm\Factory\MockVideoCaptureFactory.cpp" />
+    <ClCompile Include="Kvm\Kvm\MockKeyboard.cpp" />
+    <ClCompile Include="Kvm\Kvm\MockMouse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.h" />
@@ -52,9 +57,16 @@
     <ClInclude Include="Detection\Detector.h" />
     <ClInclude Include="ImageProcessor\ImageProcessor.h" />
     <ClInclude Include="Kvm\Delay.h" />
+    <ClInclude Include="Kvm\Factory\MockDelayFactory.h" />
+    <ClInclude Include="Kvm\Factory\MockKeyboardFactory.h" />
+    <ClInclude Include="Kvm\Factory\MockMouseFactory.h" />
+    <ClInclude Include="Kvm\Factory\MockVideoCaptureFactory.h" />
     <ClInclude Include="Kvm\Keyboard.h" />
     <ClInclude Include="Kvm\Kvm.h" />
-    <ClInclude Include="Kvm\MockDelay.h" />
+    <ClInclude Include="Kvm\Kvm\MockDelay.h" />
+    <ClInclude Include="Kvm\Kvm\MockKeyboard.h" />
+    <ClInclude Include="Kvm\Kvm\MockMouse.h" />
+    <ClInclude Include="Kvm\Kvm\MockVideoCapture.h" />
     <ClInclude Include="Kvm\Mouse.h" />
     <ClInclude Include="Kvm\VideoCapture.h" />
   </ItemGroup>

@@ -30,9 +30,6 @@
     <ClCompile Include="Kvm\HIDKeyboard.cpp" />
     <ClCompile Include="Kvm\HIDMouse.cpp" />
     <ClCompile Include="Kvm\KbdMouDevice.cpp" />
-    <ClCompile Include="Kvm\MockKeyboard.cpp" />
-    <ClCompile Include="Kvm\MockMouse.cpp" />
-    <ClCompile Include="Kvm\MockVideoCapture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command\Command.h" />
@@ -50,9 +47,6 @@
     <ClInclude Include="Kvm\HIDKeyboard.h" />
     <ClInclude Include="Kvm\HIDMouse.h" />
     <ClInclude Include="Kvm\KbdMouDevice.h" />
-    <ClInclude Include="Kvm\MockKeyboard.h" />
-    <ClInclude Include="Kvm\MockMouse.h" />
-    <ClInclude Include="Kvm\MockVideoCapture.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\AutoMacro.Core.vcxproj">

@@ -4,6 +4,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{8cc42c67-0de7-46b4-b001-404ad09ece23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kvm">
+      <UniqueIdentifier>{e0aaf3c6-6b9c-48f8-be9e-e9558a8cc425}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\DetectionResultTest.cpp">
@@ -22,8 +25,18 @@
     <ClCompile Include="Core\CommandsTest.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="..\KeyboardTest.cpp" />
+    <ClCompile Include="..\MouseTest.cpp" />
+    <ClCompile Include="Kvm\MockKeyboardTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
+    <ClCompile Include="Kvm\MockMouseTest.cpp">
+      <Filter>Kvm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
+    <ClInclude Include="..\KeyboardTest.h" />
+    <ClInclude Include="..\MouseTest.h" />
   </ItemGroup>
 </Project>

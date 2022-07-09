@@ -1,6 +1,8 @@
-#include "AutoMacro/Core/Core.h"
+#include "AutoMacro/Core/Kvm/Factory/MockDelayFactory.h"
 
-#include "AutoMacro/Core/Kvm/MockDelay.h"
+#include <memory>
+
+#include "AutoMacro/Core/Kvm/Kvm/MockDelay.h"
 
 namespace AutoMacro {
 namespace Factory {

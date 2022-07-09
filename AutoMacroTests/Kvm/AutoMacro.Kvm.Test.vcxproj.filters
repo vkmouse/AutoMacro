@@ -18,18 +18,6 @@
     <ClCompile Include="Kvm\HIDMouseTest.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
-    <ClCompile Include="Kvm\KeyboardTest.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Kvm\MockKeyboardTest.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Kvm\MockMouseTest.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Kvm\MouseTest.cpp">
-      <Filter>Kvm</Filter>
-    </ClCompile>
     <ClCompile Include="Command\SendKeyCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
@@ -48,16 +36,14 @@
     <ClCompile Include="Command\CommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="..\KeyboardTest.cpp" />
+    <ClCompile Include="..\MouseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Kvm\KeyboardTest.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
-    <ClInclude Include="Kvm\MouseTest.h">
-      <Filter>Kvm</Filter>
-    </ClInclude>
     <ClInclude Include="Command\CommandTest.h">
       <Filter>Command</Filter>
     </ClInclude>
+    <ClInclude Include="..\KeyboardTest.h" />
+    <ClInclude Include="..\MouseTest.h" />
   </ItemGroup>
 </Project>

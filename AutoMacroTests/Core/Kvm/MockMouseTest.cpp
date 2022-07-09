@@ -1,7 +1,7 @@
 #include <memory>
 
 #include "AutoMacro/Kvm/Kvm.h"
-#include "AutoMacroTests/Kvm/Kvm/MouseTest.h"
+#include "AutoMacroTests/MouseTest.h"
 #include "CppUnitTest.h"
 
 namespace AutoMacro {

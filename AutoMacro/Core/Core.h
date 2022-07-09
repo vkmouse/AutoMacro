@@ -12,9 +12,7 @@
 #include "AutoMacro/Core/Kvm/Kvm.h"
 #include "AutoMacro/Core/Kvm/Mouse.h"
 #include "AutoMacro/Core/Kvm/VideoCapture.h"
-
-namespace AutoMacro {
-namespace Factory {
-DLL_EXPORTS std::shared_ptr<Delay> createMockDelay();
-}  // namespace Factory
-}  // namespace AutoMacro
+#include "AutoMacro/Core/Kvm/Factory/MockDelayFactory.h"
+#include "AutoMacro/Core/Kvm/Factory/MockKeyboardFactory.h"
+#include "AutoMacro/Core/Kvm/Factory/MockMouseFactory.h"
+#include "AutoMacro/Core/Kvm/Factory/MockVideoCaptureFactory.h"
