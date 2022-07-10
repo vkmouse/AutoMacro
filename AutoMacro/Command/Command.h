@@ -10,3 +10,4 @@
 #include "AutoMacro/Command/Command/Factory/SendKeyCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/ShortcutCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/WaitForItemCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/WaitForItemsCommandFactory.h"

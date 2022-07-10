@@ -40,6 +40,9 @@
     <ClCompile Include="Command\CheckItemsExistenceCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\WaitForItemsCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandTest.h" />

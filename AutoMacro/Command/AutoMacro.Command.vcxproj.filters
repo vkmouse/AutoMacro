@@ -127,6 +127,15 @@
     <ClInclude Include="Command\Factory\CheckItemsExistenceCommandFactory.h">
       <Filter>Command\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Parameter\WaitForItemsCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WaitForItemsCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\WaitForItemsCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -190,6 +199,9 @@
       <Filter>Command\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Factory\CheckItemsExistenceCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\WaitForItemsCommandFactory.cpp">
       <Filter>Command\Factory</Filter>
     </ClCompile>
   </ItemGroup>

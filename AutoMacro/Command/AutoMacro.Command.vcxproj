@@ -33,6 +33,7 @@
     <ClInclude Include="Command\Command\SendKeyCommand.h" />
     <ClInclude Include="Command\Command\ShortcutCommand.h" />
     <ClInclude Include="Command\Command\WaitForItemCommand.h" />
+    <ClInclude Include="Command\Command\WaitForItemsCommand.h" />
     <ClInclude Include="Command\Command\WhileCommand.h" />
     <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CheckItemsExistenceCommandFactory.h" />
@@ -45,6 +46,7 @@
     <ClInclude Include="Command\Factory\SendKeyCommandFactory.h" />
     <ClInclude Include="Command\Factory\ShortcutCommandFactory.h" />
     <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h" />
+    <ClInclude Include="Command\Factory\WaitForItemsCommandFactory.h" />
     <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemsExistenceCommandParameter.h" />
@@ -56,6 +58,7 @@
     <ClInclude Include="Command\Parameter\SendKeyCommandParameter.h" />
     <ClInclude Include="Command\Parameter\ShortcutCommandParameter.h" />
     <ClInclude Include="Command\Parameter\WaitForItemCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\WaitForItemsCommandParameter.h" />
     <ClInclude Include="Command\Parameter\WhileCommandParameter.h" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +83,7 @@
     <ClCompile Include="Command\Factory\SendKeyCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\ShortcutCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\WaitForItemCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\WaitForItemsCommandFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\AutoMacro.Core.vcxproj">
