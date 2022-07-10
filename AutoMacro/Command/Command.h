@@ -6,6 +6,7 @@
 #include "AutoMacro/Command/Command/Factory/DesktopSwitchCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/DelayCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/EmptyCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/ExecuteUntilItemCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/MouseClickCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/SendKeyCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/ShortcutCommandFactory.h"

@@ -8,11 +8,11 @@ namespace AutoMacro {
 namespace CommandTest {
 using Microsoft::VisualStudio::CppUnitTestFramework::Assert;
 
-TEST_CLASS(WaitForItemCommandTest) {
+TEST_CLASS(ExecuteUntilItemCommandTest) {
 int delayBetweenRepeatitions = 1;
 
 public:
-TEST_METHOD(TestWaitForItemExist) {
+TEST_METHOD(TestExecuteUntilItemExist) {
     Histories h;
     std::vector<std::string> f = {
         "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png",
@@ -21,8 +21,10 @@ TEST_METHOD(TestWaitForItemExist) {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
+    DelayCommandParameter delayParameter(getKvm(&h, f));
+    delayParameter.ms = delayBetweenRepeatitions;
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+        Factory::createCommand(&delayParameter));
     p.setIsExpectedToExist(true);
 
     execute(&h, p);
@@ -47,7 +49,7 @@ TEST_METHOD(TestWaitForItemExist) {
     Assert::IsTrue(h[i++].equals("---"));
 }
 
-TEST_METHOD(TestWaitForItemDisappear) {
+TEST_METHOD(TestExecuteUntilItemDisappear) {
     Histories h;
     std::vector<std::string> f = {
         "images\\AutoMacroTests\\ItemExists_10x10_24bits.png",
@@ -56,8 +58,10 @@ TEST_METHOD(TestWaitForItemDisappear) {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
+    DelayCommandParameter delayParameter(getKvm(&h, f));
+    delayParameter.ms = delayBetweenRepeatitions;
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+        Factory::createCommand(&delayParameter));
     p.setIsExpectedToExist(false);
 
     execute(&h, p);

@@ -27,6 +27,7 @@
     <ClCompile Include="Command\DelayCommandTest.cpp" />
     <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
     <ClCompile Include="Command\EmptyCommandTest.cpp" />
+    <ClCompile Include="Command\ExecuteUntilItemCommandTest.cpp" />
     <ClCompile Include="Command\MouseClickCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />

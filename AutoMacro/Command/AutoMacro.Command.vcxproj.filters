@@ -136,6 +136,15 @@
     <ClInclude Include="Command\Factory\WaitForItemsCommandFactory.h">
       <Filter>Command\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Parameter\ExecuteUntilItemCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\ExecuteUntilItemCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\ExecuteUntilItemCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -202,6 +211,9 @@
       <Filter>Command\Factory</Filter>
     </ClCompile>
     <ClCompile Include="Command\Factory\WaitForItemsCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\ExecuteUntilItemCommandFactory.cpp">
       <Filter>Command\Factory</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,14 +4,15 @@
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Command/Command/Factory/CheckItemExistenceCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/DelayCommandFactory.h"
-#include "AutoMacro/Command/Command/Parameter/WhileCommandParameter.h"
+#include "AutoMacro/Command/Command/Factory/EmptyCommandFactory.h"
+#include "AutoMacro/Command/Command/Parameter/ExecuteUntilItemCommandParameter.h"
 
 namespace AutoMacro {
-class WaitForItemCommandParameter : public WhileCommandParameter {
+class WaitForItemCommandParameter : public ExecuteUntilItemCommandParameter {
  public:
     WaitForItemCommandParameter(Kvm kvm,
         std::shared_ptr<Detector> detector, int index, float threshold)
-        : existenceParameter(kvm, detector, index, threshold),
+        : ExecuteUntilItemCommandParameter(kvm, detector, index, threshold),
           delayParameter(kvm) {}
 
     void setDelayBetweenRepeatitions(int value) {
@@ -19,13 +20,7 @@ class WaitForItemCommandParameter : public WhileCommandParameter {
         executeCommand = Factory::createCommand(&delayParameter);
     }
 
-    void setIsExpectedToExist(bool value) {
-        existenceParameter.isExpectedToExist = value;
-        requestCommand = Factory::createTCommand(&existenceParameter);
-    }
-
  private:
-    CheckItemExistenceCommandParameter existenceParameter;
     DelayCommandParameter delayParameter;
 };
 }  // namespace AutoMacro
