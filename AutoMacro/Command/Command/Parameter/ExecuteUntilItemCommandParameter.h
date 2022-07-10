@@ -3,7 +3,6 @@
 
 #include "AutoMacro/Core/Core.h"
 #include "AutoMacro/Command/Command/Factory/CheckItemExistenceCommandFactory.h"
-#include "AutoMacro/Command/Command/Factory/DelayCommandFactory.h"
 #include "AutoMacro/Command/Command/Parameter/WhileCommandParameter.h"
 
 namespace AutoMacro {
@@ -14,6 +13,7 @@ class ExecuteUntilItemCommandParameter : public WhileCommandParameter {
         std::shared_ptr<Command> executeCommand)
         : existenceParameter(kvm, detector, index, threshold) {
         this->executeCommand = executeCommand;
+        requestCommand = Factory::createTCommand(&existenceParameter);
     }
 
     ExecuteUntilItemCommandParameter(Kvm kvm,

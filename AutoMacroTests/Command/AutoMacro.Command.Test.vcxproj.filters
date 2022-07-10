@@ -46,6 +46,9 @@
     <ClCompile Include="Command\ExecuteUntilItemCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\ExecuteUntilItemsCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandTest.h" />
