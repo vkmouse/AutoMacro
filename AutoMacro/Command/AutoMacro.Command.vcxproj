@@ -22,6 +22,7 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="Command\Command\CheckExistenceCommand.h" />
     <ClInclude Include="Command\Command\CheckItemExistenceCommand.h" />
+    <ClInclude Include="Command\Command\CheckItemsExistenceCommand.h" />
     <ClInclude Include="Command\Command\Commands.h" />
     <ClInclude Include="Command\Command\CounterCommand.h" />
     <ClInclude Include="Command\Command\DelayCommand.h" />
@@ -34,6 +35,7 @@
     <ClInclude Include="Command\Command\WaitForItemCommand.h" />
     <ClInclude Include="Command\Command\WhileCommand.h" />
     <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h" />
+    <ClInclude Include="Command\Factory\CheckItemsExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CommandsFactory.h" />
     <ClInclude Include="Command\Factory\CounterCommandFactory.h" />
     <ClInclude Include="Command\Factory\DelayCommandFactory.h" />
@@ -45,6 +47,7 @@
     <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h" />
     <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\CheckItemsExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CounterCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DelayCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DesktopSwitchCommandParameter.h" />
@@ -57,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CheckItemExistenceCommand.cpp" />
+    <ClCompile Include="Command\Command\CheckItemsExistenceCommand.cpp" />
     <ClCompile Include="Command\Command\Commands.cpp" />
     <ClCompile Include="Command\Command\CounterCommand.cpp" />
     <ClCompile Include="Command\Command\DelayCommand.cpp" />
@@ -66,6 +70,7 @@
     <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
     <ClCompile Include="Command\Command\WhileCommand.cpp" />
     <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\CheckItemsExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CommandsFactory.cpp" />
     <ClCompile Include="Command\Factory\CounterCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\DelayCommandFactory.cpp" />

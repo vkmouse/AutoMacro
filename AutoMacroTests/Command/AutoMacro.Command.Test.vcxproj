@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="CommandTest.cpp" />
     <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp" />
+    <ClCompile Include="Command\CheckItemsExistenceCommandTest.cpp" />
     <ClCompile Include="Command\CommandsTest.cpp" />
     <ClCompile Include="Command\CounterCommandTest.cpp" />
     <ClCompile Include="Command\DelayCommandTest.cpp" />
