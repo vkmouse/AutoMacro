@@ -13,9 +13,6 @@
     <Filter Include="Detection">
       <UniqueIdentifier>{bfa8ace3-eb6e-49b3-aa5c-d6a0edc0756d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Command">
-      <UniqueIdentifier>{8635a90e-1834-4967-b692-37254de08039}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Models">
       <UniqueIdentifier>{967067f1-798b-4594-a698-438f3a121677}</UniqueIdentifier>
     </Filter>
@@ -36,21 +33,9 @@
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Command\WaitForItemCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\WaitForItemsCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="..\AssertExtension.cpp" />
-    <ClCompile Include="Command\CommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp">
       <Filter>Detection</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp">
-      <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,8 +78,5 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
-    <ClInclude Include="Command\CommandTest.h">
-      <Filter>Command</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

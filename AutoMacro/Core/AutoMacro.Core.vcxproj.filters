@@ -7,21 +7,8 @@
     <ClCompile Include="Core\Types.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Command\Commands.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Detection\DetectionResult.cpp">
       <Filter>Detection</Filter>
-    </ClCompile>
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="Command\CounterCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\WhileCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\DelayCommand.cpp">
-      <Filter>Command</Filter>
     </ClCompile>
     <ClCompile Include="Kvm\Kvm\MockKeyboard.cpp">
       <Filter>Kvm\Kvm</Filter>
@@ -40,6 +27,9 @@
     </ClCompile>
     <ClCompile Include="Kvm\Factory\MockVideoCaptureFactory.cpp">
       <Filter>Kvm\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\CommandFactory.cpp">
+      <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,18 +58,6 @@
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Core.h" />
-    <ClInclude Include="Command\KvmCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\KvmCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\Commands.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CommandsParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="Detection\DetectionResult.h">
       <Filter>Detection</Filter>
     </ClInclude>
@@ -89,32 +67,7 @@
     <ClInclude Include="ImageProcessor\ImageProcessor.h">
       <Filter>ImageProcessor</Filter>
     </ClInclude>
-    <ClInclude Include="Command\EmptyCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="Command\Command.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="Command\CounterCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CounterCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\TCommandAdapter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WhileCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WhileCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\DelayCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\DelayCommandParameter.h">
       <Filter>Command</Filter>
     </ClInclude>
     <ClInclude Include="Kvm\Kvm\MockKeyboard.h">
@@ -140,6 +93,9 @@
     </ClInclude>
     <ClInclude Include="Kvm\Factory\MockVideoCaptureFactory.h">
       <Filter>Kvm\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\CommandFactory.h">
+      <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -19,12 +19,6 @@
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="..\AssertExtension.cpp" />
-    <ClCompile Include="Core\CommandTest.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\CommandsTest.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="..\KeyboardTest.cpp" />
     <ClCompile Include="..\MouseTest.cpp" />
     <ClCompile Include="Kvm\MockKeyboardTest.cpp">

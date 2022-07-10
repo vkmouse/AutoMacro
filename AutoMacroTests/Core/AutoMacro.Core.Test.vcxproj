@@ -27,8 +27,6 @@
     <ClCompile Include="..\AssertExtension.cpp" />
     <ClCompile Include="..\KeyboardTest.cpp" />
     <ClCompile Include="..\MouseTest.cpp" />
-    <ClCompile Include="Core\CommandsTest.cpp" />
-    <ClCompile Include="Core\CommandTest.cpp" />
     <ClCompile Include="Core\DetectionResultTest.cpp" />
     <ClCompile Include="Core\ImageTest.cpp" />
     <ClCompile Include="Core\TypesTest.cpp" />

@@ -3,7 +3,6 @@
 #include <string>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacro/Cv/Command/Command.h"
 #include "AutoMacro/Cv/Detection/Detection.h"
 #include "AutoMacro/Cv/ImageProcessor/ImageProcessor.h"
 #include "AutoMacro/Cv/Kvm/Kvm.h"

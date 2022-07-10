@@ -4,9 +4,6 @@
     <Filter Include="Kvm">
       <UniqueIdentifier>{4801340e-fcc0-41f0-8493-3adf95e1443e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Command">
-      <UniqueIdentifier>{3bb9a76c-68bb-4170-bdee-36cb6d9e14cf}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Kvm\DesktopCaptureTest.cpp">
@@ -18,31 +15,13 @@
     <ClCompile Include="Kvm\HIDMouseTest.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
-    <ClCompile Include="Command\SendKeyCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\ShortcutCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\MouseClickCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\DesktopSwitchCommandTest.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Kvm\ActualDelayTest.cpp">
       <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\CommandTest.cpp">
-      <Filter>Command</Filter>
     </ClCompile>
     <ClCompile Include="..\KeyboardTest.cpp" />
     <ClCompile Include="..\MouseTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Command\CommandTest.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="..\KeyboardTest.h" />
     <ClInclude Include="..\MouseTest.h" />
   </ItemGroup>

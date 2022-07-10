@@ -19,11 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Command\CheckItemExistenceCommandFactory.cpp" />
-    <ClCompile Include="Command\Command.cpp" />
-    <ClCompile Include="Command\CheckItemExistenceCommand.cpp" />
-    <ClCompile Include="Command\WaitForCommand.cpp" />
-    <ClCompile Include="Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Cv.cpp" />
     <ClCompile Include="Detection\BaseDetector.cpp" />
     <ClCompile Include="Detection\Detection.cpp" />
@@ -34,18 +29,6 @@
     <ClCompile Include="ImageProcessor\ImageProcessor.cpp" />
     <ClCompile Include="Kvm\ImageFileCapture.cpp" />
     <ClCompile Include="Kvm\Kvm.cpp" />
-    <ClInclude Include="Command\CheckExistenceCommand.h" />
-    <ClInclude Include="Command\CheckExistenceCommandParameter.h" />
-    <ClInclude Include="Command\CheckItemExistenceCommandFactory.h" />
-    <ClInclude Include="Command\CheckItemExistenceCommandParameter.h" />
-    <ClInclude Include="Command\Command.h" />
-    <ClInclude Include="Command\CheckItemExistenceCommand.h" />
-    <ClInclude Include="Command\WaitForCommand.h" />
-    <ClInclude Include="Command\WaitForCommandParameter.h" />
-    <ClInclude Include="Command\WaitForItemCommand.h" />
-    <ClInclude Include="Command\WaitForItemCommandParameter.h" />
-    <ClInclude Include="Command\WaitForItemsCommand.h" />
-    <ClInclude Include="Command\WaitForItemsCommandParameter.h" />
     <ClInclude Include="Cv.h" />
     <ClInclude Include="Detection\BaseDetector.h" />
     <ClInclude Include="Detection\Detection.h" />

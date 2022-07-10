@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Command\Command\CheckExistenceCommand.h" />
+    <ClInclude Include="Command\Command\CheckItemExistenceCommand.h" />
+    <ClInclude Include="Command\Command\Commands.h" />
+    <ClInclude Include="Command\Command\CounterCommand.h" />
+    <ClInclude Include="Command\Command\DelayCommand.h" />
+    <ClInclude Include="Command\Command\DesktopSwitchCommand.h" />
+    <ClInclude Include="Command\Command\EmptyCommand.h" />
+    <ClInclude Include="Command\Command\KvmCommand.h" />
+    <ClInclude Include="Command\Command\MouseClickCommand.h" />
+    <ClInclude Include="Command\Command\SendKeyCommand.h" />
+    <ClInclude Include="Command\Command\ShortcutCommand.h" />
+    <ClInclude Include="Command\Command\WaitForItemCommand.h" />
+    <ClInclude Include="Command\Command\WhileCommand.h" />
+    <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h" />
+    <ClInclude Include="Command\Factory\CommandsFactory.h" />
+    <ClInclude Include="Command\Factory\CounterCommandFactory.h" />
+    <ClInclude Include="Command\Factory\DelayCommandFactory.h" />
+    <ClInclude Include="Command\Factory\DesktopSwitchCommandFactory.h" />
+    <ClInclude Include="Command\Factory\EmptyCommandFactory.h" />
+    <ClInclude Include="Command\Factory\MouseClickCommandFactory.h" />
+    <ClInclude Include="Command\Factory\SendKeyCommandFactory.h" />
+    <ClInclude Include="Command\Factory\ShortcutCommandFactory.h" />
+    <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h" />
+    <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\CounterCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\DelayCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\DesktopSwitchCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\KvmCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\MouseClickCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\SendKeyCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\ShortcutCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\WaitForItemCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\WhileCommandParameter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Command\Command\CheckItemExistenceCommand.cpp" />
+    <ClCompile Include="Command\Command\Commands.cpp" />
+    <ClCompile Include="Command\Command\CounterCommand.cpp" />
+    <ClCompile Include="Command\Command\DelayCommand.cpp" />
+    <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
+    <ClCompile Include="Command\Command\MouseClickCommand.cpp" />
+    <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
+    <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
+    <ClCompile Include="Command\Command\WhileCommand.cpp" />
+    <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\CommandsFactory.cpp" />
+    <ClCompile Include="Command\Factory\CounterCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\DelayCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\DesktopSwitchCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\EmptyCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\MouseClickCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\SendKeyCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\ShortcutCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\WaitForItemCommandFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\AutoMacro.Core.vcxproj">
+      <Project>{50f13574-316f-41fd-ab3c-91172c559a60}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\AutoMacro.Util.vcxproj">
+      <Project>{cc8580ba-dd42-4df7-b0d4-76d87847009c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7d965337-2304-43e1-94e1-116186765482}</ProjectGuid>
+    <RootNamespace>AutoMacroCommand</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;AUTOMACROCOMMAND_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;AUTOMACROCOMMAND_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;AUTOMACROCOMMAND_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;AUTOMACROCOMMAND_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

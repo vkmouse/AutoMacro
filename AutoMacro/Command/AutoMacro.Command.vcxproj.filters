@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Command">
+      <UniqueIdentifier>{433379f6-1194-450c-8c28-1730d168c84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\Command">
+      <UniqueIdentifier>{a8da07bb-4069-431a-92ec-82cbd2c87f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\Parameter">
+      <UniqueIdentifier>{5f4b8741-3516-49d6-ae11-c1a8dd67e841}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command\Factory">
+      <UniqueIdentifier>{fbdaac41-9c01-4e5c-a200-ee4648da3244}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Command\Parameter\CounterCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\CounterCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\CounterCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Command\Factory\EmptyCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\EmptyCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\Commands.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\CommandsFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WhileCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\WhileCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\KvmCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\KvmCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\DelayCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\DelayCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\DelayCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\ShortcutCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\ShortcutCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\ShortcutCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\DesktopSwitchCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\DesktopSwitchCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\DesktopSwitchCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\SendKeyCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\SendKeyCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\SendKeyCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\MouseClickCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\MouseClickCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\MouseClickCommandFactory.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\CheckExistenceCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\CheckItemExistenceCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\WaitForItemCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\WaitForItemCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Command\Command\CounterCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\CounterCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\EmptyCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\Commands.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\CommandsFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WhileCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\DelayCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\DelayCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ShortcutCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\ShortcutCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\DesktopSwitchCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\SendKeyCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\SendKeyCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\MouseClickCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\MouseClickCommandFactory.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\CheckItemExistenceCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\WaitForItemCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

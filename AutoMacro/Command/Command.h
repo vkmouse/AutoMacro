@@ -1,0 +1,11 @@
+#pragma once
+#include "AutoMacro/Command/Command/Factory/CheckItemExistenceCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/CommandsFactory.h"
+#include "AutoMacro/Command/Command/Factory/CounterCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/DesktopSwitchCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/DelayCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/EmptyCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/MouseClickCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/SendKeyCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/ShortcutCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/WaitForItemCommandFactory.h"

@@ -2,7 +2,6 @@
 #include <memory>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacro/Kvm/Command/Command.h"
 
 namespace AutoMacro {
 namespace Factory {

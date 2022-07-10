@@ -17,9 +17,6 @@
     <Filter Include="Detection">
       <UniqueIdentifier>{bb042b1a-b9dc-4e92-b8d7-410b2e7d35bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Command">
-      <UniqueIdentifier>{8b4e55ce-a9e3-482d-a1f8-82aa89d725ec}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cv.cpp" />
@@ -38,32 +35,17 @@
     <ClCompile Include="Detection\TemplateBasedDetector.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
-    <ClCompile Include="Command\WaitForCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\WaitForItemsCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Detection\Detection.cpp">
       <Filter>Detection</Filter>
     </ClCompile>
     <ClCompile Include="ImageProcessor\ImageProcessor.cpp">
       <Filter>ImageProcessor</Filter>
     </ClCompile>
-    <ClCompile Include="Command\Command.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Kvm\Kvm.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
     <ClCompile Include="Detection\NetworkBasedDetector.cpp">
       <Filter>Detection</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\CheckItemExistenceCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\CheckItemExistenceCommandFactory.cpp">
-      <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,53 +65,17 @@
     <ClInclude Include="Detection\TemplateBasedDetector.h">
       <Filter>Detection</Filter>
     </ClInclude>
-    <ClInclude Include="Command\WaitForCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemsCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\WaitForItemsCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="Detection\Detection.h">
       <Filter>Detection</Filter>
     </ClInclude>
     <ClInclude Include="ImageProcessor\ImageProcessor.h">
       <Filter>ImageProcessor</Filter>
     </ClInclude>
-    <ClInclude Include="Command\Command.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="Kvm\Kvm.h">
       <Filter>Kvm</Filter>
     </ClInclude>
     <ClInclude Include="Detection\NetworkBasedDetector.h">
       <Filter>Detection</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CheckItemExistenceCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CheckExistenceCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CheckItemExistenceCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CheckExistenceCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\CheckItemExistenceCommandFactory.h">
-      <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

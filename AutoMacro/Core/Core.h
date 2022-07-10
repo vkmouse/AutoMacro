@@ -1,9 +1,10 @@
 #pragma once
 #include <memory>
 
-#include "AutoMacro/Core/Command.h"
 #include "AutoMacro/Core/Core/Image.h"
 #include "AutoMacro/Core/Core/Types.h"
+#include "AutoMacro/Core/Command/Command.h"
+#include "AutoMacro/Core/Command/CommandFactory.h"
 #include "AutoMacro/Core/Detection/DetectionResult.h"
 #include "AutoMacro/Core/Detection/Detector.h"
 #include "AutoMacro/Core/ImageProcessor/ImageProcessor.h"

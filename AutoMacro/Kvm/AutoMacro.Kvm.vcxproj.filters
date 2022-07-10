@@ -4,9 +4,6 @@
     <Filter Include="Kvm">
       <UniqueIdentifier>{6a837b0c-08c6-40da-8abe-51b068563d7f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Command">
-      <UniqueIdentifier>{b808391c-f00a-47a8-a6d0-f32897cb7ee8}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Kvm.cpp" />
@@ -22,23 +19,8 @@
     <ClCompile Include="Kvm\DesktopCapture.cpp">
       <Filter>Kvm</Filter>
     </ClCompile>
-    <ClCompile Include="Command\SendKeyCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\ShortcutCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\MouseClickCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\DesktopSwitchCommand.cpp">
-      <Filter>Command</Filter>
-    </ClCompile>
     <ClCompile Include="Kvm\ActualDelay.cpp">
       <Filter>Kvm</Filter>
-    </ClCompile>
-    <ClCompile Include="Command\Command.cpp">
-      <Filter>Command</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,35 +37,8 @@
     <ClInclude Include="Kvm\DesktopCapture.h">
       <Filter>Kvm</Filter>
     </ClInclude>
-    <ClInclude Include="Command\SendKeyCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\SendKeyCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\ShortcutCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\ShortCutCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\MouseClickCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\MouseClickCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\DesktopSwitchCommand.h">
-      <Filter>Command</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\DesktopSwitchCommandParameter.h">
-      <Filter>Command</Filter>
-    </ClInclude>
     <ClInclude Include="Kvm\ActualDelay.h">
       <Filter>Kvm</Filter>
-    </ClInclude>
-    <ClInclude Include="Command\Command.h">
-      <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

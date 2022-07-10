@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Command">
+      <UniqueIdentifier>{199cd930-7ee3-4b3e-b7be-ce484c449d03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Command\CounterCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\EmptyCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\CommandsTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\DelayCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\ShortcutCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandTest.cpp" />
+    <ClCompile Include="Command\DesktopSwitchCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\SendKeyCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\MouseClickCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\WaitForItemCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommandTest.h" />
+  </ItemGroup>
+</Project>

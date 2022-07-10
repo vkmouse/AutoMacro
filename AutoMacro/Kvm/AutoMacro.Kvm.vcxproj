@@ -19,11 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Command\Command.cpp" />
-    <ClCompile Include="Command\DesktopSwitchCommand.cpp" />
-    <ClCompile Include="Command\MouseClickCommand.cpp" />
-    <ClCompile Include="Command\SendKeyCommand.cpp" />
-    <ClCompile Include="Command\ShortcutCommand.cpp" />
     <ClCompile Include="Kvm.cpp" />
     <ClCompile Include="Kvm\ActualDelay.cpp" />
     <ClCompile Include="Kvm\DesktopCapture.cpp" />
@@ -32,15 +27,6 @@
     <ClCompile Include="Kvm\KbdMouDevice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Command\Command.h" />
-    <ClInclude Include="Command\DesktopSwitchCommand.h" />
-    <ClInclude Include="Command\DesktopSwitchCommandParameter.h" />
-    <ClInclude Include="Command\MouseClickCommand.h" />
-    <ClInclude Include="Command\MouseClickCommandParameter.h" />
-    <ClInclude Include="Command\SendKeyCommand.h" />
-    <ClInclude Include="Command\SendKeyCommandParameter.h" />
-    <ClInclude Include="Command\ShortcutCommand.h" />
-    <ClInclude Include="Command\ShortCutCommandParameter.h" />
     <ClInclude Include="Kvm.h" />
     <ClInclude Include="Kvm\ActualDelay.h" />
     <ClInclude Include="Kvm\DesktopCapture.h" />

@@ -20,10 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AssertExtension.cpp" />
-    <ClCompile Include="Command\CommandTest.cpp" />
-    <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp" />
-    <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
-    <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
     <ClCompile Include="Detection\NetworkBasedDetectorTest.cpp" />
     <ClCompile Include="Detection\TemplateBasedDetectorTest.cpp" />
     <ClCompile Include="ImageProcessor\BGRConverterProcessorTest.cpp" />
@@ -81,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssertExtension.h" />
-    <ClInclude Include="Command\CommandTest.h" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="Models\AutoMacroTests\TestModel\saved_model.bin">

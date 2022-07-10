@@ -32,11 +32,6 @@
   <ItemGroup>
     <ClCompile Include="..\KeyboardTest.cpp" />
     <ClCompile Include="..\MouseTest.cpp" />
-    <ClCompile Include="Command\CommandTest.cpp" />
-    <ClCompile Include="Command\DesktopSwitchCommandTest.cpp" />
-    <ClCompile Include="Command\MouseClickCommandTest.cpp" />
-    <ClCompile Include="Command\SendKeyCommandTest.cpp" />
-    <ClCompile Include="Command\ShortcutCommandTest.cpp" />
     <ClCompile Include="Kvm\ActualDelayTest.cpp" />
     <ClCompile Include="Kvm\DesktopCaptureTest.cpp" />
     <ClCompile Include="Kvm\HIDKeyboardTest.cpp" />
@@ -45,7 +40,6 @@
   <ItemGroup>
     <ClInclude Include="..\KeyboardTest.h" />
     <ClInclude Include="..\MouseTest.h" />
-    <ClInclude Include="Command\CommandTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
