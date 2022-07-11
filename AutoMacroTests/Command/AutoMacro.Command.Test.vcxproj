@@ -30,6 +30,7 @@
     <ClCompile Include="Command\EmptyCommandTest.cpp" />
     <ClCompile Include="Command\ExecuteUntilItemCommandTest.cpp" />
     <ClCompile Include="Command\ExecuteUntilItemsCommandTest.cpp" />
+    <ClCompile Include="Command\LogicalOperationCommandTest.cpp" />
     <ClCompile Include="Command\MouseClickCommandTest.cpp" />
     <ClCompile Include="Command\SendKeyCommandTest.cpp" />
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />

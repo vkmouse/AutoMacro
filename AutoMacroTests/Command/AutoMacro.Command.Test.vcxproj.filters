@@ -52,6 +52,9 @@
     <ClCompile Include="Command\ComparisonOperationCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\LogicalOperationCommandTest.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandTest.h" />

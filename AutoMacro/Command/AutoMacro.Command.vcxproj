@@ -32,6 +32,7 @@
     <ClInclude Include="Command\Command\ExecuteUntilItemCommand.h" />
     <ClInclude Include="Command\Command\ExecuteUntilItemsCommand.h" />
     <ClInclude Include="Command\Command\KvmCommand.h" />
+    <ClInclude Include="Command\Command\LogicalOperationCommand.h" />
     <ClInclude Include="Command\Command\MouseClickCommand.h" />
     <ClInclude Include="Command\Command\SendKeyCommand.h" />
     <ClInclude Include="Command\Command\ShortcutCommand.h" />
@@ -48,6 +49,7 @@
     <ClInclude Include="Command\Factory\EmptyCommandFactory.h" />
     <ClInclude Include="Command\Factory\ExecuteUntilItemCommandFactory.h" />
     <ClInclude Include="Command\Factory\ExecuteUntilItemsCommandFactory.h" />
+    <ClInclude Include="Command\Factory\LogicalOperationCommandFactory.h" />
     <ClInclude Include="Command\Factory\MouseClickCommandFactory.h" />
     <ClInclude Include="Command\Factory\SendKeyCommandFactory.h" />
     <ClInclude Include="Command\Factory\ShortcutCommandFactory.h" />
@@ -63,6 +65,7 @@
     <ClInclude Include="Command\Parameter\ExecuteUntilItemCommandParameter.h" />
     <ClInclude Include="Command\Parameter\ExecuteUntilItemsCommandParameter.h" />
     <ClInclude Include="Command\Parameter\KvmCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\LogicalOperationCommandParameter.h" />
     <ClInclude Include="Command\Parameter\MouseClickCommandParameter.h" />
     <ClInclude Include="Command\Parameter\SendKeyCommandParameter.h" />
     <ClInclude Include="Command\Parameter\ShortcutCommandParameter.h" />
@@ -78,6 +81,7 @@
     <ClCompile Include="Command\Command\CounterCommand.cpp" />
     <ClCompile Include="Command\Command\DelayCommand.cpp" />
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
+    <ClCompile Include="Command\Command\LogicalOperationCommand.cpp" />
     <ClCompile Include="Command\Command\MouseClickCommand.cpp" />
     <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
     <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
@@ -92,6 +96,7 @@
     <ClCompile Include="Command\Factory\EmptyCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\ExecuteUntilItemCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\ExecuteUntilItemsCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\LogicalOperationCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\MouseClickCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\SendKeyCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\ShortcutCommandFactory.cpp" />

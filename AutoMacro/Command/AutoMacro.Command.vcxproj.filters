@@ -163,6 +163,15 @@
     <ClInclude Include="Command\Command\ComparisonOperationCommand.h">
       <Filter>Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Parameter\LogicalOperationCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\LogicalOperationCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\LogicalOperationCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -241,6 +250,12 @@
       <Filter>Command\Factory</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command\ComparisonOperationCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\LogicalOperationCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\LogicalOperationCommand.cpp">
       <Filter>Command\Command</Filter>
     </ClCompile>
   </ItemGroup>

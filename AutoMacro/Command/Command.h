@@ -9,6 +9,7 @@
 #include "AutoMacro/Command/Command/Factory/EmptyCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/ExecuteUntilItemCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/ExecuteUntilItemsCommandFactory.h"
+#include "AutoMacro/Command/Command/Factory/LogicalOperationCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/MouseClickCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/SendKeyCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/ShortcutCommandFactory.h"
