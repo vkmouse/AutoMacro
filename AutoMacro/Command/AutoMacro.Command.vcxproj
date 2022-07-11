@@ -24,6 +24,7 @@
     <ClInclude Include="Command\Command\CheckItemExistenceCommand.h" />
     <ClInclude Include="Command\Command\CheckItemsExistenceCommand.h" />
     <ClInclude Include="Command\Command\Commands.h" />
+    <ClInclude Include="Command\Command\ComparisonOperationCommand.h" />
     <ClInclude Include="Command\Command\CounterCommand.h" />
     <ClInclude Include="Command\Command\DelayCommand.h" />
     <ClInclude Include="Command\Command\DesktopSwitchCommand.h" />
@@ -40,6 +41,7 @@
     <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CheckItemsExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CommandsFactory.h" />
+    <ClInclude Include="Command\Factory\ComparisonOperationCommandFactory.h" />
     <ClInclude Include="Command\Factory\CounterCommandFactory.h" />
     <ClInclude Include="Command\Factory\DelayCommandFactory.h" />
     <ClInclude Include="Command\Factory\DesktopSwitchCommandFactory.h" />
@@ -54,6 +56,7 @@
     <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemsExistenceCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\ComparisonOperationCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CounterCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DelayCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DesktopSwitchCommandParameter.h" />
@@ -71,6 +74,7 @@
     <ClCompile Include="Command\Command\CheckItemExistenceCommand.cpp" />
     <ClCompile Include="Command\Command\CheckItemsExistenceCommand.cpp" />
     <ClCompile Include="Command\Command\Commands.cpp" />
+    <ClCompile Include="Command\Command\ComparisonOperationCommand.cpp" />
     <ClCompile Include="Command\Command\CounterCommand.cpp" />
     <ClCompile Include="Command\Command\DelayCommand.cpp" />
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
@@ -81,6 +85,7 @@
     <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CheckItemsExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CommandsFactory.cpp" />
+    <ClCompile Include="Command\Factory\ComparisonOperationCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CounterCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\DelayCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\DesktopSwitchCommandFactory.cpp" />

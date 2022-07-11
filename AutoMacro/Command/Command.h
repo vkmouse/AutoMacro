@@ -2,6 +2,7 @@
 #include "AutoMacro/Command/Command/Factory/CheckItemExistenceCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CheckItemsExistenceCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CommandsFactory.h"
+#include "AutoMacro/Command/Command/Factory/ComparisonOperationCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CounterCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/DesktopSwitchCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/DelayCommandFactory.h"

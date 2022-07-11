@@ -154,6 +154,15 @@
     <ClInclude Include="Command\Factory\ExecuteUntilItemsCommandFactory.h">
       <Filter>Command\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Parameter\ComparisonOperationCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\ComparisonOperationCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\ComparisonOperationCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -227,6 +236,12 @@
     </ClCompile>
     <ClCompile Include="Command\Factory\ExecuteUntilItemsCommandFactory.cpp">
       <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\ComparisonOperationCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ComparisonOperationCommand.cpp">
+      <Filter>Command\Command</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
