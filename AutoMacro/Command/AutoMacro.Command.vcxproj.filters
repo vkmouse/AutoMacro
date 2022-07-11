@@ -172,6 +172,15 @@
     <ClInclude Include="Command\Command\LogicalOperationCommand.h">
       <Filter>Command\Command</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Command\ArithmeticOperationCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Factory\ArithmeticOperationCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Parameter\ArithmeticOperationCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -257,6 +266,12 @@
     </ClCompile>
     <ClCompile Include="Command\Command\LogicalOperationCommand.cpp">
       <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ArithmeticOperationCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\ArithmeticOperationCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

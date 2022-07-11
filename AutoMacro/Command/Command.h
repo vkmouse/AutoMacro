@@ -1,4 +1,5 @@
 #pragma once
+#include "AutoMacro/Command/Command/Factory/ArithmeticOperationCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CheckItemExistenceCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CheckItemsExistenceCommandFactory.h"
 #include "AutoMacro/Command/Command/Factory/CommandsFactory.h"

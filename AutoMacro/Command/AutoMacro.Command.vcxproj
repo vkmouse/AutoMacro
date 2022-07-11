@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.h" />
+    <ClInclude Include="Command\Command\ArithmeticOperationCommand.h" />
     <ClInclude Include="Command\Command\CheckExistenceCommand.h" />
     <ClInclude Include="Command\Command\CheckItemExistenceCommand.h" />
     <ClInclude Include="Command\Command\CheckItemsExistenceCommand.h" />
@@ -39,6 +40,7 @@
     <ClInclude Include="Command\Command\WaitForItemCommand.h" />
     <ClInclude Include="Command\Command\WaitForItemsCommand.h" />
     <ClInclude Include="Command\Command\WhileCommand.h" />
+    <ClInclude Include="Command\Factory\ArithmeticOperationCommandFactory.h" />
     <ClInclude Include="Command\Factory\CheckItemExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CheckItemsExistenceCommandFactory.h" />
     <ClInclude Include="Command\Factory\CommandsFactory.h" />
@@ -55,6 +57,7 @@
     <ClInclude Include="Command\Factory\ShortcutCommandFactory.h" />
     <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h" />
     <ClInclude Include="Command\Factory\WaitForItemsCommandFactory.h" />
+    <ClInclude Include="Command\Parameter\ArithmeticOperationCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemsExistenceCommandParameter.h" />
@@ -74,6 +77,7 @@
     <ClInclude Include="Command\Parameter\WhileCommandParameter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Command\Command\ArithmeticOperationCommand.cpp" />
     <ClCompile Include="Command\Command\CheckItemExistenceCommand.cpp" />
     <ClCompile Include="Command\Command\CheckItemsExistenceCommand.cpp" />
     <ClCompile Include="Command\Command\Commands.cpp" />
@@ -86,6 +90,7 @@
     <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
     <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
     <ClCompile Include="Command\Command\WhileCommand.cpp" />
+    <ClCompile Include="Command\Factory\ArithmeticOperationCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CheckItemsExistenceCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CommandsFactory.cpp" />

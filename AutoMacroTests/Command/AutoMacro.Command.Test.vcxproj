@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CommandTest.cpp" />
+    <ClCompile Include="Command\ArithmeticOperationCommandTest.cpp" />
     <ClCompile Include="Command\CheckItemExistenceCommandTest.cpp" />
     <ClCompile Include="Command\CheckItemsExistenceCommandTest.cpp" />
     <ClCompile Include="Command\CommandsTest.cpp" />
