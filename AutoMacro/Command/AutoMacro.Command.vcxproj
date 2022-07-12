@@ -30,6 +30,7 @@
     <ClInclude Include="Command\Command\DelayCommand.h" />
     <ClInclude Include="Command\Command\DesktopSwitchCommand.h" />
     <ClInclude Include="Command\Command\EmptyCommand.h" />
+    <ClInclude Include="Command\Command\ExecuteUntilCommand.h" />
     <ClInclude Include="Command\Command\ExecuteUntilItemCommand.h" />
     <ClInclude Include="Command\Command\ExecuteUntilItemsCommand.h" />
     <ClInclude Include="Command\Command\KvmCommand.h" />
@@ -66,6 +67,7 @@
     <ClInclude Include="Command\Parameter\CounterCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DelayCommandParameter.h" />
     <ClInclude Include="Command\Parameter\DesktopSwitchCommandParameter.h" />
+    <ClInclude Include="Command\Parameter\ExecuteUntilCommandParameter.h" />
     <ClInclude Include="Command\Parameter\ExecuteUntilItemCommandParameter.h" />
     <ClInclude Include="Command\Parameter\ExecuteUntilItemsCommandParameter.h" />
     <ClInclude Include="Command\Parameter\KvmCommandParameter.h" />
@@ -86,6 +88,7 @@
     <ClCompile Include="Command\Command\CounterCommand.cpp" />
     <ClCompile Include="Command\Command\DelayCommand.cpp" />
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
+    <ClCompile Include="Command\Command\ExecuteUntilCommand.cpp" />
     <ClCompile Include="Command\Command\ExecuteUntilItemCommand.cpp" />
     <ClCompile Include="Command\Command\ExecuteUntilItemsCommand.cpp" />
     <ClCompile Include="Command\Command\LogicalOperationCommand.cpp" />

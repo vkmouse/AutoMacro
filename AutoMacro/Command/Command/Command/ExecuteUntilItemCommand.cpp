@@ -7,14 +7,21 @@
 namespace AutoMacro {
 namespace Impl {
 ExecuteUntilItemCommand::ExecuteUntilItemCommand(
-        ExecuteUntilItemCommandParameter* p) {
-    setExecuteCommand(p->executeCommand);
+    ExecuteUntilItemCommandParameter* p)
+    : ExecuteUntilCommand(p),
+      executeCommand(p->executeCommand),
+      checkItemExistenceCommandParameter(p) {
+}
 
-    CheckItemExistenceCommandParameter* cp = p;
-    LogicalOperationCommandParameter lp(
-        Factory::createTCommand(cp), true, LogicalOperator::XOR);
-    auto requestCommand = Factory::createTCommand(&lp);
-    setRequestCommand(requestCommand);
+std::shared_ptr<Command> ExecuteUntilItemCommand::createExecuteCommand() {
+    return executeCommand;
+}
+
+std::shared_ptr<TCommand<bool>>
+ExecuteUntilItemCommand::createRequestCommand() {
+    auto cmd = Factory::createTCommand(checkItemExistenceCommandParameter);
+    LogicalOperationCommandParameter lp(cmd, true, LogicalOperator::XOR);
+    return Factory::createTCommand(&lp);
 }
 }  // namespace Impl
 }  // namespace AutoMacro

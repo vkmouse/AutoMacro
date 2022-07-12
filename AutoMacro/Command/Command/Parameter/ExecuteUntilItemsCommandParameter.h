@@ -3,12 +3,13 @@
 #include <vector>
 
 #include "AutoMacro/Core/Core.h"
-#include "AutoMacro/Command/Command/Factory/CheckItemsExistenceCommandFactory.h"
-#include "AutoMacro/Command/Command/Parameter/WhileCommandParameter.h"
+#include "AutoMacro/Command/Command/Parameter/CheckItemsExistenceCommandParameter.h"
+#include "AutoMacro/Command/Command/Parameter/ExecuteUntilCommandParameter.h"
 
 namespace AutoMacro {
 class ExecuteUntilItemsCommandParameter
-    : public CheckItemsExistenceCommandParameter {
+    : public ExecuteUntilCommandParameter,
+      public CheckItemsExistenceCommandParameter {
  public:
     ExecuteUntilItemsCommandParameter(Kvm kvm,
         std::vector<std::shared_ptr<Detector>> detectors,
@@ -24,8 +25,6 @@ class ExecuteUntilItemsCommandParameter
         std::shared_ptr<Command> executeCommand)
         : CheckItemsExistenceCommandParameter(
             kvm, detectors, indices, thresholds),
-          executeCommand(executeCommand) {}
-
-    std::shared_ptr<Command> executeCommand = nullptr;
+          ExecuteUntilCommandParameter(executeCommand, nullptr) {}
 };
 }  // namespace AutoMacro

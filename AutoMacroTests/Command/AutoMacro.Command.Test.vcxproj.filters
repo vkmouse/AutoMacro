@@ -58,6 +58,9 @@
     <ClCompile Include="Command\ArithmeticOperationCommandTest.cpp">
       <Filter>Command</Filter>
     </ClCompile>
+    <ClCompile Include="Command\WhileCommandTests.cpp">
+      <Filter>Command</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandTest.h" />

@@ -184,6 +184,12 @@
     <ClInclude Include="Command\Factory\WhileCommandFactory.h">
       <Filter>Command\Factory</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Parameter\ExecuteUntilCommandParameter.h">
+      <Filter>Command\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="Command\Command\ExecuteUntilCommand.h">
+      <Filter>Command\Command</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -289,6 +295,9 @@
       <Filter>Command\Command</Filter>
     </ClCompile>
     <ClCompile Include="Command\Command\WaitForItemsCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ExecuteUntilCommand.cpp">
       <Filter>Command\Command</Filter>
     </ClCompile>
   </ItemGroup>

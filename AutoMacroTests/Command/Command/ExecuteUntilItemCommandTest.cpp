@@ -85,6 +85,43 @@ TEST_METHOD(TestExecuteUntilItemDisappear) {
     Assert::IsTrue(h[i++].equals("delay", 0));
     Assert::IsTrue(h[i++].equals("---"));
 }
+
+TEST_METHOD(TestLoopCounter) {
+    Histories h;
+    std::vector<std::string> f = {
+        "images\\AutoMacroTests\\ItemNotExists_10x10_24bits.png" };
+    auto detector = Factory::createTemplateBasedDetector({
+        "images\\AutoMacroTests\\Template_5x5_24bits.png" });
+
+    DelayCommandParameter delayParameter(getKvm(&h, f));
+    delayParameter.ms = delayBetweenRepeatitions;
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+        Factory::createCommand(&delayParameter));
+    p.isExpectedToExist = true;
+    p.useLoopCounter = true;
+    p.numLoops = 2;
+
+    execute(&h, p);
+
+    int i = 0;
+    Assert::IsTrue(h[i++].equals("---"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", delayBetweenRepeatitions));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("takeSnapshot"));
+    Assert::IsTrue(h[i++].equals("delay", 0));
+    Assert::IsTrue(h[i++].equals("---"));
+}
 };
 }  // namespace CommandTest
 }  // namespace AutoMacro

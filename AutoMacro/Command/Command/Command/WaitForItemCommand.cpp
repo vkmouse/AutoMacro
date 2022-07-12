@@ -5,10 +5,15 @@
 namespace AutoMacro {
 namespace Impl {
 WaitForItemCommand::WaitForItemCommand(WaitForItemCommandParameter* p)
-    : ExecuteUntilItemCommand(p) {
-    DelayCommandParameter dp(p->kvm);
-    dp.ms = p->delayBetweenRepeatitions;
-    setExecuteCommand(Factory::createCommand(&dp));
+    : ExecuteUntilItemCommand(p),
+      kvm(p->kvm),
+      delayBetweenRepeatitions(p->delayBetweenRepeatitions) {
+}
+
+std::shared_ptr<Command> WaitForItemCommand::createExecuteCommand() {
+    DelayCommandParameter dp(kvm);
+    dp.ms = delayBetweenRepeatitions;
+    return Factory::createCommand(&dp);
 }
 }  // namespace Impl
 }  // namespace AutoMacro

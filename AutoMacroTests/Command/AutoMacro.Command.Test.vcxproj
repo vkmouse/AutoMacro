@@ -37,6 +37,7 @@
     <ClCompile Include="Command\ShortcutCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemCommandTest.cpp" />
     <ClCompile Include="Command\WaitForItemsCommandTest.cpp" />
+    <ClCompile Include="Command\WhileCommandTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\AutoMacro\Command\AutoMacro.Command.vcxproj">

@@ -95,6 +95,33 @@ TEST_METHOD(TestValues) {
     output = Factory::createTCommand(&p3)->execute();
     Assert::IsFalse(output);
 }
+
+TEST_METHOD(TestMultipleLogicals) {
+    ComparisonOperationCommandParameter cp1(lhs, 10, ComparisonOperator::EQUAL);
+    ComparisonOperationCommandParameter cp2(lhs, 11, ComparisonOperator::EQUAL);
+    auto trueCmd = Factory::createTCommand(&cp1);
+    auto falseCmd = Factory::createTCommand(&cp2);
+
+    LogicalOperationCommandParameter p1(
+        { falseCmd, trueCmd, trueCmd, trueCmd }, LogicalOperator::AND);
+    auto output = Factory::createTCommand(&p1)->execute();
+    Assert::IsFalse(output);
+
+    LogicalOperationCommandParameter p2(
+        { trueCmd, falseCmd, trueCmd, trueCmd }, LogicalOperator::AND);
+    output = Factory::createTCommand(&p2)->execute();
+    Assert::IsFalse(output);
+
+    LogicalOperationCommandParameter p3(
+        { trueCmd, trueCmd, falseCmd, trueCmd }, LogicalOperator::AND);
+    output = Factory::createTCommand(&p3)->execute();
+    Assert::IsFalse(output);
+
+    LogicalOperationCommandParameter p4(
+        { trueCmd, trueCmd, trueCmd, falseCmd}, LogicalOperator::AND);
+    output = Factory::createTCommand(&p4)->execute();
+    Assert::IsFalse(output);
+}
 };
 }  // namespace CommandTest
 }  // namespace AutoMacro
