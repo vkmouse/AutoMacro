@@ -8,8 +8,7 @@ namespace AutoMacro {
 namespace Impl {
 class ExecuteUntilItemsCommand : public WhileCommand {
  public:
-    explicit ExecuteUntilItemsCommand(ExecuteUntilItemsCommandParameter* p)
-        : WhileCommand(p) {}
+    explicit ExecuteUntilItemsCommand(ExecuteUntilItemsCommandParameter* p);
 };
 }  // namespace Impl
 }  // namespace AutoMacro

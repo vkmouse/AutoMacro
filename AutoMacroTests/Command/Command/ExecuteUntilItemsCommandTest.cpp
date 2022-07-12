@@ -32,8 +32,8 @@ TEST_METHOD(TestExecuteUntilAllItemsAppear) {
         { 0, 0 },
         { 0.98f, 0.98f },
         Factory::createCommand(&delayParameter));
-    p.setIsExpectedToExist(true);
-    p.setIsExpectedToAllExist(true);
+    p.isExpectedToExist = true;
+    p.isExpectedToAllExist = true;
 
     execute(&h, p);
 
@@ -75,8 +75,8 @@ TEST_METHOD(TestExecuteUntilAtLeastOneItem) {
         { 0, 0 },
         { 0.98f, 0.98f },
         Factory::createCommand(&delayParameter));
-    p.setIsExpectedToExist(true);
-    p.setIsExpectedToAllExist(false);
+    p.isExpectedToExist = true;
+    p.isExpectedToAllExist = false;
 
     execute(&h, p, p);
 

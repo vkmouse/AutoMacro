@@ -29,9 +29,9 @@ TEST_METHOD(TestWaitForAllItems) {
         { detector1, detector2 },
         { 0, 0 },
         { 0.98f, 0.98f });
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
-    p.setIsExpectedToExist(true);
-    p.setIsExpectedToAllExist(true);
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
+    p.isExpectedToExist = true;
+    p.isExpectedToAllExist = true;
 
     execute(&h, p);
 
@@ -70,9 +70,9 @@ TEST_METHOD(TestWaitForAtLeastOneItem) {
         { detector1, detector2 },
         { 0, 0 },
         { 0.98f, 0.98f });
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
-    p.setIsExpectedToExist(true);
-    p.setIsExpectedToAllExist(false);
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
+    p.isExpectedToExist = true;
+    p.isExpectedToAllExist = false;
 
     execute(&h, p, p);
 

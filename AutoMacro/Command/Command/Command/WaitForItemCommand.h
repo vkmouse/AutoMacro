@@ -8,8 +8,7 @@ namespace AutoMacro {
 namespace Impl {
 class WaitForItemCommand : public ExecuteUntilItemCommand {
  public:
-    explicit WaitForItemCommand(WaitForItemCommandParameter* p)
-        : ExecuteUntilItemCommand(p) {}
+    explicit WaitForItemCommand(WaitForItemCommandParameter* p);
 };
 }  // namespace Impl
 }  // namespace AutoMacro

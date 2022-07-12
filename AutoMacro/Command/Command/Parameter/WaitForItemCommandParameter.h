@@ -11,17 +11,8 @@ class WaitForItemCommandParameter : public ExecuteUntilItemCommandParameter {
  public:
     WaitForItemCommandParameter(Kvm kvm,
         std::shared_ptr<Detector> detector, int index, float threshold)
-        : ExecuteUntilItemCommandParameter(kvm, detector, index, threshold),
-          delayParameter(kvm) {
-        executeCommand = Factory::createCommand(&delayParameter);
-    }
+        : ExecuteUntilItemCommandParameter(kvm, detector, index, threshold) {}
 
-    void setDelayBetweenRepeatitions(int value) {
-        delayParameter.ms = value;
-        executeCommand = Factory::createCommand(&delayParameter);
-    }
-
- private:
-    DelayCommandParameter delayParameter;
+    int delayBetweenRepeatitions = 0;
 };
 }  // namespace AutoMacro

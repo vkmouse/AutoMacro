@@ -25,7 +25,7 @@ TEST_METHOD(TestExecuteUntilItemExist) {
     delayParameter.ms = delayBetweenRepeatitions;
     ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
         Factory::createCommand(&delayParameter));
-    p.setIsExpectedToExist(true);
+    p.isExpectedToExist = true;
 
     execute(&h, p);
 
@@ -62,7 +62,7 @@ TEST_METHOD(TestExecuteUntilItemDisappear) {
     delayParameter.ms = delayBetweenRepeatitions;
     ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
         Factory::createCommand(&delayParameter));
-    p.setIsExpectedToExist(false);
+    p.isExpectedToExist = false;
 
     execute(&h, p);
 

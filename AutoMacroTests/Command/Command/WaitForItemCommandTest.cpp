@@ -22,8 +22,8 @@ TEST_METHOD(TestWaitForItemExist) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
     WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
-    p.setIsExpectedToExist(true);
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
+    p.isExpectedToExist = true;
 
     execute(&h, p);
 
@@ -57,8 +57,8 @@ TEST_METHOD(TestWaitForItemDisappear) {
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
     WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
-    p.setDelayBetweenRepeatitions(delayBetweenRepeatitions);
-    p.setIsExpectedToExist(false);
+    p.delayBetweenRepeatitions = delayBetweenRepeatitions;
+    p.isExpectedToExist = false;
 
     execute(&h, p);
 

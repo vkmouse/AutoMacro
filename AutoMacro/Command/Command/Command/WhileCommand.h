@@ -11,6 +11,12 @@ class WhileCommand : public TCommand<void> {
 
     DLL_EXPORTS virtual void execute();
 
+ protected:
+    WhileCommand();
+
+    void setExecuteCommand(std::shared_ptr<Command> command);
+    void setRequestCommand(std::shared_ptr<TCommand<bool>> command);
+
  private:
     std::shared_ptr<Command> executeCommand_;
     std::shared_ptr<TCommand<bool>> requestCommand_;

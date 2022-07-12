@@ -57,6 +57,7 @@
     <ClInclude Include="Command\Factory\ShortcutCommandFactory.h" />
     <ClInclude Include="Command\Factory\WaitForItemCommandFactory.h" />
     <ClInclude Include="Command\Factory\WaitForItemsCommandFactory.h" />
+    <ClInclude Include="Command\Factory\WhileCommandFactory.h" />
     <ClInclude Include="Command\Parameter\ArithmeticOperationCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckExistenceCommandParameter.h" />
     <ClInclude Include="Command\Parameter\CheckItemExistenceCommandParameter.h" />
@@ -85,10 +86,14 @@
     <ClCompile Include="Command\Command\CounterCommand.cpp" />
     <ClCompile Include="Command\Command\DelayCommand.cpp" />
     <ClCompile Include="Command\Command\DesktopSwitchCommand.cpp" />
+    <ClCompile Include="Command\Command\ExecuteUntilItemCommand.cpp" />
+    <ClCompile Include="Command\Command\ExecuteUntilItemsCommand.cpp" />
     <ClCompile Include="Command\Command\LogicalOperationCommand.cpp" />
     <ClCompile Include="Command\Command\MouseClickCommand.cpp" />
     <ClCompile Include="Command\Command\SendKeyCommand.cpp" />
     <ClCompile Include="Command\Command\ShortcutCommand.cpp" />
+    <ClCompile Include="Command\Command\WaitForItemCommand.cpp" />
+    <ClCompile Include="Command\Command\WaitForItemsCommand.cpp" />
     <ClCompile Include="Command\Command\WhileCommand.cpp" />
     <ClCompile Include="Command\Factory\ArithmeticOperationCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\CheckItemExistenceCommandFactory.cpp" />
@@ -107,6 +112,7 @@
     <ClCompile Include="Command\Factory\ShortcutCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\WaitForItemCommandFactory.cpp" />
     <ClCompile Include="Command\Factory\WaitForItemsCommandFactory.cpp" />
+    <ClCompile Include="Command\Factory\WhileCommandFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\AutoMacro.Core.vcxproj">

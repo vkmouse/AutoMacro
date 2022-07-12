@@ -181,6 +181,9 @@
     <ClInclude Include="Command\Parameter\ArithmeticOperationCommandParameter.h">
       <Filter>Command\Parameter</Filter>
     </ClInclude>
+    <ClInclude Include="Command\Factory\WhileCommandFactory.h">
+      <Filter>Command\Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Command\Command\CounterCommand.cpp">
@@ -272,6 +275,21 @@
     </ClCompile>
     <ClCompile Include="Command\Factory\ArithmeticOperationCommandFactory.cpp">
       <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Factory\WhileCommandFactory.cpp">
+      <Filter>Command\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ExecuteUntilItemCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\ExecuteUntilItemsCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WaitForItemCommand.cpp">
+      <Filter>Command\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Command\Command\WaitForItemsCommand.cpp">
+      <Filter>Command\Command</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

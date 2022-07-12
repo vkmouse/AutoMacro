@@ -14,6 +14,7 @@ class LogicalOperationCommand : public TCommand<bool> {
 
  private:
     std::vector<std::shared_ptr<TCommand<bool>>> commands;
+    std::vector<bool> values;
     LogicalOperator op;
 };
 }  // namespace Impl

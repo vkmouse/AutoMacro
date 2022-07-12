@@ -8,7 +8,7 @@ namespace AutoMacro {
 namespace Impl {
 LogicalOperationCommand::LogicalOperationCommand(
     LogicalOperationCommandParameter* p)
-    : commands(p->commands), op(p->op) {
+    : commands(p->commands), values(p->values), op(p->op) {
 }
 
 bool LogicalOperationCommand::execute() {
@@ -28,6 +28,9 @@ bool LogicalOperationCommand::execute() {
     bool output = commands.front()->execute();
     for (int i = 1; i < commands.size(); i++) {
         output = logicalFunction(output, commands[i]->execute());
+    }
+    for (bool value : values) {
+        output = logicalFunction(output, value);
     }
 
     return output;
