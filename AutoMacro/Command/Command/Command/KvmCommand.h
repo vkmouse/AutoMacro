@@ -18,7 +18,7 @@ class DLL_EXPORTS KvmCommand : public TCommand<T> {
  protected:
     virtual T executeCommand() = 0;
 
-    const Kvm& kvm() { return kvm_; }
+    const Kvm& kvm() const { return kvm_; }
     void pressKey(KeyCode key) { kvm_.keyboard->pressKey(key); }
     void releaseKey(KeyCode key) { kvm_.keyboard->releaseKey(key); }
     void releaseAllKeys() { kvm_.keyboard->releaseAllKeys(); }
