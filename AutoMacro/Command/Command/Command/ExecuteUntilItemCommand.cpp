@@ -10,7 +10,7 @@ ExecuteUntilItemCommand::ExecuteUntilItemCommand(
     ExecuteUntilItemCommandParameter* p)
     : ExecuteUntilCommand(p),
       executeCommand(p->executeCommand),
-      checkItemExistenceCommandParameter(p) {
+      checkItemExistenceCommandParameter(*p) {
 }
 
 std::shared_ptr<Command> ExecuteUntilItemCommand::createExecuteCommand() {
@@ -19,7 +19,7 @@ std::shared_ptr<Command> ExecuteUntilItemCommand::createExecuteCommand() {
 
 std::shared_ptr<TCommand<bool>>
 ExecuteUntilItemCommand::createRequestCommand() {
-    auto cmd = Factory::createTCommand(checkItemExistenceCommandParameter);
+    auto cmd = Factory::createTCommand(&checkItemExistenceCommandParameter);
     LogicalOperationCommandParameter lp(cmd, true, LogicalOperator::XOR);
     return Factory::createTCommand(&lp);
 }

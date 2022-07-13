@@ -17,7 +17,7 @@ class ExecuteUntilItemCommand : public ExecuteUntilCommand {
 
  private:
     std::shared_ptr<Command> executeCommand;
-    CheckItemExistenceCommandParameter* checkItemExistenceCommandParameter;
+    CheckItemExistenceCommandParameter checkItemExistenceCommandParameter;
 };
 }  // namespace Impl
 }  // namespace AutoMacro
