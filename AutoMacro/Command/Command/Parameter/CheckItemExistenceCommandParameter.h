@@ -9,12 +9,13 @@ class CheckItemExistenceCommandParameter
     : public CheckExistenceCommandParameter {
  public:
     CheckItemExistenceCommandParameter(Kvm kvm,
-        std::shared_ptr<Detector> detector, int index, float threshold)
+        std::shared_ptr<Detector> detector, float threshold)
         : CheckExistenceCommandParameter(kvm),
-          detector(detector), index(index), threshold(threshold) {}
+          detector(detector), threshold(threshold) {}
 
     std::shared_ptr<Detector> detector;
-    int index;
     float threshold;
+    bool checkWithIndex = false;
+    int index = -1;
 };
 }  // namespace AutoMacro

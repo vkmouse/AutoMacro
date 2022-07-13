@@ -11,13 +11,13 @@ class ExecuteUntilItemCommandParameter
       public CheckItemExistenceCommandParameter {
  public:
     ExecuteUntilItemCommandParameter(Kvm kvm,
-        std::shared_ptr<Detector> detector, int index, float threshold)
-        : CheckItemExistenceCommandParameter(kvm, detector, index, threshold) {}
+        std::shared_ptr<Detector> detector, float threshold)
+        : CheckItemExistenceCommandParameter(kvm, detector, threshold) {}
 
     ExecuteUntilItemCommandParameter(Kvm kvm,
-        std::shared_ptr<Detector> detector, int index, float threshold,
+        std::shared_ptr<Detector> detector, float threshold,
         std::shared_ptr<Command> executeCommand)
-        : CheckItemExistenceCommandParameter(kvm, detector, index, threshold),
+        : CheckItemExistenceCommandParameter(kvm, detector, threshold),
           ExecuteUntilCommandParameter(executeCommand, nullptr) {}
 };
 }  // namespace AutoMacro

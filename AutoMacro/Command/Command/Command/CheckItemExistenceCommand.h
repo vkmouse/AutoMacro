@@ -16,8 +16,9 @@ class CheckItemExistenceCommand : public CheckExistenceCommand {
 
  private:
     std::shared_ptr<Detector> detector_;
-    int index_;
     float threshold_;
+    bool checkWithIndex_;
+    int index_;
 };
 }  // namespace Impl
 }  // namespace AutoMacro

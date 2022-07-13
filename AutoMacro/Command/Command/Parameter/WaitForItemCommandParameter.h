@@ -10,8 +10,8 @@ namespace AutoMacro {
 class WaitForItemCommandParameter : public ExecuteUntilItemCommandParameter {
  public:
     WaitForItemCommandParameter(Kvm kvm,
-        std::shared_ptr<Detector> detector, int index, float threshold)
-        : ExecuteUntilItemCommandParameter(kvm, detector, index, threshold) {}
+        std::shared_ptr<Detector> detector, float threshold)
+        : ExecuteUntilItemCommandParameter(kvm, detector, threshold) {}
 
     int delayBetweenRepeatitions = 0;
 };

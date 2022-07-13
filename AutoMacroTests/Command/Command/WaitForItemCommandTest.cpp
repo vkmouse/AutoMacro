@@ -21,7 +21,7 @@ TEST_METHOD(TestWaitForItemExist) {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
+    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0.98f);
     p.delayBetweenRepeatitions = delayBetweenRepeatitions;
     p.isExpectedToExist = true;
 
@@ -56,7 +56,7 @@ TEST_METHOD(TestWaitForItemDisappear) {
     auto detector = Factory::createTemplateBasedDetector({
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
-    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f);
+    WaitForItemCommandParameter p(getKvm(&h, f), detector, 0.98f);
     p.delayBetweenRepeatitions = delayBetweenRepeatitions;
     p.isExpectedToExist = false;
 

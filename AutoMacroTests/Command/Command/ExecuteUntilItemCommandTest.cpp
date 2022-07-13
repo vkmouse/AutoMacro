@@ -23,7 +23,7 @@ TEST_METHOD(TestExecuteUntilItemExist) {
 
     DelayCommandParameter delayParameter(getKvm(&h, f));
     delayParameter.ms = delayBetweenRepeatitions;
-    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0.98f,
         Factory::createCommand(&delayParameter));
     p.isExpectedToExist = true;
 
@@ -60,7 +60,7 @@ TEST_METHOD(TestExecuteUntilItemDisappear) {
 
     DelayCommandParameter delayParameter(getKvm(&h, f));
     delayParameter.ms = delayBetweenRepeatitions;
-    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0.98f,
         Factory::createCommand(&delayParameter));
     p.isExpectedToExist = false;
 
@@ -95,7 +95,7 @@ TEST_METHOD(TestLoopCounter) {
 
     DelayCommandParameter delayParameter(getKvm(&h, f));
     delayParameter.ms = delayBetweenRepeatitions;
-    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0, 0.98f,
+    ExecuteUntilItemCommandParameter p(getKvm(&h, f), detector, 0.98f,
         Factory::createCommand(&delayParameter));
     p.isExpectedToExist = true;
     p.useLoopCounter = true;

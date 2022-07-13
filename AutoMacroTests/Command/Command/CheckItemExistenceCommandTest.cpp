@@ -21,7 +21,7 @@ void testMethod(std::string filename,
         "images\\AutoMacroTests\\Template_5x5_24bits.png" });
 
     CheckItemExistenceCommandParameter p(getKvm(&h, f),
-                                         detector, 0, 0.98f);
+                                         detector, 0.98f);
     p.isExpectedToExist = isExpectedToExist;
     p.delayBeforeCommand = delayBeforeCommand;
     p.delayAfterCommand = delayAfterCommand;
